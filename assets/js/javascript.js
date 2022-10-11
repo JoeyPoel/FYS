@@ -3,12 +3,12 @@ class myHeader extends HTMLElement {
         // Any time this element is connected to a document this function will run
         this.innerHTML = `
             <header>
-                <a href="index.html">
+                <a href="#">
                     <img src="#">
                 </a>
                 <nav>
                     <ul>
-                        <li><a href="index.html">Startpagina</a></li>
+                        <li><a href="#">Startpagina</a></li>
                         <li><a href="#">Profiel</a></li>
                         <li><a href="#">Matches</a></li>
                         <li><a href="#">Potentiële matches</a></li>
