@@ -57,6 +57,11 @@ main {
     box-sizing: border-box;
 }
 
+#logo {
+    width: 240px;
+    height: 60px;
+}
+
 /* Navigation */
 footer p {
     display: flex;
