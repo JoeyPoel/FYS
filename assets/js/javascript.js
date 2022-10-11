@@ -8,12 +8,12 @@ class myHeader extends HTMLElement {
                 </a>
                 <nav>
                     <ul>
-                        <li><a href="#">Startpagina</a></li>
-                        <li><a href="#">Profiel</a></li>
-                        <li><a href="#">Matches</a></li>
-                        <li><a href="#">Potentiële matches</a></li>
-                        <li><a href="#">Over</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="../index.html"><img src="img/home_icon.png" alt="home icon"></a></li>
+                        <li><a href="profiel.html">Profiel</a></li>
+                        <li><a href="matches.html">Matches</a></li>
+                        <li><a href="potentiële_matches.html">Potentiële matches</a></li>
+                        <li><a href="over.html">Over</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </nav>
             </header>
