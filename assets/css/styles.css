@@ -68,3 +68,9 @@ footer p {
     margin: 0;
     background-color: #d6d6d6;
 }
+
+article{
+    border: 5px;
+    margin: 10px;
+
+}
