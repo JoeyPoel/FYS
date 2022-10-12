@@ -70,7 +70,9 @@ footer p {
 }
 
 article{
-    border: 5px;
+    border: #565656 1px solid;
+    max-width: 300px;
+    padding: 10px;
     margin: 10px;
-
 }
+
