@@ -57,6 +57,11 @@ main {
     box-sizing: border-box;
 }
 
+body {
+    overflow-y: hidden; /* Hide vertical scrollbar */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
 #logo {
     width: 240px;
     height: 60px;
@@ -83,6 +88,7 @@ profielbox {
     min-width: 500px;
     margin: 100px auto 20px;
 }
+
 #naam{
     padding: 10px;
     resize: none;
@@ -92,7 +98,6 @@ profielbox {
     min-height: 100px;
     padding: 10px;
     resize: none;
-
 }
 
 #profielFoto{
