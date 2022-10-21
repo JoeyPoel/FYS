@@ -23,15 +23,65 @@
 
 <body>
 
-<!-- Custom HTML element. By defining a new class in JS that extends HTMLElement -->
-<my-header></my-header>
+    <!-- Custom HTML element. By defining a new class in JS that extends HTMLElement -->
+    <my-header></my-header>
 
-<main>
-    <h1>Profiel</h1>
-</main>
+    <main>
+        <h1>Profiel</h1>
+    </main>
 
-<!-- Custom HTML element. By defining a new class in JS that extends HTMLElement -->
-<my-footer></my-footer>
+    <profielBox>
+
+        <naam>
+            <textarea id="naam">Type hier je naam</textarea>
+        </naam>
+
+        <profielFoto>
+            <img id="profielFoto" src="../assets/img/profielfoto.png" alt="Profiel foto">
+        </profielFoto>
+
+        <eigenTekst>
+            <textarea id= "eigenTekst">Type hier een tekst over je zelf</textarea>
+        </eigenTekst>
+
+        <interesses>
+            <ul>
+                <li> SELECTEER HIER DE INTERESSES </li>
+            </ul>
+        </interesses>
+
+        <socialmedia>
+            <ul>
+                <li> SELECTEER HIER DE SOCIAL MEDIA </li>
+            </ul>
+        </socialmedia>
+
+        <geslacht>
+            <p> Geslacht </p>
+            <ul>
+                <li> Man </li>
+                <li> Vrouw </li>
+                <li> Anders </li>
+            </ul>
+        </geslacht>
+
+        <contact>
+            <p>Hoe wilt u gecontacteerd worden?</p>
+            <ul>
+                <li> Whatsapp </li>
+                <li> Telegram </li>
+            </ul>
+        </contact>
+    </profielBox>
+    <confirm>
+        <input id="opslaan" type="button" value="OPSLAAN" onclick="alert('Je hebt je profiel opgeslagen')">
+    </confirm>
+
+
+
+
+    <!-- Custom HTML element. By defining a new class in JS that extends HTMLElement -->
+    <my-footer></my-footer>
 
 </body>
 </html>

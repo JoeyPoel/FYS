@@ -76,3 +76,41 @@ article{
     margin: 10px;
 }
 
+/* PROFIEL */
+profielbox {
+    border: black 1px solid;
+    padding: 10px;
+    min-width: 500px;
+    margin: 100px auto 20px;
+}
+#naam{
+    padding: 10px;
+    resize: none;
+}
+
+#eigenTekst{
+    min-height: 100px;
+    padding: 10px;
+    resize: none;
+
+}
+
+#profielFoto{
+    max-width: 100px;
+}
+
+confirm{
+    margin: auto;
+}
+
+#opslaan{
+    background-color: #C63520;
+    color: white;
+    border: white;
+    padding: 20px;
+
+}
+
+/*
+
+ */
