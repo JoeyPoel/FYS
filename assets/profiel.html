@@ -44,33 +44,49 @@
             <textarea id= "eigenTekst">Type hier een tekst over je zelf</textarea>
         </eigenTekst>
 
+        <br><br>
         <interesses>
-            <ul>
-                <li> SELECTEER HIER DE INTERESSES </li>
-            </ul>
+            <h3>Selecteer uw interesses</h3>
+            <p>Houdt control ingedrukt om meerder interesses te selecteren</p>
+            <select id="interesses">
+                <option disabled selected value> -- Kies een interesse -- </option>
+                <option value="zwemmen">Zwemmen</option>
+                <option value="fietsen">Fietsen</option>
+                <option value="hardlopen">Hardlopen</option>
+                <option value="klimmen">Klimmen</option>
+            </select>
         </interesses>
 
+        <br><br>
         <socialmedia>
-            <ul>
-                <li> SELECTEER HIER DE SOCIAL MEDIA </li>
-            </ul>
+            <h3>Selecteer uw social media</h3>
+            <p>Houdt control ingedrukt om meerder social media te selecteren</p>
+            <select id="socialmedia">
+                <option disabled selected value> -- Kies een sociale media -- </option>
+                <option value="instagram">Instagram</option>
+                <option value="facebook">Facebook</option>
+                <option value="twitter">Twitter</option>
+                <option value="dicsord">Discord</option>
+                <option value="none">None</option>
+            </select>
         </socialmedia>
 
+        <br><br>
         <geslacht>
-            <p> Geslacht </p>
-            <ul>
-                <li> Man </li>
-                <li> Vrouw </li>
-                <li> Anders </li>
-            </ul>
+            <label for="geslacht">Wat is uw geslacht?</label>
+            <select id="geslacht" >
+                <option disabled selected value> -- Kies een geslacht -- </option>
+                <option value="Man">Man</option>
+                <option value="Vrouw">Vrouw</option>
+                <option value="Anders">Anders</option>
+            </select>
         </geslacht>
 
+        <br><br>
         <contact>
             <p>Hoe wilt u gecontacteerd worden?</p>
-            <ul>
-                <li> Whatsapp </li>
-                <li> Telegram </li>
-            </ul>
+            <input type="checkbox" id="whatsapp"><label for="whatsapp" >Whatsapp</label>
+            <input type="checkbox" id="telegram"><label for="telegram" >Telegram</label>
         </contact>
     </profielBox>
     <confirm>
