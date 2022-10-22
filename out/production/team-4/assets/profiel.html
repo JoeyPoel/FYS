@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <!-- Always force the latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Profiel</title>
+
+    <meta name="description" content="Profiel informatie" />
+    <meta name="keywords" content="website, corendon" />
+
+    <!-- JavaScript implementation -->
+    <script type="module" src="js/javascript.js"></script>
+    <!-- CSS implementation -->
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+
+    <!-- Website Icon -->
+    <link href="" rel="icon" type="image/png" />
+</head>
+
+<body>
+
+    <!-- Custom HTML element. By defining a new class in JS that extends HTMLElement -->
+    <my-header></my-header>
+
+    <main>
+        <h1>Profiel</h1>
+    </main>
+
+    <profielBox>
+        <profielFoto>
+            <label name="profielFoto">Plak hier een foto van u zelf.</label><br>
+            <!-- <img id="profielFoto" src="../assets/img/profielfoto.png" alt="Profiel foto"><br> -->
+            <input type="file" accept="image/*" id="profielFotoInput" name="profielFoto">
+        </profielFoto>
+
+        <naam>
+            <textarea id="naam" placeholder="Type hier uw naam." ></textarea>
+        </naam>
+
+        <eigenTekst>
+            <textarea id= "eigenTekst" placeholder="Type hier een tekst over u zelf."></textarea>
+        </eigenTekst>
+
+        <br><br>
+        <interesses>
+            <h3>Selecteer uw interesses</h3>
+            <p>Houdt control ingedrukt om meerdere interesses te selecteren. <br>
+                Scroll naar beneden om meer interresses te zien.</p>
+            <select multiple id="interesses" >
+                <option disabled selected value> -- Kies een interesse -- </option>
+                <option value="zwemmen">Zwemmen</option>
+                <option value="fietsen">Fietsen</option>
+                <option value="hardlopen">Hardlopen</option>
+                <option value="klimmen">Klimmen</option>
+                <option value="musea">Musea</option>
+            </select>
+        </interesses>
+
+        <br><br>
+        <socialmedia>
+            <h3>Selecteer uw social media</h3>
+            <p>Vul alleen de social media in die u wilt delen.</p>
+            <textarea id= "Instagram" placeholder="Plak hier de URL van uw instagram."></textarea>
+            <textarea id= "Facebook" placeholder="Plak hier de URL van uw facebook."></textarea>
+            <textarea id= "Twitter" placeholder="Plak hier de URL van uw twitter."></textarea>
+            <textarea id= "Discord" placeholder="Plak hier de URL van uw discord."></textarea>
+        </socialmedia>
+
+        <br><br>
+        <geslacht>
+            <label for="geslacht">Wat is uw geslacht?</label>
+            <select id="geslacht" >
+                <option disabled selected value> -- Kies een geslacht -- </option>
+                <option value="Man">Man</option>
+                <option value="Vrouw">Vrouw</option>
+                <option value="Anders">Anders</option>
+            </select>
+        </geslacht>
+
+        <br><br>
+        <contact>
+            <p>Hoe wilt u gecontacteerd worden?</p>
+            <input type="checkbox" id="whatsapp"><label for="whatsapp" >Whatsapp</label>
+            <input type="checkbox" id="telegram"><label for="telegram" >Telegram</label>
+        </contact>
+    </profielBox>
+    <confirm>
+        <input id="opslaan" type="button" value="OPSLAAN" onclick="alert('Je hebt je profiel opgeslagen')">
+    </confirm>
+
+
+
+
+    <!-- Custom HTML element. By defining a new class in JS that extends HTMLElement -->
+    <my-footer></my-footer>
+
+</body>
+</html>
