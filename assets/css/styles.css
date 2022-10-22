@@ -108,6 +108,10 @@ confirm{
     margin: auto;
 }
 
+textarea{
+    resize: none;
+}
+
 #opslaan{
     background-color: #C63520;
     color: white;

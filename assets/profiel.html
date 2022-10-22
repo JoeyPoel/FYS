@@ -32,15 +32,17 @@
 
     <profielBox>
         <profielFoto>
-            <img id="profielFoto" src="../assets/img/profielfoto.png" alt="Profiel foto">
+            <label name="profielFoto">Plak hier een foto van u zelf</label><br>
+            <!-- <img id="profielFoto" src="../assets/img/profielfoto.png" alt="Profiel foto"><br> --!>
+            <input type="file" accept="image/*" id="profielFotoInput" name="profielFoto">
         </profielFoto>
 
         <naam>
-            <textarea id="naam">Type hier je naam</textarea>
+            <textarea id="naam" placeholder="Type hier uw naam" ></textarea>
         </naam>
 
         <eigenTekst>
-            <textarea id= "eigenTekst">Type hier een tekst over je zelf</textarea>
+            <textarea id= "eigenTekst" placeholder="Type hier een tekst over u zelf"></textarea>
         </eigenTekst>
 
         <br><br>
@@ -59,15 +61,11 @@
         <br><br>
         <socialmedia>
             <h3>Selecteer uw social media</h3>
-            <p>Houdt control ingedrukt om meerder social media te selecteren</p>
-            <select multiple id="socialmedia">
-                <option disabled selected value> -- Kies een sociale media -- </option>
-                <option value="instagram">Instagram</option>
-                <option value="facebook">Facebook</option>
-                <option value="twitter">Twitter</option>
-                <option value="dicsord">Discord</option>
-                <option value="none">None</option>
-            </select>
+            <p>Vul alleen de social media in die u wilt delen</p>
+            <textarea id= "Instagram">Plak hier de URL van uw instagram</textarea>
+            <textarea id= "Facebook">Plak hier de URL van uw facebook </textarea>
+            <textarea id= "Twitter">Plak hier de URL van uw twitter</textarea>
+            <textarea id= "Discord">Plak hier de URL van uw discord</textarea>
         </socialmedia>
 
         <br><br>
