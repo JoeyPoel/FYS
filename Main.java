@@ -24,7 +24,6 @@ public class Main {
         Scanner in = new Scanner(System.in);
         String[] Interesse = new String[hoeVaak];
 
-        System.out.print("Vul hier de interesse in: ");
         for (int i = 0; i < hoeVaak; i++){
             System.out.print("Vul hier de interesse in: ");
             Interesse[i] = in.nextLine();
