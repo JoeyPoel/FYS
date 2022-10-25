@@ -86,6 +86,9 @@ footer p {
     color: #51a334;
 }
 
+/*
+Profiel
+ */
 profielbox {
     border: #b81a04 2px solid;
     border-radius: 5px;
@@ -93,6 +96,7 @@ profielbox {
     width: 700px;
     margin: 20px auto 20px;
     box-shadow: 0 0 2px #d81e05;
+
 }
 
 #naam{
@@ -123,19 +127,6 @@ textarea{
 
 #interesses{
     height: 200px;
-    border: 1px solid #b81a04;
-    box-shadow: 0 0 2px #b81a04;
-    border-radius: 2px;
-    outline: none !important;
-}
-
-
-#geslacht{
-    border: 1px solid #b81a04;
-    box-shadow: 0 0 2px #b81a04;
-    border-radius: 2px;
-    outline: none !important;
-    padding: 1px;
 }
 
 #whatsappCheckbox{
@@ -144,6 +135,34 @@ textarea{
 
 #telegramCheckbox{
     accent-color: #d81e05;
+}
+
+#leeftijd{
+    height: 130px;
+    overflow-y: hidden;
+}
+
+select{
+    box-shadow: 0 0 2px #b81a04;
+    border: 1px solid #b81a04;
+    border-radius: 2px;
+    outline: none !important;
+    padding: 1px;
+}
+
+confirm{
+    margin: auto;
+}
+
+#opslaan{
+    background-color: #d81e05;
+    color: white;
+    border: white;
+    padding: 20px;
+}
+
+#opslaan:hover{
+    background-color: #b81a04;
 }
 
 .column {
