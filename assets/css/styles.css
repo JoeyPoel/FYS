@@ -62,13 +62,11 @@ main {
     box-sizing: border-box;
 }
 
-::-webkit-scrollbar {
-    display: none; /* Hide vertical scrollbar */
+/* ::-webkit-scrollbar {
+    display: none; // Hide vertical scrollbar
 
 }
-
-
-
+*/
 #logo {
     width: 240px;
     height: 60px;
@@ -91,9 +89,6 @@ article{
     float: left;
 }
 
-
-
-
 /* PROFIEL */
 
 /* #poppetjes {
@@ -105,6 +100,7 @@ profielbox {
     border: black 1px solid;
     padding: 10px;
     min-width: 500px;
+    max-width: 600px;
     margin: 100px auto 20px;
 }
 
