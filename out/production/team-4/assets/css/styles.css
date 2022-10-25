@@ -62,6 +62,8 @@ main {
 
 }
 
+
+
 #logo {
     width: 240px;
     height: 60px;
@@ -74,14 +76,26 @@ footer p {
     background-color: #d6d6d6;
 }
 
+/* main page text */
+
 article{
     border: #565656 1px solid;
     max-width: 300px;
     padding: 10px;
-    margin: 10px auto;
+    margin: 5px;
+    float: left;
 }
 
+
+
+
 /* PROFIEL */
+
+/* #poppetjes {
+    max-width: 200px;
+}
+*/
+
 profielbox {
     border: black 1px solid;
     padding: 10px;
