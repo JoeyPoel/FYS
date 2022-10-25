@@ -1,21 +1,30 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
-checklist{
-    color: #51a334;
-
-}
-
 body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
     background-color: #fafafa;
-    min-height: 100%;
     font-family: Open Sans WF,sans-serif;
+}
+
+.container-1 {
+    display: flex;
+}
+
+.container-1 div {
+    border: 1px #ccc solid;
+    padding: 10px;
+}
+
+.box-1 {
+    background-color: darkturquoise;
+    flex: 1;
+}
+
+.box-2 {
+    background-color: rebeccapurple;
+    flex: 1;
+}
+
+.box-3 {
+    background-color: green;
+    flex: 1;
 }
 
 /* Navigation */
@@ -56,12 +65,6 @@ ul {
     list-style-type: none;
 }
 
-/* Main */
-main {
-    display: block;
-    box-sizing: border-box;
-}
-
 /* ::-webkit-scrollbar {
     display: none; // Hide vertical scrollbar
 
@@ -72,7 +75,6 @@ main {
     height: 60px;
 }
 
-
 /* Navigation */
 footer p {
     display: flex;
@@ -80,22 +82,9 @@ footer p {
     background-color: #d6d6d6;
 }
 
-/* main page text */
-
-article{
-    border: #565656 1px solid;
-    max-width: 300px;
-    padding: 10px;
-    margin: 5px;
-    float: left;
+.checklist {
+    color: #51a334;
 }
-
-/* PROFIEL */
-
-/* #poppetjes {
-    max-width: 200px;
-}
-*/
 
 profielbox {
     border: #b81a04 2px solid;
@@ -104,7 +93,6 @@ profielbox {
     width: 700px;
     margin: 20px auto 20px;
     box-shadow: 0 0 2px #d81e05;
-
 }
 
 #naam{
@@ -156,29 +144,6 @@ textarea{
 
 #telegramCheckbox{
     accent-color: #d81e05;
-}
-
-confirm{
-    margin: auto;
-}
-
-#opslaan{
-    background-color: #d81e05;
-    color: white;
-    border: white;
-    padding: 20px;
-}
-
-#opslaan:hover{
-    background-color: #b81a04;
-}
-
-/*
-Matches
- */
-
-* {
-    box-sizing: border-box;
 }
 
 .column {

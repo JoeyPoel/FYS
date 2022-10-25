@@ -16,6 +16,8 @@ class myHeader extends HTMLElement {
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </nav>
+                <p class="checklist">✓ Gratis gebruik maken van de webapplicatie ✓ Profiel binnen 5 minuten gemaakt 
+                ✓ Andere reizigers vinden met dezelfde interesses</p>
             </header>
         `
     }

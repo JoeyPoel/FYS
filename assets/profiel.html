@@ -27,105 +27,97 @@
     <my-header></my-header>
 
     <main>
-        <checkList>
-            <p>✓ Gratis gebruik maken van de webapplicatie ✓ Profiel binnen 5 minuten gemaakt ✓ Andere reizigers vinden met dezelfde interesses</p>
-        </checkList>
         <h1>Profiel</h1>
+        <!-- <img id="poppetjes" src="../assets/img/corendon.png"> -->
+
+        <profielBox>
+
+            <naam>
+                <textarea id="naam" placeholder="Type hier uw naam." ></textarea>
+            </naam>
+            <br>
+
+            <profielFoto>
+                <label id="tekstProfielFoto" name="profielFoto">Plak hier een foto van u zelf.</label><br>
+                <!-- <img id="profielFo1to" src="../assets/img/profielfoto.png" alt="Profiel foto"><br> -->
+                <input type="file" accept="image/*" id="profielFotoInput" name="profielFoto">
+            </profielFoto>
+            <br>
+
+            <eigenTekst>
+                <textarea id= "eigenTekst" placeholder="Type hier een tekst over u zelf."></textarea>
+            </eigenTekst>
+
+            <br><br>
+            <interesses>
+                <h3>Selecteer uw interesses</h3>
+                <p>Houdt control ingedrukt om meerdere interesses te selecteren. <br>
+                    Scroll naar beneden om meer interresses te zien.</p>
+                <select multiple id="interesses" >
+                    <option disabled selected value> -- Kies een interesse -- </option>
+                    <option value="Zwemmen">Zwemmen</option>
+                    <option value="Fietsen">Fietsen</option>
+                    <option value="Hardlopen">Hardlopen</option>
+                    <option value="Klimmen">Klimmen</option>
+                    <option value="Musea">Musea</option>
+                    <option value="Culturen">Culturen</option>
+                    <option value="Skiën">Skiën</option>
+                    <option value="Kunst">Kunst</option>
+                    <option value="Grotten">Grotten</option>
+                    <option value="Geschiedenis">Geschiedenis</option>
+                </select>
+            </interesses>
+
+            <br><br>
+            <socialmedia>
+                <h3>Selecteer uw social media</h3>
+                <p>Vul alleen de social media in die u wilt delen.</p>
+                <textarea id= "Whatsapp" placeholder="Plak hier de URL van uw whatsapp."></textarea>
+                <textarea id= "Telegram" placeholder="Plak hier de URL van uw telegram."></textarea>
+                <textarea id= "Instagram" placeholder="Plak hier de URL van uw instagram."></textarea> <br>
+                <textarea id= "Facebook" placeholder="Plak hier de URL van uw facebook."></textarea>
+                <textarea id= "Twitter" placeholder="Plak hier de URL van uw twitter."></textarea>
+                <textarea id= "Discord" placeholder="Plak hier de URL van uw discord."></textarea>
+            </socialmedia>
+
+            <br><br>
+            <geslacht>
+                <label for="geslacht">Wat is uw geslacht?</label>
+                <select id="geslacht" >
+                    <option disabled selected value> -- Kies een geslacht -- </option>
+                    <option value="Man">Man</option>
+                    <option value="Vrouw">Vrouw</option>
+                    <option value="Anders">Anders</option>
+                </select>
+            </geslacht>
+
+            <br><br>
+            <contact>
+                <p>Hoe wilt u gecontacteerd worden?</p>
+                <input type="checkbox" id="whatsappCheckbox"><label for="whatsapp" >Whatsapp</label>
+                <input type="checkbox" id="telegramCheckbox"><label for="telegram" >Telegram</label>
+            </contact>
+
+            <prijs>
+
+            </prijs>
+
+            <leeftijd>
+
+            </leeftijd>
+
+            <seizoen>
+
+            </seizoen>
+
+            <tijd>
+
+            </tijd>
+
+        </profielBox>
+
+        <input id="#" type="button" value="OPSLAAN" onclick="alert('Je hebt je profiel opgeslagen')">
     </main>
-    <!-- <img id="poppetjes" src="../assets/img/corendon.png"> -->
-
-    <profielBox>
-
-        <naam>
-            <textarea id="naam" placeholder="Type hier uw naam." ></textarea>
-        </naam>
-        <br>
-
-        <profielFoto>
-            <label id="tekstProfielFoto" name="profielFoto">Plak hier een foto van u zelf.</label><br>
-            <!-- <img id="profielFo1to" src="../assets/img/profielfoto.png" alt="Profiel foto"><br> -->
-            <input type="file" accept="image/*" id="profielFotoInput" name="profielFoto">
-        </profielFoto>
-        <br>
-
-        <eigenTekst>
-            <textarea id= "eigenTekst" placeholder="Type hier een tekst over u zelf."></textarea>
-        </eigenTekst>
-
-        <br><br>
-        <interesses>
-            <h3>Selecteer uw interesses</h3>
-            <p>Houdt control ingedrukt om meerdere interesses te selecteren. <br>
-                Scroll naar beneden om meer interresses te zien.</p>
-            <select multiple id="interesses" >
-                <option disabled selected value> -- Kies een interesse -- </option>
-                <option value="Zwemmen">Zwemmen</option>
-                <option value="Fietsen">Fietsen</option>
-                <option value="Hardlopen">Hardlopen</option>
-                <option value="Klimmen">Klimmen</option>
-                <option value="Musea">Musea</option>
-                <option value="Culturen">Culturen</option>
-                <option value="Skiën">Skiën</option>
-                <option value="Kunst">Kunst</option>
-                <option value="Grotten">Grotten</option>
-                <option value="Geschiedenis">Geschiedenis</option>
-            </select>
-        </interesses>
-
-        <br><br>
-        <socialmedia>
-            <h3>Selecteer uw social media</h3>
-            <p>Vul alleen de social media in die u wilt delen.</p>
-            <textarea id= "Whatsapp" placeholder="Plak hier de URL van uw whatsapp."></textarea>
-            <textarea id= "Telegram" placeholder="Plak hier de URL van uw telegram."></textarea>
-            <textarea id= "Instagram" placeholder="Plak hier de URL van uw instagram."></textarea> <br>
-            <textarea id= "Facebook" placeholder="Plak hier de URL van uw facebook."></textarea>
-            <textarea id= "Twitter" placeholder="Plak hier de URL van uw twitter."></textarea>
-            <textarea id= "Discord" placeholder="Plak hier de URL van uw discord."></textarea>
-        </socialmedia>
-
-        <br><br>
-        <geslacht>
-            <label for="geslacht">Wat is uw geslacht?</label>
-            <select id="geslacht" >
-                <option disabled selected value> -- Kies een geslacht -- </option>
-                <option value="Man">Man</option>
-                <option value="Vrouw">Vrouw</option>
-                <option value="Anders">Anders</option>
-            </select>
-        </geslacht>
-
-        <br><br>
-        <contact>
-            <p>Hoe wilt u gecontacteerd worden?</p>
-            <input type="checkbox" id="whatsappCheckbox"><label for="whatsapp" >Whatsapp</label>
-            <input type="checkbox" id="telegramCheckbox"><label for="telegram" >Telegram</label>
-        </contact>
-
-        <prijs>
-
-        </prijs>
-
-        <leeftijd>
-
-        </leeftijd>
-
-        <seizoen>
-
-        </seizoen>
-
-        <tijd>
-
-        </tijd>
-
-    </profielBox>
-
-    <confirm>
-        <input id="opslaan" type="button" value="OPSLAAN" onclick="alert('Je hebt je profiel opgeslagen')">
-    </confirm>
-
-
-
 
     <!-- Custom HTML element. By defining a new class in JS that extends HTMLElement -->
     <my-footer></my-footer>
