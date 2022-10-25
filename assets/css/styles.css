@@ -107,24 +107,22 @@ profielbox {
 
 }
 
-#tekstProfielFoto{
-    font-weight: bold;
-}
-
 #naam{
     padding: 10px;
     resize: none;
     float: top;
+    align-content: flex-end;
+}
+
+#tekstProfielFoto{
+    font-weight: bold;
+    align-content: flex-end;
 }
 
 #eigenTekst{
     min-height: 150px;
     padding: 10px;
     resize: none;
-}
-
-#geslacht{
-    padding: 1px;
 }
 
 textarea{
@@ -143,11 +141,13 @@ textarea{
     outline: none !important;
 }
 
+
 #geslacht{
     border: 1px solid #b81a04;
     box-shadow: 0 0 2px #b81a04;
     border-radius: 2px;
     outline: none !important;
+    padding: 1px;
 }
 
 #whatsappCheckbox{
