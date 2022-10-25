@@ -72,6 +72,7 @@ main {
     height: 60px;
 }
 
+
 /* Navigation */
 footer p {
     display: flex;
@@ -141,14 +142,24 @@ Matches
 * {
     box-sizing: border-box;
 }
+
 .column {
     float: left;
     width: 33.33%;
     padding: 5px;
+    border: black 1px solid;
 }
 
+.column img {
+    width: 100%;
+}
+
+.column h2 {
+    text-align: center;
+}
 .row::after {
     content: "";
     clear: both;
     display: table;
 }
+
