@@ -98,47 +98,85 @@ article{
 */
 
 profielbox {
-    border: black 1px solid;
+    border: #b81a04 2px solid;
+    border-radius: 5px;
     padding: 10px;
-    min-width: 500px;
-    max-width: 600px;
-    margin: 100px auto 20px;
+    width: 700px;
+    margin: 20px auto 20px;
+    box-shadow: 0 0 2px #b81a04;
+
+}
+
+#tekstProfielFoto{
+    font-weight: bold;
 }
 
 #naam{
     padding: 10px;
     resize: none;
+    float: top;
 }
 
 #eigenTekst{
-    min-height: 100px;
+    min-height: 150px;
     padding: 10px;
     resize: none;
 }
 
-#profielFoto{
-    max-width: 100px;
+#geslacht{
+    padding: 1px;
+}
+
+textarea{
+    resize: none;
+    border: 1px solid #b81a04;
+    box-shadow: 0 0 2px #b81a04;
+    border-radius: 8px;
+    outline: none !important;
+}
+
+#interesses{
+    height: 200px;
+    border: 1px solid #b81a04;
+    box-shadow: 0 0 2px #b81a04;
+    border-radius: 2px;
+    outline: none !important;
+}
+
+#geslacht{
+    border: 1px solid #b81a04;
+    box-shadow: 0 0 2px #b81a04;
+    border-radius: 2px;
+    outline: none !important;
+}
+
+#whatsappCheckbox{
+    accent-color: #b81a04;
+}
+
+#telegramCheckbox{
+    accent-color: #b81a04;
 }
 
 confirm{
     margin: auto;
 }
 
-textarea{
-    resize: none;
-}
-
 #opslaan{
-    background-color: #C63520;
+    background-color: #d81e05;
     color: white;
     border: white;
     padding: 20px;
+}
 
+#opslaan:hover{
+    background-color: #b81a04;
 }
 
 /*
 Matches
  */
+
 * {
     box-sizing: border-box;
 }
@@ -147,7 +185,7 @@ Matches
     float: left;
     width: 33%;
     padding: 5px;
-    margin: 1px;
+    margin: 2px;
     border: black 1px solid;
 }
 

@@ -35,15 +35,18 @@
     <!-- <img id="poppetjes" src="../assets/img/corendon.png"> -->
 
     <profielBox>
-        <profielFoto>
-            <label name="profielFoto">Plak hier een foto van u zelf.</label><br>
-            <!-- <img id="profielFoto" src="../assets/img/profielfoto.png" alt="Profiel foto"><br> -->
-            <input type="file" accept="image/*" id="profielFotoInput" name="profielFoto">
-        </profielFoto>
 
         <naam>
             <textarea id="naam" placeholder="Type hier uw naam." ></textarea>
         </naam>
+        <br>
+
+        <profielFoto>
+            <label id="tekstProfielFoto" name="profielFoto">Plak hier een foto van u zelf.</label><br>
+            <!-- <img id="profielFo1to" src="../assets/img/profielfoto.png" alt="Profiel foto"><br> -->
+            <input type="file" accept="image/*" id="profielFotoInput" name="profielFoto">
+        </profielFoto>
+        <br>
 
         <eigenTekst>
             <textarea id= "eigenTekst" placeholder="Type hier een tekst over u zelf."></textarea>
@@ -75,7 +78,7 @@
             <p>Vul alleen de social media in die u wilt delen.</p>
             <textarea id= "Whatsapp" placeholder="Plak hier de URL van uw whatsapp."></textarea>
             <textarea id= "Telegram" placeholder="Plak hier de URL van uw telegram."></textarea>
-            <textarea id= "Instagram" placeholder="Plak hier de URL van uw instagram."></textarea>
+            <textarea id= "Instagram" placeholder="Plak hier de URL van uw instagram."></textarea> <br>
             <textarea id= "Facebook" placeholder="Plak hier de URL van uw facebook."></textarea>
             <textarea id= "Twitter" placeholder="Plak hier de URL van uw twitter."></textarea>
             <textarea id= "Discord" placeholder="Plak hier de URL van uw discord."></textarea>
@@ -98,7 +101,9 @@
             <input type="checkbox" id="whatsappCheckbox"><label for="whatsapp" >Whatsapp</label>
             <input type="checkbox" id="telegramCheckbox"><label for="telegram" >Telegram</label>
         </contact>
+
     </profielBox>
+
     <confirm>
         <input id="opslaan" type="button" value="OPSLAAN" onclick="alert('Je hebt je profiel opgeslagen')">
     </confirm>
