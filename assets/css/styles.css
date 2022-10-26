@@ -70,7 +70,6 @@ textarea {
 }
 
 .container-1-index div {
-    border: 1px black solid;
     padding: 10px;
 }
 
@@ -91,7 +90,16 @@ textarea {
     margin-left: 15px;
 }
 
-/* profiel.html met potentiële_matches.html */
+/* profiel.html */
+.container-1-profiel {
+    display: flex;
+}
+
+.container-1-profiel div {
+    border: 1px black solid;
+    padding: 10px;
+}
+
 form {
     display: flex;
     flex-wrap: wrap;
@@ -101,6 +109,18 @@ form div {
     border: 1px black solid;
     padding: 10px;
     background-color: #dedede;
+}
+
+.box-1-profiel {
+    flex: 1;
+}
+
+.box-2-profiel {
+    flex: 8;
+}
+
+.box-3-profiel {
+    flex: 1;
 }
 
 .form-fname {
@@ -157,7 +177,7 @@ form div {
     flex: 1;
 }
 
-/* matches.html */
+/* matches.html met potentiële_matches.html */
 .container-1-matches {
     display: flex;
     flex-wrap: wrap;
@@ -166,6 +186,7 @@ form div {
 
 .container-1-matches div {
     border: 1px black solid;
+    border-right: 0;
 }
 
 .box-1-matches {

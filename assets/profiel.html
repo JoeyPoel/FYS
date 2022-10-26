@@ -28,134 +28,138 @@
 
 <main>
     <div id="container-1-profiel">
-        <h1>Profiel</h1>
-        <form action="#">
-            <div class="form-fname">
-                <label for="fname">Voornaam</label>
-                <input type="text" id="fname" name="fname">
-            </div>
-            <div class="form-mname">
-                <label for="mname">Tussenvoegsel</label>
-                <input type="text" id="mname" name="mname">
-            </div>
-            <div class="form-lname">
-                <label for="lname">Achternaam</label>
-                <input type="text" id="lname" name="lname">
-            </div>
-            <div id="form-profielFoto">
-                <label name="profielFoto">Plak hier een foto van u zelf.</label>
-                <input type="file" accept="image/*" name="profielFoto">
-            </div>
-            <div id="form-persoonInfo">
-            <textarea placeholder="Type hier informatie over u zelf."></textarea>
-            </div>
-            <div id="form-interesses">
-                <h3>Selecteer uw interesses</h3>
-                <p>Houdt control ingedrukt om meerdere interesses te selecteren.
-                    Scroll naar beneden om meer interresses te zien.</p>
-                <select>
-                    <option disabled selected value> -- Kies een interesse -- </option>
-                    <option value="Zwemmen">Zwemmen</option>
-                    <option value="Fietsen">Fietsen</option>
-                    <option value="Hardlopen">Hardlopen</option>
-                    <option value="Klimmen">Klimmen</option>
-                    <option value="Musea">Musea</option>
-                    <option value="Culturen">Culturen</option>
-                    <option value="Skiën">Skiën</option>
-                    <option value="Kunst">Kunst</option>
-                    <option value="Grotten">Grotten</option>
-                    <option value="Geschiedenis">Geschiedenis</option>
-                </select>
-            </div>
-            <div id="form-socialMedia">
-                <h3>Selecteer uw sociale media platform</h3>
-                <p>Vul alleen de sociale media in die u wilt delen.</p>
-                <textarea placeholder="Plak hier de URL van uw Whatsapp."></textarea>
-                <textarea placeholder="Plak hier de URL van uw Telegram."></textarea>
-                <textarea placeholder="Plak hier de URL van uw Instagram."></textarea>
-                <textarea placeholder="Plak hier de URL van uw Facebook."></textarea>
-                <textarea placeholder="Plak hier de URL van uw Twitter."></textarea>
-                <textarea placeholder="Plak hier de URL van uw Discord."></textarea>
-            </div>
-            <div id="form-geslacht">
-                <h3>Wat is uw geslacht?</h3>
-                <select>
-                    <option disabled selected value> -- Kies een geslacht -- </option>
-                    <option value="Man">Man</option>
-                    <option value="Vrouw">Vrouw</option>
-                    <option value="Anders">Anders</option>
-                </select>
-            </div>
-            <div id="form-contact">
-                <h3>Hoe wilt u gecontacteerd worden?</h3>
-                <input type="checkbox"><label for="whatsapp" >Whatsapp</label>
-                <input type="checkbox"><label for="telegram" >Telegram</label>
-            </div>
-            <div id="form-budget">
-                <h3>Selecteer uw budget</h3>
-                <select>
-                    <option value="500">€500</option>
-                    <option value="1000">€1000</option>
-                    <option value="1500">€1500</option>
-                    <option value="2000">€2000</option>
-                    <option value="2500">€2500</option>
-                    <option value="3000">€3000</option>
-                    <option value="3500">€3500</option>
-                    <option value="4000">€4000</option>
-                    <option value="4500">€4500</option>
-                    <option value="5000">€5000</option>
-                    <option value="5500">€5500</option>
-                    <option value="6000">€6000</option>
-                    <option value="6500">€6500</option>
-                    <option value="7000">€7000</option>
-                    <option value="7500">€7500</option>
-                    <option value="8000">€8000</option>
-                    <option value="8500">€8500</option>
-                    <option value="9000">€9000</option>
-                    <option value="9500">€9500</option>
-                    <option value="10000">€10000</option>
-                </select>
-            </div>
-            <div id="form-leeftijdMatch">
-                <h3>Met welke leeftijd wilt u matchen?</h3>
-                <select>
-                    <option value="18-25">18-25</option>
-                    <option value="26-35">26-35</option>
-                    <option value="36-45">36-45</option>
-                    <option value="46-55">46-55</option>
-                    <option value="56-65">56-65</option>
-                    <option value="66-75">66-75</option>
-                    <option value="76-85">76-85</option>
-                    <option value="85+">85+</option>
-                </select>
-            </div>
-            <div id="form-soortVakantie">
-                <h3>Op wat voor soort vakantie wilt u?</h3>
-                <select>
-                    <option value="Cruise">Cruise</option>
-                    <option value="Fly-DriveVakantie">Fly-Drive vakantie</option>
-                    <option value="Formule1">Formule 1</option>
-                    <option value="Rondreis">Rondreis</option>
-                    <option value="Stedentrip">Stedentrip</option>
-                    <option value="Skivakantie">Ski vakantie</option>
-                    <option value="Zonvakantie">Zon vakantie</option>
-                </select>
-            </div>
-            <div id="form-duurVakantie">
-                <h3>Hoelang wilt u op vakantie?</h3>
-                <select>
-                    <option value="MinderDanEenWeek">Minder dan een week</option>
-                    <option value="EenWeek">Een week</option>
-                    <option value="2Weken">2 weken</option>
-                    <option value="3Weken">3 weken</option>
-                    <option value="4Weken">4 weken</option>
-                    <option value="MeerDan4Weken">Meer dan 4 weken</option>
-                </select>
-            </div>
-            <div id="form-submit">
-                <input type="submit" value="Opslaan" onclick="alert('Uw profielgegevens zijn opgeslagen.')">
-            </div>
-        </form>
+        <div class="box-1-profiel">Voorbeeld</div>
+        <div class="box-2-profiel">
+            <h1>Profiel</h1>
+            <form action="#">
+                <div class="form-fname">
+                    <label for="fname">Voornaam</label>
+                    <input type="text" id="fname" name="fname">
+                </div>
+                <div class="form-mname">
+                    <label for="mname">Tussenvoegsel</label>
+                    <input type="text" id="mname" name="mname">
+                </div>
+                <div class="form-lname">
+                    <label for="lname">Achternaam</label>
+                    <input type="text" id="lname" name="lname">
+                </div>
+                <div class="form-profielFoto">
+                    <label name="profielFoto">Plak hier een foto van u zelf.</label>
+                    <input type="file" accept="image/*" name="profielFoto">
+                </div>
+                <div class="form-persoonInfo">
+                <textarea placeholder="Type hier informatie over u zelf."></textarea>
+                </div>
+                <div class="form-interesses">
+                    <h3>Selecteer uw interesses</h3>
+                    <p>Houdt control ingedrukt om meerdere interesses te selecteren.
+                        Scroll naar beneden om meer interresses te zien.</p>
+                    <select>
+                        <option disabled selected value> -- Kies een interesse -- </option>
+                        <option value="Zwemmen">Zwemmen</option>
+                        <option value="Fietsen">Fietsen</option>
+                        <option value="Hardlopen">Hardlopen</option>
+                        <option value="Klimmen">Klimmen</option>
+                        <option value="Musea">Musea</option>
+                        <option value="Culturen">Culturen</option>
+                        <option value="Skiën">Skiën</option>
+                        <option value="Kunst">Kunst</option>
+                        <option value="Grotten">Grotten</option>
+                        <option value="Geschiedenis">Geschiedenis</option>
+                    </select>
+                </div>
+                <div class="form-socialMedia">
+                    <h3>Selecteer uw sociale media platform</h3>
+                    <p>Vul alleen de sociale media in die u wilt delen.</p>
+                    <textarea placeholder="Plak hier de URL van uw Whatsapp."></textarea>
+                    <textarea placeholder="Plak hier de URL van uw Telegram."></textarea>
+                    <textarea placeholder="Plak hier de URL van uw Instagram."></textarea>
+                    <textarea placeholder="Plak hier de URL van uw Facebook."></textarea>
+                    <textarea placeholder="Plak hier de URL van uw Twitter."></textarea>
+                    <textarea placeholder="Plak hier de URL van uw Discord."></textarea>
+                </div>
+                <div class="form-geslacht">
+                    <h3>Wat is uw geslacht?</h3>
+                    <select>
+                        <option disabled selected value> -- Kies een geslacht -- </option>
+                        <option value="Man">Man</option>
+                        <option value="Vrouw">Vrouw</option>
+                        <option value="Anders">Anders</option>
+                    </select>
+                </div>
+                <div class="form-contact">
+                    <h3>Hoe wilt u gecontacteerd worden?</h3>
+                    <input type="checkbox"><label for="whatsapp" >Whatsapp</label>
+                    <input type="checkbox"><label for="telegram" >Telegram</label>
+                </div>
+                <div class="form-budget">
+                    <h3>Selecteer uw budget</h3>
+                    <select>
+                        <option value="500">€500</option>
+                        <option value="1000">€1000</option>
+                        <option value="1500">€1500</option>
+                        <option value="2000">€2000</option>
+                        <option value="2500">€2500</option>
+                        <option value="3000">€3000</option>
+                        <option value="3500">€3500</option>
+                        <option value="4000">€4000</option>
+                        <option value="4500">€4500</option>
+                        <option value="5000">€5000</option>
+                        <option value="5500">€5500</option>
+                        <option value="6000">€6000</option>
+                        <option value="6500">€6500</option>
+                        <option value="7000">€7000</option>
+                        <option value="7500">€7500</option>
+                        <option value="8000">€8000</option>
+                        <option value="8500">€8500</option>
+                        <option value="9000">€9000</option>
+                        <option value="9500">€9500</option>
+                        <option value="10000">€10000</option>
+                    </select>
+                </div>
+                <div class="form-leeftijdMatch">
+                    <h3>Met welke leeftijd wilt u matchen?</h3>
+                    <select>
+                        <option value="18-25">18-25</option>
+                        <option value="26-35">26-35</option>
+                        <option value="36-45">36-45</option>
+                        <option value="46-55">46-55</option>
+                        <option value="56-65">56-65</option>
+                        <option value="66-75">66-75</option>
+                        <option value="76-85">76-85</option>
+                        <option value="85+">85+</option>
+                    </select>
+                </div>
+                <div class="form-soortVakantie">
+                    <h3>Op wat voor soort vakantie wilt u?</h3>
+                    <select>
+                        <option value="Cruise">Cruise</option>
+                        <option value="Fly-DriveVakantie">Fly-Drive vakantie</option>
+                        <option value="Formule1">Formule 1</option>
+                        <option value="Rondreis">Rondreis</option>
+                        <option value="Stedentrip">Stedentrip</option>
+                        <option value="Skivakantie">Ski vakantie</option>
+                        <option value="Zonvakantie">Zon vakantie</option>
+                    </select>
+                </div>
+                <div class="form-duurVakantie">
+                    <h3>Hoelang wilt u op vakantie?</h3>
+                    <select>
+                        <option value="MinderDanEenWeek">Minder dan een week</option>
+                        <option value="EenWeek">Een week</option>
+                        <option value="2Weken">2 weken</option>
+                        <option value="3Weken">3 weken</option>
+                        <option value="4Weken">4 weken</option>
+                        <option value="MeerDan4Weken">Meer dan 4 weken</option>
+                    </select>
+                </div>
+                <div class="form-submit">
+                    <input type="submit" value="Opslaan" onclick="alert('Uw profielgegevens zijn opgeslagen.')">
+                </div>
+            </form>
+        </div>
+        <div class="box-3-profiel">Voorbeeld</div>
     </div>
 </main>
 
