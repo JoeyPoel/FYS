@@ -1,8 +1,15 @@
 body {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     background-color: #fafafa;
     font-family: Open Sans WF,sans-serif;
+}
+
+.main-profiel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Header/navigation */
@@ -21,7 +28,7 @@ nav a:link, nav a:visited {
     padding: 10px 10px 10px 10px;
 }
 
-nav a:hover{
+nav a:hover {
     color: #FFFFFF;
     background-color: #b81a04;
 }
@@ -92,89 +99,114 @@ textarea {
 
 /* profiel.html */
 .container-1-profiel {
-    display: flex;
+    max-width: 700px;
+    width: 100%;
+    background-color: #fff;
+    padding: 25px 30px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
 }
 
-.container-1-profiel div {
-    border: 1px black solid;
-    padding: 10px;
+.container-1-profiel .title {
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
 }
 
-form {
+.content form .user-details {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
 }
 
-form div {
-    border: 1px black solid;
-    padding: 10px;
-    background-color: #dedede;
+form .user-details .input-box {
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
 }
 
-.box-1-profiel {
-    flex: 1;
+form .input-box label.details {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
 }
 
-.box-2-profiel {
-    flex: 8;
+.user-details .input-box input {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
 }
 
-.box-3-profiel {
-    flex: 1;
+/* Geslacht in form */
+.user-details .input-box input:focus {
+    border-color: #d81e05;
 }
 
-.form-fname {
-    flex: 1;
-}
-.form-mname {
-    flex: 1;
-}
-.form-lname {
-    flex: 1;
+form .gender-details .gender-title {
+    font-size: 20px;
+    font-weight: 500;
 }
 
-.form-profielFoto {
-    flex: 1;
+form .category {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    margin: 14px 0;
 }
 
-.form-persoonInfo {
-    flex: 1;
+form .category label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+form .category label .dot {
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    margin: 2px 10px 2px 0;
+    background: #d9d9d9;
+    border: 5px solid transparent;
+    transition: all 0.3s ease;
 }
 
-.form-interesses {
-    flex: 1;
+#dot-1:checked ~ .category label .one,
+#dot-2:checked ~ .category label .two,
+#dot-3:checked ~ .category label .three {
+    background: #d81e05;
+    border-color: #d9d9d9;
+}
+form input[type="radio"] {
+    display: none;
 }
 
-.form-socialMedia {
-    flex: 1;
+/* Opslaan button in form */
+form .button {
+    height: 45px;
+    margin: 35px 0
 }
-
-.form-geslacht {
-    flex: 1;
+form .button input {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: #d81e05;
 }
-
-.form-contact {
-    flex: 1;
-}
-
-.form-budget {
-    flex: 1;
-}
-
-.form-leeftijdMatch {
-    flex: 1;
-}
-
-.form-soortVakantie {
-    flex: 1;
-}
-
-.form-duurVakantie {
-    flex: 1;
-}
-
-.form-submit {
-    flex: 1;
+form .button input:hover {
+    /* transform: scale(0.99); */
+    background: #b81a04;
 }
 
 /* matches.html met potentiële_matches.html */
