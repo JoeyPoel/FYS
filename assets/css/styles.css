@@ -1,33 +1,11 @@
 body {
+    margin: 0;
+    padding: 0;
     background-color: #fafafa;
     font-family: Open Sans WF,sans-serif;
 }
 
-.container-1 {
-    display: flex;
-}
-
-.container-1 div {
-    border: 1px #ccc solid;
-    padding: 10px;
-}
-
-.box-1 {
-    background-color: darkturquoise;
-    flex: 1;
-}
-
-.box-2 {
-    background-color: rebeccapurple;
-    flex: 1;
-}
-
-.box-3 {
-    background-color: green;
-    flex: 1;
-}
-
-/* Navigation */
+/* Header/navigation */
 nav {
     display: flex;
     background-color: #d81e05;
@@ -65,124 +43,147 @@ ul {
     list-style-type: none;
 }
 
-/* ::-webkit-scrollbar {
-    display: none; // Hide vertical scrollbar
-
-}
-*/
 #logo {
     width: 240px;
     height: 60px;
 }
 
-/* Navigation */
+/* Footer */
 footer p {
     display: flex;
     margin: 0;
     background-color: #d6d6d6;
 }
 
+/* Other */
+textarea {
+    resize: none;
+}
+
 .checklist {
     color: #51a334;
 }
 
-/*
-Profiel
- */
-profielbox {
-    border: #b81a04 2px solid;
-    border-radius: 5px;
+/* index.html */
+.container-1-index {
+    display: flex;
+}
+
+.container-1-index div {
+    border: 1px black solid;
     padding: 10px;
-    width: 700px;
-    margin: 20px auto 20px;
-    box-shadow: 0 0 2px #d81e05;
-
 }
 
-#naam{
+.box-1 {
+    background-color: #d1d1d1;
+    flex: 1;
+    margin-right: 15px;
+}
+
+.box-2 {
+    background-color: white;
+    flex: 8;
+}
+
+.box-3 {
+    background-color: #d1d1d1;
+    flex: 1;
+    margin-left: 15px;
+}
+
+/* profiel.html met potentiële_matches.html */
+form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+form div {
+    border: 1px black solid;
     padding: 10px;
-    resize: none;
-    float: top;
-    align-content: flex-end;
+    background-color: #dedede;
 }
 
-#tekstProfielFoto{
-    font-weight: bold;
-    align-content: flex-end;
+.form-fname {
+    flex: 1;
+}
+.form-mname {
+    flex: 1;
+}
+.form-lname {
+    flex: 1;
 }
 
-#eigenTekst{
-    min-height: 150px;
-    padding: 10px;
-    resize: none;
+.form-profielFoto {
+    flex: 1;
 }
 
-textarea{
-    resize: none;
-    border: 1px solid #b81a04;
-    box-shadow: 0 0 2px #b81a04;
-    border-radius: 8px;
-    outline: none !important;
+.form-persoonInfo {
+    flex: 1;
 }
 
-#interesses{
-    height: 200px;
+.form-interesses {
+    flex: 1;
 }
 
-#whatsappCheckbox{
-    accent-color: #d81e05;
+.form-socialMedia {
+    flex: 1;
 }
 
-#telegramCheckbox{
-    accent-color: #d81e05;
+.form-geslacht {
+    flex: 1;
 }
 
-#leeftijd{
-    height: 130px;
-    overflow-y: hidden;
+.form-contact {
+    flex: 1;
 }
 
-select{
-    box-shadow: 0 0 2px #b81a04;
-    border: 1px solid #b81a04;
-    border-radius: 2px;
-    outline: none !important;
-    padding: 1px;
+.form-budget {
+    flex: 1;
 }
 
-confirm{
-    margin: auto;
+.form-leeftijdMatch {
+    flex: 1;
 }
 
-#opslaan{
-    background-color: #d81e05;
-    color: white;
-    border: white;
-    padding: 20px;
+.form-soortVakantie {
+    flex: 1;
 }
 
-#opslaan:hover{
-    background-color: #b81a04;
+.form-duurVakantie {
+    flex: 1;
 }
 
-.column {
-    float: left;
-    width: 33%;
-    padding: 5px;
-    margin: 2px;
-    border: black 1px solid;
+.form-submit {
+    flex: 1;
 }
 
-.column img {
-    width: 100%;
-}
-
-.column h2 {
+/* matches.html */
+.container-1-matches {
+    display: flex;
+    flex-wrap: wrap;
     text-align: center;
 }
-.row::after {
-    content: "";
-    clear: both;
-    display: table;
+
+.container-1-matches div {
+    border: 1px black solid;
 }
 
+.box-1-matches {
+    flex: 1;
+}
+
+.box-2-matches {
+    flex: 1;
+}
+
+.box-3-matches {
+    flex: 1;
+}
+
+.img-profielFoto {
+    width: 200px;
+}
+
+/* over.html */
+
+/* contact.html */
