@@ -148,6 +148,7 @@ textarea {
     position: relative;
 }
 
+/* Profiel input */
 .content form .user-details {
     display: flex;
     flex-wrap: wrap;
@@ -179,11 +180,11 @@ form .input-box label.details {
     box-sizing: border-box;
 }
 
-/* Geslacht in form */
 .user-details .input-box input:focus {
     border-color: #d81e05;
 }
 
+/* Geslacht in form */
 form .gender-details .gender-title {
     font-size: 20px;
     font-weight: 500;
@@ -201,6 +202,7 @@ form .category label {
     align-items: center;
     cursor: pointer;
 }
+
 form .category label .dot {
     height: 18px;
     width: 18px;
@@ -217,6 +219,7 @@ form .category label .dot {
     background: #d81e05;
     border-color: #d9d9d9;
 }
+
 form input[type="radio"] {
     display: none;
 }
@@ -226,6 +229,7 @@ form .button {
     height: 45px;
     margin: 35px 0
 }
+
 form .button input {
     height: 100%;
     width: 100%;
@@ -244,6 +248,58 @@ form .button input:hover {
     background: #b81a04;
 }
 
+/* selections */
+.content form .user-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+/* interesses */
+#interesses {
+    height: 200px;
+    width: 50%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+#interesses:focus{
+    border-color: #d81e05;
+}
+
+label.interesses  {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+/* budget */
+#budget {
+    height: 200px;
+    width: 50%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+#budget:focus{
+    border-color: #d81e05;
+}
+
+label.budget  {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
 /* matches.html met potentiële_matches.html */
 .container-1-matches {
     display: flex;

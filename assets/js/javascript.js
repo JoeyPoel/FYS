@@ -50,3 +50,5 @@ class myFooter extends HTMLElement {
 
 // Any time the HTML parser runs across a tag named my-footer, it will populate its innerHTML
 customElements.define('my-footer', myFooter)
+
+
