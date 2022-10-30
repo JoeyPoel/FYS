@@ -248,17 +248,19 @@ form .button input:hover {
     background: #b81a04;
 }
 
+
+
 /* selections */
-.content form .user-details {
+
+.selections {
     display: flex;
-    flex-wrap: wrap;
+    flex: 2;
     justify-content: space-between;
-    margin: 20px 0 12px 0;
 }
-/* interesses */
-#interesses {
+
+#interesses, #budget, #soortVakantie {
+    width: 100%;
     height: 200px;
-    width: 50%;
     outline: none;
     font-size: 16px;
     border-radius: 5px;
@@ -268,38 +270,16 @@ form .button input:hover {
     box-sizing: border-box;
 }
 
-#interesses:focus{
+#interesses:focus, #budget:focus, #soortVakantie:focus{
     border-color: #d81e05;
 }
 
-label.interesses  {
+label.interesses, label.budget, label.soortVakantie {
     display: block;
     font-weight: 500;
     margin-bottom: 5px;
 }
 
-/* budget */
-#budget {
-    height: 200px;
-    width: 50%;
-    outline: none;
-    font-size: 16px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    border-bottom-width: 2px;
-    transition: all 0.3s ease;
-    box-sizing: border-box;
-}
-
-#budget:focus{
-    border-color: #d81e05;
-}
-
-label.budget  {
-    display: block;
-    font-weight: 500;
-    margin-bottom: 5px;
-}
 /* matches.html met potentiële_matches.html */
 .container-1-matches {
     display: flex;
