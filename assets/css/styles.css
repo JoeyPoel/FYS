@@ -329,6 +329,7 @@ label.interesses, label.budget, label.soortVakantie {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex: 1;
 }
 
 .info-corendon, .info-schoolProject, .info-overOns{
@@ -339,7 +340,7 @@ label.interesses, label.budget, label.soortVakantie {
     border-bottom: 2px #2B2B2BFF solid;
     box-shadow: 0 5px 10px rgba(0,0,0,0.15);
     border-radius: 5px;
-    max-width: 400px;
+    max-width: 370px;
     margin: 10px;
     width: 100%;
     text-align: center;
