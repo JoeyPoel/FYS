@@ -309,5 +309,51 @@ label.interesses, label.budget, label.soortVakantie {
 }
 
 /* over.html */
+.main-over{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fafafa;
+}
 
+.container-1-over{
+    max-width: 1200px;
+    width: 100%;
+    background-color: #fff;
+    padding: 25px 30px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+}
+
+.content-over{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.info-corendon, .info-schoolProject, .info-overOns{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    border: 1px #2B2B2BFF solid;
+    border-bottom: 2px #2B2B2BFF solid;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+    border-radius: 5px;
+    max-width: 400px;
+    margin: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.subtitel-over{
+    align-self: center;
+}
+
+@media (max-width: 768px) {
+    .content-over {
+        flex-direction: column;
+        padding-top: 20px;
+        text-align: center;
+    }
+}
 /* contact.html */
