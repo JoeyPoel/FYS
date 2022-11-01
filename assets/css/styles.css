@@ -101,28 +101,23 @@ textarea {
 }
 
 /* index.html */
-.container-1-index {
+.main-index{
     display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fafafa;
 }
 
-.box-1 {
-    background-color: #d1d1d1;
-    flex: 1;
-    margin-right: 15px;
-    max-width: 200px;
+.container-1-index{
+    max-width: 1200px;
+    width: 100%;
+    background-color: #fff;
+    padding: 25px 30px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
 }
 
-.box-2 {
-    background-color: white;
-    flex: 8;
-}
 
-.box-3 {
-    background-color: #d1d1d1;
-    flex: 1;
-    margin-left: 15px;
-    max-width: 200px;
-}
 
 /* profiel.html */
 .main-profiel {
@@ -245,8 +240,6 @@ form .button input:hover {
     /* transform: scale(0.99); */
     background: #b81a04;
 }
-
-
 
 /* selections */
 
