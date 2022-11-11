@@ -4,6 +4,7 @@ body {
     box-sizing: border-box;
     background-color: #fafafa;
     font-family: Open Sans WF,sans-serif;
+    overflow-x: hidden;
 }
 
 /* Header/navigation */
@@ -316,14 +317,34 @@ label.interesses, label.budget, label.soortVakantie {
     box-shadow: 0 5px 10px rgba(0,0,0,0.15);
 }
 
+.titel-over{
+    text-align: center;
+}
+
 .content-over{
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    /*justify-content: space-between;*/
+    justify-content: center;
+    align-items: center;
     flex: 1;
 }
 
-.info-corendon, .info-schoolProject, .info-overOns{
+.info{
+    transform: translateX(400%);
+    transition: transform 1s ease;
+}
+
+.info:nth-of-type(even){
+    transform: translateX(-400%)
+}
+
+.info.show{
+    transform: translateX(0%);
+
+}
+
+.info{
     display: flex;
     flex-direction: column;
     padding: 5px;

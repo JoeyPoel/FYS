@@ -52,3 +52,24 @@ class myFooter extends HTMLElement {
 customElements.define('my-footer', myFooter)
 
 
+//Over pagina scroll
+
+const boxes = document.querySelectorAll('.info');
+
+window.addEventListener('scroll',checkInfo);
+
+checkInfo();
+
+function checkInfo() {
+    const triggerBottom = window.innerHeight / 5 * 4;
+
+    boxes.forEach((info) =>{
+        const boxTop = info.getBoundingClientRect().top;
+
+        if (boxTop < triggerBottom) {
+            info.classList.add('show');
+        } else {
+            info.classList.remove('show')
+        }
+    })
+}
