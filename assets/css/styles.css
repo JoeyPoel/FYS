@@ -4,7 +4,7 @@ body {
     box-sizing: border-box;
     background-color: #fafafa;
     font-family: Open Sans WF,sans-serif;
-    /*overflow-x: hidden;*/
+    overflow-x: hidden;
 }
 
 /* Header/navigation */
