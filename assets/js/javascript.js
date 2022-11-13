@@ -86,3 +86,9 @@ setInterval(function(){
         counter = 1;
     }
 }, 5000);
+
+// matches
+
+function instagram() {
+    location.replace("https://www.instagram.com/")
+}
