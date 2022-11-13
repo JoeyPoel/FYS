@@ -77,6 +77,8 @@ function checkInfo() {
 // slides op main page
 
 let counter = 2;
+
+
 setInterval(function(){
     document.getElementById('radio' + counter).checked = true;
     counter++;
