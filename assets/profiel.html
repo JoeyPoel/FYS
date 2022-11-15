@@ -13,7 +13,7 @@
     <meta name="keywords" content="website, corendon" />
 
     <!-- JavaScript implementation -->
-    <script type="module" src="js/javascript.js"></script>
+    <script src="js/javascript.js"></script>
     <script src="https://cdn.fys.cloud/fyscloud/0.0.4/fyscloud.min.js"></script>
     <script src="js/config.js"></script>
 
@@ -33,45 +33,45 @@
     <div class="container-1-profiel">
         <div class="title">Profiel</div>
         <div class="content">
-            <form action="#">
+            <form id="form" name="form" onclick="return validateForm()">
                 <div class="user-details">
                     <div class="input-box">
                         <label class="details">Voornaam</label>
-                        <input type="text" placeholder="Vul je voornaam in" required>
+                        <input type="text" id="voornaam" name="voornaam" placeholder="Vul je voornaam in" required>
                     </div>
                     <div class="input-box">
                         <label class="details">Tussenvoegsel (optioneel)</label>
-                        <input type="text" placeholder="Vul je tussenvoegsel in">
+                        <input type="text" id="tussenvoegsel" name="tussenvoegsel" placeholder="Vul je tussenvoegsel in">
                     </div>
                     <div class="input-box">
                         <label class="details">Achternaam</label>
-                        <input type="text" placeholder="Vul je achternaam in" required>
+                        <input type="text" id="achternaam" name="achternaam" placeholder="Vul je achternaam in" required>
                     </div>
                     <div class="input-box">
                         <label class="details">E-mail</label>
-                        <input type="email" placeholder="Vul je e-mail in" required>
+                        <input type="email" id="email" name="email" placeholder="Vul je e-mail in" required>
                     </div>
                     <div class="input-box">
                         <label class="details">Wachtwoord</label>
-                        <input type="password" placeholder="Vul je wachtwoord in" required>
+                        <input type="password" id="wachtwoord" name="wachtwoord" placeholder="Vul je wachtwoord in" required>
                     </div>
                     <div class="input-box">
                         <label class="details">Wachtwoord bevestigen</label>
-                        <input type="password" placeholder="Wachtwoord bevestigen" required>
+                        <input type="password" id="wachtwoordbv" name="wachtwoordbv" placeholder="Wachtwoord bevestigen" required>
                     </div>
                     <div class="input-box">
                         <label class="details">Telefoonnummer (optioneel)</label>
-                        <input type="tel" placeholder="Vul je telefoonnummer in">
+                        <input type="tel" id="telnummer" name="telnummer" placeholder="Vul je telefoonnummer in">
                     </div>
                     <div class="input-box">
                         <label class="details">Leeftijd </label>
-                        <input type="number" min="18" max="100" placeholder="Vul je leeftijd in" required>
+                        <input type="number" min="18" max="100" id="leeftijd" name="leeftijd" placeholder="Vul je leeftijd in" required>
                     </div>
                 </div>
                 <div class="gender-details">
-                    <input type="radio" name="gender" id="dot-1">
-                    <input type="radio" name="gender" id="dot-2">
-                    <input type="radio" name="gender" id="dot-3">
+                    <input type="radio" id="dot-1" name="gender">
+                    <input type="radio" id="dot-2" name="gender">
+                    <input type="radio" id="dot-3" name="gender">
                     <span class="gender-title">Geslacht (optioneel)</span>
                     <div class="category">
                         <label for="dot-1">
@@ -89,10 +89,9 @@
                     </div>
                 </div>
                 <div class="selections">
-
                     <div class="interesses">
                         <label class="interesses">Selecteer uw interesses</label>
-                        <select id="interesses" multiple required>
+                        <select id="interesses" name="interesses" multiple required>
                             <!-- <option disabled selected value> -- Kies een interesse -- </option> -->
                             <option value="Zwemmen">Zwemmen</option>
                             <option value="Fietsen">Fietsen</option>
@@ -108,7 +107,7 @@
                     </div>
                     <div class="budget">
                         <label class="budget">Selecteer uw budget</label>
-                        <select id="budget" multiple required>
+                        <select id="budget" name="budget" multiple required>
                             <option value="500">€500</option>
                             <option value="1000">€1000</option>
                             <option value="1500">€1500</option>
@@ -133,7 +132,7 @@
                     </div>
                     <div class="soortVakantie">
                         <label class="soortVakantie">Selecteer uw soort vakantie</label>
-                        <select id="soortVakantie" multiple required>
+                        <select id="soortVakantie" name="soortVakantie" multiple required>
                             <option value="Cruise">Cruise</option>
                             <option value="Fly-DriveVakantie">Fly-Drive vakantie</option>
                             <option value="Formule1">Formule 1</option>
@@ -144,10 +143,8 @@
                         </select>
                     </div>
                 </div>
-
-
                 <div class="button">
-                    <input type="submit" value="Gegevens opslaan">
+                    <input type="submit" value="Gegevens opslaan" id="btn" onclick="Submit()">
                 </div>
             </form>
         </div>
