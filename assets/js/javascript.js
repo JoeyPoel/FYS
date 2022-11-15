@@ -14,7 +14,7 @@ class myHeader extends HTMLElement {
                             <li><a class="list-link-logo" href="../index.html"><img src="img/home_icon.png" alt="Home icon"></a></li>
                             <li><a class="list-link" href="profiel.html">Profiel</a></li>
                             <li><a class="list-link" href="matches.html">Matches</a></li>
-                            <li><a class="list-link" href="potentiële_matches.html">Potentiële matches</a></li>
+                            <li><a class="list-link" href="potentiële_matches.html">Zoek andere reizigers</a></li>
                             <li><a class="list-link" href="over.html">Over</a></li>
                             <li><a class="list-link" href="contact.html">Contact</a></li>
                         </ul>
@@ -92,3 +92,11 @@ setInterval(function(){
 function instagram() {
     location.replace("https://www.instagram.com/")
 }
+
+FYSCloud.API.queryDatabase(
+    "SELECT * FROM message"
+).then(function(data) {
+    console.log(data);
+}).catch(function(reason) {
+    console.log(reason);
+});
