@@ -661,4 +661,32 @@ main.container-1-profiel_match {
     margin-top: 20px;
 }
 
+/* match buttons */
+.button_Match {
+    flex: 30%;
+    display: table;
+    align-items: center;
+    text-align: center;
+    font-size: 40px;
+    background-color: #55fc42;
+    color: #000000;
+    padding: 30px 30px;
+    border-radius: 20px;
+}
+.button_DontMatch {
+    position: relative;
+    left: 320px;
+    bottom: 140px;
+    flex: 30%;
+    display: table;
+    align-items: center;
+    text-align: center;
+    font-size: 40px;
+    background-color: #ff0d0d;
+    color: #000000;
+    padding: 30px 30px;
+    border-radius: 20px;
+
+}
+
 
