@@ -280,11 +280,6 @@ label.interesses, label.budget, label.soortVakantie {
     text-align: center;
 }
 
-.container-1-matches div {
-    border: 1px black solid;
-    border-right: 0;
-}
-
 .box-1-matches {
     flex: 1;
 }
