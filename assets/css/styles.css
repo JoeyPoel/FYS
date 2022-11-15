@@ -280,18 +280,6 @@ label.interesses, label.budget, label.soortVakantie {
     text-align: center;
 }
 
-.box-1-matches {
-    flex: 1;
-}
-
-.box-2-matches {
-    flex: 1;
-}
-
-.box-3-matches {
-    flex: 1;
-}
-
 .img-profielFoto {
     width: 200px;
 }
@@ -475,7 +463,6 @@ label.interesses, label.budget, label.soortVakantie {
 /* matches.html */
 
 .container-1-matches {
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -559,6 +546,18 @@ label.interesses, label.budget, label.soortVakantie {
 
 button:hover, a:hover {
     opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+    .container-1-matches  {
+        flex-direction: row;
+        padding-top: 20px;
+        text-align: center;
+    }
+
+    .box-1-matches, .box-2-matches, .box-3-matches{
+        margin-bottom: 20px;
+    }
 }
 
 /* profiel_match.html */
