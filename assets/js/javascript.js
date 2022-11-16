@@ -90,7 +90,6 @@ function retrieveData() {
 }
 
 //Over pagina scroll
-
 const boxes = document.querySelectorAll('.info');
 
 window.addEventListener('scroll',checkInfo);
@@ -112,7 +111,6 @@ function checkInfo() {
 }
 
 // Slides op main page
-
 let counter = 2;
 
 setInterval(function(){

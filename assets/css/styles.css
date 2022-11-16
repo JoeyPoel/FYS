@@ -96,13 +96,7 @@ nav a:hover {
     background-color: #d6d6d6;
 }
 
-/* Other */
-textarea {
-    resize: none;
-}
-
 /* index.html */
-
 .main-index{
     display: flex;
     justify-content: center;
@@ -118,8 +112,6 @@ textarea {
     border-radius: 5px;
     box-shadow: 0 5px 10px rgba(0,0,0,0.15);
 }
-
-
 
 /* profiel.html */
 .main-profiel {
@@ -238,13 +230,13 @@ form .button input {
     transition: all 0.3s ease;
     background: #d81e05;
 }
+
 form .button input:hover {
     /* transform: scale(0.99); */
     background: #b81a04;
 }
 
 /* selections */
-
 .selections {
     display: flex;
     flex: 2;
@@ -325,7 +317,6 @@ label.interesses, label.budget, label.soortVakantie {
 
 .info.show{
     transform: translateX(0%);
-
 }
 
 .info{
@@ -346,13 +337,6 @@ label.interesses, label.budget, label.soortVakantie {
     align-self: center;
 }
 
-@media (max-width: 768px) {
-    .content-over {
-        flex-direction: column;
-        padding-top: 20px;
-        text-align: center;
-    }
-}
 /* contact.html */
 
 /* Slider op main page */
@@ -406,6 +390,7 @@ label.interesses, label.budget, label.soortVakantie {
     cursor: pointer;
     transition: 1s;
 }
+
 .manual-btn:not(:last-child){
     margin-right: 40px;
 }
@@ -417,12 +402,15 @@ label.interesses, label.budget, label.soortVakantie {
 #radio1:checked ~ .first{
     margin-left: 0;
 }
+
 #radio2:checked ~ .first{
     margin-left: -20%;
 }
+
 #radio3:checked ~ .first{
     margin-left: -40%;
 }
+
 #radio4:checked ~ .first{
     margin-left: -60%;
 }
@@ -450,18 +438,20 @@ label.interesses, label.budget, label.soortVakantie {
 #radio1:checked ~ .navigation-auto .auto-btn1{
     background: white ;
 }
+
 #radio2:checked ~ .navigation-auto .auto-btn2{
     background: white;
 }
+
 #radio3:checked ~ .navigation-auto .auto-btn3{
     background: white;
 }
+
 #radio4:checked ~ .navigation-auto .auto-btn4{
     background: white;
 }
 
 /* matches.html */
-
 .container-1-matches {
     display: flex;
     justify-content: center;
@@ -481,7 +471,6 @@ label.interesses, label.budget, label.soortVakantie {
     margin-left: 50px;
     margin-right: 50px;
     box-shadow: 0 0.3em 0.7em;
-
 }
 
 .kleur_foto {
@@ -548,20 +537,7 @@ button:hover, a:hover {
     opacity: 0.7;
 }
 
-@media (max-width: 768px) {
-    .container-1-matches  {
-        flex-direction: row;
-        padding-top: 20px;
-        text-align: center;
-    }
-
-    .box-1-matches, .box-2-matches, .box-3-matches{
-        margin-bottom: 20px;
-    }
-}
-
 /* profiel_match.html */
-
 main.container-1-profiel_match {
     margin: 0;
     padding: 0;
@@ -574,7 +550,6 @@ main.container-1-profiel_match {
 .foto_match{
     width: 200px;
     height: auto;
-
 }
 
 *.container-1-profiel_match {
@@ -654,7 +629,6 @@ main.container-1-profiel_match {
 
 .about ul li {
     list-style: none;
-
 }
 
 .about.ul {
@@ -673,6 +647,7 @@ main.container-1-profiel_match {
     padding: 30px 30px;
     border-radius: 20px;
 }
+
 .button_DontMatch {
     position: relative;
     left: 320px;
@@ -686,7 +661,28 @@ main.container-1-profiel_match {
     color: #000000;
     padding: 30px 30px;
     border-radius: 20px;
-
 }
 
+/* Other */
+textarea {
+    resize: none;
+}
 
+/* CSS for smaller displays */
+@media (max-width: 768px) {
+    .container-1-matches  {
+        flex-direction: row;
+        padding-top: 20px;
+        text-align: center;
+    }
+
+    .box-1-matches, .box-2-matches, .box-3-matches{
+        margin-bottom: 20px;
+    }
+
+    .content-over {
+        flex-direction: column;
+        padding-top: 20px;
+        text-align: center;
+    }
+}
