@@ -89,7 +89,7 @@ function retrieveData() {
     return arr;
 }
 
-// Over pagina scroll
+//Over pagina scroll
 
 const boxes = document.querySelectorAll('.info');
 
