@@ -1,4 +1,9 @@
+html {
+    min-height: 100%;
+}
+
 body {
+    min-height: 100%;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -90,19 +95,9 @@ nav a:hover {
 }
 
 /* Footer */
-.footer-box-1 p {
-    padding: 0;
-    margin: 0;
-    background-color: #d6d6d6;
-}
 
-/* Other */
-textarea {
-    resize: none;
-}
 
 /* index.html */
-
 .main-index{
     display: flex;
     justify-content: center;
@@ -118,8 +113,6 @@ textarea {
     border-radius: 5px;
     box-shadow: 0 5px 10px rgba(0,0,0,0.15);
 }
-
-
 
 /* profiel.html */
 .main-profiel {
@@ -263,13 +256,13 @@ form .button input {
     transition: all 0.3s ease;
     background: #d81e05;
 }
+
 form .button input:hover {
     /* transform: scale(0.99); */
     background: #b81a04;
 }
 
 /* selections */
-
 .selections {
     display: flex;
     flex: 2;
@@ -310,14 +303,14 @@ label.interesses, label.budget, label.soortVakantie {
 }
 
 /* over.html */
-.main-over{
+.main-over {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #fafafa;
 }
 
-.container-1-over{
+.container-1-over {
     max-width: 1200px;
     width: 100%;
     background-color: #fff;
@@ -326,11 +319,11 @@ label.interesses, label.budget, label.soortVakantie {
     box-shadow: 0 5px 10px rgba(0,0,0,0.15);
 }
 
-.titel-over{
+.titel-over {
     text-align: center;
 }
 
-.content-over{
+.content-over {
     display: flex;
     flex-direction: column;
     /*justify-content: space-between;*/
@@ -339,21 +332,20 @@ label.interesses, label.budget, label.soortVakantie {
     flex: 1;
 }
 
-.info{
+.info {
     transform: translateX(400%);
     transition: transform 1s ease;
 }
 
-.info:nth-of-type(even){
+.info:nth-of-type(even) {
     transform: translateX(-400%)
 }
 
-.info.show{
+.info.show {
     transform: translateX(0%);
-
 }
 
-.info{
+.info {
     display: flex;
     flex-direction: column;
     padding: 5px;
@@ -367,21 +359,14 @@ label.interesses, label.budget, label.soortVakantie {
     text-align: center;
 }
 
-.subtitel-over{
+.subtitel-over {
     align-self: center;
 }
 
-@media (max-width: 768px) {
-    .content-over {
-        flex-direction: column;
-        padding-top: 20px;
-        text-align: center;
-    }
-}
 /* contact.html */
 
 /* Slider op main page */
-.sliderBox{
+.sliderBox {
     margin: 0;
     padding: 0;
     display: flex;
@@ -389,34 +374,34 @@ label.interesses, label.budget, label.soortVakantie {
     align-items: center;
 }
 
-.slider{
+.slider {
     width:800px;
     height:500px;
     border-radius: 10px;
     overflow: hidden;
 }
 
-.slides{
+.slides {
     width: 500%;
     height: 500px;
     display: flex;
 }
 
-.slides input{
+.slides input {
     display: none;
 }
 
-.slide{
+.slide {
     width: 20%;
     transition: 2s;
 }
 
-.slide img{
+.slide img {
     width: 800px;
     height: 500px;
 }
 
-.navigation-manual{
+.navigation-manual {
     position: absolute;
     width: 800px;
     margin-top: -40px;
@@ -424,36 +409,40 @@ label.interesses, label.budget, label.soortVakantie {
     justify-content: center;
 }
 
-.manual-btn{
+.manual-btn {
     border: 2px solid white;
     padding: 5px;
     border-radius: 10px;
     cursor: pointer;
     transition: 1s;
 }
-.manual-btn:not(:last-child){
+
+.manual-btn:not(:last-child) {
     margin-right: 40px;
 }
 
-.manual-btn:hover{
+.manual-btn:hover {
     background: white;
 }
 
-#radio1:checked ~ .first{
+#radio1:checked ~ .first {
     margin-left: 0;
 }
-#radio2:checked ~ .first{
+
+#radio2:checked ~ .first {
     margin-left: -20%;
 }
-#radio3:checked ~ .first{
+
+#radio3:checked ~ .first {
     margin-left: -40%;
 }
-#radio4:checked ~ .first{
+
+#radio4:checked ~ .first {
     margin-left: -60%;
 }
 
 /* Automatische slides */
-.navigation-auto{
+.navigation-auto {
     position: absolute;
     display: flex;
     width: 800px;
@@ -461,32 +450,34 @@ label.interesses, label.budget, label.soortVakantie {
     margin-top: 460px;
 }
 
-.navigation-auto div{
+.navigation-auto div {
     border: 2px solid white;
     padding: 5px;
     border-radius: 10px;
     transition: 1s;
 }
 
-.navigation-auto div:not(:last-child){
+.navigation-auto div:not(:last-child) {
     margin-right: 40px;
 }
 
-#radio1:checked ~ .navigation-auto .auto-btn1{
+#radio1:checked ~ .navigation-auto .auto-btn1 {
     background: white ;
 }
-#radio2:checked ~ .navigation-auto .auto-btn2{
+
+#radio2:checked ~ .navigation-auto .auto-btn2 {
     background: white;
 }
-#radio3:checked ~ .navigation-auto .auto-btn3{
+
+#radio3:checked ~ .navigation-auto .auto-btn3 {
     background: white;
 }
-#radio4:checked ~ .navigation-auto .auto-btn4{
+
+#radio4:checked ~ .navigation-auto .auto-btn4 {
     background: white;
 }
 
 /* matches.html */
-
 .container-1-matches {
     display: flex;
     justify-content: center;
@@ -496,7 +487,7 @@ label.interesses, label.budget, label.soortVakantie {
     box-sizing: border-box;
 }
 
-.box-1-matches, .box-2-matches, .box-3-matches{
+.box-1-matches, .box-2-matches, .box-3-matches {
     width: 20em;
     background-color: white;
     overflow: hidden;
@@ -506,7 +497,6 @@ label.interesses, label.budget, label.soortVakantie {
     margin-left: 50px;
     margin-right: 50px;
     box-shadow: 0 0.3em 0.7em;
-
 }
 
 .kleur_foto {
@@ -573,20 +563,7 @@ button:hover, a:hover {
     opacity: 0.7;
 }
 
-@media (max-width: 768px) {
-    .container-1-matches  {
-        flex-direction: row;
-        padding-top: 20px;
-        text-align: center;
-    }
-
-    .box-1-matches, .box-2-matches, .box-3-matches{
-        margin-bottom: 20px;
-    }
-}
-
 /* profiel_match.html */
-
 main.container-1-profiel_match {
     margin: 0;
     padding: 0;
@@ -599,7 +576,6 @@ main.container-1-profiel_match {
 .foto_match{
     width: 200px;
     height: auto;
-
 }
 
 *.container-1-profiel_match {
@@ -679,7 +655,6 @@ main.container-1-profiel_match {
 
 .about ul li {
     list-style: none;
-
 }
 
 .about.ul {
@@ -698,6 +673,7 @@ main.container-1-profiel_match {
     padding: 30px 30px;
     border-radius: 20px;
 }
+
 .button_DontMatch {
     position: relative;
     left: 320px;
@@ -711,7 +687,57 @@ main.container-1-profiel_match {
     color: #000000;
     padding: 30px 30px;
     border-radius: 20px;
-
 }
 
+/* 404.html */
+.main-404 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.container-1-404 {}
+
+.title-404 {
+    font-size: 25px;
+}
+
+/* Footer */
+.container-1-footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    background-color: #d6d6d6;
+    padding: 25px;
+}
+
+.container-1-footer p {
+    padding: 0;
+    margin: 0;
+}
+
+/* Other */
+textarea {
+    resize: none;
+}
+
+/* CSS for smaller displays */
+@media (max-width: 768px) {
+    .container-1-matches  {
+        flex-direction: row;
+        padding-top: 20px;
+        text-align: center;
+    }
+
+    .box-1-matches, .box-2-matches, .box-3-matches{
+        margin-bottom: 20px;
+    }
+
+    .content-over {
+        flex-direction: column;
+        padding-top: 20px;
+        text-align: center;
+    }
+}

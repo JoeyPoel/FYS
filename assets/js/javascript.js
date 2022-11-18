@@ -38,7 +38,7 @@ class myFooter extends HTMLElement {
         this.innerHTML = `
             <div class="container-1-footer">
                 <footer>
-                    <div class="footer-box-1">
+                    <div>
                         <p><a href="mailto:corendon@example.com">corendon@example.com</a></p>
                         <p>@ 2022 Corendon</p>
                     </div>
@@ -90,7 +90,6 @@ function retrieveData() {
 }
 
 //Over pagina scroll
-
 const boxes = document.querySelectorAll('.info');
 
 window.addEventListener('scroll',checkInfo);
@@ -112,7 +111,6 @@ function checkInfo() {
 }
 
 // Slides op main page
-
 let counter = 2;
 
 setInterval(function(){
