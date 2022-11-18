@@ -122,8 +122,33 @@ setInterval(function(){
 }, 5000);
 
 // Matches
-function instagram() {
-    location.replace("https://www.instagram.com/")
+function change() {
+    let styles = window.getComputedStyle(document.querySelector("#container-1-matches"))
+
+    function $(s) {
+        return undefined;
+    }
+
+    let container_1_matches = $(".container-1-matches");
+
+    container_1_matches.toggleClass("isOpen");
+
+    if (container_1_matches.hasClass("isOpen")) {
+
+        var cardsPerRow = Math.floor((window.innerWidth - 24) / 144)
+        var colums = styles.getPropertyValue('grid-template-colums').split(" ")
+        var cardWidth = parseFloat(colums[0]);
+
+        $('.box-1-matches,.box-2-matches,.box-3-matches').forEach(function (i, obj) {
+            var Y = i * 126;
+            var X = (i % cardsPerRow) * (cardWidth + 24);
+
+            obj.style.transform = `translateY(${Y}px) translateX(-${X}px)`;
+            obj.style.width = `calc(${window.innerWidth - 48}px)`;
+        });
+    } else {
+        $('.box-1-matches,.box-2-matches,.box-3-matches').cssFloat({"transform": "translateY(0)", "width": "120px"})
+    }
 }
 
 FYSCloud.API.queryDatabase(
