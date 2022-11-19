@@ -68,26 +68,45 @@
                         <input type="number" min="18" max="100" id="leeftijd" name="leeftijd" placeholder="Vul je leeftijd in" required>
                     </div>
                 </div>
-                <div class="gender-details">
-                    <input type="radio" id="dot-1" name="gender">
-                    <input type="radio" id="dot-2" name="gender">
-                    <input type="radio" id="dot-3" name="gender">
-                    <span class="gender-title">Geslacht (optioneel)</span>
-                    <div class="category">
-                        <label for="dot-1">
-                            <span class="dot one"></span>
-                            <span class="gender">Man</span>
-                        </label>
-                        <label for="dot-2">
-                            <span class="dot two"></span>
-                            <span class="gender">Vrouw</span>
-                        </label>
-                        <label for="dot-3">
-                            <span class="dot three"></span>
-                            <span class="gender">Geef ik liever niet</span>
-                        </label>
+                <div class="radioField1">
+                    <div class="gender-details">
+                        <input type="radio" id="dot-1" name="gender">
+                        <input type="radio" id="dot-2" name="gender">
+                        <input type="radio" id="dot-3" name="gender">
+                        <span class="gender-title">Geslacht (optioneel)</span>
+                        <div class="category">
+                            <label for="dot-1">
+                                <span class="dot one"></span>
+                                <span class="gender">Man</span>
+                            </label>
+                            <label for="dot-2">
+                                <span class="dot two"></span>
+                                <span class="gender">Vrouw</span>
+                            </label>
+                            <label for="dot-3">
+                                <span class="dot three"></span>
+                                <span class="gender">Geef ik liever niet</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="whatsappOfTelegram-details">
+                        <input type="radio" id="dot-Whatsapp">
+                        <input type="radio" id="dot-Telegram">
+                        <span class="whatsappOfTelegram-title">Ik wil bereikt worden met</span>
+                        <div class="category">
+                            <label for="dot-Whatsapp">
+                                <span class="dot Whatsapp"></span>
+                                <span class="gender">Whatsapp</span>
+                            </label>
+                            <label for="dot-Telegram">
+                                <span class="dot Telegram"></span>
+                                <span class="gender">Telegram</span>
+                            </label>
+                        </div>
                     </div>
                 </div>
+
                 <div class="selections">
                     <div class="interesses">
                         <label class="interesses">Selecteer uw interesses</label>
@@ -142,14 +161,32 @@
                             <option value="Zonvakantie">Zon vakantie</option>
                         </select>
                     </div>
+                    <div class="leeftijdGrens">
+                        <label class="leeftijdGrens">Selecteer de leeftijd grens van uw reispartner</label>
+                        <select id="leeftijdGrens" name="soortVakantie" multiple required>
+                            <option value="18-25">18-25</option>
+                            <option value="26-35">26-35</option>
+                            <option value="36-45">36-45</option>
+                            <option value="46-55">46-55</option>
+                            <option value="56-65">56-65</option>
+                            <option value="66-75">66-75</option>
+                            <option value="76-85">76-85</option>
+                            <option value="85+">85+</option>
+                        </select>
+                    </div>
                 </div>
+
+                <label class="labelSocialmedia">Kies uw sociale media (optioneel)</label>
                 <div class="socialmedia">
-                    <label class="labelSocialmedia">Kies uw sociale media (optioneel)</label>
-                    <input type="text" id="Instagram" name="Instagram" placeholder="Plak hier uw instagram">
-                    <input type="text" id="Twitter" name="Twitter" placeholder="Plak hier uw twitter">
-                    <input type="text" id="Linkedin" name="Linkedin" placeholder="Plak hier uw linkedin">
-                    <input type="text" id="Facebook" name="Facebook" placeholder="Plak hier uw facebook">
+                    <input type="text" id="Instagram" name="Instagram" placeholder="Vul uw Instagram naam in">
+                    <input type="text" id="Twitter" name="Twitter" placeholder="Vul uw Twitter naam in">
+                    <input type="text" id="LinkedIn" name="LinkedIn" placeholder="Vul uw LinkedIn naam in">
+                    <input type="text" id="Facebook" name="Facebook" placeholder="Vul uw Facebook naam in">
+                    <input type="text" id="Whatsapp" name="Whatsapp" placeholder="Vul uw Whatsapp naam in">
+                    <input type="text" id="Telegram" name="Telegram" placeholder="Vul uw Telegram naam in">
                 </div>
+
+
 
                 <div class="button">
                     <input type="submit" value="Gegevens opslaan" id="btn" onclick="Submit()">
