@@ -90,8 +90,7 @@ nav a:hover {
 .checklist {
     display: flex;
     color: #51a334;
-    padding: 0;
-    margin: 0;
+    margin: 0px 0px 10px;
 }
 
 /* Footer */
@@ -353,16 +352,30 @@ label.interesses, label.budget, label.soortVakantie {
     border-bottom: 2px #2B2B2BFF solid;
     box-shadow: 0 5px 10px rgba(0,0,0,0.15);
     border-radius: 5px;
-    max-width: 370px;
     margin: 10px;
     width: 100%;
-    text-align: center;
+    text-align: justify;
+    background-color: white;
 }
 
 .subtitel-over {
     align-self: center;
 }
 
+.over-article{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.img-over{
+    width: 50%;
+}
+
+.text-over{
+    padding-left: 10px;
+    padding-right: 10px;
+}
 /* contact.html */
 
 /* Slider op main page */
@@ -739,5 +752,14 @@ textarea {
         flex-direction: column;
         padding-top: 20px;
         text-align: center;
+    }
+
+    .over-article{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .img-over{
+        width: 100%;
     }
 }
