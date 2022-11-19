@@ -297,10 +297,17 @@ form .button input:hover {
 }
 
 /* selections */
+
+.selections-label{
+    font-size: 20px;
+    font-weight: 500;
+}
+
 .selections {
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
+    margin-top: 7px;
     flex-wrap: wrap;
 }
 
