@@ -122,9 +122,7 @@ setInterval(function(){
 }, 5000);
 
 // Matches
-function instagram() {
-    location.replace("https://www.instagram.com/")
-}
+
 
 FYSCloud.API.queryDatabase(
     "SELECT * FROM message"
