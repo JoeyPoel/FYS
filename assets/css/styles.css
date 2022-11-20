@@ -187,6 +187,17 @@ form .input-box label.details {
     width: 80%;
 }
 
+.SocialmediaLogos{
+    width: 50px;
+    padding-right: 5px;
+}
+
+.SocialmediaBox{
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+}
+
 .socialmedia input{
     height: 45px;
     outline: none;
