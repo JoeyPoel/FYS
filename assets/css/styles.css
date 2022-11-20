@@ -188,8 +188,9 @@ form .input-box label.details {
 }
 
 .SocialmediaLogos{
-    width: 50px;
+    height: 45px;
     padding-right: 5px;
+    margin-top: 10px;
 }
 
 .SocialmediaBox{
