@@ -68,26 +68,35 @@
                         <input type="number" min="18" max="100" id="leeftijd" name="leeftijd" placeholder="Vul je leeftijd in" required>
                     </div>
                 </div>
-                <div class="radioField1">
-                    <div class="gender-details">
-                        <input type="radio" id="dot-1" name="gender">
-                        <input type="radio" id="dot-2" name="gender">
-                        <input type="radio" id="dot-3" name="gender">
-                        <span class="gender-title">Geslacht (optioneel)</span>
-                        <div class="category">
-                            <label for="dot-1">
-                                <span class="dot one"></span>
-                                <span class="gender">Man</span>
-                            </label>
-                            <label for="dot-2">
-                                <span class="dot two"></span>
-                                <span class="gender">Vrouw</span>
-                            </label>
-                            <label for="dot-3">
-                                <span class="dot three"></span>
-                                <span class="gender">Geef ik liever niet</span>
-                            </label>
+                <div class="profielFotoEnRadioField1">
+                    <div class="profielFotoEnLabel">
+                        <label class="labelProfielFoto">Upload een foto van u zelf</label>
+                        <div class="profielFoto">
+                            <input type="file" id="profielFoto" onChange="handleImageUpload()" />
+                            <img id="display-image" src="../assets/img/profielfoto.png" />
                         </div>
+                    </div>
+
+                    <div class="radioField1">
+                        <div class="gender-details">
+                            <input type="radio" id="dot-1" name="gender">
+                            <input type="radio" id="dot-2" name="gender">
+                            <input type="radio" id="dot-3" name="gender">
+                            <span class="gender-title">Geslacht (optioneel)</span>
+                            <div class="category">
+                                <label for="dot-1">
+                                    <span class="dot one"></span>
+                                    <span class="gender">Man</span>
+                                </label>
+                                <label for="dot-2">
+                                    <span class="dot two"></span>
+                                    <span class="gender">Vrouw</span>
+                                </label>
+                                <label for="dot-3">
+                                    <span class="dot three"></span>
+                                    <span class="gender">Geef ik liever niet</span>
+                                </label>
+                            </div>
                     </div>
 
                     <div class="whatsappOfTelegram-details">
@@ -110,6 +119,7 @@
                             </label>
                         </div>
                     </div>
+                </div>
                 </div>
 
                 <label class="selections-label">Selecteer per onderdeel 1 of meerdere keuzes</label>
@@ -168,7 +178,7 @@
                         </select>
                     </div>
                     <div class="leeftijdGrens">
-                        <label class="leeftijdGrens">Selecteer de leeftijd grens van uw reispartner</label>
+                        <label class="leeftijdGrens">Selecteer de leeftijdsgrens van uw reispartner</label>
                         <select id="leeftijdGrens" name="soortVakantie" multiple required>
                             <option value="18-25">18-25</option>
                             <option value="26-35">26-35</option>
@@ -211,7 +221,10 @@
                     </div>
                 </div>
 
-
+                <label class="labelEigenTekst">Type hier een kleine tekst over u zelf</label>
+                <div class="eigenTekst">
+                    <textarea id="eigenTekst" placeholder="Type hier een tekst over u zelf"></textarea>
+                </div>
 
                 <div class="button">
                     <input type="submit" value="Gegevens opslaan" id="btn" onclick="Submit()">
