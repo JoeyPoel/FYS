@@ -121,8 +121,23 @@ setInterval(function(){
     }
 }, 5000);
 
-// Matches
 
+
+// PROFIEL FOTO UPLOAD
+function handleImageUpload()
+{
+
+    var image = document.getElementById("profielFoto").files[0];
+
+    var reader = new FileReader();
+
+    reader.onload = function(e) {
+        document.getElementById("display-image").src = e.target.result;
+    }
+
+    reader.readAsDataURL(image);
+
+}
 
 FYSCloud.API.queryDatabase(
     "SELECT * FROM message"
