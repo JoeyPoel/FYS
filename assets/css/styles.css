@@ -884,6 +884,14 @@ textarea {
 
 /* CSS for smaller displays */
 @media (max-width: 768px) {
+    .radioField1{
+        flex-direction: column;
+    }
+
+    .whatsappOfTelegram-details{
+        margin-left: 0;
+    }
+
     .container-1-matches  {
         flex-direction: row;
         padding-top: 20px;
