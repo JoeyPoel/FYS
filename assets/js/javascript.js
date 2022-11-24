@@ -159,12 +159,35 @@ function handleImageUpload()
     reader.readAsDataURL(image);
 
 }
+// PROFIEL UPLOAD TO DATABASE
 
-FYSCloud.API.queryDatabase(
-    "SELECT * FROM message"
-).then(function(data) {
-    console.log(data);
-}).catch(function(reason) {
-    console.log(reason);
+// maakt een array aan met alle personen
+let persoon = [];
+
+const addPersoon = (ev)=>{
+    ev.preventDefault(); // stop from submitting
+    let persoon = {
+        voornaam: document.getElementById('voornaam').value,
+        tussenvoegsel: document.getElementById('tussenvoegsel').value,
+        achternaam: document.getElementById('achternaam').value,
+        email: document.getElementById('email').value,
+        wachtwoord: document.getElementById('wachtwoord').value,
+        wachtwoordBevestigen: document.getElementById('wachtwoordbv').value,
+        telefoonNummer: document.getElementById('telnummer').value,
+        leeftijd: document.getElementById('leeftijd').value,
+        profielFoto: document.getElementById('profielFoto').value,
+    }
+    addPersoon.push(persoon)
+    document.forms[0].reset();
+
+    console.warn('added',{addPersoon});
+    let pre = document.querySelector('#msg pre');
+    pre.textContent = '\n' + JSON.stringify(addPersoon, '\t', 2);
+
+}
+
+document.addEventListener('DOMContentLoaded', ()=>{
+    document.getElementById('btn').addEventListener('click',addPersoon);
 });
+
 

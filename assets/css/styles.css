@@ -457,6 +457,7 @@ label.interesses, label.budget, label.soortVakantie label.leeftijdGrens {
     display: flex;
     flex-wrap: wrap;
     text-align: center;
+    min-height: 100vh;
 }
 
 .img-profielFoto {
