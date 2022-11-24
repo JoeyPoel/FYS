@@ -161,12 +161,11 @@ function handleImageUpload()
 }
 // PROFIEL UPLOAD TO DATABASE
 
-// maakt een array aan met alle personen
-let persoon = [];
+// Maak persoon object een array
 
 const addPersoon = (ev)=>{
     ev.preventDefault(); // stop from submitting
-    let persoon = {
+     let persoon = {
         voornaam: document.getElementById('voornaam').value,
         tussenvoegsel: document.getElementById('tussenvoegsel').value,
         achternaam: document.getElementById('achternaam').value,
@@ -177,17 +176,11 @@ const addPersoon = (ev)=>{
         leeftijd: document.getElementById('leeftijd').value,
         profielFoto: document.getElementById('profielFoto').value,
     }
-    addPersoon.push(persoon)
-    document.forms[0].reset();
-
-    console.warn('added',{addPersoon});
-    let pre = document.querySelector('#msg pre');
-    pre.textContent = '\n' + JSON.stringify(addPersoon, '\t', 2);
-
+    console.log (persoon);
 }
 
 document.addEventListener('DOMContentLoaded', ()=>{
-    document.getElementById('btn').addEventListener('click',addPersoon);
+    document.getElementById('btn').addEventListener('click',addPersoon());
 });
 
 
