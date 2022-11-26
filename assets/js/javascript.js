@@ -51,44 +51,6 @@ class myFooter extends HTMLElement {
 // Any time the HTML parser runs across a tag named my-footer, it will populate its innerHTML
 customElements.define('my-footer', myFooter);
 
-// Profiel
-// CRUD - Create, Read, Update, Delete
-
-/*function validateForm() {
-    let x = document.forms["form"]["voornaam"].value;
-    if (x == "") {
-        alert("Name must be filled out");
-        return false;
-    }
-}*/
-
-function Submit() {
-    var dataEntered = retrieveData();
-    console.log(dataEntered);
-}
-
-function retrieveData() {
-    var voornaam = document.getElementById("voornaam").value;
-    var tussenvoegsel = document.getElementById("tussenvoegsel").value;
-    var achternaam = document.getElementById("achternaam").value;
-    var email = document.getElementById("email").value;
-    var wachtwoord = document.getElementById("wachtwoord").value;
-    //var wachtwoordbv = document.getElementById("wachtwoordbv").value;
-    var telnummer = document.getElementById("telnummer").value;
-    var leeftijd = document.getElementById("leeftijd").value;
-    //var dot_one = document.getElementById("dot-1").value;
-    //var dot_two = document.getElementById("dot-2").value;
-    //var dot_three = document.getElementById("dot-3").value;
-    //var interesses = document.getElementById("interesses").value;
-    var budget = document.getElementById("budget").value;
-    var soortVakantie = document.getElementById("soortVakantie").value;
-
-    // Geen wachtwoordbv, specifieke gender
-
-    var arr = [voornaam, tussenvoegsel, achternaam, email, wachtwoord, telnummer, leeftijd, budget, soortVakantie];
-    return arr;
-}
-
 //Over pagina scroll
 const boxes = document.querySelectorAll('.info');
 
@@ -182,5 +144,4 @@ const addPersoon = (ev)=>{
 document.addEventListener('DOMContentLoaded', ()=>{
     document.getElementById('btn').addEventListener('click',addPersoon());
 });
-
 
