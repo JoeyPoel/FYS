@@ -134,12 +134,19 @@ async function addProfiel() {
     let leeftijd = document.getElementById('leeftijd').value;
     let profielFoto = document.getElementById('profielFoto').value;
 
-    let instagram = document.getElementById('').value;
-    let twitter = document.getElementById('').value;
-    let linkedIn = document.getElementById('').value;
-    let facebook = document.getElementById('').value;
-    let whatsapp = document.getElementById('').value;
-    let telegram = document.getElementById('').value;
+    let instagram = document.getElementById('Instagram').value;
+    let twitter = document.getElementById('Twitter').value;
+    let linkedIn = document.getElementById('LinkedIn').value;
+    let facebook = document.getElementById('Facebook').value;
+    let whatsapp = document.getElementById('Whatsapp').value;
+    let telegram = document.getElementById('Telegram').value;
+
+    // INLOG
+    // if(email en wachtwoord gelijk aan iets in database){
+    //     voeg dan aan die account_id het toe
+    // } else[
+    //     voeg nieuw account_id toe
+    // ]
 
     // EMAIL EN WACHTWOORD
     await FYSCloud.API.queryDatabase(
@@ -153,7 +160,7 @@ async function addProfiel() {
 
     // STANDAARD INFO
     await FYSCloud.API.queryDatabase(
-        "INSERT INTO persoon (voornaam, tussenvoegsel, achternaam, telefoon, leeftijd, persoon_info) VALUES (?)",
+        "INSERT INTO persoon (voornaam, tussenvoegsel, achternaam, telefoon, leeftijd, persoon_info) VALUES (?, ?, ?, ?, ?)",
         [voornaam, tussenvoegsel, achternaam, telefoonNummer, leeftijd]
     ).then(function (data) {
         console.log(data);
@@ -162,18 +169,18 @@ async function addProfiel() {
     });
 
     // RADIO EN SELECTIONS
-    await FYSCloud.API.queryDatabase(
-        "INSERT INTO persoon (foto, geslacht, budget, soort_vakantie, leeftijdsgrens_reispartner, persoon_info) VALUES (?)",
-        []
-    ).then(function (data) {
-        console.log(data);
-    }).catch(function (reason) {
-        console.log(reason);
-    });
+    // await FYSCloud.API.queryDatabase(
+    //     "INSERT INTO persoon (foto, geslacht, budget, soort_vakantie, leeftijdsgrens_reispartner, persoon_info) VALUES (?, ?, ?, ?, ?, ?)",
+    //     []
+    // ).then(function (data) {
+    //     console.log(data);
+    // }).catch(function (reason) {
+    //     console.log(reason);
+    // });
 
     //SOCIALMEDIA
     await FYSCloud.API.queryDatabase(
-        "INSERT INTO sociale_media (instagram, twitter, linkedin, facebook, whatsapp, telegram) VALUES (?)",
+        "INSERT INTO sociale_media (instagram, twitter, linkedin, facebook, whatsapp, telegram) VALUES (?, ?, ?, ?, ?, ?)",
         [instagram, twitter, linkedIn, facebook, whatsapp, telegram]
     ).then(function (data) {
         console.log(data);
