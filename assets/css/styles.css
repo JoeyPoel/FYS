@@ -682,7 +682,7 @@ label.interesses, label.budget, label.soortVakantie label.leeftijdGrens {
     display: flex;
     flex-direction: row;
     border: solid black 1px;
-    padding: 5px;
+    padding: 5px 20px 5px 5px;
     color: black;
 }
 
