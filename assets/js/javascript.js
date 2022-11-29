@@ -183,4 +183,12 @@ document.addEventListener('DOMContentLoaded', ()=> {
             console.log(reason);
         });
     }
+
+    FYSCloud.API.queryDatabase(
+        "SELECT * FROM account"
+    ).then(function(data) {
+        console.log(data);
+    }).catch(function(reason) {
+        console.log(reason);
+    });
 });
