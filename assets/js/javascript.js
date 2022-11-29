@@ -133,12 +133,48 @@ async function addProfiel() {
     let telefoonNummer = document.getElementById('telnummer').value;
     let leeftijd = document.getElementById('leeftijd').value;
     let profielFoto = document.getElementById('profielFoto').value;
-    console.log(email);
-    console.log(wachtwoord);
 
+    let instagram = document.getElementById('').value;
+    let twitter = document.getElementById('').value;
+    let linkedIn = document.getElementById('').value;
+    let facebook = document.getElementById('').value;
+    let whatsapp = document.getElementById('').value;
+    let telegram = document.getElementById('').value;
+
+    // EMAIL EN WACHTWOORD
     await FYSCloud.API.queryDatabase(
         "INSERT INTO account (email, password) VALUES (?, ?)",
         [email, wachtwoord]
+    ).then(function (data) {
+        console.log(data);
+    }).catch(function (reason) {
+        console.log(reason);
+    });
+
+    // STANDAARD INFO
+    await FYSCloud.API.queryDatabase(
+        "INSERT INTO persoon (voornaam, tussenvoegsel, achternaam, telefoon, leeftijd, persoon_info) VALUES (?)",
+        [voornaam, tussenvoegsel, achternaam, telefoonNummer, leeftijd]
+    ).then(function (data) {
+        console.log(data);
+    }).catch(function (reason) {
+        console.log(reason);
+    });
+
+    // RADIO EN SELECTIONS
+    await FYSCloud.API.queryDatabase(
+        "INSERT INTO persoon (foto, geslacht, budget, soort_vakantie, leeftijdsgrens_reispartner, persoon_info) VALUES (?)",
+        []
+    ).then(function (data) {
+        console.log(data);
+    }).catch(function (reason) {
+        console.log(reason);
+    });
+
+    //SOCIALMEDIA
+    await FYSCloud.API.queryDatabase(
+        "INSERT INTO sociale_media (instagram, twitter, linkedin, facebook, whatsapp, telegram) VALUES (?)",
+        [instagram, twitter, linkedIn, facebook, whatsapp, telegram]
     ).then(function (data) {
         console.log(data);
     }).catch(function (reason) {
