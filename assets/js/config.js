@@ -5,10 +5,5 @@ FYSCloud.API.configure({
     environment: "mockup"
 });
 
-FYSCloud.API.queryDatabase(
-    "SELECT * FROM usertype"
-).then(function(data) {
-    console.log(data);
-}).catch(function(reason) {
-    console.log(reason);
-});
+
+

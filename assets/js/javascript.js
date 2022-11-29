@@ -1,4 +1,6 @@
-class myHeader extends HTMLElement {
+document.addEventListener('DOMContentLoaded', ()=>{
+
+    class myHeader extends HTMLElement {
     connectedCallback() {
         // Any time this element is connected to a document this function will run
         this.innerHTML = `
@@ -21,7 +23,7 @@ class myHeader extends HTMLElement {
                     </nav>
                 </div>
                 <div class="bottom-bar">
-                    <p class="checklist">✓ Gratis gebruik maken van de webapplicatie ✓ Profiel binnen 5 minuten gemaakt 
+                    <p class="checklist">✓ Gratis gebruik maken van de webapplicatie ✓ Profiel binnen 5 minuten gemaakt
                     ✓ Andere reizigers vinden met dezelfde interesses</p>
                 </div>
             </header>
@@ -101,11 +103,6 @@ function bruh() {
 function closePopup() {
     document.getElementById('popup').style.display = 'none';
 }
-
-
-
-
-
 // PROFIEL FOTO UPLOAD
 function handleImageUpload()
 {
@@ -121,27 +118,35 @@ function handleImageUpload()
     reader.readAsDataURL(image);
 
 }
-// PROFIEL UPLOAD TO DATABASE
 
-// Maak persoon object een array
 
-const addPersoon = (ev)=>{
-    ev.preventDefault(); // stop from submitting
-     let persoon = {
-        voornaam: document.getElementById('voornaam').value,
-        tussenvoegsel: document.getElementById('tussenvoegsel').value,
-        achternaam: document.getElementById('achternaam').value,
-        email: document.getElementById('email').value,
-        wachtwoord: document.getElementById('wachtwoord').value,
-        wachtwoordBevestigen: document.getElementById('wachtwoordbv').value,
-        telefoonNummer: document.getElementById('telnummer').value,
-        leeftijd: document.getElementById('leeftijd').value,
-        profielFoto: document.getElementById('profielFoto').value,
-    }
-    console.log (persoon);
+// PROFIEL UPLOAD
+
+document.getElementById('btn').addEventListener('click',addProfiel);
+
+async function addProfiel() {
+    let voornaam = document.getElementById('voornaam').value;
+    let tussenvoegsel = document.getElementById('tussenvoegsel').value;
+    let achternaam = document.getElementById('achternaam').value;
+    let email = document.getElementById('email').value;
+    let wachtwoord = document.getElementById('wachtwoord').value;
+    let telefoonNummer = document.getElementById('telnummer').value;
+    let leeftijd = document.getElementById('leeftijd').value;
+    let profielFoto = document.getElementById('profielFoto').value;
+    console.log(email);
+    console.log(wachtwoord);
+
+    await FYSCloud.API.queryDatabase(
+        "INSERT INTO account (email, password) VALUES (?, ?)",
+        [email, wachtwoord]
+    ).then(function (data) {
+        console.log(data);
+    }).catch(function (reason) {
+        console.log(reason);
+    });
 }
-
-document.addEventListener('DOMContentLoaded', ()=>{
-    document.getElementById('btn').addEventListener('click',addPersoon());
 });
+
+
+
 
