@@ -453,17 +453,37 @@ label.interesses, label.budget, label.soortVakantie label.leeftijdGrens {
 }
 
 /* matches.html met potentiële_matches.html */
+.container-1\+container-2-matches{
+    display: flex;
+    flex-direction: row;
+}
+
 .container-1-matches {
     display: flex;
     flex-wrap: wrap;
     text-align: center;
-
+    width: 85%;
 }
 
 .container-2-matches {
     display: flex;
-    flex-wrap: wrap;
-    text-align: center;
+    flex-direction: column;
+    width: 15%;
+    border: solid black 1px;
+    padding: 5px;
+}
+
+.friendrequest{
+    display: flex;
+    flex-direction: row;
+    border: solid black 1px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.friendrequestFoto{
+    width: 50px;
+    margin-right: 5px;
 }
 
 .img-profielFoto {
@@ -688,6 +708,7 @@ body.container-1-matches {
     margin-right: 50px;
     box-shadow: 0 0.3em 0.7em;
     transition: all 1s ease-in-out;
+    height: 600px;
 }
 
 .isOpen .box-1-matches p .box-2-matches p .box-3-matches p {
