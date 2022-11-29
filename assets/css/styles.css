@@ -93,9 +93,6 @@ nav a:hover {
     margin: 0px 0px 10px;
 }
 
-/* Footer */
-
-
 /* index.html */
 .banner{
     height: 100vh;
@@ -261,7 +258,6 @@ form .input-box label.details {
 }
 
 /* RADIOFIELD 1*/
-
 .profielFotoEnRadioField1{
     display: flex;
     flex-direction: row;
@@ -333,7 +329,6 @@ form input[type="radio"] {
 }
 
 /* EIGEN TEKST PROFIEL */
-
 .labelEigenTekst{
     font-size: 20px;
     font-weight: 500;
@@ -359,7 +354,6 @@ form input[type="radio"] {
 }
 
 /* PROFIEL FOTO UPLOAD */
-
 .profielFotoEnLabel{
     display: flex;
     flex-direction: column;
@@ -387,7 +381,6 @@ form input[type="radio"] {
 }
 
 /* Opslaan button in form */
-
 form .button {
     height: 45px;
     margin: 35px 0
@@ -413,7 +406,6 @@ form .button input:hover {
 }
 
 /* selections */
-
 .selections-label{
     margin-top: 10px;
     font-size: 20px;
@@ -659,7 +651,6 @@ label.interesses, label.budget, label.soortVakantie label.leeftijdGrens {
 }
 
 /* potientiële_matches.html */
-
 body.container-1-matches {
     overflow-y: scroll;
     overflow-x: hidden;
@@ -866,7 +857,6 @@ main.container-1-profiel_match {
 }
 
 /* match buttons */
-
 .popup {
     width: 400px;
     background: #fff;
@@ -930,9 +920,6 @@ main.container-1-profiel_match {
 .match_button img {
     width: 50px;
 }
-
-
-
 
 /* 404.html */
 .main-404 {
