@@ -136,6 +136,9 @@ document.addEventListener('DOMContentLoaded', ()=> {
         let whatsapp = document.getElementById('Whatsapp').value;
         let telegram = document.getElementById('Telegram').value;
 
+        let insteresse = document.getElementById('Instagram').value;
+
+
         // INLOG
         // if(email en wachtwoord gelijk aan iets in database){
         //     voeg dan aan die account_id het toe
@@ -184,11 +187,37 @@ document.addEventListener('DOMContentLoaded', ()=> {
         });
     }
 
+
+    // WERKT NOG NIET
+
+    // let email = document.getElementById('email_aanmelden').value;
+    // let wachtwoord = document.getElementById('wachtwoord_aanmelden').value;
+
+
+    let email = "Joeyvdpoel@gmail.com"
+    let wachtwoord = "Joey"
+
     FYSCloud.API.queryDatabase(
-        "SELECT * FROM account"
-    ).then(function(data) {
+        "SELECT * FROM account WHERE email LIKE ? ",
+        email
+    ).then(function (data) {
         console.log(data);
-    }).catch(function(reason) {
+        console.log("Email is al in gebruik");
+    }).catch(function (reason) {
         console.log(reason);
     });
+
+    FYSCloud.API.queryDatabase(
+        "SELECT * FROM account WHERE email NOT LIKE ? ",
+        email
+    ).then(function (data) {
+        console.log(data);
+        console.log("Email is nog niet in gebruik");
+        "INSERT INTO account (email, password) VALUES (?, ?)",
+            [email, wachtwoord]
+    }).catch(function (reason) {
+        console.log(reason);
+    });
+
+
 });

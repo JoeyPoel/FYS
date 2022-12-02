@@ -1058,3 +1058,180 @@ textarea {
 .contact-image img{
     width: 100%;
 }
+
+/* INLOG PAGINA */
+
+.main-logIn{
+    height: 100vh;
+}
+
+.container-1-Inlog{
+    height: 80vh;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+.inlogBox{
+    width: 400px;
+    height: 100vh;
+    margin-top: 100px;
+    max-width: 1200px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+}
+
+/* AANMELDEN */
+
+.label_aanmelden{
+    font-size: 2.3em;
+    justify-content: center;
+    display: flex;
+    margin: 60px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.aanmelden{
+    display: flex;
+    position: relative;
+    width: 100%;
+    flex-direction: column;
+}
+
+.form_aanmelden{
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+}
+
+.input_aanmelden{
+    height: 45px;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+
+.input_aanmelden:focus {
+    border-color: #d81e05;
+}
+
+.button_aanmelden{
+    height: 45px;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    margin-top: 30px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.button_aanmelden:hover {
+    border-color: #d81e05;
+    opacity: 100%;
+    scale: 0.97;
+}
+
+/* INLOGGEN */
+
+.label_inloggen{
+    color: white;
+    font-size: 2.3em;
+    justify-content: center;
+    display: flex;
+    margin: 60px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.inloggen{
+    background-color: #b81a04;
+    border-radius: 60% / 10%;
+    display: flex;
+    flex-direction: column;
+    transition: .8s ease-in-out;
+    height: 100vh;
+}
+
+.form_inloggen{
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+}
+
+.input_inloggen{
+    height: 45px;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+
+.input_inloggen:focus {
+    border-color: rgba(0,0,0,0.7);
+}
+
+.button_inloggen{
+    height: 45px;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    margin-top: 30px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.button_inloggen:hover {
+    border-color: rgba(0,0,0,0.7);
+    opacity: 100%;
+    scale: 0.97;
+}
+
+.smalltext{
+    margin-top: 10px;
+    margin-bottom: 30px;
+    color: #3366CC;
+    cursor: pointer;
+}
+
+.smalltext2{
+    margin-top: 10px;
+    color: black;
+    cursor: pointer;
+}
+.nogGeenAccount{
+    color: white;
+}
+
+#chk{
+    display: none;
+}
+
+#chk:checked ~ .inloggen{
+    transform: translateY(-320px);
+}
+
