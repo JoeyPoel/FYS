@@ -1107,13 +1107,14 @@ textarea {
 
 /* AANMELDEN */
 
-.label_aanmelden{
+.aanmelden .label_aanmelden{
     font-size: 2.3em;
     justify-content: center;
     display: flex;
     margin: 60px;
     font-weight: bold;
     cursor: pointer;
+    transition: .6s ease-in-out;
 }
 
 .aanmelden{
@@ -1169,7 +1170,7 @@ textarea {
 
 /* INLOGGEN */
 
-.label_inloggen{
+.inloggen .label_inloggen{
     color: white;
     font-size: 2.3em;
     justify-content: center;
@@ -1177,6 +1178,8 @@ textarea {
     margin: 60px;
     font-weight: bold;
     cursor: pointer;
+    transition: .6s ease-in-out;
+    transform: scale(.7);
 }
 
 .inloggen{
@@ -1254,4 +1257,12 @@ textarea {
 
 #chk:checked ~ .inloggen{
     transform: translateY(-320px);
+}
+
+#chk:checked ~ .aanmelden .label_aanmelden{
+    transform: scale(.7);
+}
+
+#chk:checked ~ .inloggen .label_inloggen{
+    transform: scale(1);
 }
