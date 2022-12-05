@@ -197,8 +197,10 @@ document.addEventListener('DOMContentLoaded', ()=> {
     let email = "Joeyvdpoel@gmail.com"
     let wachtwoord = "Joey"
 
+
+    // log in
     FYSCloud.API.queryDatabase(
-        "SELECT * FROM account WHERE email LIKE ? ",
+        "SELECT * FROM account WHERE email LIKE ? ", // Vraagt of email al in de database zit
         email
     ).then(function (data) {
         console.log(data);
@@ -207,14 +209,15 @@ document.addEventListener('DOMContentLoaded', ()=> {
         console.log(reason);
     });
 
+    // Aanmelden
     FYSCloud.API.queryDatabase(
-        "SELECT * FROM account WHERE email NOT LIKE ? ",
+        "SELECT * FROM account WHERE email NOT LIKE ? ", // Vraagt of email NOG NIET in de database zit
         email
     ).then(function (data) {
         console.log(data);
         console.log("Email is nog niet in gebruik");
-        "INSERT INTO account (email, password) VALUES (?, ?)",
-            [email, wachtwoord]
+        "INSERT INTO account (email, password) VALUES (?, ?)", // Voegt de email toe aan de database
+            [email, wachtwoord];
     }).catch(function (reason) {
         console.log(reason);
     });
