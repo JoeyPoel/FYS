@@ -216,11 +216,20 @@ document.addEventListener('DOMContentLoaded', ()=> {
     ).then(function (data) {
         console.log(data);
         console.log("Email is nog niet in gebruik");
-        "INSERT INTO account (email, password) VALUES (?, ?)", // Voegt de email toe aan de database
-            [email, wachtwoord];
     }).catch(function (reason) {
         console.log(reason);
     });
+
+    function insertAccount(){
+        FYSCloud.API.queryDatabase(
+            "INSERT INTO account (email, password) VALUES (?, ?)", // Voegt de email toe aan de database
+            [email, wachtwoord]
+        ).then(function (data) {
+            console.log(data);
+        }).catch(function (reason) {
+            console.log(reason);
+        });
+    }
 
 
 });
