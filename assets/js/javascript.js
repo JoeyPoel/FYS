@@ -204,7 +204,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
         email
     ).then(function (data) {
         console.log(data);
-        console.log("Email is al in gebruik");
+        console.log("Email is al in gebruik"); // Logged dat email in gebruik is, maar kan ook dat je dan inlogt
     }).catch(function (reason) {
         console.log(reason);
     });
