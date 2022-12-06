@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- Always force the latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Log in</title>
+    <meta name="description" content="Log in"/>
+    <meta name="keywords" content="website, corendon"/>
+    <!-- JavaScript implementation -->
+    <script type="module" src="js/javascript.js"></script>
+    <script src="https://cdn.fys.cloud/fyscloud/0.0.4/fyscloud.min.js"></script>
+    <script type="module" src="js/config.js"></script>
+    <!-- CSS implementation -->
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <!-- Website Icon -->
+    <link href="" rel="icon" type="image/png"/>
+</head>
+<body>
+<!-- Custom HTML element. By defining a new class in JS that extends HTMLElement -->
+<my-header></my-header>
+<main class="main-logIn">
+    <div class="container-1-Inlog">
+        <div class="inlogBox">
+            <input type="checkbox" class="button_aanmelden" id="chk">
+            <div class="aanmelden">
+                <label class="label_aanmelden" for="chk">Registreren</label>
+                <form class="form_aanmelden">
+                    <input class="input_aanmelden" id="email_aanmelden" type="email" placeholder="Email" required>
+                    <input class="input_aanmelden" id="wachtwoord_aanmelden" type="password" placeholder="Wachtwoord"
+                           required>
+                    <button class="button_aanmelden">Registreren</button>
+                    <p>
+                        Al een account,
+                        <label class="smalltext" for="chk">klik hier.</label>
+                    </p>
+                </form>
+            </div>
+            <div class="inloggen">
+                <label class="label_inloggen" for="chk">Log in</label>
+                <form class="form_inloggen">
+                    <input class="input_inloggen" id="email_inloggen" type="email" placeholder="Email" required>
+                    <input class="input_inloggen" id="wachtwoord_inloggen" type="password" placeholder="Wachtwoord"
+                           required>
+                    <button class="button_inloggen">Inloggen</button>
+                    <p class="nogGeenAccount">
+                        Nog geen account,
+                        <label class="smalltext2" for="chk">klik hier.</label>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+<!-- Custom HTML element. By defining a new class in JS that extends HTMLElement -->
+<my-footer></my-footer>
+</body>
+</html>

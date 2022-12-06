@@ -4,15 +4,11 @@ document.addEventListener('DOMContentLoaded', () => {
         connectedCallback() {
             // Any time this element is connected to a document this function will run
             this.innerHTML = `
-               
-              
-              
-               
                   <div class="Navbar">
                         <nav>
                             <ul class="Navbar-button" id="MyNavbar">
                                 <li><a href="../index.html" class="Logo">LOGO</a></li>
-                                <li><a href="Log_in.html" class="button">LOG IN</a></li>
+                                <li><a href="login.html" class="button">LOG IN</a></li>
                                 <li><a href="contact.html" class="button" class="Contact">CONTACT</a></li>
                                 <li><a href="../index.html#over" class="button" class="Over">OVER</a</li>
                                 <li><a href="matches.html" class="button" class="Matches">MATCHES</a></li>
@@ -20,13 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                 <li><a href="profiel.html" class="button" class="Contact"> PROFIEL</a></li>
                             </ul>
                         </nav>
-                        
                   </div>
-                  
-                    
-      
-                        
-                
             `
         }
     }
@@ -74,8 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     }
 
-    // fade in van info pagina //
-
+    // Fade-in van info pagina
     const faders = document.querySelectorAll('.fade-in');
 
     const appearOptions = {
@@ -130,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('popup').style.display = 'none';
     }
 
-    // PROFIEL FOTO UPLOAD
+    // Profielfoto upload
     async function handleImageUpload() {
 
         let image = document.getElementById("profielFoto").files[0];
@@ -156,7 +145,6 @@ document.addEventListener('DOMContentLoaded', () => {
         let telefoonNummer = document.getElementById('telnummer').value;
         let leeftijd = document.getElementById('leeftijd').value;
         let persoon_info = document.getElementById('eigenTekst').value;
-
 
         let profielFoto = document.getElementById('profielFoto').value;
 
@@ -189,7 +177,6 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log(reason);
             console.log("Insert mislukt")
         });
-
 
         // RADIO EN SELECTIONS
         // await FYSCloud.API.queryDatabase(
@@ -232,7 +219,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-
     // Aanmelden
     async function aanmelden(){
     await FYSCloud.API.queryDatabase(
@@ -256,6 +242,4 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log(reason);
         });
     }
-
-
 });

@@ -2,9 +2,7 @@ html {
     height: 100%;
     margin: 0;
     /*line-height: 1.8;*/
-
 }
-
 
 body {
     height: 100%;
@@ -12,9 +10,8 @@ body {
     padding: 0;
     box-sizing: border-box;
     background-color: #fafafa;
-    font-family: Open Sans WF,sans-serif;
+    font-family: Open Sans WF, sans-serif;
     overflow-x: hidden;
-
 }
 
 header img {
@@ -37,11 +34,11 @@ header img {
     height: 100px;
 }
 
-.banner_blok_img{
+.banner_blok_img {
     width: 50%;
 }
 
-.header-button{
+.header-button {
     visibility: hidden;
     position: absolute;
     top: 80%;
@@ -49,7 +46,7 @@ header img {
     text-decoration: none;
     color: black;
     display: inline-block;
-    background: rgba(255,255,255, 0.5);
+    background: rgba(255, 255, 255, 0.5);
     width: 16%;
     height: 6%;
     text-align: center;
@@ -62,11 +59,9 @@ header img {
 
 
 .header-button:hover {
-    background: rgba(255,255,255, 1);
+    background: rgba(255, 255, 255, 1);
     transition: 250ms;
 }
-
-
 
 
 .Navbar ul {
@@ -76,7 +71,7 @@ header img {
     height: 70px;
     margin: 0;
     padding: 0;
-    background: 	rgb(255,70,50);
+    background: rgb(255, 70, 50);
     box-shadow: 5px 2px 8px #888;
     width: 100%;
     /*border-bottom-left-radius: 10px;*/
@@ -88,15 +83,13 @@ header img {
     padding: 17px;
     display: inline;
     float: right;
-
 }
 
 .Navbar li:hover {
-
     transition: 200ms ease-in;
 }
 
-.Navbar li:first-child{
+.Navbar li:first-child {
     float: left;
     padding-top: 24px;
 }
@@ -105,7 +98,6 @@ header img {
     padding: 8px;
     color: white;
     text-decoration: none;
-
 }
 
 .ss {
@@ -115,7 +107,6 @@ header img {
 .container {
     padding: 128px 16px;
 }
-
 
 
 .container-about {
@@ -129,33 +120,32 @@ header img {
 .info {
     display: flex;
     flex-direction: column;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
     margin: 10px;
     width: 100%;
     text-align: justify;
     background-color: rgba(239, 239, 240, 1);
     border: none;
-
 }
 
 .subtitel-over {
     align-self: center;
 }
 
-.over-article{
+.over-article {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.img-over{
+.img-over {
     width: 40%;
     padding: 20px;
     border-radius: 60px;
 }
 
-.text-over{
+.text-over {
     padding-left: 10px;
     padding-right: 10px;
     margin: 20px;
@@ -166,7 +156,7 @@ header img {
     background-size: cover;
 }
 
-.fade-in{
+.fade-in {
     opacity: 0;
     transition: opacity 250ms ease-in;
 }
@@ -326,7 +316,7 @@ header img {
     background-color: #fff;
     padding: 25px 30px;
     border-radius: 5px;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
 }
 
 .container-1-profiel .title {
@@ -372,13 +362,13 @@ form .input-box label.details {
 }
 
 /* SOCIAL MEDIA */
-.labelSocialmedia{
+.labelSocialmedia {
     margin-top: 17px;
     font-size: 20px;
     font-weight: 500;
 }
 
-.socialmedia{
+.socialmedia {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -386,20 +376,20 @@ form .input-box label.details {
     margin-bottom: 20px;
 }
 
-.SocialmediaLogos{
+.SocialmediaLogos {
     height: 45px;
     width: 45px;
     padding-right: 5px;
     margin-top: 10px;
 }
 
-.SocialmediaBox{
+.SocialmediaBox {
     display: flex;
     flex-direction: row;
     padding: 5px;
 }
 
-.socialmedia input{
+.socialmedia input {
     height: 45px;
     outline: none;
     font-size: 16px;
@@ -410,25 +400,25 @@ form .input-box label.details {
     transition: all 0.3s ease;
     box-sizing: border-box;
     margin-top: 10px;
-
 }
 
 .socialmedia input:focus {
     border-color: #d81e05;
 }
-@media (max-width: 899px){
-    .socialmedia{
+
+@media (max-width: 899px) {
+    .socialmedia {
         width: 70%;
     }
 }
 
 /* RADIOFIELD 1*/
-.profielFotoEnRadioField1{
+.profielFotoEnRadioField1 {
     display: flex;
     flex-direction: row;
 }
 
-.radioField1{
+.radioField1 {
     display: flex;
     flex-direction: row;
 }
@@ -476,12 +466,12 @@ form input[type="radio"] {
 }
 
 /* EIGEN TEKST PROFIEL */
-.labelEigenTekst{
+.labelEigenTekst {
     font-size: 20px;
     font-weight: 500;
 }
 
-.eigenTekst textarea{
+.eigenTekst textarea {
     outline: none;
     font-size: 16px;
     border-radius: 5px;
@@ -496,44 +486,44 @@ form input[type="radio"] {
     margin-bottom: 10px;
 }
 
-.eigenTekst textarea:focus{
+.eigenTekst textarea:focus {
     border-color: #d81e05;
 }
 
 /* PROFIEL FOTO UPLOAD */
-.profielFotoEnLabel{
+.profielFotoEnLabel {
     display: flex;
     flex-direction: column;
     margin-right: 20px;
 }
 
-.labelProfielFoto{
+.labelProfielFoto {
     font-size: 20px;
     font-weight: 500;
 }
 
-.profielFoto{
+.profielFoto {
     margin-top: 10px;
     display: flex;
     flex-direction: column-reverse;
 }
 
-#display-image{
+#display-image {
     max-width: 300px;
     max-height: 300px;
 }
 
-#profielFoto{
+#profielFoto {
     margin-bottom: 20px;
 }
 
 /* Opslaan button in form */
-.button{
+.button {
     display: flex;
     justify-content: center;
 }
 
-.btn{
+.btn {
     height: 60px;
     outline: none;
     font-size: 16px;
@@ -574,7 +564,7 @@ form .button input:hover {
 }
 
 /* selections */
-.selections-label{
+.selections-label {
     margin-top: 10px;
     font-size: 20px;
     font-weight: 500;
@@ -588,7 +578,7 @@ form .button input:hover {
     flex-wrap: wrap;
 }
 
-#interesses, #budget, #soortVakantie, #leeftijdGrens{
+#interesses, #budget, #soortVakantie, #leeftijdGrens {
     width: 100%;
     height: 200px;
     outline: none;
@@ -603,7 +593,7 @@ form .button input:hover {
     margin-top: 5px;
 }
 
-#interesses:focus, #budget:focus, #soortVakantie:focus, #leeftijdGrens:focus{
+#interesses:focus, #budget:focus, #soortVakantie:focus, #leeftijdGrens:focus {
     border-color: #d81e05;
 }
 
@@ -698,8 +688,8 @@ label.interesses, label.budget, label.soortVakantie label.leeftijdGrens {
 }
 
 .slider {
-    width:800px;
-    height:500px;
+    width: 800px;
+    height: 500px;
     border-radius: 10px;
     overflow: hidden;
 }
@@ -785,7 +775,7 @@ label.interesses, label.budget, label.soortVakantie label.leeftijdGrens {
 }
 
 #radio1:checked ~ .navigation-auto .auto-btn1 {
-    background: white ;
+    background: white;
 }
 
 #radio2:checked ~ .navigation-auto .auto-btn2 {
@@ -801,7 +791,7 @@ label.interesses, label.budget, label.soortVakantie label.leeftijdGrens {
 }
 
 /* potientiële_matches.html */
-.main-potentieleMatches{
+.main-potentieleMatches {
     display: flex;
     flex-direction: column;
     margin-top: 20px;
@@ -818,12 +808,12 @@ label.interesses, label.budget, label.soortVakantie label.leeftijdGrens {
     margin-bottom: 10px;
 }
 
-.change_img{
+.change_img {
     width: 45px;
     height: 45px;
 }
 
-.container-1\+container-2-matches{
+.container-1\+container-2-matches {
     display: flex;
     flex-direction: row;
 }
@@ -842,13 +832,13 @@ label.interesses, label.budget, label.soortVakantie label.leeftijdGrens {
     padding: 5px;
 }
 
-.friendrequestMetX{
+.friendrequestMetX {
     display: flex;
     flex-direction: row;
     margin-bottom: 10px;
 }
 
-.friendrequest{
+.friendrequest {
     display: flex;
     flex-direction: row;
     border: solid black 1px;
@@ -856,18 +846,18 @@ label.interesses, label.budget, label.soortVakantie label.leeftijdGrens {
     color: black;
 }
 
-.friendrequestButton{
+.friendrequestButton {
     height: 62px;
     border-radius: 0;
     border: 1px solid black;
     border-left: none;
 }
 
-.friendrequestLink{
+.friendrequestLink {
     text-decoration: none;
 }
 
-.friendrequestFoto{
+.friendrequestFoto {
     width: 50px;
     margin-right: 5px;
 }
@@ -875,7 +865,6 @@ label.interesses, label.budget, label.soortVakantie label.leeftijdGrens {
 .img-profielFoto {
     width: 200px;
 }
-
 
 .box-matches {
     width: 20em;
@@ -899,7 +888,7 @@ label.interesses, label.budget, label.soortVakantie label.leeftijdGrens {
 
 .kleur_foto {
     padding: 3em 0;
-    background-image:  linear-gradient(#e66465, #9198e5);
+    background-image: linear-gradient(#e66465, #9198e5);
 }
 
 .kleur_foto img {
@@ -908,14 +897,12 @@ label.interesses, label.budget, label.soortVakantie label.leeftijdGrens {
     border-radius: 50%;
     box-shadow: 0 0.6em 1.8em;
     object-fit: cover;
-
 }
 
 .content_matches {
     color: #565656;
     padding: 2.2em;
 }
-
 
 .work_description {
     color: grey;
@@ -948,32 +935,30 @@ label.interesses, label.budget, label.soortVakantie label.leeftijdGrens {
     margin: 24px;
 }
 
-.twitter_image, .instagram_image, .linkedin_image, .facebook_image  {
+.twitter_image, .instagram_image, .linkedin_image, .facebook_image {
     width: 40px;
     margin: 4px;
 }
 
 .twitter_image:hover, .instagram_image:hover, .linkedin_image:hover, .facebook_image:hover {
-    transform: scale(2,2);
+    transform: scale(2, 2);
 }
 
 button:hover, a:hover {
     opacity: 0.7;
 }
 
-
 /* profiel_match.html */
-
 main.container-1-profiel_match {
     margin: 0;
     padding: 0;
-    font-family: Open Sans WF,sans-serif;
+    font-family: Open Sans WF, sans-serif;
     background-color: #ddd;
     align-items: center;
     justify-content: center;
 }
 
-.foto_match{
+.foto_match {
     width: 200px;
     height: auto;
 }
@@ -1006,7 +991,7 @@ main.container-1-profiel_match {
     border-radius: 20px;
 }
 
-.foto_match{
+.foto_match {
     border-radius: 50%;
     border: 2px solid #fff;
     height: 250px;
@@ -1079,8 +1064,14 @@ main.container-1-profiel_match {
 }
 
 @keyframes animatetop {
-    from {top:-100px; opacity: 0}
-    to {top: 0; opacity: 1}
+    from {
+        top: -100px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
 }
 
 .popup img {
@@ -1133,7 +1124,8 @@ main.container-1-profiel_match {
     align-items: center;
 }
 
-.container-1-404 {}
+.container-1-404 {
+}
 
 .title-404 {
     font-size: 25px;
@@ -1162,21 +1154,21 @@ textarea {
 
 /* CSS for smaller displays */
 @media (max-width: 768px) {
-    .radioField1{
+    .radioField1 {
         flex-direction: column;
     }
 
-    .whatsappOfTelegram-details{
+    .whatsappOfTelegram-details {
         margin-left: 0;
     }
 
-    .container-1-matches  {
+    .container-1-matches {
         flex-direction: row;
         padding-top: 20px;
         text-align: center;
     }
 
-    .box-1-matches, .box-2-matches, .box-3-matches{
+    .box-1-matches, .box-2-matches, .box-3-matches {
         margin-bottom: 20px;
     }
 
@@ -1186,19 +1178,18 @@ textarea {
         text-align: center;
     }
 
-    .over-article{
+    .over-article {
         display: flex;
         flex-direction: column;
     }
 
-    .img-over{
+    .img-over {
         width: 100%;
     }
 }
 
 /* CONTACT PAGE */
-
-.main-contact{
+.main-contact {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1207,37 +1198,38 @@ textarea {
     margin-bottom: 10px;
 }
 
-.container-1-contact{
+.container-1-contact {
     max-width: 1200px;
     width: 100%;
     background-color: white;
     padding: 25px 30px;
     border-radius: 5px;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
     min-height: 100vh;
 }
 
-.titel-contact{
+.titel-contact {
     display: flex;
     justify-content: center;
     color: #ff0d0d;
 }
-.contact-image{
+
+.contact-image {
     display: flex;
     justify-content: center;
 }
 
-.contact-image img{
+.contact-image img {
     width: 100%;
 }
 
 /* INLOG PAGINA */
 
-.main-logIn{
+.main-logIn {
     height: 100vh;
 }
 
-.container-1-Inlog{
+.container-1-Inlog {
     height: 80vh;
     align-items: center;
     display: flex;
@@ -1246,19 +1238,18 @@ textarea {
     margin-top: 30px;
 }
 
-.inlogBox{
+.inlogBox {
     width: 400px;
     height: 100vh;
     margin-top: 100px;
     max-width: 1200px;
     background-color: #fff;
     border-radius: 5px;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
 }
 
 /* AANMELDEN */
-
-.aanmelden .label_aanmelden{
+.aanmelden .label_aanmelden {
     font-size: 2.3em;
     justify-content: center;
     display: flex;
@@ -1268,20 +1259,20 @@ textarea {
     transition: .6s ease-in-out;
 }
 
-.aanmelden{
+.aanmelden {
     display: flex;
     position: relative;
     width: 100%;
     flex-direction: column;
 }
 
-.form_aanmelden{
+.form_aanmelden {
     display: flex;
     flex-direction: column;
     padding: 25px;
 }
 
-.input_aanmelden{
+.input_aanmelden {
     height: 45px;
     outline: none;
     font-size: 16px;
@@ -1298,7 +1289,7 @@ textarea {
     border-color: #d81e05;
 }
 
-.button_aanmelden{
+.button_aanmelden {
     height: 45px;
     outline: none;
     font-size: 16px;
@@ -1319,9 +1310,8 @@ textarea {
     scale: 0.97;
 }
 
-/* INLOGGEN */
-
-.inloggen .label_inloggen{
+/* login.html */
+.inloggen .label_inloggen {
     color: white;
     font-size: 2.3em;
     justify-content: center;
@@ -1333,7 +1323,7 @@ textarea {
     transform: scale(.7);
 }
 
-.inloggen{
+.inloggen {
     background-color: #b81a04;
     border-radius: 60% / 10%;
     display: flex;
@@ -1342,13 +1332,13 @@ textarea {
     height: 100vh;
 }
 
-.form_inloggen{
+.form_inloggen {
     display: flex;
     flex-direction: column;
     padding: 25px;
 }
 
-.input_inloggen{
+.input_inloggen {
     height: 45px;
     outline: none;
     font-size: 16px;
@@ -1362,10 +1352,10 @@ textarea {
 }
 
 .input_inloggen:focus {
-    border-color: rgba(0,0,0,0.7);
+    border-color: rgba(0, 0, 0, 0.7);
 }
 
-.button_inloggen{
+.button_inloggen {
     height: 45px;
     outline: none;
     font-size: 16px;
@@ -1381,40 +1371,45 @@ textarea {
 }
 
 .button_inloggen:hover {
-    border-color: rgba(0,0,0,0.7);
+    border-color: rgba(0, 0, 0, 0.7);
     opacity: 100%;
     scale: 0.97;
 }
 
-.smalltext{
+.smalltext {
     margin-top: 10px;
     margin-bottom: 30px;
     color: #3366CC;
     cursor: pointer;
 }
 
-.smalltext2{
+.smalltext2 {
     margin-top: 10px;
     color: black;
     cursor: pointer;
 }
-.nogGeenAccount{
+
+.nogGeenAccount {
     color: white;
 }
 
-#chk{
+#chk {
     display: none;
 }
 
-#chk:checked ~ .inloggen{
+#chk:checked ~ .inloggen {
     transform: translateY(-320px);
 }
 
-#chk:checked ~ .aanmelden .label_aanmelden{
+#chk:checked ~ .aanmelden .label_aanmelden {
     transform: scale(.7);
 }
 
-#chk:checked ~ .inloggen .label_inloggen{
+#chk:checked ~ .inloggen .label_inloggen {
     transform: scale(1);
 }
 
+/* Data van SQL opmaak */
+.divPersoonOpmaak {
+    color: #6fd649;
+}
