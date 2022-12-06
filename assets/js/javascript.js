@@ -1,32 +1,30 @@
-document.addEventListener('DOMContentLoaded', ()=> {
+document.addEventListener('DOMContentLoaded', () => {
 
     class myHeader extends HTMLElement {
         connectedCallback() {
             // Any time this element is connected to a document this function will run
             this.innerHTML = `
-                <header>
-                    <div class="top-bar">
-                        <a href="../index.html">
-                            <img class="header-logo" src="img/corendon_logo.png" alt="Corendon logo">
-                        </a>
-                    </div>
-                    <div class="middle-bar">
+               
+              
+               
+                  <div class="Navbar">
                         <nav>
-                            <ul class="nav-links">
-                                <li><a class="list-link-logo" href="../index.html"><img src="img/home_icon.png" alt="Home icon"></a></li>
-                                <li><a class="list-link" href="profiel.html">Profiel</a></li>
-                                <li><a class="list-link" href="matches.html">Matches</a></li>
-                                <li><a class="list-link" href="potentiële_matches.html">Zoek andere reizigers</a></li>
-                                <li><a class="list-link" href="over.html">Over</a></li>
-                                <li><a class="list-link" href="contact.html">Contact</a></li>
+                            <ul class="Navbar-button" id="MyNavbar">
+                                <li><a href="../index.html" class="Logo">LOGO</a></li>
+                                <li><a href="contact.html" class="button" class="Contact">CONTACT</a></li>
+                                <li><a href="../index.html#over" class="button" class="Over">OVER</a</li>
+                                <li><a href="matches.html" class="button" class="Matches">MATCHES</a></li>
+                                <li><a href="potentiële_matches.html" class="button" class="Zoek-Andere-Reizigers">ZOEK ANDERE REIZIGERS</a></li>
+                                <li><a href="profiel.html" class="button" class="Contact"> PROFIEL</a></li>
                             </ul>
                         </nav>
-                    </div>
-                    <div class="bottom-bar">
-                        <p class="checklist">✓ Gratis gebruik maken van de webapplicatie ✓ Profiel binnen 5 minuten gemaakt
-                        ✓ Andere reizigers vinden met dezelfde interesses</p>
-                    </div>
-                </header>
+                        
+                  </div>
+                  
+                    
+      
+                        
+                
             `
         }
     }
@@ -56,14 +54,14 @@ document.addEventListener('DOMContentLoaded', ()=> {
     //Over pagina scroll
     const boxes = document.querySelectorAll('.info');
 
-    window.addEventListener('scroll',checkInfo);
+    window.addEventListener('scroll', checkInfo);
 
     checkInfo();
 
     function checkInfo() {
         const triggerBottom = window.innerHeight / 5 * 4;
 
-        boxes.forEach((info) =>{
+        boxes.forEach((info) => {
             const boxTop = info.getBoundingClientRect().top;
 
             if (boxTop < triggerBottom) {
@@ -74,10 +72,38 @@ document.addEventListener('DOMContentLoaded', ()=> {
         })
     }
 
+    // fade in van info pagina //
+
+    const faders = document.querySelectorAll('.fade-in');
+
+    const appearOptions = {
+        threshold: 0.3,
+        rootMargin: "0px 0px -150px 0px"
+    };
+
+    const appearOnScroll = new IntersectionObserver(function(
+            entries,
+            appearOnScroll
+        ) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    return;
+                } else {
+                    entry.target.classList.add("appear");
+                    appearOnScroll.unobserve(entry.target);
+                }
+            });
+        },
+        appearOptions);
+
+    faders.forEach(fader => {
+        appearOnScroll.observe(fader);
+    });
+
     // Slides op main page
     let counter = 2;
 
-    setInterval(function(){
+    setInterval(function () {
         document.getElementById('radio' + counter).checked = true
         counter++;
         if (counter > 4) {
@@ -109,7 +135,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
 
         var reader = new FileReader();
 
-        reader.onload = function(e) {
+        reader.onload = function (e) {
             document.getElementById("display-image").src = e.target.result;
         }
 
@@ -117,7 +143,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
     }
 
     // PROFIEL UPLOAD
-    document.getElementById('btn').addEventListener('click',addProfiel);
+    document.getElementById('btn').addEventListener('click', addProfiel);
 
     async function addProfiel() {
         let voornaam = document.getElementById('voornaam').value;
@@ -220,7 +246,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
         console.log(reason);
     });
 
-    function insertAccount(){
+    function insertAccount() {
         FYSCloud.API.queryDatabase(
             "INSERT INTO account (email, password) VALUES (?, ?)", // Voegt de email toe aan de database
             [email, wachtwoord]
