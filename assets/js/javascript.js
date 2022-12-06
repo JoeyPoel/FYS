@@ -129,6 +129,10 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('popup').style.display = 'none';
     }
 
+    function position() {
+        document.getElementById('button').style.position = 'center';
+    }
+
     // PROFIEL FOTO UPLOAD
     function handleImageUpload() {
 

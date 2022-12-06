@@ -71,10 +71,6 @@ body {
     z-index: 2;
 }
 
-.Navbar.position ul {
-    position: center;
-}
-
 .Navbar li {
     padding: 17px;
     display: inline;
