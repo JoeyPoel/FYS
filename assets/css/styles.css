@@ -58,12 +58,12 @@ body {
 
 .Navbar ul {
     list-style-type: none;
-    /*position: fixed;*/
+    position: fixed;
     overflow: hidden;
     height: 70px;
     margin: 0;
     padding: 0;
-    background-color: white;
+    background: 	rgb(255,70,50);
     box-shadow: 5px 2px 8px #888;
     width: 100%;
     /*border-bottom-left-radius: 10px;*/
@@ -71,15 +71,19 @@ body {
     z-index: 2;
 }
 
+.Navbar.position ul {
+    position: center;
+}
+
 .Navbar li {
     padding: 17px;
     display: inline;
     float: right;
-    height: 100%;
+
 }
 
 .Navbar li:hover {
-    background-image:  linear-gradient(#B0F3F1, #FFCFDF);
+    background-image:  ;
     transition: 200ms ease-in;
 }
 
@@ -90,7 +94,7 @@ body {
 
 .Navbar li a {
     padding: 8px;
-    color: black;
+    color: white;
     text-decoration: none;
 
 }
