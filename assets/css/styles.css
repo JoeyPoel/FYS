@@ -16,16 +16,29 @@ body {
     overflow-x: hidden;
 
 }
-.header-text {
-    position: absolute;
+
+header img {
+    height: 400px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+.banner_blok {
     top: 20%;
     left: 10%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     color: white;
-    font-size: 90px;
-    margin-right: 100px;
     font-family: sans-serif;
     font-weight: lighter;
+    height: 100px;
+}
 
+.banner_blok_img{
+    width: 50%;
 }
 
 .header-button{
@@ -45,7 +58,6 @@ body {
     font-size: 24px;
     border-radius: 10px;
     font-weight: lighter;
-
 }
 
 
@@ -96,14 +108,6 @@ body {
 
 }
 
-header img {
-    height: 100%;
-    width: 100%;
-    background-position: center;
-    background-size: cover;
-    min-height: 100%;
-}
-
 .ss {
     padding: 20px 40px;
 }
@@ -134,7 +138,6 @@ header img {
     border: none;
 
 }
-
 
 .subtitel-over {
     align-self: center;
@@ -470,24 +473,6 @@ form .category label .dot {
 
 form input[type="radio"] {
     display: none;
-}
-
-/* WHATSAPP OF TELEGRAM */
-
-.whatsappOfTelegram-title{
-    font-size: 20px;
-    font-weight: 500;
-}
-
-.whatsappOfTelegram-details{
-    margin-left: 20px;
-}
-
-#dot-Whatsapp:checked~ .category label .Whatsapp,
-#dot-Telegram:checked~ .category label .Telegram,
-#dot-Email:checked~ .category label .Email{
-    background: #d81e05;
-    border-color: #d9d9d9;
 }
 
 /* EIGEN TEKST PROFIEL */

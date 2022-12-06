@@ -13,9 +13,9 @@
     <meta name="keywords" content="website, corendon" />
 
     <!-- JavaScript implementation -->
-    <script src="js/javascript.js"></script>
+    <script type="module" src="js/javascript.js"></script>
     <script src="https://cdn.fys.cloud/fyscloud/0.0.4/fyscloud.min.js"></script>
-    <script src="js/config.js"></script>
+    <script type="module" src="js/config.js"></script>
 
     <!-- CSS implementation -->
     <link href="css/styles.css" rel="stylesheet" type="text/css">
@@ -33,7 +33,7 @@
     <div class="container-1-profiel">
         <div class="title">Profiel</div>
         <div class="content">
-            <form id="form" name="form" onclick="return validateForm()">
+            <form id="form" name="form">
                 <div class="user-details">
                     <div class="input-box">
                         <label class="details">Voornaam</label>
@@ -97,27 +97,6 @@
                                     <span class="gender">Geef ik liever niet</span>
                                 </label>
                             </div>
-                    </div>
-
-                    <div class="whatsappOfTelegram-details">
-                        <input type="radio" id="dot-Whatsapp">
-                        <input type="radio" id="dot-Telegram">
-                        <input type="radio" id="dot-Email">
-                        <span class="whatsappOfTelegram-title">Ik wil bereikt worden via</span>
-                        <div class="category">
-                            <label for="dot-Whatsapp">
-                                <span class="dot Whatsapp"></span>
-                                <span class="gender">Whatsapp</span>
-                            </label>
-                            <label for="dot-Telegram">
-                                <span class="dot Telegram"></span>
-                                <span class="gender">Telegram</span>
-                            </label>
-                            <label for="dot-Email">
-                                <span class="dot Email"></span>
-                                <span class="gender">Email</span>
-                            </label>
-                        </div>
                     </div>
                 </div>
                 </div>
@@ -227,7 +206,7 @@
                 </div>
 
                 <div class="button">
-                    <input type="submit" value="Gegevens opslaan" id="btn" onclick="Submit()">
+                    <input type="submit" value="Gegevens opslaan" id="btn">
                 </div>
             </form>
         </div>
