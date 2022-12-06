@@ -75,6 +75,7 @@ body {
     padding: 17px;
     display: inline;
     float: right;
+    height: 100%;
 }
 
 .Navbar li:hover {
