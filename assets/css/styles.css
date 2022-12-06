@@ -31,7 +31,7 @@ body {
 .header-button{
     position: absolute;
     top: 80%;
-    left: 10%;
+    left: 40%;
     text-decoration: none;
     color: black;
     display: inline-block;
@@ -79,7 +79,7 @@ body {
 }
 
 .Navbar li:hover {
-    background-image:  ;
+
     transition: 200ms ease-in;
 }
 
@@ -1431,3 +1431,4 @@ textarea {
 #chk:checked ~ .inloggen .label_inloggen{
     transform: scale(1);
 }
+

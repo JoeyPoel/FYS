@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <nav>
                             <ul class="Navbar-button" id="MyNavbar">
                                 <li><a href="../index.html" class="Logo">LOGO</a></li>
+                                <li><a href="Log_in.html" class="button">LOG IN</a></li>
                                 <li><a href="contact.html" class="button" class="Contact">CONTACT</a></li>
                                 <li><a href="../index.html#over" class="button" class="Over">OVER</a</li>
                                 <li><a href="matches.html" class="button" class="Matches">MATCHES</a></li>
