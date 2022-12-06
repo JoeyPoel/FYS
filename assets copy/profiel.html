@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <!-- Always force the latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Profiel</title>
+
+    <meta name="description" content="Profiel informatie" />
+    <meta name="keywords" content="website, corendon" />
+
+    <!-- JavaScript implementation -->
+    <script src="js/javascript.js"></script>
+    <script src="https://cdn.fys.cloud/fyscloud/0.0.4/fyscloud.min.js"></script>
+    <script src="js/config.js"></script>
+
+    <!-- CSS implementation -->
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+
+    <!-- Website Icon -->
+    <link href="" rel="icon" type="image/png" />
+</head>
+
+<body>
+
+<!-- Custom HTML element. By defining a new class in JS that extends HTMLElement -->
+<my-header></my-header>
+
+<main class="main-profiel">
+    <div class="container-1-profiel">
+        <div class="title">Profiel</div>
+        <div class="content">
+            <form id="form" name="form" onclick="return validateForm()">
+                <div class="user-details">
+                    <div class="input-box">
+                        <label class="details">Voornaam</label>
+                        <input type="text" id="voornaam" name="voornaam" placeholder="Vul je voornaam in" required>
+                    </div>
+                    <div class="input-box">
+                        <label class="details">Tussenvoegsel (optioneel)</label>
+                        <input type="text" id="tussenvoegsel" name="tussenvoegsel" placeholder="Vul je tussenvoegsel in">
+                    </div>
+                    <div class="input-box">
+                        <label class="details">Achternaam</label>
+                        <input type="text" id="achternaam" name="achternaam" placeholder="Vul je achternaam in" required>
+                    </div>
+                    <div class="input-box">
+                        <label class="details">E-mail</label>
+                        <input type="email" id="email" name="email" placeholder="Vul je e-mail in" required>
+                    </div>
+                    <div class="input-box">
+                        <label class="details">Wachtwoord</label>
+                        <input type="password" id="wachtwoord" name="wachtwoord" placeholder="Vul je wachtwoord in" required>
+                    </div>
+                    <div class="input-box">
+                        <label class="details">Wachtwoord bevestigen</label>
+                        <input type="password" id="wachtwoordbv" name="wachtwoordbv" placeholder="Wachtwoord bevestigen" required>
+                    </div>
+                    <div class="input-box">
+                        <label class="details">Telefoonnummer (optioneel)</label>
+                        <input type="tel" id="telnummer" name="telnummer" placeholder="Vul je telefoonnummer in">
+                    </div>
+                    <div class="input-box">
+                        <label class="details">Leeftijd </label>
+                        <input type="number" min="18" max="100" id="leeftijd" name="leeftijd" placeholder="Vul je leeftijd in" required>
+                    </div>
+                </div>
+                <div class="profielFotoEnRadioField1">
+                    <div class="profielFotoEnLabel">
+                        <label class="labelProfielFoto">Upload een foto van u zelf</label>
+                        <div class="profielFoto">
+                            <input type="file" id="profielFoto" onChange="handleImageUpload()" />
+                            <img id="display-image" src="../assets/img/profielfoto.png" />
+                        </div>
+                    </div>
+
+                    <div class="radioField1">
+                        <div class="gender-details">
+                            <input type="radio" id="dot-1" name="gender">
+                            <input type="radio" id="dot-2" name="gender">
+                            <input type="radio" id="dot-3" name="gender">
+                            <span class="gender-title">Geslacht (optioneel)</span>
+                            <div class="category">
+                                <label for="dot-1">
+                                    <span class="dot one"></span>
+                                    <span class="gender">Man</span>
+                                </label>
+                                <label for="dot-2">
+                                    <span class="dot two"></span>
+                                    <span class="gender">Vrouw</span>
+                                </label>
+                                <label for="dot-3">
+                                    <span class="dot three"></span>
+                                    <span class="gender">Geef ik liever niet</span>
+                                </label>
+                            </div>
+                    </div>
+
+                    <div class="whatsappOfTelegram-details">
+                        <input type="radio" id="dot-Whatsapp">
+                        <input type="radio" id="dot-Telegram">
+                        <input type="radio" id="dot-Email">
+                        <span class="whatsappOfTelegram-title">Ik wil bereikt worden via</span>
+                        <div class="category">
+                            <label for="dot-Whatsapp">
+                                <span class="dot Whatsapp"></span>
+                                <span class="gender">Whatsapp</span>
+                            </label>
+                            <label for="dot-Telegram">
+                                <span class="dot Telegram"></span>
+                                <span class="gender">Telegram</span>
+                            </label>
+                            <label for="dot-Email">
+                                <span class="dot Email"></span>
+                                <span class="gender">Email</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+                <label class="selections-label">Selecteer per onderdeel 1 of meerdere keuzes</label>
+                <div class="selections">
+                    <div class="interesses">
+                        <label class="interesses">Selecteer uw interesses</label>
+                        <select id="interesses" name="interesses" multiple required>
+                            <!-- <option disabled selected value> -- Kies een interesse -- </option> -->
+                            <option value="Zwemmen">Zwemmen</option>
+                            <option value="Fietsen">Fietsen</option>
+                            <option value="Hardlopen">Hardlopen</option>
+                            <option value="Klimmen">Klimmen</option>
+                            <option value="Musea">Musea</option>
+                            <option value="Culturen">Culturen</option>
+                            <option value="Skiën">Skiën</option>
+                            <option value="Kunst">Kunst</option>
+                            <option value="Grotten">Grotten</option>
+                            <option value="Geschiedenis">Geschiedenis</option>
+                        </select>
+                    </div>
+                    <div class="budget">
+                        <label class="budget">Selecteer uw budget</label>
+                        <select id="budget" name="budget" multiple required>
+                            <option value="500">€500</option>
+                            <option value="1000">€1000</option>
+                            <option value="1500">€1500</option>
+                            <option value="2000">€2000</option>
+                            <option value="2500">€2500</option>
+                            <option value="3000">€3000</option>
+                            <option value="3500">€3500</option>
+                            <option value="4000">€4000</option>
+                            <option value="4500">€4500</option>
+                            <option value="5000">€5000</option>
+                            <option value="5500">€5500</option>
+                            <option value="6000">€6000</option>
+                            <option value="6500">€6500</option>
+                            <option value="7000">€7000</option>
+                            <option value="7500">€7500</option>
+                            <option value="8000">€8000</option>
+                            <option value="8500">€8500</option>
+                            <option value="9000">€9000</option>
+                            <option value="9500">€9500</option>
+                            <option value="10000">€10000</option>
+                        </select>
+                    </div>
+                    <div class="soortVakantie">
+                        <label class="soortVakantie">Selecteer uw soort vakantie</label>
+                        <select id="soortVakantie" name="soortVakantie" multiple required>
+                            <option value="Cruise">Cruise</option>
+                            <option value="Fly-DriveVakantie">Fly-Drive vakantie</option>
+                            <option value="Formule1">Formule 1</option>
+                            <option value="Rondreis">Rondreis</option>
+                            <option value="Stedentrip">Stedentrip</option>
+                            <option value="Skivakantie">Ski vakantie</option>
+                            <option value="Zonvakantie">Zon vakantie</option>
+                        </select>
+                    </div>
+                    <div class="leeftijdGrens">
+                        <label class="leeftijdGrens">Selecteer de leeftijdsgrens van uw reispartner</label>
+                        <select id="leeftijdGrens" name="soortVakantie" multiple required>
+                            <option value="18-25">18-25</option>
+                            <option value="26-35">26-35</option>
+                            <option value="36-45">36-45</option>
+                            <option value="46-55">46-55</option>
+                            <option value="56-65">56-65</option>
+                            <option value="66-75">66-75</option>
+                            <option value="76-85">76-85</option>
+                            <option value="85+">85+</option>
+                        </select>
+                    </div>
+                </div>
+
+                <label class="labelSocialmedia">Kies uw sociale media (optioneel)</label>
+                <div class="socialmedia">
+                    <div class="SocialmediaBox">
+                        <img class="SocialmediaLogos" src="../assets/img/Logo-Instagram.png">
+                        <input type="text" id="Instagram" name="Instagram" placeholder="Vul uw Instagram naam in">
+                    </div>
+                    <div class="SocialmediaBox">
+                        <img class="SocialmediaLogos" src="../assets/img/Logo-Twitter.png">
+                        <input type="text" id="Twitter" name="Twitter" placeholder="Vul uw Twitter naam in">
+                    </div>
+                    <div class="SocialmediaBox">
+                        <img class="SocialmediaLogos" src="../assets/img/Logo-LinkedIn.png">
+                        <input type="text" id="LinkedIn" name="LinkedIn" placeholder="Vul uw LinkedIn naam in">
+                    </div>
+                    <div class="SocialmediaBox">
+                        <img class="SocialmediaLogos" src="../assets/img/facebookfoto.png">
+                        <input type="text" id="Facebook" name="Facebook" placeholder="Vul uw Facebook naam in">
+                    </div>
+                    <div class="SocialmediaBox">
+                        <img class="SocialmediaLogos" src="../assets/img/Logo-Whatsapp.png">
+                        <input type="text" id="Whatsapp" name="Whatsapp" placeholder="Vul uw Whatsapp naam in">
+
+                    </div>
+                    <div class="SocialmediaBox">
+                        <img class="SocialmediaLogos" src="../assets/img/Logo-Telegram.png">
+                        <input type="text" id="Telegram" name="Telegram" placeholder="Vul uw Telegram naam in">
+                    </div>
+                </div>
+
+                <label class="labelEigenTekst">Type hier een kleine tekst over u zelf</label>
+                <div class="eigenTekst">
+                    <textarea id="eigenTekst" placeholder="Type hier een tekst over u zelf"></textarea>
+                </div>
+
+                <div class="button">
+                    <input type="submit" value="Gegevens opslaan" id="btn" onclick="Submit()">
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
+
+<!-- Custom HTML element. By defining a new class in JS that extends HTMLElement -->
+<my-footer></my-footer>
+
+</body>
+</html>
