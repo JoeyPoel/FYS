@@ -27,13 +27,17 @@
 <body>
 
 <!-- Custom HTML element. By defining a new class in JS that extends HTMLElement -->
-<my-header></my-header>
+
+<my-header class="gewoon-boef-man">
+
+</my-header>
+
 
 <main class="main-profiel">
     <div class="container-1-profiel">
         <div class="title">Profiel</div>
         <div class="content">
-            <form id="form" name="form" onclick="return validateForm()">
+            <form id="form" name="form">
                 <div class="user-details">
                     <div class="input-box">
                         <label class="details">Voornaam</label>
@@ -76,7 +80,6 @@
                             <img id="display-image" src="../assets/img/profielfoto.png" />
                         </div>
                     </div>
-
                     <div class="radioField1">
                         <div class="gender-details">
                             <input type="radio" id="dot-1" name="gender">
@@ -98,7 +101,6 @@
                                 </label>
                             </div>
                     </div>
-
                     <div class="whatsappOfTelegram-details">
                         <input type="radio" id="dot-Whatsapp">
                         <input type="radio" id="dot-Telegram">
@@ -121,7 +123,6 @@
                     </div>
                 </div>
                 </div>
-
                 <label class="selections-label">Selecteer per onderdeel 1 of meerdere keuzes</label>
                 <div class="selections">
                     <div class="interesses">
@@ -191,7 +192,6 @@
                         </select>
                     </div>
                 </div>
-
                 <label class="labelSocialmedia">Kies uw sociale media (optioneel)</label>
                 <div class="socialmedia">
                     <div class="SocialmediaBox">
@@ -213,21 +213,18 @@
                     <div class="SocialmediaBox">
                         <img class="SocialmediaLogos" src="../assets/img/Logo-Whatsapp.png">
                         <input type="text" id="Whatsapp" name="Whatsapp" placeholder="Vul uw Whatsapp naam in">
-
                     </div>
                     <div class="SocialmediaBox">
                         <img class="SocialmediaLogos" src="../assets/img/Logo-Telegram.png">
                         <input type="text" id="Telegram" name="Telegram" placeholder="Vul uw Telegram naam in">
                     </div>
                 </div>
-
                 <label class="labelEigenTekst">Type hier een kleine tekst over u zelf</label>
                 <div class="eigenTekst">
                     <textarea id="eigenTekst" placeholder="Type hier een tekst over u zelf"></textarea>
                 </div>
-
                 <div class="button">
-                    <input type="submit" value="Gegevens opslaan" id="btn" onclick="Submit()">
+                    <button class="btn">Gegevens opslaan</button>
                 </div>
             </form>
         </div>

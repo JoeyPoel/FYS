@@ -1007,65 +1007,32 @@ textarea {
 /* CONTACT PAGE */
 
 .main-contact{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 24px;
-
-}
-
-.main-contact img {
-    filter: blur(8px);
-}
-
-.box-contact {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fafafa;
 }
 
-
-.email-contact {
-
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
-    color: white;
-    font-weight: bold;
-    border: 3px solid #f1f1f1;
-    position: absolute;
-    top: 50%;
-    left: 80%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    width: 30%;
-    padding: 20px;
-    text-align: center;
-
+.container-1-contact{
+    max-width: 1200px;
+    width: 100%;
+    background-color: white;
+    padding: 25px 30px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+    min-height: 100vh;
 }
 
-
-
-.whatsapp-contact {
-
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
-    color: white;
-    font-weight: bold;
-    border: 3px solid #f1f1f1;
-    position: absolute;
-    top: 50%;
-    right: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    width: 30%;
-    padding: 20px;
-    text-align: center;
-
+.titel-contact{
+    display: flex;
+    justify-content: center;
+    color: #ff0d0d;
+}
+.contact-image{
+    display: flex;
+    justify-content: center;
 }
 
-
-.image-logo {
-
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 5px;
-    width: 150px;
-    filter: blur(0px);
+.contact-image img{
+    width: 100%;
 }
