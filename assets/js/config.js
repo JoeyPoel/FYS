@@ -4,3 +4,11 @@ FYSCloud.API.configure({
     database: "fys_is101_4_live",
     environment: "mockup"
 });
+
+FYSCloud.API.queryDatabase(
+    "SELECT * FROM usertype"
+).then(function(data) {
+    console.log(data);
+}).catch(function(reason) {
+    console.log(reason);
+});
