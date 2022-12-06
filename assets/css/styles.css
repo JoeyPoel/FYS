@@ -1,11 +1,9 @@
 html {
     height: 100%;
     margin: 0;
-    line-height: 1.8;
+    /*line-height: 1.8;*/
 
 }
-
-
 
 
 body {
@@ -58,7 +56,7 @@ body {
 
 
 
-ul {
+.Navbar ul {
     list-style-type: none;
     /*position: fixed;*/
     overflow: hidden;
@@ -73,23 +71,23 @@ ul {
     z-index: 2;
 }
 
-li {
+.Navbar li {
     padding: 17px;
     display: inline;
     float: right;
 }
 
-li:hover {
+.Navbar li:hover {
     background-image:  linear-gradient(#B0F3F1, #FFCFDF);
     transition: 200ms ease-in;
 }
 
-li:first-child{
+.Navbar li:first-child{
     float: left;
     padding-top: 24px;
 }
 
-li a {
+.Navbar li a {
     padding: 8px;
     color: black;
     text-decoration: none;

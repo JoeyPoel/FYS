@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
             this.innerHTML = `
                
               
+              
                
                   <div class="Navbar">
                         <nav>
