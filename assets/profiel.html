@@ -94,54 +94,59 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <label class="selections-label">Selecteer per onderdeel 1 of meerdere keuzes</label>
-                <div class="selections">
-                    <div class="interesses">
-                        <label class="interesses">Selecteer uw interesses</label>
-                        <select id="interesses" name="interesses" multiple required>
-                            <!-- <option disabled selected value> -- Kies een interesse -- </option> -->
-                            <option value="Zwemmen">Zwemmen</option>
-                            <option value="Fietsen">Fietsen</option>
-                            <option value="Hardlopen">Hardlopen</option>
-                            <option value="Klimmen">Klimmen</option>
-                            <option value="Musea">Musea</option>
-                            <option value="Culturen">Culturen</option>
-                            <option value="Skiën">Skiën</option>
-                            <option value="Kunst">Kunst</option>
-                            <option value="Grotten">Grotten</option>
-                            <option value="Geschiedenis">Geschiedenis</option>
-                        </select>
+                    <div class="selectionsMetLabel">
+                        <label class="selections-label">Selecteer per onderdeel 1 of meerdere keuzes</label>
+                        <div class="selections">
+                            <div class="interesses">
+                                <label class="interesses">Selecteer uw interesses</label>
+                                <select id="interesses" name="interesses" multiple required>
+                                    <!-- <option disabled selected value> -- Kies een interesse -- </option> -->
+                                    <option value="Zwemmen">Zwemmen</option>
+                                    <option value="Fietsen">Fietsen</option>
+                                    <option value="Hardlopen">Hardlopen</option>
+                                    <option value="Klimmen">Klimmen</option>
+                                    <option value="Musea">Musea</option>
+                                    <option value="Culturen">Culturen</option>
+                                    <option value="Skiën">Skiën</option>
+                                    <option value="Kunst">Kunst</option>
+                                    <option value="Grotten">Grotten</option>
+                                    <option value="Geschiedenis">Geschiedenis</option>
+                                </select>
+                            </div>
+                            <div class="soortVakantie">
+                                <label class="soortVakantie">Selecteer uw soort vakantie</label>
+                                <select id="soortVakantie" name="soortVakantie" multiple required>
+                                    <option value="Cruise">Cruise</option>
+                                    <option value="Fly-DriveVakantie">Fly-Drive vakantie</option>
+                                    <option value="Formule1">Formule 1</option>
+                                    <option value="Rondreis">Rondreis</option>
+                                    <option value="Stedentrip">Stedentrip</option>
+                                    <option value="Skivakantie">Ski vakantie</option>
+                                    <option value="Zonvakantie">Zon vakantie</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
-                    <div class="soortVakantie">
-                        <label class="soortVakantie">Selecteer uw soort vakantie</label>
-                        <select id="soortVakantie" name="soortVakantie" multiple required>
-                            <option value="Cruise">Cruise</option>
-                            <option value="Fly-DriveVakantie">Fly-Drive vakantie</option>
-                            <option value="Formule1">Formule 1</option>
-                            <option value="Rondreis">Rondreis</option>
-                            <option value="Stedentrip">Stedentrip</option>
-                            <option value="Skivakantie">Ski vakantie</option>
-                            <option value="Zonvakantie">Zon vakantie</option>
-                        </select>
+                </div>
+
+                <div class="budgetLeeftijdGrensDatum">
+                    <div class="budget">
+                        <label class="budget">Wat is uw budget voor een reis?</label>
+                        <input type="number" id="budget" min="0" placeholder="Vul uw budget in euro's in">
+                    </div>
+
+                    <div class="leeftijdGrens">
+                        <label class="leeftijdGrens">Selecteer de leeftijdsgrens van uw reispartner</label>
+                        <input type="number" min="18" max="100" id="leeftijdsgrens" name="leeftijd" placeholder="Vul de leeftijdsgrens in" required>
+                    </div>
+
+                    <label class="datumRangeLabel">Wanneer wilt u op vakantie?</label>
+                    <div class="datumRange">
+                        <input type="date" id="datumVan">
+                        <input type="date" id="datumTot">
                     </div>
                 </div>
 
-                <div class="budget">
-                    <label class="budget">Wat is uw budget voor een reis?</label>
-                    <input type="number" id="budget" min="0" placeholder="Vul uw budget in euro's in">
-                </div>
-
-                <div class="leeftijdGrens">
-                    <label class="leeftijdGrens">Selecteer de leeftijdsgrens van uw reispartner</label>
-                    <input type="number" min="18" max="100" id="leeftijdsgrens" name="leeftijd" placeholder="Vul de leeftijdsgrens in" required>
-                </div>
-
-                <label class="datumRangeLabel">Wanneer wilt u op vakantie?</label>
-                <div class="datumRange">
-                    <input type="date" id="datumVan">
-                    <input type="date" id="datumTot">
-                </div>
 
                 <label class="labelSocialmedia">Kies uw sociale media (optioneel)</label>
                 <div class="socialmedia">
