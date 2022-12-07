@@ -1,32 +1,13 @@
 FYSCloud.API.configure({
     url: "https://api.fys.cloud",
     apiKey: "fys_is101_4.kQepJlZ8TUMLReYA",
-    database: "fys_is101_4_live",
+    database: "fys_is101_4_test",
     environment: "mockup"
 });
-
+/*
 let data = await getData();
 document.getElementById("div-test").innerText = data[1].email;
 makeDiv("Hoi Joey");makeDiv("heeeey");
-
-/*FYSCloud.API.queryDatabase(
-    "SELECT * FROM account"
-).then(function(data) {
-    console.log(data);
-}).catch(function(reason) {
-    console.log(reason);
-});*/
-/*function getData() {
-    FYSCloud.API.queryDatabase(
-        "SELECT * FROM account"
-    ).then(function (data) {
-        console.log(data);
-        return data;
-    }).catch(function (reason) {
-        console.error(reason);
-        return null;
-    });
-}*/
 
 async function getData() {
     try {
@@ -48,4 +29,36 @@ function makeDiv(divParameter) {
 
 for (let i = 0; i < data.length; i++) {
     makeDiv(data[i].email);
+} */
+
+// Form testing
+window.addEventListener("load", addListeners);
+
+function addListeners() {
+    document.getElementById("submitBtn").addEventListener("click", insertData);
+}
+
+async function insertData() {
+    let voornaam;
+    let tussenvoegsel;
+    let achternaam;
+    voornaam = document.getElementById("voornaam").value;
+    tussenvoegsel = document.getElementById("tussenvoegsel").value;
+    achternaam = document.getElementById("achternaam").value;
+
+    document.getElementById("second").innerHTML = "HET WERKT!!!!";
+    console.log(voornaam);
+    console.log(tussenvoegsel);
+    console.log(achternaam);
+
+    try {
+        const data = await FYSCloud.API.queryDatabase(
+            "INSERT INTO persoon(voornaam, tussenvoegsel, achternaam) VALUES(?, ?, ?)",
+            [voornaam, tussenvoegsel, achternaam]
+        );
+        console.log(data);
+        return data;
+    } catch (error) {
+        return null;
+    }
 }

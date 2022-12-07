@@ -9,7 +9,7 @@
     <meta name="description" content="Error 404"/>
     <meta name="keywords" content="website, corendon"/>
     <!-- JavaScript implementation -->
-    <script type="module" src="js/javascript.js"></script>
+    <script type="module" src="js/header_footer.js"></script>
     <script src="https://cdn.fys.cloud/fyscloud/0.0.4/fyscloud.min.js"></script>
     <script type="module" src="js/404.js"></script>
     <!-- CSS implementation -->
@@ -24,6 +24,20 @@
     <div class="container-1-404">
         <div class="title-404">Error 404!</div>
         <div id="div-test"></div>
+    </div>
+    <div>
+        <form>
+            <label for="voornaam">Voornaam: </label>
+            <input type="text" id="voornaam"><br>
+            <label for="tussenvoegsel">Tussenvoegsel: </label>
+            <input type="text" id="tussenvoegsel"><br>
+            <label for="achternaam">Achternaam: </label>
+            <input type="text" id="achternaam"><br>
+
+            <button type="reset" id="submitBtn">Gegevens Opslaan</button>
+        </form>
+
+        <p id="second"></p>
     </div>
 </main>
 <!-- Custom HTML element. By defining a new class in JS that extends HTMLElement -->
