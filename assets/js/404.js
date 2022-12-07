@@ -1,11 +1,10 @@
-/*
 FYSCloud.API.configure({
     url: "https://api.fys.cloud",
     apiKey: "fys_is101_4.kQepJlZ8TUMLReYA",
-    database: "fys_is101_4_live",
+    database: "fys_is101_4_test",
     environment: "mockup"
 });
-
+/*
 let data = await getData();
 document.getElementById("div-test").innerText = data[1].email;
 makeDiv("Hoi Joey");makeDiv("heeeey");
@@ -36,10 +35,10 @@ for (let i = 0; i < data.length; i++) {
 window.addEventListener("load", addListeners);
 
 function addListeners() {
-    document.getElementById("submitBtn").addEventListener("click", formFunction);
+    document.getElementById("submitBtn").addEventListener("click", insertData);
 }
 
-function formFunction() {
+async function insertData() {
     let voornaam;
     let tussenvoegsel;
     let achternaam;
@@ -51,4 +50,15 @@ function formFunction() {
     console.log(voornaam);
     console.log(tussenvoegsel);
     console.log(achternaam);
+
+    try {
+        const data = await FYSCloud.API.queryDatabase(
+            "INSERT INTO persoon(voornaam, tussenvoegsel, achternaam) VALUES(?, ?, ?)",
+            [voornaam, tussenvoegsel, achternaam]
+        );
+        console.log(data);
+        return data;
+    } catch (error) {
+        return null;
+    }
 }
