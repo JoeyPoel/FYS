@@ -32,6 +32,42 @@ for (let i = 0; i < data.length; i++) {
 } */
 
 // Form testing
+const form = document.getElementById("form");
+const errorElement = document.getElementById("error");
+
+const voornaam = document.getElementById("voornaam");
+const tussenvoegsel = document.getElementById("tussenvoegsel");
+const achternaam = document.getElementById("achternaam");
+
+form.addEventListener("submit", (e) => {
+    let messages = [];
+    if (voornaam.value === '' || voornaam.value == null) {
+        messages.push("Voornaam is verplicht");
+    }
+
+    if (achternaam.value === '' || achternaam.value == null) {
+        messages.push("Achternaam is verplicht");
+    }
+
+    if (messages.length > 0) {
+        e.preventDefault() // prevent page refreshing to show the error
+        errorElement.innerHTML = messages.join(", ");
+    }
+
+    if (messages.length == 0) {
+        try {
+            const data = FYSCloud.API.queryDatabase(
+                "INSERT INTO persoon(voornaam, tussenvoegsel, achternaam) VALUES(?, ?, ?)",
+                [voornaam.value, tussenvoegsel.value, achternaam.value]
+            );
+            console.log(data);
+            return data;
+        } catch (error) {
+            return null;
+        }
+    }
+});
+/*
 window.addEventListener("load", addListeners);
 
 function addListeners() {
@@ -61,4 +97,4 @@ async function insertData() {
     } catch (error) {
         return null;
     }
-}
+}*/
