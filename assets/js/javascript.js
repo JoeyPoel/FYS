@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
         rootMargin: "0px 0px -150px 0px"
     };
 
-    const appearOnScroll = new IntersectionObserver(function(
+    const appearOnScroll = new IntersectionObserver(function (
             entries,
             appearOnScroll
         ) {
@@ -89,114 +89,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         reader.readAsDataURL(image);
     }
-
-    // PROFIEL UPLOAD
-    document.getElementById('btn').addEventListener('click', addProfiel);
-
-    async function addProfiel() {
-        let voornaam = document.getElementById('voornaam').value;
-        let tussenvoegsel = document.getElementById('tussenvoegsel').value;
-        let achternaam = document.getElementById('achternaam').value;
-        let email = document.getElementById('email').value;
-        let wachtwoord = document.getElementById('wachtwoord').value;
-        let telefoonNummer = document.getElementById('telnummer').value;
-        let leeftijd = document.getElementById('leeftijd').value;
-        let persoon_info = document.getElementById('eigenTekst').value;
-
-        let profielFoto = document.getElementById('profielFoto').value;
-
-        let instagram = document.getElementById('Instagram').value;
-        let twitter = document.getElementById('Twitter').value;
-        let linkedIn = document.getElementById('LinkedIn').value;
-        let facebook = document.getElementById('Facebook').value;
-        let whatsapp = document.getElementById('Whatsapp').value;
-        let telegram = document.getElementById('Telegram').value;
-
-        let account_id = 45;
-
-        // EMAIL EN WACHTWOORD
-        await FYSCloud.API.queryDatabase(
-            "INSERT INTO account (email, wachtwoord) VALUES (?, ?)", // Voegt de persoon toe aan de database
-            [email, wachtwoord]
-        ).then(function (data) {
-            console.log(data);
-        }).catch(function (reason) {
-            console.log(reason);
-        });
-
-        // STANDAARD INFO
-        FYSCloud.API.queryDatabase(
-            "INSERT INTO persoon (account_id, voornaam, tussenvoegsel, achternaam, telefoon, leeftijd, foto, persoon_info) VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
-            [account_id, voornaam, tussenvoegsel, achternaam, telefoonNummer, leeftijd, profielFoto, persoon_info]
-        ).then(function (data) {
-            console.log(data);
-        }).catch(function (reason) {
-            console.log(reason);
-            console.log("Insert mislukt")
-        });
-
-        // RADIO EN SELECTIONS
-        // await FYSCloud.API.queryDatabase(
-        //     "INSERT INTO persoon (foto, geslacht, budget, soort_vakantie, leeftijdsgrens_reispartner, persoon_info) VALUES (?, ?, ?, ?, ?, ?)",
-        //     []
-        // ).then(function (data) {
-        //     console.log(data);
-        // }).catch(function (reason) {
-        //     console.log(reason);
-        // });
-
-        //SOCIALMEDIA
-        await FYSCloud.API.queryDatabase(
-            "INSERT INTO sociale_media (instagram, twitter, linkedin, facebook, whatsapp, telegram) VALUES (?, ?, ?, ?, ?, ?)",
-            [instagram, twitter, linkedIn, facebook, whatsapp, telegram]
-        ).then(function (data) {
-            console.log(data);
-        }).catch(function (reason) {
-            console.log(reason);
-        });
-    }
-
-    // TEST DATA
-    let wachtwoord = "joey";
-    let email = "hoi";
-
-    /**
-     *
-     * SQL LIKE mag maar 1 waarde hebben, dus dit is fout
-     */
-    // log in
-    async function inloggen(){
-        FYSCloud.API.queryDatabase(
-            "SELECT * FROM account WHERE (email, wachtwoord) LIKE (?, ?) ", // Vraagt of email in de database zit
-            [email, wachtwoord]                                             // en of het wachtwoord bij de email hoort
-        ).then(function (data) {
-            console.log(data);
-        }).catch(function (reason) {
-            console.log(reason);
-        });
-    }
-
-    // Aanmelden
-    async function aanmelden(){
-    await FYSCloud.API.queryDatabase(
-        "SELECT * FROM account WHERE email NOT LIKE ? ", // Vraagt of email NOG NIET in de database zit
-        email
-    ).then(function (data) {
-        insertAccount();
-        console.log(data);
-    }).catch(function (reason) {
-        console.log(reason);
-    });
-    }
-
-    async function insertAccount() {
-        await FYSCloud.API.queryDatabase(
-            "INSERT INTO account (email, wachtwoord) VALUES (?, ?)", // Voegt de persoon toe aan de database
-            [email, wachtwoord]
-        ).then(function (data) {
-            console.log(data);
-        }).catch(function (reason) {
-            console.log(reason);
-        });
-    }
 });
+
+
