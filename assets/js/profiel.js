@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // STANDAARD INFO
         await FYSCloud.API.queryDatabase(
-            "INSERT INTO sociale_media (account_id, voornaam, tussenvoegsel, achternaam, telefoon, leeftijd, persoon_info) VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
+            "INSERT INTO persoon (accountId, voornaam, tussenvoegsel, achternaam, telefoon, leeftijd, persoonInfo) VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
             [account_id, voornaam, tussenvoegsel, achternaam, telefoonNummer, leeftijd, persoon_info]
         ).then(function (data) {
             console.log(data);
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         //SOCIALMEDIA
         await FYSCloud.API.queryDatabase(
-            "INSERT INTO sociale_media (instagram, twitter, linkedin, facebook, whatsapp, telegram) VALUES (?, ?, ?, ?, ?, ?)",
+            "INSERT INTO social_media (instagram, twitter, linkedin, facebook, whatsapp, telegram) VALUES (?, ?, ?, ?, ?, ?)",
             [instagram, twitter, linkedIn, facebook, whatsapp, telegram]
         ).then(function (data) {
             console.log(data);

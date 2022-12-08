@@ -24,6 +24,16 @@
 <main class="main-profiel">
     <div class="container-1-profiel">
         <div class="title">Profiel</div>
+        <div class="profielfotoCenter">
+            <div class="profielFotoEnLabel">
+                <label class="labelProfielFoto">Upload een foto van u zelf</label>
+                <div class="profielFoto">
+                    <input type="file" id="profielFoto" onChange="handleImageUpload()"/>
+                    <img id="display-image" src="../assets/img/profielfoto.png"/>
+                </div>
+            </div>
+        </div>
+
         <div class="content">
             <form id="form" name="form">
                 <div class="user-details">
@@ -60,18 +70,11 @@
                         <input type="tel" id="telnummer" name="telnummer" placeholder="Vul je telefoonnummer in">
                     </div>
                     <div class="input-box">
-                        <label class="details">Leeftijd </label>
-                        <input type="number" min="18" max="100" id="leeftijd" name="leeftijd" placeholder="Vul je leeftijd in" required>
+                        <label class="details">Geboorte datum </label>
+                        <input type="date" id="leeftijd" name="leeftijd"  required>
                     </div>
                 </div>
-                <div class="profielFotoEnRadioField1">
-                    <div class="profielFotoEnLabel">
-                        <label class="labelProfielFoto">Upload een foto van u zelf</label>
-                        <div class="profielFoto">
-                            <input type="file" id="profielFoto" onChange="handleImageUpload()"/>
-                            <img id="display-image" src="../assets/img/profielfoto.png"/>
-                        </div>
-                    </div>
+                <div class="RadioField1">
                     <div class="radioField1">
                         <div class="gender-details">
                             <input type="radio" id="dot-1" name="gender">
