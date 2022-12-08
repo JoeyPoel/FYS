@@ -4,6 +4,64 @@ FYSCloud.API.configure({
     database: "fys_is101_4_test",
     environment: "mockup"
 });
+
+const form = document.getElementById("form");
+const errorElement = document.getElementById("error");
+
+const voornaam = document.getElementById("voornaam");
+const tussenvoegsel = document.getElementById("tussenvoegsel");
+const achternaam = document.getElementById("achternaam");
+
+async function getData() {
+    try {
+        const selectedData = await FYSCloud.API.queryDatabase(
+            "SELECT id FROM hobby WHERE id = (SELECT MAX(id) FROM hobby)"
+        );
+        return selectedData;
+    } catch (error) {
+        return null;
+    }
+}
+
+let selectedData = await getData();
+
+form.addEventListener("submit", (e) => {
+    let messages = [];
+    if (voornaam.value === '' || voornaam.value == null) {
+        messages.push("Voornaam is verplicht");
+    }
+
+    if (tussenvoegsel.value === '123') {
+        messages.push("Tussenvoegsel mag niet 123 zijn!");
+    }
+
+    if (achternaam.value === '' || achternaam.value == null) {
+        messages.push("Achternaam is verplicht");
+    }
+
+    if (messages.length > 0) {
+        e.preventDefault() // prevent page refreshing to show the error
+        errorElement.innerHTML = messages.join(", ");
+    }
+
+    if (messages.length == 0) {
+        try {
+            const data = FYSCloud.API.queryDatabase(
+                "INSERT INTO persoon_has_hobby(persoon_id, hobby_id) VALUES(?, ?)",
+                [1, selectedData[0].id]
+            );
+            console.log(data);
+            return data;
+        } catch (error) {
+            return null;
+        }
+    }
+});
+console.log(selectedData[0].id); // Hier wordt de laatste id weergegeven
+/*const data = FYSCloud.API.queryDatabase(
+    "INSERT INTO persoon_has_hobby(persoon_id, hobby_id) VALUES(?, ?)",
+    [3, selectedData[0].id]
+);*/
 /*
 let data = await getData();
 document.getElementById("div-test").innerText = data[1].email;
@@ -30,43 +88,6 @@ function makeDiv(divParameter) {
 for (let i = 0; i < data.length; i++) {
     makeDiv(data[i].email);
 } */
-
-// Form testing
-const form = document.getElementById("form");
-const errorElement = document.getElementById("error");
-
-const voornaam = document.getElementById("voornaam");
-const tussenvoegsel = document.getElementById("tussenvoegsel");
-const achternaam = document.getElementById("achternaam");
-
-form.addEventListener("submit", (e) => {
-    let messages = [];
-    if (voornaam.value === '' || voornaam.value == null) {
-        messages.push("Voornaam is verplicht");
-    }
-
-    if (achternaam.value === '' || achternaam.value == null) {
-        messages.push("Achternaam is verplicht");
-    }
-
-    if (messages.length > 0) {
-        e.preventDefault() // prevent page refreshing to show the error
-        errorElement.innerHTML = messages.join(", ");
-    }
-
-    if (messages.length == 0) {
-        try {
-            const data = FYSCloud.API.queryDatabase(
-                "INSERT INTO persoon(voornaam, tussenvoegsel, achternaam) VALUES(?, ?, ?)",
-                [voornaam.value, tussenvoegsel.value, achternaam.value]
-            );
-            console.log(data);
-            return data;
-        } catch (error) {
-            return null;
-        }
-    }
-});
 /*
 window.addEventListener("load", addListeners);
 
@@ -97,4 +118,4 @@ async function insertData() {
     } catch (error) {
         return null;
     }
-}*/
+} */
