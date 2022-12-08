@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // EMAIL EN WACHTWOORD
         await FYSCloud.API.queryDatabase(
-            "INSERT INTO account (email, wachtwoord) VALUES (?, ?)", // Voegt de persoon toe aan de database
+            "INSERT INTO Account (email, wachtwoord) VALUES (?, ?)", // Voegt de persoon toe aan de database
             [email, wachtwoord]
         ).then(function (data) {
             console.log(data);
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         let account_id = FYSCloud.API.queryDatabase(
-            "SELECT * FROM account WHERE (email) LIKE (?) ",
+            "SELECT * FROM Account WHERE (email) LIKE (?) ",
             [email]
         ).then(function (data) {
             console.log(data);
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // STANDAARD INFO
         await FYSCloud.API.queryDatabase(
-            "INSERT INTO persoon (accountId, voornaam, tussenvoegsel, achternaam, telefoon, leeftijd, persoonInfo) VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
+            "INSERT INTO Persoon (account_id, voornaam, tussenvoegsel, achternaam, telefoon, leeftijd, persoon_info) VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
             [account_id, voornaam, tussenvoegsel, achternaam, telefoonNummer, leeftijd, persoon_info]
         ).then(function (data) {
             console.log(data);
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         //SOCIALMEDIA
         await FYSCloud.API.queryDatabase(
-            "INSERT INTO social_media (instagram, twitter, linkedin, facebook, whatsapp, telegram) VALUES (?, ?, ?, ?, ?, ?)",
+            "INSERT INTO SocialMedia (instagram, twitter, linkedin, facebook, whatsapp, telegram) VALUES (?, ?, ?, ?, ?, ?)",
             [instagram, twitter, linkedIn, facebook, whatsapp, telegram]
         ).then(function (data) {
             console.log(data);
