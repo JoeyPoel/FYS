@@ -572,7 +572,6 @@ form .button input:hover {
 }
 
 .selections-label {
-    margin-top: 10px;
     font-size: 20px;
     font-weight: 500;
 }
@@ -613,6 +612,22 @@ form .button input:hover {
 label.interesses, label.soortVakantie  {
     display: block;
     font-weight: 500;
+}
+
+.budgetLeeftijdGrensDatum{
+    display: flex;
+    flex-direction: row;
+}
+
+.bugdgetLeeftijdGrens{
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+}
+
+.datumRange\+Label{
+    display: flex;
+    flex-direction: column;
 }
 
 #budget, #leeftijdsgrens, #datumVan, #datumTot {

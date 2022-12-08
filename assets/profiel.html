@@ -130,20 +130,24 @@
                 </div>
 
                 <div class="budgetLeeftijdGrensDatum">
-                    <div class="budget">
-                        <label class="budget">Wat is uw budget voor een reis?</label>
-                        <input type="number" id="budget" min="0" placeholder="Vul uw budget in euro's in">
+                    <div class="bugdgetLeeftijdGrens">
+                        <div class="budget">
+                            <label class="budget">Wat is uw budget voor een reis?</label>
+                            <input type="number" id="budget" min="0" placeholder="Vul uw budget in euro's in">
+                        </div>
+
+                        <div class="leeftijdGrens">
+                            <label class="leeftijdGrens">Selecteer de leeftijdsgrens van uw reispartner</label>
+                            <input type="number" min="18" max="100" id="leeftijdsgrens" name="leeftijd" placeholder="Vul de leeftijdsgrens in" required>
+                        </div>
                     </div>
 
-                    <div class="leeftijdGrens">
-                        <label class="leeftijdGrens">Selecteer de leeftijdsgrens van uw reispartner</label>
-                        <input type="number" min="18" max="100" id="leeftijdsgrens" name="leeftijd" placeholder="Vul de leeftijdsgrens in" required>
-                    </div>
-
-                    <label class="datumRangeLabel">Wanneer wilt u op vakantie?</label>
-                    <div class="datumRange">
-                        <input type="date" id="datumVan">
-                        <input type="date" id="datumTot">
+                    <div class="datumRange+Label">
+                        <label class="datumRangeLabel">Wanneer wilt u op vakantie?</label>
+                        <div class="datumRange">
+                            <input type="date" id="datumVan">
+                            <input type="date" id="datumTot">
+                        </div>
                     </div>
                 </div>
 
