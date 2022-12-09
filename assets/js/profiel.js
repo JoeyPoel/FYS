@@ -62,4 +62,21 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log(reason);
         });
     }
+
+    // Profielfoto upload
+    /**
+     * WERKT OPEENS NIET MEER
+     **/
+    async function handleImageUpload() {
+
+        let image = document.getElementById("profielFoto").files[0];
+
+        let reader = new FileReader();
+
+        reader.onload = function (e) {
+            document.getElementById("display-image").src = e.target.result;
+        }
+
+        reader.readAsDataURL(image);
+    }
 });
