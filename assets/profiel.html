@@ -10,7 +10,7 @@
     <meta name="keywords" content="website, corendon"/>
     <!-- JavaScript implementation -->
     <script type="module" src="js/header_footer.js"></script>
-    <script type="module" src="js/profiel.js"></script>
+    <script src="js/profiel.js"></script>
     <script src="https://cdn.fys.cloud/fyscloud/0.0.4/fyscloud.min.js"></script>
     <script type="module" src="js/config.js"></script>
     <!-- CSS implementation -->
@@ -30,7 +30,7 @@
                 <div class="profielFotoEnLabel">
                     <label class="labelProfielFoto">Upload een foto van u zelf</label>
                     <div class="profielFoto">
-                        <input type="file" id="profielFoto" onChange="handleImageUpload()"/>
+                        <input type="file" id="profielFoto"/>
                         <img id="display-image" src="../assets/img/profielfoto.png"/>
                     </div>
                 </div>
@@ -132,7 +132,7 @@
                     </div>
                         <div class="bugdgetLeeftijdGrens">
                             <div class="budget">
-                                <label class="budget">Wat is uw budget voor een reis?</label>
+                                <label class="budget">Wat is uw budget in euro's voor een reis?</label>
                                 <input type="number" id="budget" min="0" placeholder="Vul uw budget in euro's in">
                             </div>
 
