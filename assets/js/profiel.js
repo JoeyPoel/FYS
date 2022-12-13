@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded',
             });
 
             let account_id = FYSCloud.API.queryDatabase(
-                "SELECT * FROM Account WHERE (email) LIKE (?) ",
+                "SELECT account_id FROM Account WHERE email = ? ",
                 [email]
             ).then(function (data) {
                 console.log(data);

@@ -463,7 +463,7 @@ form .category label .dot {
     border-color: #d9d9d9;
 }
 
-form input[type="radio"] {
+#dot-1, #dot-2, #dot-3  {
     display: none;
 }
 
@@ -478,7 +478,7 @@ form input[type="radio"] {
     transition: all 0.3s ease;
     box-sizing: border-box;
     height: 300px;
-    width: 80%;
+    width: 100%;
     margin-top: 10px;
     margin-bottom: 10px;
 }
@@ -609,6 +609,46 @@ label.interesses, label.soortVakantie  {
     display: block;
     font-weight: 500;
 }
+
+/*INTERESSES DROPDOWN*/
+.dropbtn {
+    background-color: red;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    min-width: 160px;
+    text-align: center;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+}
+
+.dropdown-checkboxfield{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.dropdown-labelMetcheckbox{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.dropdown:hover .dropdown-content {display: block;}
 
 .bugdgetLeeftijdGrens{
     display: flex;

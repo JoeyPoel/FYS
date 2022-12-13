@@ -53,20 +53,6 @@
                                required>
                     </div>
                     <div class="input-box">
-                        <label class="details">E-mail</label>
-                        <input type="email" id="email" name="email" placeholder="Vul je e-mail in" required>
-                    </div>
-                    <div class="input-box">
-                        <label class="details">Wachtwoord</label>
-                        <input type="password" id="wachtwoord" name="wachtwoord" placeholder="Vul je wachtwoord in"
-                               required>
-                    </div>
-                    <div class="input-box">
-                        <label class="details">Wachtwoord bevestigen</label>
-                        <input type="password" id="wachtwoordbv" name="wachtwoordbv" placeholder="Wachtwoord bevestigen"
-                               required>
-                    </div>
-                    <div class="input-box">
                         <label class="details">Telefoonnummer (optioneel)</label>
                         <input type="tel" id="telnummer" name="telnummer" placeholder="Vul je telefoonnummer in">
                     </div>
@@ -104,31 +90,91 @@
                 <div class="selections">
                     <div class="interesses">
                         <label class="interesses">Selecteer uw interesses</label>
-                        <select id="interesses" name="interesses" multiple required>
-                            <!-- <option disabled selected value> -- Kies een interesse -- </option> -->
-                            <option value="Zwemmen">Zwemmen</option>
-                            <option value="Fietsen">Fietsen</option>
-                            <option value="Hardlopen">Hardlopen</option>
-                            <option value="Klimmen">Klimmen</option>
-                            <option value="Musea">Musea</option>
-                            <option value="Culturen">Culturen</option>
-                            <option value="Skiën">Skiën</option>
-                            <option value="Kunst">Kunst</option>
-                            <option value="Grotten">Grotten</option>
-                            <option value="Geschiedenis">Geschiedenis</option>
-                        </select>
+                        <div class="dropdown">
+                           <div class="dropbtn">Klik hier</div>
+                            <div class="dropdown-content">
+                                <div class="dropdown-checkboxfield">
+                                    <div class="dropdown-labelMetcheckbox">
+                                        <label for="Zwemmen">Zwemmen</label>
+                                        <input type="checkbox" id="zwemmen">
+                                    </div>
+                                    <div class="dropdown-labelMetcheckbox">
+                                        <label for="Fietsen">Fietsen</label>
+                                        <input type="checkbox" id="Fietsen">
+                                    </div>
+                                    <div class="dropdown-labelMetcheckbox">
+                                        <label for="Hardlopen">Hardlopen</label>
+                                        <input type="checkbox" id="Hardlopen">
+                                    </div>
+                                    <div class="dropdown-labelMetcheckbox">
+                                        <label for="Klimmen">Klimmen</label>
+                                        <input type="checkbox" id="Klimmen">
+                                    </div>
+                                    <div class="dropdown-labelMetcheckbox">
+                                        <label for="Musea">Musea</label>
+                                        <input type="checkbox" id="Musea">
+                                    </div>
+                                    <div class="dropdown-labelMetcheckbox">
+                                        <label for="Culturen">Culturen</label>
+                                        <input type="checkbox" id="Culturen">
+                                    </div>
+                                    <div class="dropdown-labelMetcheckbox">
+                                        <label for="Skiën">Skiën</label>
+                                        <input type="checkbox" id="Skiën">
+                                    </div>
+                                    <div class="dropdown-labelMetcheckbox">
+                                        <label for="Kunst">Kunst</label>
+                                        <input type="checkbox" id="Kunst">
+                                    </div>
+                                    <div class="dropdown-labelMetcheckbox">
+                                        <label for="Grotten">Grotten</label>
+                                        <input type="checkbox" id="Grotten">
+                                    </div>
+                                    <div class="dropdown-labelMetcheckbox">
+                                        <label for="Geschiedenis">Geschiedenis</label>
+                                        <input type="checkbox" id="Geschiedenis">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="soortVakantie">
                         <label class="soortVakantie">Selecteer uw soort vakantie</label>
-                        <select id="soortVakantie" name="soortVakantie" multiple required>
-                            <option value="Cruise">Cruise</option>
-                            <option value="Fly-DriveVakantie">Fly-Drive vakantie</option>
-                            <option value="Formule1">Formule 1</option>
-                            <option value="Rondreis">Rondreis</option>
-                            <option value="Stedentrip">Stedentrip</option>
-                            <option value="Skivakantie">Ski vakantie</option>
-                            <option value="Zonvakantie">Zon vakantie</option>
-                        </select>
+                        <div class="dropdown">
+                            <div class="dropbtn">Klik hier</div>
+                            <div class="dropdown-content">
+                                <div class="dropdown-checkboxfield">
+                                    <div class="dropdown-labelMetcheckbox">
+                                        <label for="Cruise">Cruise</label>
+                                        <input type="checkbox" id="Cruise">
+                                    </div>
+                                    <div class="dropdown-labelMetcheckbox">
+                                        <label for="Fly-DriveVakantie">Fly-Drive Vakantie</label>
+                                        <input type="checkbox" id="Fly-DriveVakantie">
+                                    </div>
+                                    <div class="dropdown-labelMetcheckbox">
+                                        <label for="Formule1">Formule 1</label>
+                                        <input type="checkbox" id="Formule1">
+                                    </div>
+                                    <div class="dropdown-labelMetcheckbox">
+                                        <label for="Rondreis">Rondreis</label>
+                                        <input type="checkbox" id="Rondreis">
+                                    </div>
+                                    <div class="dropdown-labelMetcheckbox">
+                                        <label for="Stedentrip">Stedentrip</label>
+                                        <input type="checkbox" id="Stedentrip">
+                                    </div>
+                                    <div class="dropdown-labelMetcheckbox">
+                                        <label for="Skivakantie">Ski vakantie</label>
+                                        <input type="checkbox" id="Skivakantie">
+                                    </div>
+                                    <div class="dropdown-labelMetcheckbox">
+                                        <label for="Zonvakantie">Zon vakantie</label>
+                                        <input type="checkbox" id="Zonvakantie">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                         <div class="bugdgetLeeftijdGrens">
                             <div class="budget">
