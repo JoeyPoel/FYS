@@ -459,7 +459,7 @@ form .category label .dot {
 #dot-1:checked ~ .category label .one,
 #dot-2:checked ~ .category label .two,
 #dot-3:checked ~ .category label .three {
-    background: #d81e05;
+    background: rgb(255, 70, 50);
     border-color: #d9d9d9;
 }
 
@@ -558,12 +558,12 @@ form .button input {
     letter-spacing: 1px;
     cursor: pointer;
     transition: all 0.3s ease;
-    background: #d81e05;
+    background: rgb(255, 70, 50) ;
 }
 
 form .button input:hover {
     /* transform: scale(0.99); */
-    background: #b81a04;
+    background: rgb(255, 70, 50);
 }
 
 /* selections */
@@ -579,6 +579,11 @@ form .button input:hover {
     margin-bottom: 20px;
     margin-top: 7px;
     flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.interessesEnSoortVakantie{
+    display: flex;
     flex-direction: row;
 }
 
@@ -612,7 +617,7 @@ label.interesses, label.soortVakantie  {
 
 /*INTERESSES DROPDOWN*/
 .dropbtn {
-    background-color: red;
+    background-color: rgb(255, 70, 50);
     color: white;
     padding: 16px;
     font-size: 16px;
@@ -650,10 +655,10 @@ label.interesses, label.soortVakantie  {
 
 .dropdown:hover .dropdown-content {display: block;}
 
-.bugdgetLeeftijdGrens{
+.budgetLeeftijdGrens{
     display: flex;
     flex-direction: column;
-    margin-right: 10px;
+    margin-right: 30px;
 }
 
 .datumRange\+Label{
@@ -1410,7 +1415,7 @@ textarea {
 }
 
 .inloggen {
-    background-color: #b81a04;
+    background-color: rgb(255, 70, 50);
     border-radius: 60% / 10%;
     display: flex;
     flex-direction: column;
