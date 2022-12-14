@@ -12,65 +12,28 @@ const voornaam = document.getElementById("voornaam");
 const tussenvoegsel = document.getElementById("tussenvoegsel");
 const achternaam = document.getElementById("achternaam");
 
-async function getData() {
+document.getElementById("form").addEventListener("submit", insertData);
+
+async function insertData() {
     try {
-        const selectedData = await FYSCloud.API.queryDatabase(
-            "SELECT id FROM hobby WHERE id = (SELECT MAX(id) FROM hobby)"
+        const data = await FYSCloud.API.queryDatabase(
+            "INSERT INTO persoon(voornaam, tussenvoegsel, achternaam) VALUES(?, ?, ?)",
+            [voornaam.value, tussenvoegsel.value, achternaam.value]
         );
-        return selectedData;
+        console.log(data);
+        return data;
     } catch (error) {
         return null;
     }
 }
 
-let selectedData = await getData();
-
-form.addEventListener("submit", (e) => {
-    let messages = [];
-    if (voornaam.value === '' || voornaam.value == null) {
-        messages.push("Voornaam is verplicht");
-    }
-
-    if (tussenvoegsel.value === '123') {
-        messages.push("Tussenvoegsel mag niet 123 zijn!");
-    }
-
-    if (achternaam.value === '' || achternaam.value == null) {
-        messages.push("Achternaam is verplicht");
-    }
-
-    if (messages.length > 0) {
-        e.preventDefault() // prevent page refreshing to show the error
-        errorElement.innerHTML = messages.join(", ");
-    }
-
-    if (messages.length == 0) {
-        try {
-            const data = FYSCloud.API.queryDatabase(
-                "INSERT INTO persoon_has_hobby(persoon_id, hobby_id) VALUES(?, ?)",
-                [1, selectedData[0].id]
-            );
-            console.log(data);
-            return data;
-        } catch (error) {
-            return null;
-        }
-    }
-});
-console.log(selectedData[0].id); // Hier wordt de laatste id weergegeven
-/*const data = FYSCloud.API.queryDatabase(
-    "INSERT INTO persoon_has_hobby(persoon_id, hobby_id) VALUES(?, ?)",
-    [3, selectedData[0].id]
-);*/
-/*
-let data = await getData();
-document.getElementById("div-test").innerText = data[1].email;
-makeDiv("Hoi Joey");makeDiv("heeeey");
+/* let data = await getData();
+document.getElementById("div-test").innerText = data[0].id;
 
 async function getData() {
     try {
         const data = await FYSCloud.API.queryDatabase(
-            "SELECT * FROM account"
+            "SELECT id FROM persoon WHERE id = (SELECT MAX(id) FROM persoon)"
         );
         return data;
     } catch (error) {
@@ -86,36 +49,5 @@ function makeDiv(divParameter) {
 }
 
 for (let i = 0; i < data.length; i++) {
-    makeDiv(data[i].email);
-} */
-/*
-window.addEventListener("load", addListeners);
-
-function addListeners() {
-    document.getElementById("submitBtn").addEventListener("click", insertData);
-}
-
-async function insertData() {
-    let voornaam;
-    let tussenvoegsel;
-    let achternaam;
-    voornaam = document.getElementById("voornaam").value;
-    tussenvoegsel = document.getElementById("tussenvoegsel").value;
-    achternaam = document.getElementById("achternaam").value;
-
-    document.getElementById("second").innerHTML = "HET WERKT!!!!";
-    console.log(voornaam);
-    console.log(tussenvoegsel);
-    console.log(achternaam);
-
-    try {
-        const data = await FYSCloud.API.queryDatabase(
-            "INSERT INTO persoon(voornaam, tussenvoegsel, achternaam) VALUES(?, ?, ?)",
-            [voornaam, tussenvoegsel, achternaam]
-        );
-        console.log(data);
-        return data;
-    } catch (error) {
-        return null;
-    }
+    makeDiv(data[i].id);
 } */

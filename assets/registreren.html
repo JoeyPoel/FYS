@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- Always force the latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Error 404</title>
+    <meta name="description" content="Registreren"/>
+    <meta name="keywords" content="website, corendon"/>
+    <!-- JavaScript implementation -->
+    <script type="module" src="js/header_footer.js"></script>
+    <script src="https://cdn.fys.cloud/fyscloud/0.0.4/fyscloud.min.js"></script>
+    <script type="module" src="js/registreren.js"></script>
+    <!-- CSS implementation -->
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <!-- Website Icon -->
+    <link href="" rel="icon" type="image/png"/>
+</head>
+<body>
+<!-- Custom HTML element. By defining a new class in JS that extends HTMLElement -->
+<my-header></my-header>
+<form id="create-account-form" action="../index.html" method="GET">
+    <div class="title">
+        <h2>Create Account</h2>
+    </div>
+    <!-- USERNAME -->
+    <div class="input-group">
+        <label for="username">Name</label>
+        <input type="text" id="username" placeholder="Name" name="username">
+        <i class="fas fa-check-circle"></i>
+        <i class="fas fa-exclamation-circle"></i>
+        <p>Error Message</p>
+    </div>
+    <!-- EMAIL -->
+    <div class="input-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Email" name="email">
+        <i class="fas fa-check-circle"></i>
+        <i class="fas fa-exclamation-circle"></i>
+        <p>Error Message</p>
+    </div>
+    <!-- PASSWORD -->
+    <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Password" name="password">
+        <i class="fas fa-check-circle"></i>
+        <i class="fas fa-exclamation-circle"></i>
+        <p>Error Message</p>
+    </div>
+    <!-- CONFIRM PASSWORD -->
+    <div class="input-group">
+        <label for="confirm-password">Confirm Password</label>
+        <input type="password" id="confirm-password" placeholder="Password" name="confirmpassword">
+        <i class="fas fa-check-circle"></i>
+        <i class="fas fa-exclamation-circle"></i>
+        <p>Error Message</p>
+    </div>
+    <button type="submit" class="btn">Submit</button>
+</form>
+<!-- Custom HTML element. By defining a new class in JS that extends HTMLElement -->
+<my-footer></my-footer>
+</body>
+</html>
