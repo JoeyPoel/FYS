@@ -1508,7 +1508,7 @@ textarea {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: chocolate;
+    background-color: #565656;
 }
 
 #create-account-form {
@@ -1520,6 +1520,7 @@ textarea {
 
 .title {
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .input-group {
@@ -1554,7 +1555,6 @@ textarea {
     visibility: hidden;
 }
 
-
 .success i.fa-check-circle{
     visibility: visible;
     color:green;
@@ -1564,7 +1564,6 @@ textarea {
     visibility: visible;
     color:red;
 }
-
 
 .input-group p {
     font-size: 15px;
@@ -1580,7 +1579,7 @@ textarea {
     width:100%;
     padding:10px;
     font-size: 20px;
-    background-color: chocolate;
+    background-color: rgb(255, 70, 50);
     color:#fff;
     text-transform: uppercase;
     border:none;
