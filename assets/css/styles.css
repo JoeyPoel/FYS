@@ -1,13 +1,10 @@
-html {
-    height: 100%;
+* {
     margin: 0;
-    /*line-height: 1.8;*/
+    padding: 0;
 }
 
 body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
+    height: 100vh;
     box-sizing: border-box;
     background-color: #fafafa;
     font-family: Open Sans WF, sans-serif;
@@ -1504,4 +1501,87 @@ textarea {
 /* Data van SQL opmaak */
 .divPersoonOpmaak {
     color: #6fd649;
+}
+
+/* registreren.html */
+#main-register-div {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #363636;
+}
+
+#create-account-form {
+    width:400px;
+    padding:20px;
+    text-transform: uppercase;
+    background-color: #fff;
+}
+
+.title {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.input-group {
+    margin:20px 0;
+    position:relative;
+}
+
+.input-group label {
+    display:inline-block;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    display:block;
+    width:100%;
+    padding:10px;
+    box-sizing: border-box;
+}
+
+.error input {
+    border:3px red solid;
+}
+
+.success input {
+    border:3px green solid;
+}
+
+.input-group i {
+    position:absolute;
+    right:10px;
+    top:35px;
+    visibility: hidden;
+}
+
+.success i.fa-check-circle{
+    visibility: visible;
+    color:green;
+}
+
+.error i.fa-exclamation-circle {
+    visibility: visible;
+    color:red;
+}
+
+.input-group p {
+    font-size: 15px;
+    color:red;
+    visibility: hidden;
+}
+
+.error p {
+    visibility: visible;
+}
+
+.register-btn {
+    width:100%;
+    padding:10px;
+    font-size: 20px;
+    background-color: rgb(255, 70, 50);
+    color:#fff;
+    text-transform: uppercase;
+    border:none;
 }
