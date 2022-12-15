@@ -1,5 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    FYSCloud.API.configure({
+        url: "https://api.fys.cloud",
+        apiKey: "fys_is101_4.kQepJlZ8TUMLReYA",
+        database: "fys_is101_4_live",
+        environment: "mockup"
+    });
+
     const form = document.querySelector('#create-account-form');
     const usernameInput = document.querySelector('#username');
     const emailInput = document.querySelector('#email');
@@ -11,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log(isFormValid());
         if (isFormValid() == true) {
             form.submit();
+            insertData();
         } else {
             event.preventDefault();
         }
@@ -28,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function validateForm() {
-        //USERNAME
+        // USERNAME
         if (usernameInput.value.trim() == '') {
             setError(usernameInput, 'Name can not be empty');
         } else if (usernameInput.value.trim().length < 5 || usernameInput.value.trim().length > 15) {
@@ -36,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             setSuccess(usernameInput);
         }
-        //EMAIL
+        // EMAIL
         if (emailInput.value.trim() == '') {
             setError(emailInput, 'Provide email address');
         } else if (isEmailValid(emailInput.value)) {
@@ -44,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             setError(emailInput, 'Provide valid email address');
         }
-        //PASSWORD
+        // PASSWORD
         if (passwordInput.value.trim() == '') {
             setError(passwordInput, 'Password can not be empty');
         } else if (passwordInput.value.trim().length < 6 || passwordInput.value.trim().length > 20) {
@@ -52,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             setSuccess(passwordInput);
         }
-        //CONFIRM PASSWORD
+        // CONFIRM PASSWORD
         if (confirmPasswordInput.value.trim() == '') {
             setError(confirmPasswordInput, 'Password can not be empty');
         } else if (confirmPasswordInput.value !== passwordInput.value) {
@@ -83,5 +91,18 @@ document.addEventListener('DOMContentLoaded', () => {
     function isEmailValid(email) {
         const reg = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
         return reg.test(email);
+    }
+    // Function with SQL
+    async function insertData() {
+        try {
+            const data = await FYSCloud.API.queryDatabase(
+                "INSERT INTO account(gebruikersnaam, email, wachtwoord) VALUES(?, ?, ?)",
+                [usernameInput.value, emailInput.value, passwordInput.value]
+            );
+            console.log(data);
+            return data;
+        } catch (error) {
+            return null;
+        }
     }
 });
