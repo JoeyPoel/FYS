@@ -190,7 +190,7 @@ header img {
 /*    justify-content: center;*/
 /*    align-items: center;*/
 /*    width: 100%;*/
-/*    background-color: #d81e05;*/
+/*    background-color: rgb(255, 70, 50);*/
 /*}*/
 
 /*nav {*/
@@ -227,7 +227,7 @@ header img {
 /*    margin: 0;*/
 /*    height: 50px;*/
 /*    font-size: 1.07692rem;*/
-/*    background-color: #d81e05;*/
+/*    background-color: rgb(255, 70, 50);*/
 /*}*/
 
 /*.nav-links li {*/
@@ -364,7 +364,7 @@ form .input-box label.details {
 }
 
 .user-details .input-box input:focus {
-    border-color: #d81e05;
+    border-color: rgb(255, 70, 50);
 }
 
 /* SOCIAL MEDIA */
@@ -404,7 +404,7 @@ form .input-box label.details {
 }
 
 .socialmedia input:focus {
-    border-color: #d81e05;
+    border-color: rgb(255, 70, 50);
 }
 
 @media (max-width: 899px) {
@@ -484,7 +484,7 @@ form .category label .dot {
 }
 
 .eigenTekst textarea:focus {
-    border-color: #d81e05;
+    border-color: rgb(255, 70, 50);
 }
 
 /* PROFIEL FOTO UPLOAD */
@@ -607,7 +607,7 @@ form .button input:hover {
 }
 
 #interesses:focus, #soortVakantie:focus {
-    border-color: #d81e05;
+    border-color: rgb(255, 70, 50);
 }
 
 label.interesses, label.soortVakantie  {
@@ -651,6 +651,7 @@ label.interesses, label.soortVakantie  {
 .dropdown-labelMetcheckbox{
     display: flex;
     flex-direction: row-reverse;
+    font-size: 18px;
 }
 
 .dropdown:hover .dropdown-content {display: block;}
@@ -691,7 +692,7 @@ label.interesses, label.soortVakantie  {
 }
 
 #budget:focus, #leeftijdsgrens:focus, #datumVan:focus, #datumTot:focus{
-    border-color: #d81e05;
+    border-color: rgb(255, 70, 50);
 }
     /* over.html */
 /*.main-over {*/
@@ -1377,7 +1378,7 @@ textarea {
 }
 
 .input_aanmelden:focus {
-    border-color: #d81e05;
+    border-color: rgb(255, 70, 50);
 }
 
 .button_aanmelden {
@@ -1396,7 +1397,7 @@ textarea {
 }
 
 .button_aanmelden:hover {
-    border-color: #d81e05;
+    border-color: rgb(255, 70, 50);
     opacity: 100%;
     scale: 0.97;
 }
