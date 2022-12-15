@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (isFormValid() == true) {
             form.submit();
             insertData();
+            selectData();
         } else {
             event.preventDefault();
         }
@@ -92,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const reg = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
         return reg.test(email);
     }
-    // Function with SQL
+    // Function with SQL that sends data to the database
     async function insertData() {
         try {
             const data = await FYSCloud.API.queryDatabase(
@@ -101,6 +102,19 @@ document.addEventListener('DOMContentLoaded', () => {
             );
             console.log(data);
             return data;
+        } catch (error) {
+            return null;
+        }
+    }
+    // Function with SQL that retrieves data from the database
+    async function selectData() {
+        try {
+            const dataSelected = await FYSCloud.API.queryDatabase(
+                "SELECT account_id FROM account WHERE gebruikersnaam='JoeyP';"
+            );
+            console.log(dataSelected);
+            FYSCloud.Session.set("userId", 420);
+            return dataSelected;
         } catch (error) {
             return null;
         }
