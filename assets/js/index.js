@@ -12,16 +12,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function getData() {
         try {
-            const dataTeen = await FYSCloud.API.queryDatabase(
-                "SELECT * FROM account"
+            const data = await FYSCloud.API.queryDatabase(
+                "SELECT account_id FROM account"
             );
-            return dataTeen;
+            console.log(data);
+            return data;
         } catch (error) {
             return null;
         }
     }
 
-    // let dataTeen = await getData();
+    getData(); // Functie wordt aangeroepen
 
-    console.log(getData()); // Hier wordt de laatste id weergegeven
+    // Remove everything from the session
+    // FYSCloud.Session.clear();
 });
