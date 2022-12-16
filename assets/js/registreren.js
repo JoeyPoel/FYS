@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (isFormValid() == true) {
             form.submit();
             insertData();
-            selectData();
+            //getData();
         } else {
             event.preventDefault();
         }
@@ -96,6 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Function with SQL that sends data to the database
     async function insertData() {
         try {
+            FYSCloud.Session.set(usernameInput.value, 49);
             const data = await FYSCloud.API.queryDatabase(
                 "INSERT INTO account(gebruikersnaam, email, wachtwoord) VALUES(?, ?, ?)",
                 [usernameInput.value, emailInput.value, passwordInput.value]
@@ -107,14 +108,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     // Function with SQL that retrieves data from the database
-    async function selectData() {
+    async function getData() {
         try {
-            const dataSelected = await FYSCloud.API.queryDatabase(
-                "SELECT account_id FROM account WHERE gebruikersnaam='JoeyP';"
+            const data = await FYSCloud.API.queryDatabase(
+                "SELECT idAccount FROM account WHERE gebruikersnaam=?;",
+                [usernameInput.value]
             );
-            console.log(dataSelected);
-            FYSCloud.Session.set("userId", 420);
-            return dataSelected;
+            console.log(data[0].idAccount);
+            return FYSCloud.Session.set(usernameInput.value, data[0].idAccount);
         } catch (error) {
             return null;
         }
