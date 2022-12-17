@@ -39,16 +39,31 @@ document.addEventListener('DOMContentLoaded', () => {
     //FYSCloud.Session.clear();
 
     // Login/logout button
-    document.querySelector("button").onclick = function () {
+    // if statement that checks if obejct/session is empty. If object/session is not empty, then user is logged in and logout button appears
+    if (Object.keys(object).length === 0 && Object.getPrototypeOf(object) === Object.prototype) {
+        document.querySelector("#login-logout").innerHTML = "Login";
+    } else {
+        document.querySelector("#login-logout").innerHTML = "Logout";
+        document.querySelector("#login-logout").onclick = function () {
+            FYSCloud.Session.clear(); // Remove everything from the session
+            refreshPage();
+        }
+    }
+    // function that refreshes the page
+    function refreshPage(){
+        window.location.reload();
+    }
+
+    /* document.querySelector("#login-logout").onclick = function () {
         // if statement that checks if obejct/session is empty. If object/session is not empty, then user is logged in and logout button appears
         if (Object.keys(object).length === 0 && Object.getPrototypeOf(object) === Object.prototype) {
             console.log("You are not logged in.");
         } else {
-            const buttonText = document.querySelector("button");
+            const buttonText = document.querySelector("#login-logout");
             const newButtonText = document.createElement("p");
             newButtonText.innerText = "Logout";
             buttonText.innerHTML = "";
-            buttonText.appendChild(newButtonText);
+            buttonText.append(newButtonText);
         }
-    }
+    } */
 });
