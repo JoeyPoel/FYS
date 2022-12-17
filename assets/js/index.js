@@ -42,6 +42,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // if statement that checks if obejct/session is empty. If object/session is not empty, then user is logged in and logout button appears
     if (Object.keys(object).length === 0 && Object.getPrototypeOf(object) === Object.prototype) {
         document.querySelector("#login-logout").innerHTML = "Login";
+        document.querySelector("#login-logout").onclick = function () {
+            window.location.href='assets/registreren.html';
+        }
     } else {
         document.querySelector("#login-logout").innerHTML = "Logout";
         document.querySelector("#login-logout").onclick = function () {
