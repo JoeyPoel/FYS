@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Function with SQL that sends data to the database
     async function insertData() {
         try {
-            FYSCloud.Session.set(usernameInput.value, 49);
+            FYSCloud.Session.set(usernameInput.value, 49); // 49 is a random number that doesn't matter, because it will change to the id of the person in index.js
             const data = await FYSCloud.API.queryDatabase(
                 "INSERT INTO account(gebruikersnaam, email, wachtwoord) VALUES(?, ?, ?)",
                 [usernameInput.value, emailInput.value, passwordInput.value]
