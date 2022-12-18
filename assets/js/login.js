@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log(isFormValid());
         if (isFormValid() == true) {
             form.submit();
-            //getData();
+            getData();
         } else {
             event.preventDefault();
         }
@@ -77,25 +77,31 @@ document.addEventListener('DOMContentLoaded', () => {
     // Function with SQL that retrieves data from the database
     async function getData() {
         try {
+            let status = true;
             const data = await FYSCloud.API.queryDatabase(
-                "SELECT * FROM fys_is101_4_live.`account` WHERE email='admin@gmail.com';"
+                "SELECT * FROM fys_is101_4_live.`account` WHERE email='neymar@gmail.com' AND wachtwoord='voetballu';"
             );
-            /* if (data[0].idAccount != 0) {
-                return data[0].idAccount;
-            } */
-            console.log(data[0].idAccount);
-            FYSCloud.Session.set(emailInput.value, data[0].idAccount);
-            return data;// FYSCloud.Session.set(emailInput.value, data[0].idAccount);
+            // if statement that checks if variable data has any values
+            if (!data.length) {
+                console.log("No data!");
+                status = false;
+            } else { // else statement for when variable data has values
+                console.log("There is data.");
+                console.log(data[0].idAccount);
+                //console.log(data.length);
+                FYSCloud.Session.set(emailInput.value, data[0].idAccount);
+            }
+            return status;
         } catch (error) {
             return null;
         }
     }
 
-    //getData();
+    console.log(getData());
 
     // Remove everything from the session
-    FYSCloud.Session.clear();
-
+    //FYSCloud.Session.clear();
+    /*
     let object = FYSCloud.Session.get();
 
     if (Object.keys(object).length === 0 && Object.getPrototypeOf(object) === Object.prototype) {
@@ -104,5 +110,5 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log(object); // View object
         console.log(Object.keys(object)); // View object
         //getData(); // Functie wordt aangeroepen
-    }
+    } */
 });
