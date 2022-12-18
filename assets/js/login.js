@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log(isFormValid());
         if (isFormValid() == true) {
             form.submit();
-            getData();
+            //getData();
         } else {
             event.preventDefault();
         }
@@ -78,17 +78,29 @@ document.addEventListener('DOMContentLoaded', () => {
     async function getData() {
         try {
             const data = await FYSCloud.API.queryDatabase(
-                "SELECT * FROM fys_is101_4_live.`account` WHERE email='admin@gmail.comm';"
+                "SELECT * FROM fys_is101_4_live.`account` WHERE email='admin@gmail.com';"
             );
-            if (data[0].idAccount != 0) {
-                console.log("CROWD");
-            }
+            /* if (data[0].idAccount != 0) {
+                return data[0].idAccount;
+            } */
             console.log(data[0].idAccount);
             FYSCloud.Session.set(emailInput.value, data[0].idAccount);
-            return 0;// FYSCloud.Session.set(emailInput.value, data[0].idAccount);
+            return data;// FYSCloud.Session.set(emailInput.value, data[0].idAccount);
         } catch (error) {
             return null;
         }
     }
-    getData();
+
+    // Remove everything from the session
+    FYSCloud.Session.clear();
+
+    let object = FYSCloud.Session.get();
+
+    if (Object.keys(object).length === 0 && Object.getPrototypeOf(object) === Object.prototype) {
+        console.log("Object is empty. Register or login to show object/session data.");
+    } else {
+        console.log(object); // View object
+        console.log(Object.keys(object)); // View object
+        //getData(); // Functie wordt aangeroepen
+    }
 });
