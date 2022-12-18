@@ -91,6 +91,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    //getData();
+
     // Remove everything from the session
     FYSCloud.Session.clear();
 
