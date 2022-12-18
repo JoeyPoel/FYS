@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
         environment: "mockup"
     });
 
-    const form = document.querySelector('#create-account-form');
+    const form = document.querySelector('#login-register-form');
     const usernameInput = document.querySelector('#username');
     const emailInput = document.querySelector('#email');
     const passwordInput = document.querySelector('#password');
@@ -47,11 +47,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         // EMAIL
         if (emailInput.value.trim() == '') {
-            setError(emailInput, 'Provide email address');
+            setError(emailInput, 'Provide an email address');
         } else if (isEmailValid(emailInput.value)) {
             setSuccess(emailInput);
         } else {
-            setError(emailInput, 'Provide valid email address');
+            setError(emailInput, 'Provide a valid email address');
         }
         // PASSWORD
         if (passwordInput.value.trim() == '') {

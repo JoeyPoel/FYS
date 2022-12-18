@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector("#login-logout").innerHTML = "Logout";
         document.querySelector("#login-logout").onclick = function () {
             FYSCloud.Session.clear(); // Remove everything from the session
-            refreshPage();
+            refreshPage(); // If a session exists and user clicks on "logout", then refresh the page and the login-logout button will say "Login".
         }
     }
     // function that refreshes the page

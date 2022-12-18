@@ -20,44 +20,36 @@
 <body>
 <!-- Custom HTML element. By defining a new class in JS that extends HTMLElement -->
 <my-header></my-header>
-<div id="main-register-div">
-    <form id="create-account-form" action="../index.html" method="GET">
+<div id="main-login-register-div">
+    <form id="login-register-form" action="../index.html" method="GET">
         <div class="title">
             <h2>Account aanmaken</h2>
         </div>
         <!-- USERNAME -->
         <div class="input-group">
-            <label for="username">Name</label>
-            <input type="text" id="username" placeholder="Name" name="username">
-            <i class="fas fa-check-circle"></i>
-            <i class="fas fa-exclamation-circle"></i>
+            <label for="username">Gebruikersnaam</label>
+            <input type="text" id="username" placeholder="Gebruikersnaam" name="username">
             <p>Error Message</p>
         </div>
         <!-- EMAIL -->
         <div class="input-group">
             <label for="email">Email</label>
             <input type="email" id="email" placeholder="Email" name="email">
-            <i class="fas fa-check-circle"></i>
-            <i class="fas fa-exclamation-circle"></i>
             <p>Error Message</p>
         </div>
         <!-- PASSWORD -->
         <div class="input-group">
-            <label for="password">Password</label>
-            <input type="password" id="password" placeholder="Password" name="password">
-            <i class="fas fa-check-circle"></i>
-            <i class="fas fa-exclamation-circle"></i>
+            <label for="password">Wachtwoord</label>
+            <input type="password" id="password" placeholder="Wachtwoord" name="password">
             <p>Error Message</p>
         </div>
         <!-- CONFIRM PASSWORD -->
         <div class="input-group">
-            <label for="confirm-password">Confirm Password</label>
-            <input type="password" id="confirm-password" placeholder="Password" name="confirmpassword">
-            <i class="fas fa-check-circle"></i>
-            <i class="fas fa-exclamation-circle"></i>
+            <label for="confirm-password">Wachtwoord bevestigen</label>
+            <input type="password" id="confirm-password" placeholder="Wachtwoord bevestigen" name="confirmpassword">
             <p>Error Message</p>
         </div>
-        <button type="submit" class="register-btn">Aanmelden</button>
+        <button type="submit" class="login-register-btn">Aanmelden</button>
     </form>
 </div>
 <!-- Custom HTML element. By defining a new class in JS that extends HTMLElement -->
