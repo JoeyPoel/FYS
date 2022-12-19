@@ -1554,6 +1554,16 @@ textarea {
     visibility: hidden;
 }
 
+.input-group p {
+    font-size: 15px;
+    color:red;
+    visibility: hidden;
+}
+
+.login-register-text p {
+    margin:20px 0;
+}
+
 .error p {
     visibility: visible;
 }
