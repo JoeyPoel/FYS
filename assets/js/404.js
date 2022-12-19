@@ -31,7 +31,18 @@ for (let i = 0; i < data.length; i++) {
     makeDivBeginVakantie(data[i].beginVakantie);
     makeDivEindVakantie(data[i].eindVakantie);
     makeDivBio(data[i].bio);
+    /* for (const property in data[i]) {
+        console.log(`${property}: ${data[i][property]}`);
+        let div = document.createElement("div"); // creates div element
+        document.getElementById("div-voornaam").appendChild(div); // plakt div element aan test-div element
+        div.innerText = data[i][property];
+        div.className = "divPersoonOpmaak";
+    } */
 }
+
+console.log(data);
+console.log(data.values(data)[0]); // {one: '1'} -> returns '1'
+console.log(data.keys(data)); // {one: '1'} -> returns 'one'
 
 function makeDivVoornaam(divParameter) {
     let div = document.createElement("div"); // creates div element

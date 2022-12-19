@@ -53,8 +53,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let object = FYSCloud.Session.get();
     //console.log(object);
-    console.log(Object.values(object)[0]); // {one: '1'} -> returns '1'
-    console.log(Object.keys(object)); // {one: '1'} -> returns 'one'
+    //console.log(Object.values(object)[0]); // {one: '1'} -> returns '1'
+    //console.log(Object.keys(object)); // {one: '1'} -> returns 'one'
 
     async function getData() {
         try {
@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     // if statement that checks if the object is empty
     if (Object.keys(object).length === 0 && Object.getPrototypeOf(object) === Object.prototype) {
-        console.log("Object is empty. Register or login to show object/session data.");
+        //console.log("Object is empty. Register or login to show object/session data.");
     } else {
         //console.log(object); // View object
         //console.log(Object.keys(object)); // View object
