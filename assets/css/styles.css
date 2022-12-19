@@ -1503,8 +1503,8 @@ textarea {
     color: #6fd649;
 }
 
-/* registreren.html */
-#main-register-div {
+/* registreren.html & login.html */
+#main-login-register-div {
     display:flex;
     justify-content: center;
     align-items: center;
@@ -1512,7 +1512,7 @@ textarea {
     background-color: #363636;
 }
 
-#create-account-form {
+#login-register-form {
     width:400px;
     padding:20px;
     text-transform: uppercase;
@@ -1549,23 +1549,6 @@ textarea {
     border:3px green solid;
 }
 
-.input-group i {
-    position:absolute;
-    right:10px;
-    top:35px;
-    visibility: hidden;
-}
-
-.success i.fa-check-circle{
-    visibility: visible;
-    color:green;
-}
-
-.error i.fa-exclamation-circle {
-    visibility: visible;
-    color:red;
-}
-
 .input-group p {
     font-size: 15px;
     color:red;
@@ -1576,7 +1559,7 @@ textarea {
     visibility: visible;
 }
 
-.register-btn {
+.login-register-btn {
     width:100%;
     padding:10px;
     font-size: 20px;
