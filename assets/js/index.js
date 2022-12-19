@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (Object.keys(object).length === 0 && Object.getPrototypeOf(object) === Object.prototype) {
         document.querySelector("#login-logout").innerHTML = "Login";
         document.querySelector("#login-logout").onclick = function () {
-            window.location.href='assets/registreren.html';
+            window.location.href='assets/login.html';
         }
     } else {
         document.querySelector("#login-logout").innerHTML = "Logout";
