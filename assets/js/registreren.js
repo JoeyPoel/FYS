@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.log(values);
                 if (values[0] == true) {
                     console.log("FALSE");
-                    alert("Gebruikersnaam of email bestaat al!");
+                    alert("Gebruikersnaam en/of email bestaat al!");
                     event.preventDefault();
                 } else {
                     console.log("TRUE");
