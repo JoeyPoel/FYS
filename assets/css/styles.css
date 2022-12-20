@@ -97,6 +97,14 @@ header img {
     text-decoration: none;
 }
 
+.menu{
+    display: none;
+}
+
+.menu img{
+    width: 72px;
+}
+
 .ss {
     padding: 20px 40px;
 }
@@ -1354,6 +1362,7 @@ textarea {
 }
 
 /* CSS for smaller displays */
+
 @media (max-width: 768px) {
     .radioField1 {
         flex-direction: column;

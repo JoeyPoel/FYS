@@ -6,6 +6,11 @@ document.addEventListener('DOMContentLoaded',
         document.getElementById('btn_profiel').addEventListener('click', addProfiel);
 
         async function addProfiel() {
+
+            // ACCOUNT ID
+            // let account_id =
+
+            // PROFIEL FOTO
             let profielFoto = document.getElementById('profielFoto').value;
 
             // PERSOONLIJKE GEGEVENS
