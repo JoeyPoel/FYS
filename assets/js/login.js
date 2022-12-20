@@ -13,10 +13,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     form.addEventListener('submit', (event) => {
         validateForm();
-        console.log(isFormValid());
+        //console.log(isFormValid());
         if (isFormValid() == true) {
-            form.submit();
-            getData();
+            event.preventDefault();
+            Promise.all([getData()]).then(values => {
+                console.log(values);
+                if (values[0] == true) {
+                    console.log("TRUE");
+                    form.submit();
+                } else {
+                    console.log("FALSE");
+                    event.preventDefault();
+                }
+            });
         } else {
             event.preventDefault();
         }
@@ -79,7 +88,8 @@ document.addEventListener('DOMContentLoaded', () => {
         try {
             let status = true;
             const data = await FYSCloud.API.queryDatabase(
-                "SELECT * FROM fys_is101_4_live.`account` WHERE email='neymar@gmail.com' AND wachtwoord='voetballu';"
+                "SELECT * FROM fys_is101_4_live.`account` WHERE email=? AND wachtwoord=?;",
+                [emailInput.value, passwordInput.value]
             );
             // if statement that checks if variable data has any values
             if (!data.length) {
@@ -96,8 +106,6 @@ document.addEventListener('DOMContentLoaded', () => {
             return null;
         }
     }
-
-    console.log(getData());
 
     // Remove everything from the session
     //FYSCloud.Session.clear();

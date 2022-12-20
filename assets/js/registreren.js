@@ -17,9 +17,19 @@ document.addEventListener('DOMContentLoaded', () => {
         validateForm();
         console.log(isFormValid());
         if (isFormValid() == true) {
-            form.submit();
-            insertData();
-            //getData();
+            event.preventDefault();
+            Promise.all([getData()]).then(values => {
+                console.log(values);
+                if (values[0] == true) {
+                    console.log("FALSE");
+                    alert("Gebruikersnaam en/of email bestaat al!");
+                    event.preventDefault();
+                } else {
+                    console.log("TRUE");
+                    form.submit();
+                    insertData();
+                }
+            });
         } else {
             event.preventDefault();
         }
@@ -96,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Function with SQL that sends data to the database
     async function insertData() {
         try {
-            FYSCloud.Session.set(usernameInput.value, 49); // 49 is a random number that doesn't matter, because it will change to the id of the person in index.js
+            FYSCloud.Session.set(emailInput.value, 49); // 49 is a random number that doesn't matter, because it will change to the id of the person in index.js
             const data = await FYSCloud.API.queryDatabase(
                 "INSERT INTO account(gebruikersnaam, email, wachtwoord) VALUES(?, ?, ?)",
                 [usernameInput.value, emailInput.value, passwordInput.value]
@@ -110,12 +120,22 @@ document.addEventListener('DOMContentLoaded', () => {
     // Function with SQL that retrieves data from the database
     async function getData() {
         try {
+            let status = true;
             const data = await FYSCloud.API.queryDatabase(
-                "SELECT idAccount FROM account WHERE gebruikersnaam=?;",
-                [usernameInput.value]
+                "SELECT * FROM fys_is101_4_live.`account` WHERE gebruikersnaam=? OR email=?;",
+                [usernameInput.value, emailInput.value]
             );
-            console.log(data[0].idAccount);
-            return FYSCloud.Session.set(usernameInput.value, data[0].idAccount);
+            // if statement that checks if variable data has any values
+            if (!data.length) {
+                console.log("No data!");
+                status = false;
+            } else { // else statement for when variable data has values
+                console.log("There is data.");
+                console.log(data[0].idAccount);
+                //console.log(data.length);
+                //FYSCloud.Session.set(emailInput.value, data[0].idAccount);
+            }
+            return status;
         } catch (error) {
             return null;
         }
