@@ -10,14 +10,14 @@
     <meta name="keywords" content="website, corendon"/>
     <!-- JavaScript implementation -->
     <script type="module" src="js/header_footer.js"></script>
-    <script type="module" src="js/profiel_match.js"></script>
     <script src="https://cdn.fys.cloud/fyscloud/0.0.4/fyscloud.min.js"></script>
     <script type="module" src="js/config.js"></script>
+    <script src="js/profiel_match.js"></script>
+
     <!-- CSS implementation -->
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <!-- Website Icon -->
     <link href="" rel="icon" type="image/png"/>
-    <link href="css/styles.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <!-- Custom HTML element. By defining a new class in JS that extends HTMLElement -->
@@ -38,7 +38,7 @@
                 </li>
             </ul>
             <div class="match_button">
-                <button id="btn" onclick="bruh()"><img src="img/Check.png"></button>
+                <button id="btn" onclick="bruh()"><img src="/assets/img/Check.png"></button>
                 <div class="popup" id="popup">
                     <img src="img/checkmark3.png">
                     <h2>Verzoek is vertuurd!</h2>
@@ -46,40 +46,45 @@
                 </div>
             </div>
         </div>
-        <div class="about">
-            <ul>
-                <h1>about</h1>
+        <div class="switch tab-content">
+            <ul class="nav nav-tabs" id="about" role="tablist">
+                <li class="nav-item">
+                    <button onclick="over()" class="nav-link active over" id="over-tab" data-toggle="tab" href="#over" role="tab" aria-selected="true" aria-controls="over">OVER</button>
+                </li>
+                <li class="nav-item">
+                    <button  onclick="vakantie()" class="nav-link vakantie" id="vakantie-tab" data-toggle="tab" href="#vakantie" role="tab" aria-selected="false" aria-controls="vakantie">VAKANTIE</button>
+                </li>
+                <li class="nav-item">
+                    <button onclick="gegevens()" class="nav-link gegevens" id="gegevens-tab" data-toggle="tab" href="#gegevens" role="tab">GEGEVENS</button>
+                </li>
             </ul>
-            <ul>
-                <h3>Work</h3>
-                <li>Profession</li>
-            </ul>
-            <ul>
-                <h3>Gender</h3>
-                <li>male</li>
-            </ul>
-            <ul>
-                <h3>Country</h3>
-                <li>USA</li>
-            </ul>
-            <ul>
-                <h3>More Info</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor nisl vitae purus
-                    fringilla, non bibendum urna porta. Integer ut luctus lectus. Aliquam feugiat dapibus tellus vitae
-                    imperdiet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt lorem in
-                    accumsan porttitor. Maecenas tincidunt ullamcorper aliquam. Phasellus porttitor volutpat lobortis.
-                    Vestibulum vel sapien vel massa congue posuere cursus sit amet risus. Nulla ac pellentesque massa.
-                    Curabitur consectetur risus vitae interdum laoreet. Phasellus rutrum dui eu turpis egestas, eu
-                    facilisis nibh pellentesque. Suspendisse ut sapien vitae dui hendrerit tincidunt.
-                </p>
-            </ul>
-            <ul>
-                <h3>Contact</h3>
-                <li>example@gmail.com</li>
-            </ul>
+            <div class="box-over active" id="over" role="tabpanel">
+                <h1>OVER</h1>
+                <p class="teks-over">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse accumsan ipsum ut ornare laoreet. Vestibulum libero dolor, facilisis vel tortor sit amet, ultrices aliquet felis. Ut non risus libero. Nulla facilisi. Vestibulum vel eleifend lorem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris ut augue at nunc hendrerit consectetur. Suspendisse massa tellus, accumsan sed volutpat dictum, gravida ut sem. Sed interdum diam a ullamcorper scelerisque.</p>
+            </div>
+            <div class="box-over tab-pane fade show" id="vakantie" role="tabpanel">
+                <h1>VAKANTIE</h1>
+                <h3 class="teks-over vakantie-tekst">Budget</h3>
+                <p>asdasdas</p>
+                <h3 class="teks-over vakantie-tekst">Maximum leeftijd van reispartner</h3>
+                <p></p>
+                <h3 class="teks-over vakantie-tekst">Datum van vakantie</h3>
+                <p></p>
+                <h3 class="teks-over vakantie-tekst rotjoch-1">Interesses</h3>
+                <h3 class="teks-over vakantie-tekst rotjoch-2">Soort vakantie</h3>
+
+
+
+
+            </div>
+            <div class="box-over tab-pane fade show" id="gegevens" role="tabpanel">
+                <h1>GEGEVENS</h1>
+                <p class="teks-over">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse accumsan ipsum ut ornare laoreet. Vestibulum libero dolor, facilisis vel tortor sit amet, ultrices aliquet felis. Ut non risus libero. Nulla facilisi. Vestibulum vel eleifend lorem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris ut augue at nunc hendrerit consectetur. Suspendisse massa tellus, accumsan sed volutpat dictum, gravida ut sem. Sed interdum diam a ullamcorper scelerisque.</p>
+            </div>
         </div>
     </div>
 </main>
+
 <!-- Custom HTML element. By defining a new class in JS that extends HTMLElement -->
 <my-footer></my-footer>
 </body>

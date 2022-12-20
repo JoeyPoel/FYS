@@ -1158,6 +1158,95 @@ main.container-1-profiel_match {
     margin-top: 20px;
 }
 
+/** nav-tabs */
+
+.switch{
+    display: flex;
+    /*align-items: flex-start;*/
+    /*height: fit-content;*/
+    flex-direction: column;
+}
+
+
+.nav-tabs, .over, .vakantie, .gegevens  {
+    list-style-type: none;
+    /*overflow: hidden;*/
+    margin-left: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: black;
+    font-family: Open Sans WF, sans-serif;
+    text-transform: uppercase;
+    /*height: 10%;*/
+
+}
+
+.nav-item {
+    margin-right: 100px;
+    margin-left: 20px;
+}
+
+.nav-link.over {
+    background-color: aqua;
+    padding: 20px 15px;
+    margin-right: 20px;
+    justify-content: center;
+}
+
+.nav-link.vakantie {
+    background-color: aqua;
+    padding: 20px 15px;
+    margin-right: 20px;
+    justify-content: center;
+}
+.nav-link.gegevens {
+    background-color: aqua;
+    margin-right: 30px;
+    justify-content: center;
+    padding: 20px 15px 20px 10px;
+
+}
+
+
+/** tekst over */
+
+.box-over {
+    display: none;
+    text-align: center;
+    height: fit-content;
+    background: #ddd;
+    font-family: Open Sans WF, sans-serif;
+    border-radius: 20px;
+    margin: 20px 0 0 30px;
+    padding-top: 10px;
+
+}
+
+.box-over.active {
+    display: block;
+}
+
+.switch button:hover {
+    cursor: pointer;
+}
+
+.teks-over {
+    padding: 30px 30px;
+}
+
+.vakantie-tekst {
+    display: flex;
+}
+
+.box-over p {
+    display: flex;
+    padding-left: 31px;
+}
+
 /* match buttons */
 .popup {
     width: 400px;
