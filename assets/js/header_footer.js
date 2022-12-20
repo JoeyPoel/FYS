@@ -9,7 +9,7 @@ class myHeader extends HTMLElement {
                         <li><a href="../index.html" class="Logo">LOGO</a></li>
                         <li><a href="login.html" class="button">LOG IN</a></li>
                         <li><a href="contact.html" class="button" class="Contact">CONTACT</a></li>
-                        <li><a href="over.html" class="button" class="Over">OVER</a</li>
+                        <li><a href="../index.html#over" class="button" class="Over">OVER</a</li>
                         <li><a href="matches.html" class="button" class="Matches">MATCHES</a></li>
                         <li><a href="potentiële_matches.html" class="button" class="Zoek-Andere-Reizigers">ZOEK ANDERE REIZIGERS</a></li>
                         <li><a href="profiel.html" class="button" class="Contact"> PROFIEL</a></li>

@@ -10,7 +10,7 @@
     <meta name="keywords" content="website, corendon"/>
     <!-- JavaScript implementation -->
     <script type="module" src="js/header_footer.js"></script>
-    <script src="js/profiel.js"></script>
+    <script type="module" src="js/profiel.js"></script>
     <script src="https://cdn.fys.cloud/fyscloud/0.0.4/fyscloud.min.js"></script>
     <script type="module" src="js/config.js"></script>
     <!-- CSS implementation -->
@@ -67,7 +67,7 @@
                         <input type="radio" id="dot-1" name="gender">
                         <input type="radio" id="dot-2" name="gender">
                         <input type="radio" id="dot-3" name="gender">
-                        <span class="gender-title">Geslacht (optioneel)</span>
+                        <span class="gender-title">Geslacht</span>
                         <div class="category">
                             <label for="dot-1">
                                 <span class="dot one"></span>
@@ -98,17 +98,22 @@
                         <label class="leeftijdGrens">Wat is de maximumleeftijd van uw reispartner?</label>
                         <input type="number" min="18" max="100" id="leeftijdsgrens" name="leeftijd" placeholder="Vul de leeftijdsgrens in" required>
                     </div>
+
+                    <div class="bestemming">
+                        <label class="bestemming">Waar wilt u op vakantie</label>
+                        <input type="text" id="bestemming" name="bestemming" placeholder="Vul de naam van het land in">
+                    </div>
                 </div>
                     <div class="interessesEnSoortVakantie">
                         <div class="interesses">
                             <label class="interesses">Selecteer uw interesses</label>
                             <div class="dropdown">
-                               <div class="dropbtn">Klik hier</div>
+                               <div class="dropbtn">Kies hier</div>
                                 <div class="dropdown-content">
                                     <div class="dropdown-checkboxfield">
                                         <div class="dropdown-labelMetcheckbox">
                                             <label for="Zwemmen">Zwemmen</label>
-                                            <input type="checkbox" id="zwemmen">
+                                            <input type="checkbox" id="Zwemmen">
                                         </div>
                                         <div class="dropdown-labelMetcheckbox">
                                             <label for="Fietsen">Fietsen</label>
@@ -123,8 +128,8 @@
                                             <input type="checkbox" id="Klimmen">
                                         </div>
                                         <div class="dropdown-labelMetcheckbox">
-                                            <label for="Musea">Musea</label>
-                                            <input type="checkbox" id="Musea">
+                                            <label for="MuseaBezoeken">Musea bezoeken</label>
+                                            <input type="checkbox" id="MuseaBezoeken">
                                         </div>
                                         <div class="dropdown-labelMetcheckbox">
                                             <label for="Culturen">Culturen</label>
@@ -153,7 +158,7 @@
                         <div class="soortVakantie">
                             <label class="soortVakantie">Selecteer uw soort vakantie</label>
                             <div class="dropdown">
-                                <div class="dropbtn">Klik hier</div>
+                                <div class="dropbtn">Kies hier</div>
                                 <div class="dropdown-content">
                                     <div class="dropdown-checkboxfield">
                                         <div class="dropdown-labelMetcheckbox">
