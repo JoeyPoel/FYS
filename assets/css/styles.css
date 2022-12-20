@@ -364,6 +364,27 @@ form .input-box label.details {
     border-color: rgb(255, 70, 50);
 }
 
+/* BESTEMMING */
+.bestemming{
+    display: flex;
+    flex-direction: column;
+}
+
+.bestemming input {
+    height: 45px;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    margin-top: 5px;
+    width: 70%;
+    margin-bottom: 5px;
+}
+
 /* SOCIAL MEDIA */
 
 .socialmedia {
@@ -672,6 +693,7 @@ label.interesses, label.soortVakantie  {
 .datumVan{
     margin-right: 10px;
 }
+
 #budget, #leeftijdsgrens, #datumVan, #datumTot {
     width: 200px;
     height: 50px;
@@ -686,6 +708,7 @@ label.interesses, label.soortVakantie  {
     flex-direction: column;
     margin-top: 5px;
     padding-right: 10px;
+    padding-left: 15px;
 }
 
 #budget:focus, #leeftijdsgrens:focus, #datumVan:focus, #datumTot:focus{
