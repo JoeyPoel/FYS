@@ -97,6 +97,14 @@ header img {
     text-decoration: none;
 }
 
+.menu{
+    display: none;
+}
+
+.menu img{
+    width: 72px;
+}
+
 .ss {
     padding: 20px 40px;
 }
@@ -187,7 +195,7 @@ header img {
 /*    justify-content: center;*/
 /*    align-items: center;*/
 /*    width: 100%;*/
-/*    background-color: #d81e05;*/
+/*    background-color: rgb(255, 70, 50);*/
 /*}*/
 
 /*nav {*/
@@ -224,7 +232,7 @@ header img {
 /*    margin: 0;*/
 /*    height: 50px;*/
 /*    font-size: 1.07692rem;*/
-/*    background-color: #d81e05;*/
+/*    background-color: rgb(255, 70, 50);*/
 /*}*/
 
 /*.nav-links li {*/
@@ -361,7 +369,28 @@ form .input-box label.details {
 }
 
 .user-details .input-box input:focus {
-    border-color: #d81e05;
+    border-color: rgb(255, 70, 50);
+}
+
+/* BESTEMMING */
+.bestemming{
+    display: flex;
+    flex-direction: column;
+}
+
+.bestemming input {
+    height: 45px;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    margin-top: 5px;
+    width: 70%;
+    margin-bottom: 5px;
 }
 
 /* SOCIAL MEDIA */
@@ -401,7 +430,7 @@ form .input-box label.details {
 }
 
 .socialmedia input:focus {
-    border-color: #d81e05;
+    border-color: rgb(255, 70, 50);
 }
 
 @media (max-width: 899px) {
@@ -481,7 +510,7 @@ form .category label .dot {
 }
 
 .eigenTekst textarea:focus {
-    border-color: #d81e05;
+    border-color: rgb(255, 70, 50);
 }
 
 /* PROFIEL FOTO UPLOAD */
@@ -604,7 +633,7 @@ form .button input:hover {
 }
 
 #interesses:focus, #soortVakantie:focus {
-    border-color: #d81e05;
+    border-color: rgb(255, 70, 50);
 }
 
 label.interesses, label.soortVakantie  {
@@ -648,6 +677,7 @@ label.interesses, label.soortVakantie  {
 .dropdown-labelMetcheckbox{
     display: flex;
     flex-direction: row-reverse;
+    font-size: 18px;
 }
 
 .dropdown:hover .dropdown-content {display: block;}
@@ -671,6 +701,7 @@ label.interesses, label.soortVakantie  {
 .datumVan{
     margin-right: 10px;
 }
+
 #budget, #leeftijdsgrens, #datumVan, #datumTot {
     width: 200px;
     height: 50px;
@@ -685,10 +716,11 @@ label.interesses, label.soortVakantie  {
     flex-direction: column;
     margin-top: 5px;
     padding-right: 10px;
+    padding-left: 15px;
 }
 
 #budget:focus, #leeftijdsgrens:focus, #datumVan:focus, #datumTot:focus{
-    border-color: #d81e05;
+    border-color: rgb(255, 70, 50);
 }
     /* over.html */
 /*.main-over {*/
@@ -1333,6 +1365,7 @@ textarea {
 }
 
 /* CSS for smaller displays */
+
 @media (max-width: 768px) {
     .radioField1 {
         flex-direction: column;
@@ -1466,7 +1499,7 @@ textarea {
 }
 
 .input_aanmelden:focus {
-    border-color: #d81e05;
+    border-color: rgb(255, 70, 50);
 }
 
 .button_aanmelden {
@@ -1485,7 +1518,7 @@ textarea {
 }
 
 .button_aanmelden:hover {
-    border-color: #d81e05;
+    border-color: rgb(255, 70, 50);
     opacity: 100%;
     scale: 0.97;
 }
