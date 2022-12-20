@@ -1068,7 +1068,6 @@ main.container-1-profiel_match {
 }
 
 .box-1-profiel_match {
-    flex: 30%;
     display: table;
     align-items: center;
     text-align: center;
@@ -1141,12 +1140,12 @@ main.container-1-profiel_match {
     /*align-items: flex-start;*/
     /*height: fit-content;*/
     flex-direction: column;
+    flex: auto;
 }
 
 
 .nav-tabs, .over, .vakantie, .gegevens  {
     list-style-type: none;
-    /*overflow: hidden;*/
     margin-left: 20px;
     width: 100%;
     display: flex;
@@ -1157,9 +1156,13 @@ main.container-1-profiel_match {
     color: black;
     font-family: Open Sans WF, sans-serif;
     text-transform: uppercase;
-    /*height: 10%;*/
+    padding-left: 40px;
+    border: none;
 
 }
+
+
+
 
 .nav-item {
     margin-right: 100px;
@@ -1197,8 +1200,9 @@ main.container-1-profiel_match {
     background: #ddd;
     font-family: Open Sans WF, sans-serif;
     border-radius: 20px;
-    margin: 20px 0 0 30px;
+    margin: 20px 0 0 60px;
     padding-top: 10px;
+    box-shadow: 0 0 8px 0;
 
 }
 
@@ -1282,8 +1286,7 @@ main.container-1-profiel_match {
     margin-top: 40px;
     margin-right: 150px;
     padding: 10px 60px;
-    background: #fff;
-    border: 0;
+    border: none;
     outline: none;
     cursor: pointer;
     font-size: 22px;
