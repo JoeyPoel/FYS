@@ -1,7 +1,7 @@
 FYSCloud.API.configure({
     url: "https://api.fys.cloud",
     apiKey: "fys_is101_4.kQepJlZ8TUMLReYA",
-    database: "fys_is101_4_test",
+    database: "fys_is101_4_live",
     environment: "mockup"
 });
 
@@ -12,7 +12,7 @@ async function getData() {
     try {
         const data = await FYSCloud.API.queryDatabase(
             "SELECT voornaam, tussenvoegsel, achternaam, bio, geboortedatum, interesse, " +
-            "bestemming, beginVakantie, eindVakantie, geslacht FROM `fys_is101_4_test`.`persoon` " +
+            "bestemming, beginVakantie, eindVakantie, geslacht FROM `fys_is101_4_live`.`persoon` " +
             "WHERE bestemming = 'Duitsland';"
         );
         return data;
