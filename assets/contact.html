@@ -30,10 +30,19 @@
             Voor al je vragen over onze website
         </p>
         <p>
-            Neem contact met ons op via email:   <a href="mailto:Joeywognum@gmail.com">Email</a>
-
+            Neem contact met ons op via email:
         </p>
+        <div class="email">
+            <form id="emailForm">
+                <input type="text" id="yourName" placeholder="Wat is uw naam?">
+                <input type="text" id="yourEmail" placeholder="Wat is uw email">
+                <input type="text" id="subject" placeholder="Wat is het onderwerp">
+                <textarea id="text" placeholder="Waar heeft u een vraag over of hulp bij nodig?"></textarea>
+            </form>
+            <button id="sendEmail">Send email</button>
+        </div>
     </div>
+
 </main>
 <!-- Custom HTML element. By defining a new class in JS that extends HTMLElement -->
 <my-footer></my-footer>

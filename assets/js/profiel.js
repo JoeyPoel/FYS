@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded',
 
             // ACCOUNT ID
             // let account_id =
-
             // PROFIEL FOTO
             let profielFoto = document.getElementById('profielFoto').value;
 
