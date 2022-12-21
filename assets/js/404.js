@@ -1,7 +1,7 @@
 FYSCloud.API.configure({
     url: "https://api.fys.cloud",
     apiKey: "fys_is101_4.kQepJlZ8TUMLReYA",
-    database: "fys_is101_4_test",
+    database: "fys_is101_4_live",
     environment: "mockup"
 });
 
@@ -11,7 +11,9 @@ let data = await getData();
 async function getData() {
     try {
         const data = await FYSCloud.API.queryDatabase(
-            "SELECT * FROM `fys_is101_4_live`.`persoon` WHERE bestemming='Duitsland';"
+            "SELECT voornaam, tussenvoegsel, achternaam, bio, geboortedatum, interesse, " +
+            "bestemming, beginVakantie, eindVakantie, geslacht FROM `fys_is101_4_live`.`persoon` " +
+            "WHERE bestemming = 'Duitsland';"
         );
         return data;
     } catch (error) {
@@ -19,9 +21,27 @@ async function getData() {
     }
 }
 
+/* const parentDiv = document.querySelector(".container-1-404");
+
+function createMatchList(data) {
+    for (const buddy in data[0]) {
+        console.log(buddy);
+        const div = document.createElement("div"); // Create div
+        const text = document.createElement("p"); // Create p
+        text.innerHTML = buddy.geslacht;
+        div.appendChild(text);
+
+        console.log(buddy.geslacht);
+
+        parentDiv.appendChild(div);
+    }
+}
+
+createMatchList(data); */
+
 // for loop with the output
 for (let i = 0; i < data.length; i++) {
-    makeDivVoornaam(data[i].voornaam);
+    /* makeDivVoornaam(data[i].voornaam);
     makeDivTussenvoegsel(data[i].tussenvoegsel);
     makeDivAchternaam(data[i].achternaam);
     makeDivGeslacht(data[i].geslacht);
@@ -30,19 +50,23 @@ for (let i = 0; i < data.length; i++) {
     makeDivBestemming(data[i].bestemming);
     makeDivBeginVakantie(data[i].beginVakantie);
     makeDivEindVakantie(data[i].eindVakantie);
-    makeDivBio(data[i].bio);
-    /* for (const property in data[i]) {
-        console.log(`${property}: ${data[i][property]}`);
+    makeDivBio(data[i].bio); */
+    for (const property in data[i]) {
+        //console.log(`${property}: ${data[i][property]}`);
         let div = document.createElement("div"); // creates div element
         document.getElementById("div-voornaam").appendChild(div); // plakt div element aan test-div element
         div.innerText = data[i][property];
         div.className = "divPersoonOpmaak";
-    } */
+    }
 }
 
+data.forEach((element) => {
+    console.log(element.geslacht);
+});
+
 console.log(data);
-console.log(data.values(data)[0]); // {one: '1'} -> returns '1'
-console.log(data.keys(data)); // {one: '1'} -> returns 'one'
+//console.log(data.values(data)[0]); // {one: '1'} -> returns '1'
+//console.log(data.keys(data)); // {one: '1'} -> returns 'one'
 
 function makeDivVoornaam(divParameter) {
     let div = document.createElement("div"); // creates div element
