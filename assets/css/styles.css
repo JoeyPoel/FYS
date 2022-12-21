@@ -1408,7 +1408,7 @@ textarea {
     margin-bottom: 10px;
 }
 
-.container-1-contact {
+.contact-container-1 {
     max-width: 1200px;
     width: 100%;
     background-color: white;
@@ -1416,6 +1416,8 @@ textarea {
     border-radius: 5px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .titel-contact {
