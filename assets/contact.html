@@ -22,19 +22,27 @@
 <!-- Custom HTML element. By defining a new class in JS that extends HTMLElement -->
 <my-header></my-header>
 <main class="main-contact">
-    <div class="bg-img">
-        <img src="img/vliegtuig.jpeg">
-        <div class="email-contact">
-            <h2>email</h2>
-            <a href="mailto:john@example.com"><img class="image-logo" src="img/email-logo.png"></a>
-            <p>Stuur ons een bericht via e-mail</p>
-        </div>
-        <div class="whatsapp-contact">
-            <h2>whatsapp</h2>
-            <a href="https://web.whatsapp.com/"><img class="image-logo" src="img/whatsapp-logo.png"></a>
-            <p>Stuur ons een whatsapp bericht</p>
+    <div class="contact-container-1">
+        <h2>
+            Hulp / support
+        </h2>
+        <p>
+            Voor al je vragen over onze website
+        </p>
+        <p>
+            Neem contact met ons op via email:
+        </p>
+        <div class="email">
+            <form id="emailForm">
+                <input type="text" id="yourName" placeholder="Wat is uw naam?">
+                <input type="text" id="yourEmail" placeholder="Wat is uw email">
+                <input type="text" id="subject" placeholder="Wat is het onderwerp">
+                <textarea id="text" placeholder="Waar heeft u een vraag over of hulp bij nodig?"></textarea>
+            </form>
+            <button id="sendEmail">Send email</button>
         </div>
     </div>
+
 </main>
 <!-- Custom HTML element. By defining a new class in JS that extends HTMLElement -->
 <my-footer></my-footer>

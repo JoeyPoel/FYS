@@ -795,8 +795,40 @@ label.interesses, label.soortVakantie  {
 /*    padding-left: 10px;*/
 /*    padding-right: 10px;*/
 /*}*/
-/* contact.html */
 
+/* contact.html */
+#emailForm{
+    display: flex;
+    flex-direction: column;
+}
+
+#yourName, #yourEmail, #subject{
+    height: 45px;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+
+#text{
+    height: 200px;
+    width: 100%;
+    padding-top: 10px;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
 /* Slider op main page */
 .sliderBox {
     margin: 0;
@@ -1402,7 +1434,7 @@ textarea {
     margin-bottom: 10px;
 }
 
-.container-1-contact {
+.contact-container-1 {
     max-width: 1200px;
     width: 100%;
     background-color: white;
@@ -1410,6 +1442,8 @@ textarea {
     border-radius: 5px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .titel-contact {
