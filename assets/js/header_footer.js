@@ -65,7 +65,8 @@ document.addEventListener('DOMContentLoaded', () => {
             //console.log(data);
             //console.log(FYSCloud.Session.get());
             //console.log(data[0].idAccount);
-            return console.log(data[0].idAccount);
+            let userId = data[0].idAccount;
+            return console.log(userId);
         } catch (error) {
             return null;
         }
