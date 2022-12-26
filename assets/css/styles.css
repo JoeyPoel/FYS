@@ -941,263 +941,7 @@ label.interesses, label.soortVakantie  {
     background: white;
 }
 
-/* potientiële_matches.html */
-.main-potentieleMatches {
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
-
-.change_btn {
-    display: flex;
-    margin-left: auto;
-    float: right;
-    justify-content: center;
-    width: 5%;
-    margin-right: 10px;
-    margin-bottom: 10px;
-}
-
-.change_img {
-    width: 45px;
-    height: 45px;
-}
-
-.container-1\+container-2-matches {
-    display: flex;
-    flex-direction: row;
-}
-
-.container-1-matches {
-    display: flex;
-    flex-wrap: wrap;
-    text-align: center;
-    min-width: 85%;
-}
-
-.container-2-matches {
-    display: flex;
-    flex-direction: column;
-    border: solid black 1px;
-    padding: 5px;
-}
-
-.friendrequestMetX {
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 10px;
-}
-
-.friendrequest {
-    display: flex;
-    flex-direction: row;
-    border: solid black 1px;
-    padding: 5px 20px 5px 5px;
-    color: black;
-}
-
-.friendrequestButton {
-    height: 62px;
-    border-radius: 0;
-    border: 1px solid black;
-    border-left: none;
-}
-
-.friendrequestLink {
-    text-decoration: none;
-}
-
-.friendrequestFoto {
-    width: 50px;
-    margin-right: 5px;
-}
-
-.img-profielFoto {
-    width: 200px;
-}
-
-.box-matches {
-    width: 20em;
-    background-color: white;
-    overflow: hidden;
-    border-radius: 1em;
-    text-align: center;
-    font-size: 1em;
-    margin-left: 50px;
-    margin-right: 50px;
-    box-shadow: 0 0.3em 0.7em;
-    transition: all 1s ease-in-out;
-    height: 600px;
-    margin-bottom: 20px;
-}
-
-.isOpen .box-matches p {
-    margin-top: 30px;
-    margin-left: 40px;
-}
-
-.kleur_foto {
-    padding: 3em 0;
-    background-image: linear-gradient(#e66465, #9198e5);
-}
-
-.kleur_foto img {
-    width: 8em;
-    height: 8em;
-    border-radius: 50%;
-    box-shadow: 0 0.6em 1.8em;
-    object-fit: cover;
-}
-
-.content_matches {
-    color: #565656;
-    padding: 2.2em;
-}
-
-.work_description {
-    color: grey;
-    font-size: 18px;
-}
-
-.button_profiel {
-    text-align: center;
-    display: inline-block;
-    position: relative;
-    text-decoration: none;
-    text-transform: capitalize;
-    width: 100%;
-    background: linear-gradient(#e66465, #9198e5);
-    font-size: 1.2em;
-    padding: 1em 3em;
-    border-radius: 5em;
-    overflow: hidden;
-}
-
-.button_profiel:hover {
-    cursor: pointer;
-}
-
-.social-list {
-    display: flex;
-    list-style: none;
-    justify-content: center;
-    padding: 0;
-    margin: 24px;
-}
-
-.twitter_image, .instagram_image, .linkedin_image, .facebook_image {
-    width: 40px;
-    margin: 4px;
-}
-
-.twitter_image:hover, .instagram_image:hover, .linkedin_image:hover, .facebook_image:hover {
-    transform: scale(2, 2);
-}
-
-button:hover, a:hover {
-    opacity: 0.7;
-}
-
-/* profiel_match.html */
-main.container-1-profiel_match {
-    margin: 0;
-    padding: 0;
-    font-family: Open Sans WF, sans-serif;
-    background-color: #ddd;
-    align-items: center;
-    justify-content: center;
-}
-
-.foto_match {
-    width: 200px;
-    height: auto;
-}
-
-*.container-1-profiel_match {
-    box-sizing: border-box;
-}
-
-.container-1-profiel_match {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    padding: 20px 20px;
-}
-
-.twitter_image, .instagram_image, .facebook_image, .linkedin_image {
-    width: 40px;
-    padding: 3px;
-}
-
-.box-1-profiel_match {
-    display: table;
-    align-items: center;
-    text-align: center;
-    font-size: 20px;
-    background-image: linear-gradient(#FE5F75, #FC9842);
-    color: #fff;
-    padding: 30px 30px;
-    border-radius: 20px;
-}
-
-.foto_match {
-    border-radius: 50%;
-    border: 2px solid #fff;
-    height: 250px;
-    width: 250px;
-}
-
-.box-1-profiel_match ul {
-    margin-top: 30px;
-    text-align: center;
-    margin-right: 40px;
-    font-size: 30px;
-}
-
-.box-1-profiel_match ul li {
-    list-style: none;
-    margin-top: 50px;
-    font-weight: 100;
-}
-
-.box-1-profiel_match ul li a {
-    cursor: pointer;
-    margin-left: 0;
-}
-
-.box-1-profiel_match ul li a:hover {
-    opacity: 0.6;
-}
-
-.about {
-    margin-left: 20px;
-    flex: 50%;
-    display: table;
-    padding: 30px 30px;
-    font-size: 20px;
-    background-color: #dddddd;
-    border-radius: 20px;
-}
-
-.about h1 {
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-size: 50px;
-    font-weight: 500;
-    text-align: center;
-}
-
-.about ul li {
-    list-style: none;
-}
-
-.about.ul {
-    margin-top: 20px;
-}
-
 /** nav-tabs */
-
 .switch{
     display: flex;
     /*align-items: flex-start;*/
@@ -1205,7 +949,6 @@ main.container-1-profiel_match {
     flex-direction: column;
     flex: auto;
 }
-
 
 .nav-tabs, .over, .vakantie, .gegevens  {
     list-style-type: none;
@@ -1223,9 +966,6 @@ main.container-1-profiel_match {
     border: none;
 
 }
-
-
-
 
 .nav-item {
     margin-right: 100px;
@@ -1253,9 +993,7 @@ main.container-1-profiel_match {
 
 }
 
-
 /** tekst over */
-
 .box-over {
     display: none;
     text-align: center;
@@ -1288,23 +1026,6 @@ main.container-1-profiel_match {
 .box-over p {
     display: flex;
     padding-left: 31px;
-}
-
-/* match buttons */
-.popup {
-    width: 400px;
-    background: #fff;
-    border-radius: 6px;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(1);
-    text-align: center;
-    padding: 0 30px 30px;
-    color: #333;
-    display: none;
-    animation-name: animatetop;
-    animation-duration: 0.4s;
 }
 
 @keyframes animatetop {
@@ -1361,9 +1082,10 @@ main.container-1-profiel_match {
 }
 
 /* 404.html */
-
-.title-404 {
-    font-size: 25px;
+.container-1-404 {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
 }
 
 /* Footer */
@@ -1380,48 +1102,6 @@ main.container-1-profiel_match {
 .container-1-footer p {
     padding: 0;
     margin: 0;
-}
-
-/* Other */
-textarea {
-    resize: none;
-}
-
-/* CSS for smaller displays */
-
-@media (max-width: 768px) {
-    .radioField1 {
-        flex-direction: column;
-    }
-
-    .whatsappOfTelegram-details {
-        margin-left: 0;
-    }
-
-    .container-1-matches {
-        flex-direction: row;
-        padding-top: 20px;
-        text-align: center;
-    }
-
-    .box-1-matches, .box-2-matches, .box-3-matches {
-        margin-bottom: 20px;
-    }
-
-    .content-over {
-        flex-direction: column;
-        padding-top: 20px;
-        text-align: center;
-    }
-
-    .over-article {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .img-over {
-        width: 100%;
-    }
 }
 
 /* CONTACT PAGE */
@@ -1461,195 +1141,9 @@ textarea {
     width: 100%;
 }
 
-/* INLOG PAGINA */
-
-.main-logIn {
-    height: 100vh;
-}
-
-.container-1-Inlog {
-    height: 80vh;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
-    margin-top: 30px;
-}
-
-.inlogBox {
-    width: 400px;
-    height: 100vh;
-    margin-top: 100px;
-    max-width: 1200px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
-}
-
-/* AANMELDEN */
-.aanmelden .label_aanmelden {
-    font-size: 2.3em;
-    justify-content: center;
-    display: flex;
-    margin: 60px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: .6s ease-in-out;
-}
-
-.aanmelden {
-    display: flex;
-    position: relative;
-    width: 100%;
-    flex-direction: column;
-}
-
-.form_aanmelden {
-    display: flex;
-    flex-direction: column;
-    padding: 25px;
-}
-
-.input_aanmelden {
-    height: 45px;
-    outline: none;
-    font-size: 16px;
-    border-radius: 5px;
-    padding-left: 15px;
-    border: 1px solid #ccc;
-    border-bottom-width: 2px;
-    transition: all 0.3s ease;
-    box-sizing: border-box;
-    margin-top: 10px;
-}
-
-.input_aanmelden:focus {
-    border-color: rgb(255, 70, 50);
-}
-
-.button_aanmelden {
-    height: 45px;
-    outline: none;
-    font-size: 16px;
-    border-radius: 5px;
-    padding-left: 15px;
-    border: 1px solid #ccc;
-    border-bottom-width: 2px;
-    transition: all 0.3s ease;
-    box-sizing: border-box;
-    margin-top: 30px;
-    background-color: white;
-    cursor: pointer;
-}
-
-.button_aanmelden:hover {
-    border-color: rgb(255, 70, 50);
-    opacity: 100%;
-    scale: 0.97;
-}
-
-/* login.html */
-.inloggen .label_inloggen {
-    color: white;
-    font-size: 2.3em;
-    justify-content: center;
-    display: flex;
-    margin: 60px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: .6s ease-in-out;
-    transform: scale(.7);
-}
-
-.inloggen {
-    background-color: rgb(255, 70, 50);
-    border-radius: 60% / 10%;
-    display: flex;
-    flex-direction: column;
-    transition: .8s ease-in-out;
-    height: 100vh;
-}
-
-.form_inloggen {
-    display: flex;
-    flex-direction: column;
-    padding: 25px;
-}
-
-.input_inloggen {
-    height: 45px;
-    outline: none;
-    font-size: 16px;
-    border-radius: 5px;
-    padding-left: 15px;
-    border: 1px solid #ccc;
-    border-bottom-width: 2px;
-    transition: all 0.3s ease;
-    box-sizing: border-box;
-    margin-top: 10px;
-}
-
-.input_inloggen:focus {
-    border-color: rgba(0, 0, 0, 0.7);
-}
-
-.button_inloggen {
-    height: 45px;
-    outline: none;
-    font-size: 16px;
-    border-radius: 5px;
-    padding-left: 15px;
-    border: 1px solid #ccc;
-    border-bottom-width: 2px;
-    transition: all 0.3s ease;
-    box-sizing: border-box;
-    margin-top: 30px;
-    background-color: white;
-    cursor: pointer;
-}
-
-.button_inloggen:hover {
-    border-color: rgba(0, 0, 0, 0.7);
-    opacity: 100%;
-    scale: 0.97;
-}
-
-.smalltext {
-    margin-top: 10px;
-    margin-bottom: 30px;
-    color: #3366CC;
-    cursor: pointer;
-}
-
-.smalltext2 {
-    margin-top: 10px;
-    color: black;
-    cursor: pointer;
-}
-
-.nogGeenAccount {
-    color: white;
-}
-
-#chk {
-    display: none;
-}
-
-#chk:checked ~ .inloggen {
-    transform: translateY(-320px);
-}
-
-#chk:checked ~ .aanmelden .label_aanmelden {
-    transform: scale(.7);
-}
-
-#chk:checked ~ .inloggen .label_inloggen {
-    transform: scale(1);
-}
-
 /* registreren.html & login.html */
 #main-login-register-div {
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
@@ -1657,8 +1151,8 @@ textarea {
 }
 
 #login-register-form {
-    width:400px;
-    padding:20px;
+    width: 400px;
+    padding: 20px;
     text-transform: uppercase;
     background-color: #fff;
 }
@@ -1669,44 +1163,44 @@ textarea {
 }
 
 .input-group {
-    margin:20px 0;
-    position:relative;
+    margin: 20px 0;
+    position: relative;
 }
 
 .input-group label {
-    display:inline-block;
+    display: inline-block;
     margin-bottom: 5px;
 }
 
 .input-group input {
-    display:block;
-    width:100%;
-    padding:10px;
+    display: block;
+    width: 100%;
+    padding: 10px;
     box-sizing: border-box;
 }
 
 .error input {
-    border:3px red solid;
+    border: 3px red solid;
 }
 
 .success input {
-    border:3px green solid;
+    border: 3px green solid;
 }
 
 .input-group p {
     font-size: 15px;
-    color:red;
+    color: red;
     visibility: hidden;
 }
 
 .input-group p {
     font-size: 15px;
-    color:red;
+    color: red;
     visibility: hidden;
 }
 
 .login-register-text p {
-    margin:20px 0;
+    margin: 20px 0;
 }
 
 .error p {
@@ -1714,42 +1208,22 @@ textarea {
 }
 
 .login-register-btn {
-    width:100%;
-    padding:10px;
+    width: 100%;
+    padding: 10px;
     font-size: 20px;
     background-color: rgb(255, 70, 50);
-    color:#fff;
+    color: #fff;
     text-transform: uppercase;
-    border:none;
+    border: none;
 }
 
-/* ?.html styling */
-.container-1-404 {
+/* mogelijke_reispartner.html */
+.container-1-mogelijke_reispartner {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
 }
 
-.divOne {
-    display: flex;
-    flex-direction: column;
-    width: 20em;
-    background-color: #bfe9ff;
-    border-radius: 1em;
-    font-size: 1em;
-    margin-left: 50px;
-    margin-right: 50px;
-    box-shadow: 0 0.3em 0.7em;
-    transition: all 1s ease-in-out;
-    height: 600px;
-    margin-bottom: 20px;
-}
-
-.divTwo {
-    display: flex;
-    background-color: pink;
-}
-/* */
 #person-list {
     display: flex;
     min-height: 70vh;
@@ -1806,10 +1280,10 @@ textarea {
 }
 
 .profile-img {
-    min-height: 300px;
-    max-height: 300px;
-    min-width: 300px;
-    max-width: 300px;
+    min-height: 150px;
+    max-height: 150px;
+    min-width: 150px;
+    max-width: 150px;
     object-fit: cover;
     object-position: center center;
     border-radius: 50%;
@@ -1873,4 +1347,11 @@ textarea {
 .links img {
     padding-left: 5px;
     width: 25px;
+}
+
+/* CSS for smaller displays */
+
+/* Other */
+textarea {
+    resize: none;
 }
