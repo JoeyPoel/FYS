@@ -48,12 +48,6 @@ body {
     font-weight: lighter;
 }
 
-header img {
-    height: 400px;
-    width: 100%;
-    background-position: center;
-    background-size: cover;
-}
 
 .header-button:hover {
     background: rgba(255, 255, 255, 1);
@@ -851,6 +845,29 @@ label.interesses, label.soortVakantie  {
     width: 50px;
 }
 
+/* 404.html */
+.container-1-404 {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+/* Footer */
+.container-1-footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    background-color: #d6d6d6;
+    padding: 25px;
+}
+
+.container-1-footer p {
+    padding: 0;
+    margin: 0;
+}
+
 /* contact.html */
 .main-contact {
     display: flex;
@@ -1112,32 +1129,6 @@ label.interesses, label.soortVakantie  {
 .links img {
     padding-left: 5px;
     width: 25px;
-}
-
-/* 404.html */
-.container-1-404 {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-}
-
-/* Header */
-
-
-/* Footer */
-.container-1-footer {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: center;
-    background-color: #d6d6d6;
-    padding: 25px;
-}
-
-.container-1-footer p {
-    padding: 0;
-    margin: 0;
 }
 
 /* CSS for smaller displays */
