@@ -5,13 +5,14 @@
     <!-- Always force the latest IE rendering engine or request Chrome Frame -->
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Error 404</title>
-    <meta name="description" content="Error 404"/>
+    <title>Mogelijke reispartner</title>
+    <meta name="description" content="Matches"/>
     <meta name="keywords" content="website, corendon"/>
     <!-- JavaScript implementation -->
     <script type="module" src="js/header_footer.js"></script>
+    <script type="module" src="js/mogelijke_reispartner.js"></script>
     <script src="https://cdn.fys.cloud/fyscloud/0.0.4/fyscloud.min.js"></script>
-    <script type="module" src="js/404.js"></script>
+    <script type="module" src="js/config.js"></script>
     <!-- CSS implementation -->
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <!-- Website Icon -->
@@ -21,13 +22,12 @@
 <!-- Custom HTML element. By defining a new class in JS that extends HTMLElement -->
 <my-header></my-header>
 <main>
-    <div class="container-1-404">
-        <form id="login-register-form" action="#" method="GET">
-            <label for="fileUpload">Kies een foto:</label>
-            <input type="file" id="fileUpload" class="fileUpload" name="myfile"><br><br>
-            <img id="imagePreview" src="#" alt="Profielfoto">
-            <button type="submit" class="login-register-btn">Opslaan</button>
-        </form>
+    <div class="container-1-mogelijke_reispartner">
+        <div id="person-list">
+            <ul id="append-list-ul">
+                <li class="append-list-li"></li>
+            </ul>
+        </div>
     </div>
 </main>
 <!-- Custom HTML element. By defining a new class in JS that extends HTMLElement -->
