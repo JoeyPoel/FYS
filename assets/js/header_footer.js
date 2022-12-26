@@ -2,20 +2,19 @@ class myHeader extends HTMLElement {
     connectedCallback() {
         // Any time this element is connected to a document this function will run
         this.innerHTML = `
-            <button id="login-logout">Login</button>
-            <div class="Navbar">
-                <nav>
-                    <ul class="Navbar-button" id="MyNavbar">
-                        <li><a href="../index.html" class="Logo">LOGO</a></li>
-                        <li><a href="login.html" class="button">LOG IN</a></li>
-                        <li><a href="contact.html" class="button" class="Contact">CONTACT</a></li>
-                        <li><a href="../index.html#over" class="button" class="Over">OVER</a</li>
-                        <li><a href="matches.html" class="button" class="Matches">MATCHES</a></li>
-                        <li><a href="mogelijke_reispartner.html" class="button" class="Zoek-Andere-Reizigers">Mogelijke reispartner</a></li>
-                        <li><a href="profiel.html" class="button" class="Contact"> PROFIEL</a></li>
+            <nav class="navbar">
+                <div class="brand-title">Brand logo</div>
+                <div class="navbar-links">
+                    <ul>
+                        <li><a href="profiel.html">Profiel</a></li>
+                        <li><a href="mogelijke_reispartner.html">Mogelijke reispartner</a></li>
+                        <li><a href="matches.html">Matches</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="over.html">Over</a></li>
+                        <li><button id="login-logout">Login</button></li>
                     </ul>
-                </nav>
-            </div>
+                </div>
+            </nav>
         `
     }
 }
