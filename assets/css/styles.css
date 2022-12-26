@@ -48,12 +48,6 @@ body {
     font-weight: lighter;
 }
 
-header img {
-    height: 400px;
-    width: 100%;
-    background-position: center;
-    background-size: cover;
-}
 
 .header-button:hover {
     background: rgba(255, 255, 255, 1);
@@ -395,7 +389,7 @@ form .button input {
     letter-spacing: 1px;
     cursor: pointer;
     transition: all 0.3s ease;
-    background: rgb(255, 70, 50) ;
+    background: rgb(255, 70, 50);
 }
 
 form .button input:hover {
@@ -534,6 +528,123 @@ label.interesses, label.soortVakantie  {
     border-color: rgb(255, 70, 50);
 }
 
+/*.container-1-over {*/
+/*    max-width: 1200px;*/
+/*    width: 100%;*/
+/*    background-color: #fff;*/
+/*    padding: 25px 30px;*/
+/*    border-radius: 5px;*/
+/*    box-shadow: 0 5px 10px rgba(0,0,0,0.15);*/
+/*}*/
+
+/*.titel-over {*/
+/*    text-align: center;*/
+/*}*/
+
+/*.content-over {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    flex: 1;*/
+/*}*/
+
+/*.info {*/
+/*    transform: translateX(400%);*/
+/*    transition: transform 1s ease;*/
+/*}*/
+
+/*.info:nth-of-type(even) {*/
+/*    transform: translateX(-400%)*/
+/*}*/
+
+/*.info.show {*/
+/*    transform: translateX(0%);*/
+/*}*/
+
+/*.info {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    padding: 5px;*/
+/*    border: 1px #2B2B2BFF solid;*/
+/*    border-bottom: 2px #2B2B2BFF solid;*/
+/*    box-shadow: 0 5px 10px rgba(0,0,0,0.15);*/
+/*    border-radius: 5px;*/
+/*    margin: 10px;*/
+/*    width: 100%;*/
+/*    text-align: justify;*/
+/*    background-color: white;*/
+/*}*/
+
+/*.subtitel-over {*/
+/*    align-self: center;*/
+/*}*/
+
+/*.over-article{*/
+/*    display: flex;*/
+/*    flex-direction: row;*/
+/*    justify-content: space-between;*/
+/*}*/
+
+/*.img-over{*/
+/*    width: 50%;*/
+/*}*/
+
+/*.text-over{*/
+/*    padding-left: 10px;*/
+/*    padding-right: 10px;*/
+/*}*/
+
+/* contact.html */
+#emailForm{
+    display: flex;
+    flex-direction: column;
+}
+
+#yourName, #yourEmail, #subject{
+    height: 45px;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+
+#text{
+    height: 200px;
+    width: 100%;
+    padding-top: 10px;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+
+#sendEmail{
+    margin-top: 5px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: rgb(255, 70, 50);
+}
 /* Slider op main page */
 .sliderBox {
     margin: 0;
@@ -732,6 +843,29 @@ label.interesses, label.soortVakantie  {
 
 .match_button img {
     width: 50px;
+}
+
+/* 404.html */
+.container-1-404 {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+/* Footer */
+.container-1-footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    background-color: #d6d6d6;
+    padding: 25px;
+}
+
+.container-1-footer p {
+    padding: 0;
+    margin: 0;
 }
 
 /* contact.html */

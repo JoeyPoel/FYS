@@ -18,8 +18,8 @@ class myHeader extends HTMLElement {
                         <li><a href="over.html">Over</a></li>
                         <li><button id="login-logout">Login</button></li>
                     </ul>
-                </div>
-            </nav>
+                </nav>
+            </div>
         `
     }
 }
@@ -78,7 +78,8 @@ document.addEventListener('DOMContentLoaded', () => {
             //console.log(data);
             //console.log(FYSCloud.Session.get());
             //console.log(data[0].idAccount);
-            return console.log(data[0].idAccount);
+            let userId = data[0].idAccount;
+            return console.log(userId);
         } catch (error) {
             return null;
         }
