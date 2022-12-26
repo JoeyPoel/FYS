@@ -20,19 +20,19 @@
 <body>
 <!-- Custom HTML element. By defining a new class in JS that extends HTMLElement -->
 <my-header></my-header>
-<main class="main-404">
+<main>
     <div class="container-1-404">
-        <div class="title-404">Error 404!</div>
-        <div id="div-voornaam"></div>
-        <div id="div-tussenvoegsel"></div>
-        <div id="div-achternaam"></div>
-        <div id="div-geslacht"></div>
-        <div id="div-geboortedatum"></div>
-        <div id="div-interesse"></div>
-        <div id="div-bestemming"></div>
-        <div id="div-beginVakantie"></div>
-        <div id="div-eindVakantie"></div>
-        <div id="div-bio"></div>
+        <div id="person-list">
+            <ul id="append-list-ul">
+                <li class="append-list-li"></li>
+            </ul>
+        </div>
+        <form id="login-register-form" action="#" method="GET">
+            <label for="fileUpload">Kies een foto:</label>
+            <input type="file" id="fileUpload" class="fileUpload" name="myfile"><br><br>
+            <img id="imagePreview" src="#" alt="Profielfoto">
+            <button type="submit" class="login-register-btn">Opslaan</button>
+        </form>
     </div>
 </main>
 <!-- Custom HTML element. By defining a new class in JS that extends HTMLElement -->

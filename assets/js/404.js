@@ -1,3 +1,87 @@
+document.addEventListener('DOMContentLoaded', () => {
+
+    FYSCloud.API.configure({
+        url: "https://api.fys.cloud",
+        apiKey: "fys_is101_4.kQepJlZ8TUMLReYA",
+        database: "fys_is101_4_live",
+        environment: "mockup"
+    });
+
+    const form = document.querySelector('#login-register-form');
+    const imageInput = document.getElementById("fileUpload");
+
+      form.addEventListener('submit', async (event) => {
+        console.log("Start transaction");
+        // Upload file
+          await FYSCloud.Utils
+            .getDataUrl(document.querySelector("#fileUpload"))
+            .then(function(data) {
+                FYSCloud.API.uploadFile(
+                    data.fileName,
+                    data.url, true // data.url under ~500kb will work otherwise error due to slow network traffic (in API)
+                ).then(function(data) {
+                    console.log(data);
+                    console.log("Succes!");
+                }).catch(function(reason) {
+                    console.log(reason);
+                    console.log("Error!");
+                });
+            }).catch(function(reason) {
+            console.log(reason);
+            console.log("Failed! No file selected.");
+        });
+
+        await FYSCloud.Utils.fetchBlob(document.querySelector("#fileUpload")).then(
+            (result) => {
+                console.log("getimage:")
+                console.log(result);
+            }
+        )
+    });
+    // Show image
+    imageInput.addEventListener('change', (event) => {
+        FYSCloud.Utils
+            .getDataUrl("#fileUpload")
+            .then(function(data) {
+                if(data.isImage) {
+                    document.getElementById("imagePreview").src = data.url;
+                    console.log(data);
+                    console.log(data.url);
+                    console.log(data.fileName);
+                    console.log(Object.values(data)); // {one: '1'} -> returns '1'
+                    let promise = FYSCloud.API.listDirectory();
+                    console.log(promise);
+                    console.log("Success!");
+                }
+            }).catch(function(reason) {
+            console.log(reason);
+            console.log("Error!");
+        });
+    });
+    // Show list/array with the file names
+    let promise = FYSCloud.API.listDirectory();
+    console.log(promise);
+    promise.then(
+        (result) => {
+            console.log(result);
+            //console.log(result[0]); // First index of array
+        }
+    );
+    //FYSCloud.API.deleteFile("Bugatti.jpg");
+    //console.log(FYSCloud.API.fileExists("Bugatti.jpg"));
+    // Get URL
+    // FYSCloud.Utils
+    //     .getDataUrl("#fileUpload")
+    //     .then(function(data) {
+    //         console.log(data);
+    //         console.log("Success!");
+    //     })
+    //     .catch(function(reason) {
+    //         console.log(reason);
+    //         console.log("Error!");
+    //     });
+});
+
 FYSCloud.API.configure({
     url: "https://api.fys.cloud",
     apiKey: "fys_is101_4.kQepJlZ8TUMLReYA",
@@ -12,7 +96,7 @@ async function getData() {
     try {
         const data = await FYSCloud.API.queryDatabase(
             "SELECT voornaam, tussenvoegsel, achternaam, bio, geboortedatum, interesse, " +
-            "bestemming, beginVakantie, eindVakantie, geslacht FROM `fys_is101_4_live`.`persoon` " +
+            "bestemming, beginVakantie, eindVakantie, geslacht, profielfoto FROM `fys_is101_4_live`.`persoon` " +
             "WHERE bestemming = 'Duitsland';"
         );
         return data;
@@ -39,115 +123,130 @@ function createMatchList(data) {
 
 createMatchList(data); */
 
+/*
 // for loop with the output
 for (let i = 0; i < data.length; i++) {
-    /* makeDivVoornaam(data[i].voornaam);
-    makeDivTussenvoegsel(data[i].tussenvoegsel);
-    makeDivAchternaam(data[i].achternaam);
-    makeDivGeslacht(data[i].geslacht);
-    makeDivGeboortedatum(data[i].geboortedatum);
-    makeDivInteresse(data[i].interesse);
-    makeDivBestemming(data[i].bestemming);
-    makeDivBeginVakantie(data[i].beginVakantie);
-    makeDivEindVakantie(data[i].eindVakantie);
-    makeDivBio(data[i].bio); */
     for (const property in data[i]) {
         //console.log(`${property}: ${data[i][property]}`);
-        let div = document.createElement("div"); // creates div element
-        document.getElementById("div-voornaam").appendChild(div); // plakt div element aan test-div element
+        let div = document.createElement("li"); // creates div element
+        document.getElementById("ul-persoon").appendChild(div); // plakt div element aan test-div element
         div.innerText = data[i][property];
         div.className = "divPersoonOpmaak";
     }
-}
+} */
 
 data.forEach((element) => {
-    console.log(element.geslacht);
+    let dtFormat = new Intl.DateTimeFormat('nl-NL');
+    console.log(element.voornaam + ' ' + element.tussenvoegsel + ' ' + element.achternaam);
+
+    let divOne = document.createElement("li");
+    document.querySelector("#append-list-ul").appendChild(divOne);
+    //divOne.innerText = element.voornaam + ' ' + element.tussenvoegsel + ' ' + element.achternaam;
+    divOne.className = "append-list-ul";
+
+    //let divTwo = document.createElement("p");
+    //divOne.appendChild(divTwo);
+    //divTwo.innerText = "test2";
+    //divTwo.className = "divTwo";
+
+    let divContainer = document.createElement("div");
+    divOne.appendChild(divContainer);
+    divContainer.className = "container";
+
+    let divCard = document.createElement("div");
+    divContainer.appendChild(divCard);
+    divCard.className = "card";
+
+    let imgProfile = document.createElement("img");
+    divCard.appendChild(imgProfile);
+    imgProfile.className = "profile-img";
+    imgProfile.src = "https://mockup-is101-4.fys.cloud/uploads/" + element.profielfoto;
+    imgProfile.alt = "User profile";
+
+    let divCardInfo = document.createElement("div");
+    divCard.appendChild(divCardInfo);
+    divCardInfo.className = "card-info";
+
+    let personName = document.createElement("h1");
+    divCardInfo.appendChild(personName);
+    personName.innerText = element.voornaam + ' ' + element.tussenvoegsel + ' ' + element.achternaam;
+
+    let personBio = document.createElement("p");
+    divCardInfo.appendChild(personBio);
+    personBio.innerText = element.bio;
+
+    let ul = document.createElement("ul");
+    divCardInfo.appendChild(ul);
+
+    let li = document.createElement("li");
+    ul.appendChild(li);
+
+    let iconImgLocation = document.createElement("img");
+    li.appendChild(iconImgLocation);
+    iconImgLocation.src = "img/icon/location.svg";
+    iconImgLocation.alt = "Location";
+    const textLocation = document.createTextNode(element.bestemming);
+    li.appendChild(textLocation);
+
+    let iconImgInterest = document.createElement("img");
+    li.appendChild(iconImgInterest);
+    iconImgInterest.src = "img/icon/interest.svg";
+    iconImgInterest.alt = "Interest";
+    const textInterest = document.createTextNode("Interesse " + element.interesse);
+    li.appendChild(textInterest);
+
+    let iconImgCalendar = document.createElement("img");
+    li.appendChild(iconImgCalendar);
+    iconImgCalendar.src = "img/icon/calendar.svg";
+    iconImgCalendar.alt = "Calendar";
+    let dateGB = new Date(element.geboortedatum);
+    const textCalendar = document.createTextNode("Geboortedatum " + dtFormat.format(dateGB));
+    li.appendChild(textCalendar);
+
+    let iconImgGender = document.createElement("img");
+    li.appendChild(iconImgGender);
+    iconImgGender.src = "img/icon/gender.svg";
+    iconImgGender.alt = "Gender";
+    const textGender = document.createTextNode("Geslacht " + element.geslacht);
+    li.appendChild(textGender);
+
+    let iconImgDateFrom = document.createElement("img");
+    li.appendChild(iconImgDateFrom);
+    iconImgDateFrom.src = "img/icon/date-from.svg";
+    iconImgDateFrom.alt = "Date from";
+    let dateBV = new Date(element.beginVakantie);
+    const textDateFrom = document.createTextNode("Datum van " + dtFormat.format(dateBV));
+    li.appendChild(textDateFrom);
+
+    let iconImgDateTo = document.createElement("img");
+    li.appendChild(iconImgDateTo);
+    iconImgDateTo.src = "img/icon/date-to.svg";
+    iconImgDateTo.alt = "Date to";
+    let dateEV = new Date(element.eindVakantie);
+    const textDateTo = document.createTextNode("Datum tot " + dtFormat.format(dateEV));
+    li.appendChild(textDateTo);
+
+    let divLinks = document.createElement("div");
+    divCardInfo.appendChild(divLinks);
+    divLinks.className = "links";
+
+    let linksA = document.createElement("a");
+    divLinks.appendChild(linksA);
+    linksA.href = "#";
+    const textLinksA = document.createTextNode("Stuur een match verzoek");
+    linksA.appendChild(textLinksA);
+
+    let aImg = document.createElement("img");
+    linksA.appendChild(aImg);
+    aImg.src = "img/icon/send.png";
+    aImg.alt = "Send";
 });
+
+//FYSCloud.API.deleteFile("");
 
 console.log(data);
 //console.log(data.values(data)[0]); // {one: '1'} -> returns '1'
 //console.log(data.keys(data)); // {one: '1'} -> returns 'one'
-
-function makeDivVoornaam(divParameter) {
-    let div = document.createElement("div"); // creates div element
-    document.getElementById("div-voornaam").appendChild(div); // plakt div element aan test-div element
-    div.innerText = divParameter;
-    div.className = "divPersoonOpmaak";
-}
-
-function makeDivTussenvoegsel(divParameter) {
-    let div = document.createElement("div"); // creates div element
-    document.getElementById("div-tussenvoegsel").appendChild(div); // plakt div element aan test-div element
-    div.innerText = divParameter;
-    div.className = "divPersoonOpmaak";
-}
-
-function makeDivAchternaam(divParameter) {
-    let div = document.createElement("div"); // creates div element
-    document.getElementById("div-achternaam").appendChild(div); // plakt div element aan test-div element
-    div.innerText = divParameter;
-    div.className = "divPersoonOpmaak";
-}
-
-function makeDivGeslacht(divParameter) {
-    let div = document.createElement("div"); // creates div element
-    document.getElementById("div-geslacht").appendChild(div); // plakt div element aan test-div element
-    div.innerText = divParameter;
-    div.className = "divPersoonOpmaak";
-}
-
-function makeDivGeboortedatum(divParameter) {
-    let div = document.createElement("div"); // creates div element
-    document.getElementById("div-geboortedatum").appendChild(div); // plakt div element aan test-div element
-    div.innerText = divParameter;
-    div.className = "divPersoonOpmaak";
-}
-
-function makeDivInteresse(divParameter) {
-    let div = document.createElement("div"); // creates div element
-    document.getElementById("div-interesse").appendChild(div); // plakt div element aan test-div element
-    div.innerText = divParameter;
-    div.className = "divPersoonOpmaak";
-}
-
-function makeDivBestemming(divParameter) {
-    let div = document.createElement("div"); // creates div element
-    document.getElementById("div-bestemming").appendChild(div); // plakt div element aan test-div element
-    div.innerText = divParameter;
-    div.className = "divPersoonOpmaak";
-}
-
-function makeDivBeginVakantie(divParameter) {
-    let div = document.createElement("div"); // creates div element
-    document.getElementById("div-beginVakantie").appendChild(div); // plakt div element aan test-div element
-    div.innerText = divParameter;
-    div.className = "divPersoonOpmaak";
-}
-
-function makeDivEindVakantie(divParameter) {
-    let div = document.createElement("div"); // creates div element
-    document.getElementById("div-eindVakantie").appendChild(div); // plakt div element aan test-div element
-    div.innerText = divParameter;
-    div.className = "divPersoonOpmaak";
-}
-
-function makeDivBio(divParameter) {
-    let div = document.createElement("div"); // creates div element
-    document.getElementById("div-bio").appendChild(div); // plakt div element aan test-div element
-    div.innerText = divParameter;
-    div.className = "divPersoonOpmaak";
-}
-
-/* function makeDiv(divParameter) {
-    let div = document.createElement("div"); // creates div element
-    document.getElementById("div-test").appendChild(div); // plakt div element aan test-div element
-    div.innerText = divParameter;
-    div.className = "divPersoonOpmaak";
-}
-
-for (let i = 0; i < data.length; i++) {
-    makeDiv(data[i].voornaam);
-} */
 
 /* Joey login.html oud
 <main class="main-logIn">
