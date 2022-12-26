@@ -21,17 +21,24 @@
 </head>
 <body>
 <!-- Navbar -->
-<div class="Navbar">
-    <ul class="Navbar-button" id="MyNavbar">
-        <li><a href="#home" class="Logo">LOGO</a></li>
-        <li><a href="assets/login.html" class="button">LOG IN</a></li>
-        <li><a href="assets/contact.html" class="button" class="Contact">CONTACT</a></li>
-        <li><a href="#over" class="button" class="Over">OVER</a></li>
-        <li><a href="assets/matches.html" class="button" class="Matches">MATCHES</a></li>
-        <li><a href="assets/mogelijke_reispartner.html" class="button" class="Zoek-Andere-Reizigers">Mogelijke reispartner</a></li>
-        <li><a href="assets/profiel.html" class="button" class="Contact"> PROFIEL</a></li>
-    </ul>
-</div>
+<nav class="navbar">
+    <div class="brand-title">Brand logo</div>
+    <a href="#" class="toggle-button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </a>
+    <div class="navbar-links">
+        <ul>
+            <li><a href="assets/profiel.html">Profiel</a></li>
+            <li><a href="assets/mogelijke_reispartner.html">Mogelijke reispartner</a></li>
+            <li><a href="assets/matches.html">Matches</a></li>
+            <li><a href="assets/contact.html">Contact</a></li>
+            <li><a href="assets/over.html">Over</a></li>
+            <li><button id="login-logout">Login</button></li>
+        </ul>
+    </div>
+</nav>
 <header>
     <div class="container-header" id="home">
         <img src="assets/img/Banner-index.jpg" class="landscape-img">
@@ -42,7 +49,6 @@
         <p class="text-button"><a href="assets/profiel.html" class="header-button">Maak je profiel aan</a></p>
     </div>
 </header>
-<button id="login-logout">Login</button>
 <div class="ss">
     <div class="container-about" id="over">
         <h3 class="Over-titel">Home</h3>

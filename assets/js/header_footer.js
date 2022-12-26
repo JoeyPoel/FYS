@@ -4,6 +4,11 @@ class myHeader extends HTMLElement {
         this.innerHTML = `
             <nav class="navbar">
                 <div class="brand-title">Brand logo</div>
+                <a href="#" class="toggle-button">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </a>
                 <div class="navbar-links">
                     <ul>
                         <li><a href="profiel.html">Profiel</a></li>
@@ -18,6 +23,15 @@ class myHeader extends HTMLElement {
         `
     }
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const toggleButton = document.getElementsByClassName('toggle-button')[0];
+    const navbarLinks = document.getElementsByClassName('navbar-links')[0];
+    // Hamburger menu pops open and closes when you click it
+    toggleButton.addEventListener('click', () => {
+        navbarLinks.classList.toggle('active')
+    });
+});
 
 // Any time the HTML parser runs across a tag named my-header, it will populate its innerHTML
 customElements.define('my-header', myHeader);
