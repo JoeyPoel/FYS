@@ -16,9 +16,9 @@ class myHeader extends HTMLElement {
                 </a>
                 <div class="navbar-links">
                     <ul>
-                        <li><a href="profiel.html">Profiel</a></li>
-                        <li><a href="mogelijke_reispartner.html">Mogelijke reispartner</a></li>
-                        <li><a href="matches.html">Matches</a></li>
+                        <li><a id="profiel" href="profiel.html">Profiel</a></li>
+                        <li><a id="mogelijke_reispartner" href="mogelijke_reispartner.html">Mogelijke reispartner</a></li>
+                        <li><a id="matches" href="matches.html">Matches</a></li>
                         <li><a href="contact.html">Contact</a></li>
                         <li><a href="over.html">Over</a></li>
                         <li><button id="login-logout">Login</button></li>
@@ -28,15 +28,6 @@ class myHeader extends HTMLElement {
         `
     }
 }
-
-document.addEventListener('DOMContentLoaded', () => {
-    const toggleButton = document.getElementsByClassName('toggle-button')[0];
-    const navbarLinks = document.getElementsByClassName('navbar-links')[0];
-    // Hamburger menu pops open and closes when you click it
-    toggleButton.addEventListener('click', () => {
-        navbarLinks.classList.toggle('active')
-    });
-});
 
 // Any time the HTML parser runs across a tag named my-header, it will populate its innerHTML
 customElements.define('my-header', myHeader);
@@ -69,9 +60,16 @@ document.addEventListener('DOMContentLoaded', () => {
         environment: "mockup"
     });
 
+    const toggleButton = document.getElementsByClassName('toggle-button')[0];
+    const navbarLinks = document.getElementsByClassName('navbar-links')[0];
+    // Hamburger menu pops open and closes when you click it
+    toggleButton.addEventListener('click', () => {
+        navbarLinks.classList.toggle('active')
+    });
+
     let object = FYSCloud.Session.get();
     //console.log(object);
-    //console.log(Object.values(object)[0]); // {one: '1'} -> returns '1'
+    console.log(Object.values(object)[0]); // {one: '1'} -> returns '1'
     //console.log(Object.keys(object)); // {one: '1'} -> returns 'one'
 
     async function getData() {
@@ -89,6 +87,24 @@ document.addEventListener('DOMContentLoaded', () => {
             return null;
         }
     }
+
+    async function getDataPersoon() {
+        try {
+            const data = await FYSCloud.API.queryDatabase(
+                "SELECT voornaam FROM `fys_is101_4_live`.persoon WHERE idAccount=?;",
+                [Object.values(object)[0]]
+            );
+            //console.log(data);
+            //console.log(FYSCloud.Session.get());
+            //console.log(data[0].idAccount);
+            let userId = data[0].voornaam;
+            console.log(userId);
+            return document.getElementById('profiel').style.display = 'none';
+        } catch (userId) {
+            return console.log(userId);
+        }
+    }
+
     // if statement that checks if the object is empty
     if (Object.keys(object).length === 0 && Object.getPrototypeOf(object) === Object.prototype) {
         //console.log("Object is empty. Register or login to show object/session data.");
@@ -115,10 +131,22 @@ document.addEventListener('DOMContentLoaded', () => {
             refreshPage(); // If a session exists and user clicks on "logout", then refresh the page and the login-logout button will say "Login".
         }
     }
+
     // function that refreshes the page
     function refreshPage(){
         window.location.reload();
     }
+
+    // // Visible/Invisible 'profiel' in menu
+    // if (Object.keys(object).length === 0 && Object.getPrototypeOf(object) === Object.prototype) {
+    //     // object/session is empty
+    //     document.getElementById('profiel').style.display = 'none';
+    //     document.getElementById('mogelijke_reispartner').style.display = 'none';
+    //     document.getElementById('matches').style.display = 'none';
+    // } else {
+    //     // object/session is not empty
+    //     getDataPersoon();
+    // }
 
     /* document.querySelector("#login-logout").onclick = function () {
         // if statement that checks if obejct/session is empty. If object/session is not empty, then user is logged in and logout button appears
