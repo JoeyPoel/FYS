@@ -1,13 +1,18 @@
+@font-face {
+    src: url(fonts/HankenGrotesk-Regular.ttf);
+    font-family: Hanken Grotesk;
+}
+
 * {
     margin: 0;
     padding: 0;
+    font-family: Hanken Grotesk;
 }
 
 body {
     height: 100vh;
     box-sizing: border-box;
     background-color: #fafafa;
-    font-family: Open Sans WF, sans-serif;
     overflow-x: hidden;
 }
 
@@ -20,7 +25,6 @@ body {
     flex-direction: column;
     justify-content: center;
     color: white;
-    font-family: sans-serif;
     font-weight: lighter;
     height: 100px;
 }
@@ -763,7 +767,6 @@ label.interesses, label.soortVakantie  {
     text-align: center;
     height: fit-content;
     background: #ddd;
-    font-family: Open Sans WF, sans-serif;
     border-radius: 20px;
     margin: 20px 0 0 60px;
     padding-top: 10px;
@@ -1142,28 +1145,36 @@ label.interesses, label.soortVakantie  {
 .navbar {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch;
+    text-align: center;
     background-color: #333;
     color: white;
 }
 
 .brand-title {
+    display: flex;
+    align-items: center;
     font-size: 1.5rem;
     margin: .5rem;
 }
 
 .navbar-links ul {
     display: flex;
+    height: 100%;
+    /* align-items: center; */
     margin: 0;
     padding: 0;
+    justify-content: center;
 }
 
 .navbar-links li {
+    display: flex;
     list-style: none;
 }
 
 .navbar-links li a {
-    display: block;
+    display: flex;
+    align-items: center;
     text-decoration: none;
     color: white;
     padding: 1rem;
@@ -1192,7 +1203,22 @@ label.interesses, label.soortVakantie  {
     border-radius: 10px;
 }
 
-@media (max-width: 600px) {
+#login-logout {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    border: none;
+    background: none;
+    font-size: 16px;
+}
+
+#login-logout:hover {
+    cursor: pointer;
+}
+
+@media (max-width: 650px) {
     .toggle-button {
         display: flex;
     }
@@ -1210,14 +1236,20 @@ label.interesses, label.soortVakantie  {
     .navbar-links ul {
         width: 100%;
         flex-direction: column;
+        margin-bottom: 25px;
     }
 
     .navbar-links li {
         text-align: center;
+        justify-content: center;
     }
 
     .navbar-links li a {
         padding: .5rem 1rem;
+    }
+
+    #login-logout {
+        padding: 8px 16px;
     }
 
     .navbar-links.active {

@@ -18,8 +18,8 @@ class myHeader extends HTMLElement {
                         <li><a href="over.html">Over</a></li>
                         <li><button id="login-logout">Login</button></li>
                     </ul>
-                </nav>
-            </div>
+                </div>
+            </nav>
         `
     }
 }
