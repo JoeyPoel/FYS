@@ -101,6 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log(userId);
             return document.getElementById('profiel').style.display = 'none';
         } catch (userId) {
+            // No data found
             return console.log(userId);
         }
     }
