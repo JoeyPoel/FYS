@@ -3,12 +3,8 @@ document.addEventListener('DOMContentLoaded',
 
 
         // PROFIEL UPLOAD
-        document.getElementById('btn_profiel').addEventListener('click', addProfiel);
-
-        async function addProfiel() {
-
+        document.getElementById('btn-profiel').onclick= async function addProfiel(){
             // Zorgt er voor dat het profiel in de juiste id wordt ge insert
-
             await getData();
             async function getData() {
                 let object = FYSCloud.Session.get();
@@ -36,15 +32,21 @@ document.addEventListener('DOMContentLoaded',
                     let checkboxvalue = document.getElementById("dot-1");
                     if (checkboxvalue.checked == true){
                         geslacht = ("Man")
+                    } else{
+                        checkboxvalue = document.getElementById("dot-2");
+                        if (checkboxvalue.checked == true){
+                            geslacht = ("Vrouw")
+                        } else{
+                            checkboxvalue = document.getElementById("dot-3");
+                            if (checkboxvalue.checked == true){
+                                geslacht = ("Anders")
+                            } else{
+                                geslacht = "niet gegeven"
+                            }
+                        }
                     }
-                    checkboxvalue = document.getElementById("dot-2");
-                    if (checkboxvalue.checked == true){
-                        geslacht = ("Vrouw")
-                    }
-                    checkboxvalue = document.getElementById("dot-3");
-                    if (checkboxvalue.checked == true){
-                        geslacht = ("Anders")
-                    }
+
+
 
                     // SOCIAL MEDIA
                     let instagram = document.getElementById('Instagram').value;
@@ -59,6 +61,12 @@ document.addEventListener('DOMContentLoaded',
                     let leeftijdsgrens = document.getElementById('leeftijdsgrens').value;
                     let vakantieVan = document.getElementById('datumVan').value;
                     let vakantieTot = document.getElementById('datumTot').value;
+                    // Switcht de values van vakantie tot en van als de waardes niet kloppen
+                    if(vakantieVan > vakantieTot){
+                        let tussenstap = vakantieVan;
+                        vakantieVan = vakantieTot;
+                        vakantieTot = tussenstap;
+                    }
                     let bestemming = document.getElementById('bestemming').value;
 
 
@@ -303,6 +311,14 @@ document.addEventListener('DOMContentLoaded',
                 } catch (error) { // ALS IETS FOUT GAAT
                     return null;
                 }
+            }
+
+            // Zorgt ervoor dat dit element geshowed wordt wanneer je je aanpassingen doet om te valideren dat je het echt wilt
+            let x = document.getElementById("weetJeHetZeker");
+            if (x.style.display === "flex") {
+                x.style.display = "flex";
+            } else {
+                x.style.display = "flex";
             }
         }
     });

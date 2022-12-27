@@ -318,6 +318,23 @@ form .category label .dot {
     border-color: rgb(255, 70, 50);
 }
 
+/* VALIDATE FORM */
+#weetJeHetZeker{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#btn-profiel{
+    background-color: rgb(255, 70, 50);
+    height: 50px;
+    width: 300px;
+    border: none;
+    color: white;
+    font-size: 16px;
+}
+
 /* PROFIEL FOTO UPLOAD */
 .profielfotoCenter{
     display: flex;
@@ -503,11 +520,17 @@ label.interesses, label.soortVakantie  {
     flex-direction: row;
 }
 
+.datumTot, .datumVan{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
 .datumVan{
     margin-right: 10px;
 }
 
-#budget, #leeftijdsgrens, #datumVan, #datumTot {
+#budget, #leeftijdsgrens, #datumVan, #datumTot, #bestemming {
     width: 200px;
     height: 50px;
     outline: none;
@@ -524,7 +547,11 @@ label.interesses, label.soortVakantie  {
     padding-left: 15px;
 }
 
-#budget:focus, #leeftijdsgrens:focus, #datumVan:focus, #datumTot:focus{
+#bestemming{
+    width: 250px;
+}
+
+#budget:focus, #leeftijdsgrens:focus, #datumVan:focus, #datumTot:focus , #bestemming:focus{
     border-color: rgb(255, 70, 50);
 }
 
