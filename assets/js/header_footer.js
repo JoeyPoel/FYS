@@ -3,7 +3,12 @@ class myHeader extends HTMLElement {
         // Any time this element is connected to a document this function will run
         this.innerHTML = `
             <nav class="navbar">
-                <div class="brand-title">Brand logo</div>
+                <div class="brand-title">
+                    <div class="brand-name">Fys PUBG</div>
+                    <div class="banner_blok">
+                        <a href="../index.html"><img class="banner_blok_img" src="../assets/img/logo/logo.png"></a>
+                    </div>
+                </div>
                 <a href="#" class="toggle-button">
                     <span class="bar"></span>
                     <span class="bar"></span>
