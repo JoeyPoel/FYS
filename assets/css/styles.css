@@ -1,34 +1,91 @@
+@font-face {
+    src: url(fonts/HankenGrotesk-Regular.ttf);
+    font-family: Hanken Grotesk;
+}
+
 * {
     margin: 0;
     padding: 0;
+    font-family: Hanken Grotesk;
 }
 
 body {
-    height: 100vh;
+    height: 100%;
+    width: 100%;
     box-sizing: border-box;
     background-color: #fafafa;
-    font-family: Open Sans WF, sans-serif;
     overflow-x: hidden;
 }
 
-/* ?.html */
-.banner_blok {
-    top: 20%;
-    left: 10%;
-    position: absolute;
+.div-content {
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* index.html */
+.background-image {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to bottom, rgba(92, 77, 66, 0.65) 0%, rgba(92, 77, 66, 0.65) 100%), url("../img/background/strand.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    height: 100vh;
+}
+
+.div-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: auto;
+    width: 100%;
+    margin-right: 3rem;
+    margin-left: 3rem;
+    padding-right: 3rem;
+    padding-left: 3rem;
+    /* padding-top: 4.5rem; */
+}
+
+.main-content {
+    width: 430px;
+}
+
+.main-content h1, .main-content h2 {
     color: white;
-    font-family: sans-serif;
-    font-weight: lighter;
-    height: 100px;
 }
 
-.banner_blok_img {
-    width: 50%;
+.main-content h3 {
+    color: rgba(255, 255, 255, 0.75) !important;
 }
 
+.info-btn {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 1.25rem 2.25rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 10rem;
+    color: #fff;
+    background-color: #f4623a;
+    text-decoration: none;
+}
+
+.divider {
+    height: 0.2rem;
+    max-width: 3.25rem;
+    margin: 1.5rem auto;
+    background-color: #f4623a;
+    opacity: 1;
+    border: none;
+}
+
+/* ?.html */
 .header-button {
     visibility: hidden;
     position: absolute;
@@ -54,7 +111,7 @@ body {
     transition: 250ms;
 }
 
-.ss {
+.page-section {
     padding: 20px 40px;
 }
 
@@ -112,6 +169,20 @@ body {
 }
 
 /* profiel.html */
+.div-container-profiel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: auto;
+    width: 100%;
+    margin-right: 3rem;
+    margin-left: 3rem;
+    padding-right: 3rem;
+    padding-left: 3rem;
+    padding-top: 4.5rem;
+}
+
 .main-profiel {
     display: flex;
     justify-content: center;
@@ -555,74 +626,21 @@ label.interesses, label.soortVakantie  {
     border-color: rgb(255, 70, 50);
 }
 
-/*.container-1-over {*/
-/*    max-width: 1200px;*/
-/*    width: 100%;*/
-/*    background-color: #fff;*/
-/*    padding: 25px 30px;*/
-/*    border-radius: 5px;*/
-/*    box-shadow: 0 5px 10px rgba(0,0,0,0.15);*/
-/*}*/
-
-/*.titel-over {*/
-/*    text-align: center;*/
-/*}*/
-
-/*.content-over {*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    justify-content: center;*/
-/*    align-items: center;*/
-/*    flex: 1;*/
-/*}*/
-
-/*.info {*/
-/*    transform: translateX(400%);*/
-/*    transition: transform 1s ease;*/
-/*}*/
-
-/*.info:nth-of-type(even) {*/
-/*    transform: translateX(-400%)*/
-/*}*/
-
-/*.info.show {*/
-/*    transform: translateX(0%);*/
-/*}*/
-
-/*.info {*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    padding: 5px;*/
-/*    border: 1px #2B2B2BFF solid;*/
-/*    border-bottom: 2px #2B2B2BFF solid;*/
-/*    box-shadow: 0 5px 10px rgba(0,0,0,0.15);*/
-/*    border-radius: 5px;*/
-/*    margin: 10px;*/
-/*    width: 100%;*/
-/*    text-align: justify;*/
-/*    background-color: white;*/
-/*}*/
-
-/*.subtitel-over {*/
-/*    align-self: center;*/
-/*}*/
-
-/*.over-article{*/
-/*    display: flex;*/
-/*    flex-direction: row;*/
-/*    justify-content: space-between;*/
-/*}*/
-
-/*.img-over{*/
-/*    width: 50%;*/
-/*}*/
-
-/*.text-over{*/
-/*    padding-left: 10px;*/
-/*    padding-right: 10px;*/
-/*}*/
-
 /* contact.html */
+.div-container-contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: auto;
+    width: 100%;
+    margin-right: 3rem;
+    margin-left: 3rem;
+    padding-right: 3rem;
+    padding-left: 3rem;
+    padding-top: 4.5rem;
+}
+
 #emailForm{
     display: flex;
     flex-direction: column;
@@ -672,6 +690,7 @@ label.interesses, label.soortVakantie  {
     transition: all 0.3s ease;
     background: rgb(255, 70, 50);
 }
+
 /* Slider op main page */
 .sliderBox {
     margin: 0;
@@ -790,7 +809,6 @@ label.interesses, label.soortVakantie  {
     text-align: center;
     height: fit-content;
     background: #ddd;
-    font-family: Open Sans WF, sans-serif;
     border-radius: 20px;
     margin: 20px 0 0 60px;
     padding-top: 10px;
@@ -900,6 +918,7 @@ label.interesses, label.soortVakantie  {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 600px;
     background-color: #fafafa;
     margin-top: 20px;
     margin-bottom: 10px;
@@ -950,6 +969,21 @@ label.interesses, label.soortVakantie  {
     margin-top: 10px;
 }
 
+/* matches.html */
+.div-container-matches {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: auto;
+    width: 100%;
+    margin-right: 3rem;
+    margin-left: 3rem;
+    padding-right: 3rem;
+    padding-left: 3rem;
+    padding-top: 4.5rem;
+}
+
 /* registreren.html & login.html */
 #main-login-register-div {
     display: flex;
@@ -973,7 +1007,6 @@ label.interesses, label.soortVakantie  {
 
 .input-group {
     margin: 20px 0;
-    position: relative;
 }
 
 .input-group label {
@@ -1027,6 +1060,20 @@ label.interesses, label.soortVakantie  {
 }
 
 /* mogelijke_reispartner.html */
+.div-container-mogelijke_reispartner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: auto;
+    width: 100%;
+    margin-right: 3rem;
+    margin-left: 3rem;
+    padding-right: 3rem;
+    padding-left: 3rem;
+    padding-top: 4.5rem;
+}
+
 .container-1-mogelijke_reispartner {
     display: flex;
     flex-flow: row wrap;
@@ -1036,7 +1083,7 @@ label.interesses, label.soortVakantie  {
 #person-list {
     display: flex;
     min-height: 70vh;
-    width: 100%;
+    width: 1000px;
     justify-content: center;
     align-items: center;
     background-color: purple;
@@ -1158,6 +1205,21 @@ label.interesses, label.soortVakantie  {
     width: 25px;
 }
 
+/* over.html */
+.div-container-over {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: auto;
+    width: 100%;
+    margin-right: 3rem;
+    margin-left: 3rem;
+    padding-right: 3rem;
+    padding-left: 3rem;
+    padding-top: 4.5rem;
+}
+
 /* 404.html */
 .container-1-404 {
     display: flex;
@@ -1169,28 +1231,65 @@ label.interesses, label.soortVakantie  {
 .navbar {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    background-color: #333;
+    align-items: stretch;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    /* background-color: #333; */
+    background-color: #c47322;
     color: white;
 }
 
 .brand-title {
+    display: flex;
+    align-items: center;
     font-size: 1.5rem;
     margin: .5rem;
 }
 
+.brand-name {
+    display: none;
+}
+
+.banner_blok {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    font-weight: lighter;
+}
+
+.banner_blok_img {
+    width: 20rem;
+}
+
+.banner_blok a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+
 .navbar-links ul {
     display: flex;
+    height: 100%;
+    /* align-items: center; */
     margin: 0;
     padding: 0;
+    justify-content: center;
 }
 
 .navbar-links li {
+    display: flex;
     list-style: none;
 }
 
 .navbar-links li a {
-    display: block;
+    display: flex;
+    align-items: center;
     text-decoration: none;
     color: white;
     padding: 1rem;
@@ -1219,7 +1318,22 @@ label.interesses, label.soortVakantie  {
     border-radius: 10px;
 }
 
-@media (max-width: 600px) {
+#login-logout {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    border: none;
+    background: none;
+    font-size: 16px;
+}
+
+#login-logout:hover {
+    cursor: pointer;
+}
+
+@media (max-width: 865px) {
     .toggle-button {
         display: flex;
     }
@@ -1237,18 +1351,37 @@ label.interesses, label.soortVakantie  {
     .navbar-links ul {
         width: 100%;
         flex-direction: column;
+        margin-bottom: 25px;
     }
 
     .navbar-links li {
         text-align: center;
+        justify-content: center;
     }
 
     .navbar-links li a {
         padding: .5rem 1rem;
     }
 
+    #login-logout {
+        padding: 8px 16px;
+    }
+
     .navbar-links.active {
         display: flex;
+    }
+}
+
+@media (max-width: 400px) {
+    .brand-name {
+        display: flex;
+        align-items: center;
+        font-size: 1.5rem;
+        margin-left: .5rem;
+    }
+
+    .banner_blok_img {
+        display: none;
     }
 }
 
