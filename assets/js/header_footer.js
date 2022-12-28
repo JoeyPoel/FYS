@@ -4,7 +4,7 @@ class myHeader extends HTMLElement {
         this.innerHTML = `
             <nav class="navbar">
                 <div class="brand-title">
-                    <div class="brand-name">Fys PUBG</div>
+                    <div class="brand-name"><a href="../index.html">Fys PUBG</a></div>
                     <div class="banner_blok">
                         <a href="../index.html"><img class="banner_blok_img" src="../assets/img/logo/logo.png"></a>
                     </div>

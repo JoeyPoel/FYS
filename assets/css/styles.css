@@ -22,7 +22,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: #b3b4b3;
+    background-color: #eeeeee;
 }
 
 /* index.html */
@@ -1240,7 +1240,8 @@ label.interesses, label.soortVakantie  {
     left: 0;
     /* background-color: #333; */
     /* background-color: #c47322; */
-    background: none;
+    /* background: none; */
+    background: rgba(0,0,0,0.3);
     color: white;
 }
 
@@ -1253,6 +1254,11 @@ label.interesses, label.soortVakantie  {
 
 .brand-name {
     display: none;
+}
+
+.brand-name a {
+    text-decoration: none;
+    color: white;
 }
 
 .banner_blok {
