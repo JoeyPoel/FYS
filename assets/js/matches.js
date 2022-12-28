@@ -36,5 +36,3 @@ data.forEach((element) => {
 console.log(data);
 //console.log(data.values(data)[0]); // {one: '1'} -> returns '1'
 //console.log(data.keys(data)); // {one: '1'} -> returns 'one'
-
-//yo

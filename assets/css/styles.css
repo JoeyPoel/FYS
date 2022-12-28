@@ -22,6 +22,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    background-color: #b3b4b3;
 }
 
 /* index.html */
@@ -1238,7 +1239,8 @@ label.interesses, label.soortVakantie  {
     right: 0;
     left: 0;
     /* background-color: #333; */
-    background-color: #c47322;
+    /* background-color: #c47322; */
+    background: none;
     color: white;
 }
 
