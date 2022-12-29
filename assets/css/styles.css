@@ -191,6 +191,16 @@ body {
     border-radius: 20px;
 }
 
+.persoonOpslaan-btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    background-color: rgb(255, 70, 50);
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+}
+
 .main-profiel {
     display: flex;
     justify-content: center;

@@ -45,17 +45,9 @@ document.addEventListener('DOMContentLoaded', () => {
             .then(function(data) {
                 if(data.isImage) {
                     document.getElementById("imagePreview").src = data.url;
-                    console.log(data);
-                    console.log(data.url);
-                    console.log(data.fileName);
-                    console.log(Object.values(data)); // {one: '1'} -> returns '1'
-                    let promise = FYSCloud.API.listDirectory();
-                    console.log(promise);
-                    console.log("Success!");
                 }
             }).catch(function(reason) {
             console.log(reason);
-            console.log("Error!");
         });
     });
 });
