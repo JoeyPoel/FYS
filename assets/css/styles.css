@@ -251,6 +251,7 @@ body {
     outline: none;
     border-width: medium;
     border-radius: 5px;
+    font-size: 16px;
 }
 
 #bio:focus {
