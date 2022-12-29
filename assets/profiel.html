@@ -35,80 +35,94 @@
                     <input type="file" id="fileUpload" class="fileUpload" name="myfile">
                     <p>Error Message</p>
                 </div>
-                <!-- Voornaam -->
-                <div class="input-group">
-                    <label for="voornaam">Voornaam</label>
-                    <input type="text" id="voornaam" placeholder="Voornaam" name="voornaam">
-                    <p>Error Message</p>
+                <div class="form-items">
+                    <!-- Voornaam -->
+                    <div id="vnaam" class="input-group">
+                        <label for="voornaam">Voornaam</label>
+                        <input type="text" id="voornaam" placeholder="Voornaam" name="voornaam">
+                        <p>Error Message</p>
+                    </div>
+                    <!-- Tussenvoegsel -->
+                    <div id="tvoegsel" class="input-group">
+                        <label for="tussenvoegsel">Tussenvoegsel</label>
+                        <input type="text" id="tussenvoegsel" placeholder="Tussenvoegsel" name="tussenvoegsel">
+                        <p>Error Message</p>
+                    </div>
+                    <!-- Achternaam -->
+                    <div id="anaam" class="input-group">
+                        <label for="achternaam">Achternaam</label>
+                        <input type="text" id="achternaam" placeholder="Achternaam" name="achternaam">
+                        <p>Error Message</p>
+                    </div>
+                    <!-- Telefoonnummer -->
+                    <div id="telnummer" class="input-group">
+                        <label for="telefoonnummer">Telefoonnummer</label>
+                        <input type="tel" id="telefoonnummer" placeholder="Telefoonnummer" name="telefoonnummer">
+                        <p>Error Message</p>
+                    </div>
                 </div>
-                <!-- Tussenvoegsel -->
-                <div class="input-group">
-                    <label for="tussenvoegsel">Tussenvoegsel</label>
-                    <input type="text" id="tussenvoegsel" placeholder="Tussenvoegsel" name="tussenvoegsel">
-                    <p>Error Message</p>
-                </div>
-                <!-- Achternaam -->
-                <div class="input-group">
-                    <label for="achternaam">Achternaam</label>
-                    <input type="text" id="achternaam" placeholder="Achternaam" name="achternaam">
-                    <p>Error Message</p>
+                <div class="flex-items">
+                    <div class="dropdown-items">
+                        <!-- Interesse -->
+                        <div class="input-group">
+                            <label for="interesse">Kies een activiteit:</label>
+                            <select name="interesse" id="interesse">
+                                <option value="interesseDefaultNone" disabled selected>Kies je interesse</option>
+                                <option value="zwemmen">Zwemmen</option>
+                                <option value="hardlopen">Hardlopen</option>
+                                <option value="musea">Musea</option>
+                                <option value="rondreis">Rondreis</option>
+                            </select>
+                            <p>Error Message</p>
+                        </div>
+                        <!-- Bestemming -->
+                        <div class="input-group">
+                            <label for="bestemming">Kies je bestemming:</label>
+                            <select name="bestemming" id="bestemming">
+                                <option value="bestemmingDefaultNone" disabled selected>Kies je bestemming</option>
+                                <option value="spanje">Spanje</option>
+                                <option value="frankrijk">Frankrijk</option>
+                                <option value="duitsland">Duitsland</option>
+                                <option value="portugal">Portugal</option>
+                            </select>
+                            <p>Error Message</p>
+                        </div>
+                        <!-- Geslacht -->
+                        <div class="input-group">
+                            <label for="geslacht">Kies je geslacht:</label>
+                            <select name="geslacht" id="geslacht">
+                                <option value="geslachtDefaultNone" disabled selected>Kies je geslacht</option>
+                                <option value="man">Man</option>
+                                <option value="vrouw">Vrouw</option>
+                            </select>
+                            <p>Error Message</p>
+                        </div>
+                    </div>
+                    <div class="date-items">
+                        <!-- Begin vakantie -->
+                        <div class="input-group">
+                            <label for="beginVakantie">Begin vakantie</label>
+                            <input type="date" id="beginVakantie" name="beginVakantie" min="2023-01-01">
+                            <p>Error Message</p>
+                        </div>
+                        <!-- Eind vakantie -->
+                        <div class="input-group">
+                            <label for="eindVakantie">Eind vakantie</label>
+                            <input type="date" id="eindVakantie" name="eindVakantie" min="2023-01-01">
+                            <p>Error Message</p>
+                        </div>
+                        <!-- Geboortedatum -->
+                        <div class="input-group">
+                            <label for="geboortedatum">Geboortedatum</label>
+                            <input type="date" id="geboortedatum" name="geboortedatum">
+                            <p>Error Message</p>
+                        </div>
+                    </div>
                 </div>
                 <!-- Bio -->
                 <div class="input-group">
-                    <label for="bio">Bio</label>
+                    <label for="bio">Biografie</label>
                     <textarea id="bio" name="bio" rows="4" cols="50" placeholder="Informatie over jezelf"></textarea>
-                    <p>Error Message</p>
-                </div>
-                <!-- Geboortedatum -->
-                <div class="input-group">
-                    <label for="geboortedatum">Geboortedatum</label>
-                    <input type="date" id="geboortedatum" name="geboortedatum">
-                    <p>Error Message</p>
-                </div>
-                <!-- Interesse -->
-                <div class="input-group">
-                    <label for="interesse">Kies een activiteit die je wilt gaan doen:</label>
-                    <select name="interesse" id="interesse">
-                        <option value="interesseDefaultNone" disabled selected>Kies je interesse</option>
-                        <option value="zwemmen">Zwemmen</option>
-                        <option value="hardlopen">Hardlopen</option>
-                        <option value="musea">Musea</option>
-                        <option value="rondreis">Rondreis</option>
-                    </select>
-                    <p>Error Message</p>
-                </div>
-                <!-- Bestemming -->
-                <div class="input-group">
-                    <label for="bestemming">Kies je bestemming:</label>
-                    <select name="bestemming" id="bestemming">
-                        <option value="bestemmingDefaultNone" disabled selected>Kies je bestemming</option>
-                        <option value="spanje">Spanje</option>
-                        <option value="frankrijk">Frankrijk</option>
-                        <option value="duitsland">Duitsland</option>
-                        <option value="portugal">Portugal</option>
-                    </select>
-                    <p>Error Message</p>
-                </div>
-                <!-- Begin vakantie -->
-                <div class="input-group">
-                    <label for="beginVakantie">Begin vakantie</label>
-                    <input type="date" id="beginVakantie" name="beginVakantie" min="2023-01-01">
-                    <p>Error Message</p>
-                </div>
-                <!-- Eind vakantie -->
-                <div class="input-group">
-                    <label for="eindVakantie">Eind vakantie</label>
-                    <input type="date" id="eindVakantie" name="eindVakantie" min="2023-01-01">
-                    <p>Error Message</p>
-                </div>
-                <!-- Geslacht -->
-                <div class="input-group">
-                    <label for="geslacht">Kies je geslacht:</label>
-                    <select name="geslacht" id="geslacht">
-                        <option value="geslachtDefaultNone" disabled selected>Kies je geslacht</option>
-                        <option value="man">Man</option>
-                        <option value="vrouw">Vrouw</option>
-                    </select>
                     <p>Error Message</p>
                 </div>
                 <button type="submit" class="persoonOpslaan-btn">Gegevens opslaan</button>

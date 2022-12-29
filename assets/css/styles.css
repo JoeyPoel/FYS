@@ -187,17 +187,17 @@ body {
 #profiel-form {
     display: flex;
     flex-direction: column;
-    width: 400px;
+    width: 750px;
     padding: 20px;
     background-color: #fff;
     border-radius: 20px;
 }
 
 #imagePreview {
-    min-height: 150px;
-    max-height: 150px;
-    min-width: 150px;
-    max-width: 150px;
+    min-height: 190px;
+    max-height: 190px;
+    min-width: 190px;
+    max-width: 190px;
     object-fit: cover;
     object-position: center center;
     border-radius: 50%;
@@ -215,6 +215,52 @@ body {
     display: none;
 }
 
+.form-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#vnaam, #tvoegsel, #anaam, #telnummer {
+    width: 45%;
+}
+
+.flex-items {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.dropdown-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+}
+
+.date-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 50%;
+}
+
+#bio {
+    border: 1px solid #ccc;
+    outline: none;
+    border-width: medium;
+    border-radius: 5px;
+}
+
+#bio:focus {
+    border-color: rgb(0, 255, 119);
+    outline: none;
+    /* border-style: solid; */
+    border-width: medium;
+    border-radius: 5px;
+}
+
 .persoonOpslaan-btn {
     width: 100%;
     padding: 10px;
@@ -225,6 +271,7 @@ body {
     border-radius: 30px;
 }
 
+/* oud profiel */
 .main-profiel {
     display: flex;
     justify-content: center;
@@ -1051,7 +1098,7 @@ label.interesses, label.soortVakantie  {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 20px 0;
+    /* margin: 20px 0; */
 }
 
 .input-group label {
@@ -1064,6 +1111,18 @@ label.interesses, label.soortVakantie  {
     width: 100%;
     padding: 10px;
     box-sizing: border-box;
+    height: 45px;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+    border-color: rgb(0, 255, 119);
 }
 
 .error input {
@@ -1072,12 +1131,6 @@ label.interesses, label.soortVakantie  {
 
 .success input {
     border: 3px green solid;
-}
-
-.input-group p {
-    font-size: 15px;
-    color: red;
-    visibility: hidden;
 }
 
 .input-group p {
@@ -1458,4 +1511,17 @@ label.interesses, label.soortVakantie  {
 /* Other */
 textarea {
     resize: none;
+}
+
+select {
+    border-radius: 20px;
+    width: 200px;
+    padding: 5px;
+}
+
+select:focus {
+    border-color: rgb(0, 255, 119);
+    outline: none;
+    /* border-style: solid; */
+    border-width: medium;
 }
