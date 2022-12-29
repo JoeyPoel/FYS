@@ -185,10 +185,34 @@ body {
 }
 
 #profiel-form {
+    display: flex;
+    flex-direction: column;
     width: 400px;
     padding: 20px;
     background-color: #fff;
     border-radius: 20px;
+}
+
+#imagePreview {
+    min-height: 150px;
+    max-height: 150px;
+    min-width: 150px;
+    max-width: 150px;
+    object-fit: cover;
+    object-position: center center;
+    border-radius: 50%;
+    border: 18px solid #f4eeff;
+}
+
+#choosePhoto {
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 30px;
+    background: pink;
+}
+
+#fileUpload {
+    display: none;
 }
 
 .persoonOpslaan-btn {
@@ -1024,6 +1048,9 @@ label.interesses, label.soortVakantie  {
 }
 
 .input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 20px 0;
 }
 
