@@ -184,6 +184,13 @@ body {
     padding-top: 4.5rem;
 }
 
+#profiel-form {
+    width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
 .main-profiel {
     display: flex;
     justify-content: center;
@@ -250,12 +257,12 @@ form .input-box label.details {
 }
 
 /* BESTEMMING */
-.bestemming{
+.bestemmings{
     display: flex;
     flex-direction: column;
 }
 
-.bestemming input {
+.bestemmings input {
     height: 45px;
     outline: none;
     font-size: 16px;
@@ -602,7 +609,7 @@ label.interesses, label.soortVakantie  {
     margin-right: 10px;
 }
 
-#budget, #leeftijdsgrens, #datumVan, #datumTot, #bestemming {
+#budget, #leeftijdsgrens, #datumVan, #datumTot, #bestemmings {
     width: 200px;
     height: 50px;
     outline: none;
@@ -619,11 +626,11 @@ label.interesses, label.soortVakantie  {
     padding-left: 15px;
 }
 
-#bestemming{
+#bestemmings{
     width: 250px;
 }
 
-#budget:focus, #leeftijdsgrens:focus, #datumVan:focus, #datumTot:focus , #bestemming:focus{
+#budget:focus, #leeftijdsgrens:focus, #datumVan:focus, #datumTot:focus , #bestemmings:focus{
     border-color: rgb(255, 70, 50);
 }
 

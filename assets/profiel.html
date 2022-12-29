@@ -23,6 +23,98 @@
 <my-header></my-header>
 <div class="div-content">
     <div class="div-container-profiel">
+        <div>
+            <form id="profiel-form" action="../index.html" method="GET">
+                <div class="title">
+                    <h2>Persoonsgegevens</h2>
+                </div>
+                <!-- Profielfoto -->
+                <div class="input-group">
+                    <label for="fileUpload">Kies een profielfoto</label>
+                    <input type="file" id="fileUpload" class="fileUpload" name="myfile">
+                    <img id="imagePreview" src="#" alt="Profielfoto">
+                    <p>Error Message</p>
+                </div>
+                <!-- Voornaam -->
+                <div class="input-group">
+                    <label for="voornaam">Voornaam</label>
+                    <input type="text" id="voornaam" placeholder="Voornaam" name="voornaam">
+                    <p>Error Message</p>
+                </div>
+                <!-- Tussenvoegsel -->
+                <div class="input-group">
+                    <label for="tussenvoegsel">Tussenvoegsel</label>
+                    <input type="text" id="tussenvoegsel" placeholder="Tussenvoegsel" name="tussenvoegsel">
+                    <p>Error Message</p>
+                </div>
+                <!-- Achternaam -->
+                <div class="input-group">
+                    <label for="achternaam">Achternaam</label>
+                    <input type="text" id="achternaam" placeholder="Achternaam" name="achternaam">
+                    <p>Error Message</p>
+                </div>
+                <!-- Bio -->
+                <div class="input-group">
+                    <label for="bio">Bio</label>
+                    <textarea id="bio" name="bio" rows="4" cols="50" placeholder="Informatie over jezelf"></textarea>
+                    <p>Error Message</p>
+                </div>
+                <!-- Geboortedatum -->
+                <div class="input-group">
+                    <label for="geboortedatum">Geboortedatum</label>
+                    <input type="date" id="geboortedatum" name="geboortedatum">
+                    <p>Error Message</p>
+                </div>
+                <!-- Interesse -->
+                <div class="input-group">
+                    <label for="interesse">Kies een activiteit die je wilt gaan doen:</label>
+                    <select name="interesse" id="interesse">
+                        <option value="interesseDefaultNone" disabled selected>Kies je interesse</option>
+                        <option value="zwemmen">Zwemmen</option>
+                        <option value="hardlopen">Hardlopen</option>
+                        <option value="musea">Musea</option>
+                        <option value="rondreis">Rondreis</option>
+                    </select>
+                    <p>Error Message</p>
+                </div>
+                <!-- Bestemming -->
+                <div class="input-group">
+                    <label for="bestemming">Kies je bestemming:</label>
+                    <select name="bestemming" id="bestemming">
+                        <option value="bestemmingDefaultNone" disabled selected>Kies je bestemming</option>
+                        <option value="spanje">Spanje</option>
+                        <option value="frankrijk">Frankrijk</option>
+                        <option value="duitsland">Duitsland</option>
+                        <option value="portugal">Portugal</option>
+                    </select>
+                    <p>Error Message</p>
+                </div>
+                <!-- Begin vakantie -->
+                <div class="input-group">
+                    <label for="beginVakantie">Begin vakantie</label>
+                    <input type="date" id="beginVakantie" name="beginVakantie" min="2023-01-01">
+                    <p>Error Message</p>
+                </div>
+                <!-- Eind vakantie -->
+                <div class="input-group">
+                    <label for="eindVakantie">Eind vakantie</label>
+                    <input type="date" id="eindVakantie" name="eindVakantie" min="2023-01-01">
+                    <p>Error Message</p>
+                </div>
+                <!-- Geslacht -->
+                <div class="input-group">
+                    <label for="geslacht">Kies je geslacht:</label>
+                    <select name="geslacht" id="geslacht">
+                        <option value="geslachtDefaultNone" disabled selected>Kies je geslacht</option>
+                        <option value="man">Man</option>
+                        <option value="vrouw">Vrouw</option>
+                    </select>
+                    <p>Error Message</p>
+                </div>
+                <button type="submit" class="login-register-btn">Aanmelden</button>
+            </form>
+        </div>
+        <!--
         <main class="main-profiel">
             <div class="container-1-profiel">
                 <div class="title">Profiel</div>
@@ -100,9 +192,9 @@
                                 <input type="number" min="18" max="100" id="leeftijdsgrens" name="leeftijd" placeholder="Vul de leeftijdsgrens in" required>
                             </div>
 
-                            <div class="bestemming">
-                                <label class="bestemming">Waar wilt u op vakantie</label>
-                                <input type="text" id="bestemming" name="bestemming" placeholder="Vul de naam van het land in">
+                            <div class="bestemmings">
+                                <label class="bestemmings">Waar wilt u op vakantie</label>
+                                <input type="text" id="bestemmings" name="bestemmings" placeholder="Vul de naam van het land in">
                             </div>
                         </div>
                             <div class="interessesEnSoortVakantie">
@@ -246,7 +338,7 @@
                     </form>
                 </div>
             </div>
-        </main>
+        </main> -->
     </div>
 </div>
 <!-- Custom HTML element. By defining a new class in JS that extends HTMLElement -->
