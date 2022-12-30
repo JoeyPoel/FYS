@@ -1130,7 +1130,19 @@ label.interesses, label.soortVakantie  {
     border: 3px red solid;
 }
 
+.error #interesse {
+    border: 3px red solid;
+}
+
+.error #interesse, .error #bestemming, .error #geslacht, .error #bio {
+    border: 3px red solid;
+}
+
 .success input {
+    border: 3px green solid;
+}
+
+.success #interesse, .success #bestemming, .success #geslacht, .success #bio {
     border: 3px green solid;
 }
 
