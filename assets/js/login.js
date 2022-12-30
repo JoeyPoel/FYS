@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     form.submit();
                 } else {
                     console.log("FALSE");
+                    alert("Email of wachtwoord is onjuist!");
                     event.preventDefault();
                 }
             });

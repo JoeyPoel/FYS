@@ -88,6 +88,30 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // Function that sets the new session id
+    async function getDataId() {
+        try {
+            let status = true;
+            const data = await FYSCloud.API.queryDatabase(
+                "SELECT * FROM fys_is101_4_live.`account` WHERE email=?;",
+                [Object.keys(object)]
+            );
+            // if statement that checks if variable data has any values
+            if (!data.length) {
+                console.log("No data!");
+                status = false;
+            } else { // else statement for when variable data has values
+                console.log("There is data.");
+                console.log(data[0].idAccount);
+                //console.log(data.length);
+                FYSCloud.Session.set(Object.keys(object), data[0].idAccount);
+            }
+            return status;
+        } catch (error) {
+            return null;
+        }
+    }
+
     async function getDataPersoon() {
         try {
             const data = await FYSCloud.API.queryDatabase(
@@ -113,6 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
         //console.log(object); // View object
         //console.log(Object.keys(object)); // View object
         getData(); // Functie wordt aangeroepen
+        getDataId();
     }
 
     // Remove everything from the session

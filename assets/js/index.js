@@ -8,14 +8,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     let object = FYSCloud.Session.get();
-    //console.log(object);
-    //console.log(Object.values(object)[0]); // {one: '1'} -> returns '1'
-    //console.log(Object.keys(object)); // {one: '1'} -> returns 'one'
+    console.log(object);
+    console.log(Object.values(object)[0]); // {one: '1'} -> returns '1'
+    console.log(Object.keys(object)); // {one: '1'} -> returns 'one'
 
     async function getData() {
         try {
             const data = await FYSCloud.API.queryDatabase(
-                "SELECT idAccount FROM account WHERE gebruikersnaam=?;",
+                "SELECT idAccount FROM account WHERE email=?;",
                 [Object.keys(object)]
             );
             //console.log(data);
@@ -33,6 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
         //console.log(object); // View object
         //console.log(Object.keys(object)); // View object
         getData(); // Functie wordt aangeroepen
+        //console.log(getData());
     }
 
     // Remove everything from the session

@@ -7,6 +7,11 @@ document.addEventListener('DOMContentLoaded', () => {
         environment: "mockup"
     });
 
+    let object = FYSCloud.Session.get();
+    //console.log(object);
+    //console.log(Object.values(object)[0]); // {one: '1'} -> returns '1'
+    //console.log(Object.keys(object)); // {one: '1'} -> returns 'one'
+
     const form = document.querySelector('#profiel-form');
     const imageInput = document.getElementById("fileUpload");
     const voornaam = document.querySelector('#voornaam');
@@ -26,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log(isFormValid());
         if (isFormValid() == true) {
             form.submit();
-            //insertData();
+            insertData();
         } else {
             event.preventDefault();
         }
@@ -136,8 +141,8 @@ document.addEventListener('DOMContentLoaded', () => {
     async function insertData() {
         try {
             const data = await FYSCloud.API.queryDatabase(
-                "INSERT INTO account(gebruikersnaam, email, wachtwoord) VALUES(?, ?, ?)",
-                [usernameInput.value, emailInput.value, passwordInput.value]
+                "INSERT INTO `fys_is101_4_live`.`Persoon` VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?);",
+                [Object.values(object)[0], voornaam.value, tussenvoegsel.value, achternaam.value, bio.value, geboortedatum.value, interesse.value, bestemming.value, beginVakantie.value, eindVakantie.value, geslacht.value, imageInput.value, telefoonnummer.value]
             );
             console.log(data);
             return data;
@@ -178,11 +183,11 @@ document.addEventListener('DOMContentLoaded', () => {
     imageInput.addEventListener('change', (event) => {
         FYSCloud.Utils
             .getDataUrl("#fileUpload")
-            .then(function(data) {
-                if(data.isImage) {
+            .then(function (data) {
+                if (data.isImage) {
                     document.getElementById("imagePreview").src = data.url;
                 }
-            }).catch(function(reason) {
+            }).catch(function (reason) {
             console.log(reason);
         });
     });
