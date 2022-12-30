@@ -49,6 +49,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function validateForm() {
+        // Profielfoto
+        if (imageInput.value.trim() == '') {
+            setError(imageInput, 'Kies een foto');
+        } else {
+            setSuccess(imageInput);
+        }
         // Voornaam
         if (voornaam.value.trim() == '') {
             setError(voornaam, 'Voornaam kan niet leeg zijn');

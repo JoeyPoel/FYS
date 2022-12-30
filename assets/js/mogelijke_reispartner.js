@@ -10,10 +10,9 @@ let data = await getData();
 async function getData() {
     try {
         const data = await FYSCloud.API.queryDatabase(
-            "SELECT voornaam, tussenvoegsel, achternaam, bio, geboortedatum, interesse, " +
-            "bestemming, beginVakantie, eindVakantie, geslacht, profielfoto FROM `fys_is101_4_live`.`persoon` " +
-            "WHERE bestemming = 'Duitsland';"
+            "SELECT * FROM `fys_is101_4_live`.`persoon` WHERE NOT voornaam='admin';"
         );
+        console.log(data);
         return data;
     } catch (error) {
         return null;
