@@ -23,6 +23,26 @@
 <my-header></my-header>
 <div class="div-content">
     <div class="div-container-mogelijke_reispartner">
+        <div>
+            <form id="filter-form" action="#" method="GET">
+                <div class="title">
+                    <h2>Filter</h2>
+                </div>
+                <!-- Bestemming -->
+                <div class="input-group">
+                    <label for="bestemming">Filter op bestemming:</label>
+                    <select name="bestemming" id="bestemming">
+                        <option value="bestemmingDefaultNone" disabled selected>Kies een bestemming</option>
+                        <option value="spanje">Spanje</option>
+                        <option value="frankrijk">Frankrijk</option>
+                        <option value="duitsland">Duitsland</option>
+                        <option value="portugal">Portugal</option>
+                    </select>
+                    <p>Error Message</p>
+                </div>
+                <button type="submit" class="filter-btn">Reset filter</button>
+            </form>
+        </div>
         <main>
             <div class="container-1-mogelijke_reispartner">
                 <div id="person-list">

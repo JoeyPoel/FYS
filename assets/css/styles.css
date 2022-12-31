@@ -187,6 +187,7 @@ body {
 #profiel-form {
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 750px;
     padding: 20px;
     background-color: #fff;
@@ -1173,6 +1174,7 @@ label.interesses, label.soortVakantie  {
 /* mogelijke_reispartner.html */
 .div-container-mogelijke_reispartner {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -1183,6 +1185,26 @@ label.interesses, label.soortVakantie  {
     padding-right: 3rem;
     padding-left: 3rem;
     padding-top: 4.5rem;
+}
+
+#filter-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 750px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+.filter-btn {
+    width: 150px;
+    padding: 10px;
+    font-size: 20px;
+    background-color: rgb(255, 70, 50);
+    color: #fff;
+    border: none;
+    border-radius: 30px;
 }
 
 .container-1-mogelijke_reispartner {
