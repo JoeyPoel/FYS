@@ -1187,30 +1187,18 @@ label.interesses, label.soortVakantie  {
     padding-top: 4.5rem;
 }
 
-#filter-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 750px;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 20px;
+.button-value {
+    border: 2px solid #6759ff;
+    padding: 1em 2.2em;
+    border-radius: 3em;
+    background-color: transparent;
+    color: #6759ff;
+    cursor: pointer;
 }
 
-.filter-btn {
-    width: 150px;
-    padding: 10px;
-    font-size: 20px;
-    background-color: rgb(255, 70, 50);
-    color: #fff;
-    border: none;
-    border-radius: 30px;
-}
-
-.container-1-mogelijke_reispartner {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
+.active {
+    background-color: #6759ff;
+    color: #ffffff;
 }
 
 #person-list {
@@ -1219,7 +1207,6 @@ label.interesses, label.soortVakantie  {
     width: 1000px;
     justify-content: center;
     align-items: center;
-    background-color: purple;
 }
 
 #append-list-ul {
@@ -1229,23 +1216,18 @@ label.interesses, label.soortVakantie  {
     width: 900px;
     overflow: hidden;
     overflow-y: scroll;
-    border-radius: 1em;
+    border-radius: 1em 0 0 1em;
     padding-bottom: 15px;
-    background-color: #6fd649;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
     list-style: none;
 }
 
-#append-list-li {
-    display: flex;
-    flex-direction: column;
-    background-color: #bfe9ff;
-    border-radius: 1em;
-    box-shadow: 0 0.3em 0.7em;
-    transition: all 1s ease-in-out;
-    margin-top: 10px;
-    margin-left: 15px;
-    margin-right: 15px;
-    min-height: 140px;
+.liCard {
+    background: none;
+}
+
+.hide {
+    display: none;
 }
 
 /* Person card */
@@ -1573,4 +1555,18 @@ select:focus {
     outline: none;
     /* border-style: solid; */
     border-width: medium;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #686868;
+}
+
+::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 1em;
 }

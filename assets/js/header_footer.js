@@ -163,7 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
         window.location.reload();
     }
 
-    // // Visible/Invisible 'profiel' in menu
+    // // Visible/Invisible items in menu like 'profiel'
     // if (Object.keys(object).length === 0 && Object.getPrototypeOf(object) === Object.prototype) {
     //     // object/session is empty
     //     document.getElementById('profiel').style.display = 'none';
