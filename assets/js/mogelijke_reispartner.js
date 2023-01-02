@@ -36,6 +36,11 @@ async function getMatchData() {
     }
 }
 
+// function that refreshes the page
+function refreshPage() {
+    window.location.reload();
+}
+
 // Initially display all products
 window.onload = () => {
     filterProduct("all");
@@ -149,7 +154,6 @@ for (let i of person.data) {
         if (button.value == Object.values(object)[0]) {
             alert("Je kunt niet met jezelf matchen!");
         } else {
-            console.log("MOET FIXEN");
             for (let x = 0; x < index.length; x++) {
                 /* if (Object.values(object)[0] == index.idAccountPersoonEen && button.value == index.idAccountPersoonTwee) {
                     //alert("Je hebt al een matchverzoek verstuurd naar deze persoon!");
@@ -163,7 +167,8 @@ for (let i of person.data) {
                         "INSERT INTO `fys_is101_4_live`.`match` VALUES (?, ?, FALSE);",
                         [Object.values(object)[0], i.idAccount]
                     );
-                    console.log(data);
+                    refreshPage();
+                    //console.log(data);
                 }
                 //console.log(index[x]);
                 //console.log(indexTwo[x]);
