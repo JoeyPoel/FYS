@@ -14,8 +14,20 @@ console.log(Object.values(object)[0]); // {one: '1'} -> returns '1'
 async function getData() {
     try {
         const data = await FYSCloud.API.queryDatabase(
-            "SELECT * FROM `fys_is101_4_live`.`persoon` WHERE NOT (voornaam='admin' OR idAccount=?);",
+            "SELECT * FROM `fys_is101_4_live`.`persoon` WHERE NOT (voornaam='admin' || idAccount=?);",
             [Object.values(object)[0]]
+        );
+        //console.log({data});
+        return {data};
+    } catch (error) {
+        return null;
+    }
+}
+
+async function getMatchData() {
+    try {
+        const data = await FYSCloud.API.queryDatabase(
+            "SELECT * FROM `fys_is101_4_live`.`match`;"
         );
         //console.log({data});
         return {data};
@@ -31,6 +43,15 @@ window.onload = () => {
 
 let person = await getData();
 console.log(person);
+let match = await getMatchData();
+console.log(match);
+console.log(match.data);
+
+const index = match.data.map(object => object.idAccountPersoonEen);
+console.log(index);
+
+const indexTwo = match.data.map(object => object.idAccountPersoonTwee);
+console.log(indexTwo);
 
 for (let i of person.data) {
     let dtFormat = new Intl.DateTimeFormat('nl-NL');
@@ -128,12 +149,35 @@ for (let i of person.data) {
         if (button.value == Object.values(object)[0]) {
             alert("Je kunt niet met jezelf matchen!");
         } else {
-            console.log(button.value);
-            const data = FYSCloud.API.queryDatabase(
-                "INSERT INTO `fys_is101_4_live`.`match` VALUES (?, ?, FALSE);",
-                [Object.values(object)[0], i.idAccount]
-            );
-            console.log(data);
+            console.log("MOET FIXEN");
+            for (let x = 0; x < index.length; x++) {
+                /* if (Object.values(object)[0] == index.idAccountPersoonEen && button.value == index.idAccountPersoonTwee) {
+                    //alert("Je hebt al een matchverzoek verstuurd naar deze persoon!");
+                    alert(index.idAccountPersoonEen + " " + index.idAccountPersoonTwee);
+                } */
+                if (Object.values(object)[0] == index[x] && button.value == indexTwo[x]) {
+                    //alert("Je hebt al een matchverzoek verstuurd naar deze persoon!");
+                    alert(index[x] + " " + indexTwo[x]);
+                } else {
+                    const data = FYSCloud.API.queryDatabase(
+                        "INSERT INTO `fys_is101_4_live`.`match` VALUES (?, ?, FALSE);",
+                        [Object.values(object)[0], i.idAccount]
+                    );
+                    console.log(data);
+                }
+                //console.log(index[x]);
+                //console.log(indexTwo[x]);
+            }
+
+            // else if (Object.values(object)[0] == j.idAccountPersoonEen && button.value == j.idAccountPersoonTwee) {
+            //     console.log("Success");
+            //     console.log(button.value);
+            //     /* const data = FYSCloud.API.queryDatabase(
+            //         "INSERT INTO `fys_is101_4_live`.`match` VALUES (?, ?, FALSE);",
+            //         [Object.values(object)[0], i.idAccount]
+            //     );
+            //     console.log(data); */
+            // }
         }
     };
 
@@ -147,6 +191,10 @@ for (let i of person.data) {
     linksA.appendChild(aImg);
     aImg.src = "img/icon/send.svg";
     aImg.alt = "Send";
+
+    /* if (Object.values(object)[0] == i.idAccountPersoonEen) {
+        console.log("BOYZ");
+    } */
 }
 
 // Parameter passed from button (Parameter same as category)
