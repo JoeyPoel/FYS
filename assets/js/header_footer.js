@@ -159,7 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // function that refreshes the page
-    function refreshPage(){
+    function refreshPage() {
         window.location.reload();
     }
 

@@ -5,6 +5,12 @@ FYSCloud.API.configure({
     environment: "mockup"
 });
 
+const filterBtn = document.querySelectorAll(".button-value");
+let object = FYSCloud.Session.get();
+//console.log(object);
+console.log(Object.values(object)[0]); // {one: '1'} -> returns '1'
+//console.log(Object.keys(object)); // {one: '1'} -> returns 'one'
+
 async function getData() {
     try {
         const data = await FYSCloud.API.queryDatabase(
@@ -17,7 +23,7 @@ async function getData() {
     }
 }
 
-//Initially display all products
+// Initially display all products
 window.onload = () => {
     filterProduct("all");
 };
@@ -113,8 +119,25 @@ for (let i of person.data) {
     divCardInfo.appendChild(divLinks);
     divLinks.className = "links";
 
+    let button = document.createElement("button");
+    divLinks.appendChild(button);
+    button.className = "matchBtn";
+    button.value = i.idAccount;
+    button.onclick = () => {
+        if (button.value == Object.values(object)[0]) {
+            alert("Je kunt niet met jezelf matchen!");
+        } else {
+            console.log(button.value);
+            const data = FYSCloud.API.queryDatabase(
+                "INSERT INTO `fys_is101_4_live`.`match` VALUES (?, ?, FALSE);",
+                [Object.values(object)[0], i.idAccount]
+            );
+            console.log(data);
+        }
+    };
+
     let linksA = document.createElement("a");
-    divLinks.appendChild(linksA);
+    button.appendChild(linksA);
     linksA.href = "#";
     const textLinksA = document.createTextNode("Stuur een match verzoek");
     linksA.appendChild(textLinksA);
@@ -158,7 +181,6 @@ function filterProduct(value) {
     });
 }
 
-const filterBtn = document.querySelectorAll(".button-value");
 for (let j = 0; j < filterBtn.length; j++) {
     filterBtn[j].onclick = () => {
         console.log(filterBtn[j].value);
@@ -186,11 +208,6 @@ document.getElementById("search").addEventListener("click", () => {
         }
     });
 }); */
-
-//Initially display all products
-// window.onload = () => {
-//     filterProduct("all");
-// };
 
 //console.log(data);
 //console.log(data.values(data)[0]); // {one: '1'} -> returns '1'

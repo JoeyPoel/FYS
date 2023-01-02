@@ -1297,6 +1297,11 @@ label.interesses, label.soortVakantie  {
     margin: 0 0 20px 0;
 }
 
+.matchBtn {
+    border: none;
+    background: none;
+}
+
 .links a {
     display: inline-flex;
     text-decoration: none;
