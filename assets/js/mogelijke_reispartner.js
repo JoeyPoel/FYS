@@ -14,7 +14,8 @@ console.log(Object.values(object)[0]); // {one: '1'} -> returns '1'
 async function getData() {
     try {
         const data = await FYSCloud.API.queryDatabase(
-            "SELECT * FROM `fys_is101_4_live`.`persoon` WHERE NOT voornaam='admin';"
+            "SELECT * FROM `fys_is101_4_live`.`persoon` WHERE NOT (voornaam='admin' OR idAccount=?);",
+            [Object.values(object)[0]]
         );
         //console.log({data});
         return {data};
