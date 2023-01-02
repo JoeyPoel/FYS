@@ -163,16 +163,16 @@ document.addEventListener('DOMContentLoaded', () => {
         window.location.reload();
     }
 
-    // // Visible/Invisible items in menu like 'profiel'
-    // if (Object.keys(object).length === 0 && Object.getPrototypeOf(object) === Object.prototype) {
-    //     // object/session is empty
-    //     document.getElementById('profiel').style.display = 'none';
-    //     document.getElementById('mogelijke_reispartner').style.display = 'none';
-    //     document.getElementById('matches').style.display = 'none';
-    // } else {
-    //     // object/session is not empty
-    //     getDataPersoon();
-    // }
+    // Visible/Invisible items in menu like 'profiel'
+    if (Object.keys(object).length === 0 && Object.getPrototypeOf(object) === Object.prototype) {
+        // object/session is empty
+        document.getElementById('profiel').style.display = 'none';
+        document.getElementById('mogelijke_reispartner').style.display = 'none';
+        document.getElementById('matches').style.display = 'none';
+    } else {
+        // object/session is not empty
+        getDataPersoon();
+    }
 
     /* document.querySelector("#login-logout").onclick = function () {
         // if statement that checks if obejct/session is empty. If object/session is not empty, then user is logged in and logout button appears

@@ -156,8 +156,8 @@ for (let i of person.data) {
                     alert(index.idAccountPersoonEen + " " + index.idAccountPersoonTwee);
                 } */
                 if (Object.values(object)[0] == index[x] && button.value == indexTwo[x]) {
-                    //alert("Je hebt al een matchverzoek verstuurd naar deze persoon!");
-                    alert(index[x] + " " + indexTwo[x]);
+                    alert("Je hebt al een matchverzoek verstuurd naar deze persoon!");
+                    //alert(index[x] + " " + indexTwo[x]);
                 } else {
                     const data = FYSCloud.API.queryDatabase(
                         "INSERT INTO `fys_is101_4_live`.`match` VALUES (?, ?, FALSE);",
