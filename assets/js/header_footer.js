@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
             //console.log(data);
             //console.log(FYSCloud.Session.get());
             //console.log(data[0].idAccount);
-            let userId = data[0].voornaam;
+            let userId = data[1].voornaam;
             console.log(userId);
             return document.getElementById('profiel').style.display = 'none';
         } catch (userId) {
