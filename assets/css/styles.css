@@ -769,7 +769,6 @@ label.interesses, label.soortVakantie  {
     margin-top: 5px;
     padding-bottom: 5px;
     padding-top: 5px;
-    height: 100%;
     width: 100%;
     border-radius: 5px;
     border: none;
@@ -1203,13 +1202,14 @@ label.interesses, label.soortVakantie  {
 
 #person-list {
     display: flex;
+    flex-wrap: wrap;
     min-height: 70vh;
     width: 1000px;
     justify-content: center;
     align-items: center;
 }
 
-#append-list-ul {
+.list-styling {
     display: flex;
     flex-direction: column;
     height: 400px;
@@ -1220,6 +1220,7 @@ label.interesses, label.soortVakantie  {
     padding-bottom: 15px;
     background: linear-gradient(135deg, #71b7e6, #9b59b6);
     list-style: none;
+    margin-bottom: 20px;
 }
 
 .liCard {

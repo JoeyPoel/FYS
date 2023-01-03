@@ -40,11 +40,12 @@ async function getMatchData() {
 function refreshPage() {
     window.location.reload();
 }
-
-// Initially display all products
-window.onload = () => {
+//document.addEventListener('DOMContentLoaded', () => {
+    // Initially display all products
+    //window.onload = () => {
     filterProduct("all");
-};
+    //};
+//});
 
 let person = await getData();
 console.log(person);
