@@ -136,7 +136,7 @@ async function getInkomendVerzoek() {
 async function getUitgaandVerzoek() {
     try {
         const data = await FYSCloud.API.queryDatabase(
-            "",
+            "SELECT * FROM `fys_is101_4_live`.`persoon` LEFT JOIN `fys_is101_4_live`.`match` ON `persoon`.`idAccount` = `match`.`idAccountPersoonTwee` WHERE idAccountPersoonEen=?;",
             [Object.values(object)[0]]
         );
         data.forEach((element) => {
@@ -255,8 +255,8 @@ async function getUitgaandVerzoek() {
 async function getGeaccepteerd() {
     try {
         const data = await FYSCloud.API.queryDatabase(
-            "",
-            [Object.values(object)[0]]
+            "SELECT * FROM `fys_is101_4_live`.`persoon` LEFT JOIN `fys_is101_4_live`.`match` ON `persoon`.`idAccount` = `match`.`idAccountPersoonTwee` WHERE (idAccountPersoonEen = ? || idAccountPersoonTwee = ?) && isAccepted = TRUE;",
+            [Object.values(object)[0], Object.values(object)[0]]
         );
         data.forEach((element) => {
             let dtFormat = new Intl.DateTimeFormat('nl-NL');
