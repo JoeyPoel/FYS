@@ -119,8 +119,8 @@ async function getInkomendVerzoek() {
             button.value = element.idAccount;
             button.onclick = () => {
                 const dataAccept = FYSCloud.API.queryDatabase(
-                    "",
-                    []
+                    "UPDATE `fys_is101_4_live`.`match` SET isAccepted = TRUE WHERE (idAccountPersoonEen = ? && idAccountPersoonTwee = ? && isAccepted = FALSE) || (idAccountPersoonEen = ? && idAccountPersoonTwee = ? && isAccepted = FALSE);",
+                    [Object.values(object)[0], button.value, button.value, Object.values(object)[0]]
                 );
                 refreshPage();
                 //console.log(dataAccept);
