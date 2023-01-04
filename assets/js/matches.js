@@ -14,10 +14,15 @@ let inkomendVerzoek = await getInkomendVerzoek();
 let uitgaandVerzoek = await getUitgaandVerzoek();
 let geaccepteerd = await getGeaccepteerd();
 
+// function that refreshes the page
+function refreshPage() {
+    window.location.reload();
+}
+
 async function getInkomendVerzoek() {
     try {
         const data = await FYSCloud.API.queryDatabase(
-            "SELECT * FROM `fys_is101_4_live`.`persoon` LEFT JOIN `fys_is101_4_live`.`match` ON `persoon`.`idAccount` = `match`.`idAccountPersoonEen` WHERE idAccountPersoonTwee=?;",
+            "SELECT * FROM `fys_is101_4_live`.`persoon` LEFT JOIN `fys_is101_4_live`.`match` ON `persoon`.`idAccount` = `match`.`idAccountPersoonEen` WHERE idAccountPersoonTwee=? && isAccepted = FALSE;",
             [Object.values(object)[0]]
         );
         data.forEach((element) => {
@@ -113,7 +118,13 @@ async function getInkomendVerzoek() {
             button.className = "matchBtn";
             button.value = element.idAccount;
             button.onclick = () => {
-
+                const dataAccept = FYSCloud.API.queryDatabase(
+                    "",
+                    []
+                );
+                refreshPage();
+                //console.log(dataAccept);
+                //console.log(button.value);
             };
 
             let linksA = document.createElement("a");
@@ -133,7 +144,13 @@ async function getInkomendVerzoek() {
             buttonTwo.className = "matchBtn";
             buttonTwo.value = element.idAccount;
             buttonTwo.onclick = () => {
-
+                const dataDelete = FYSCloud.API.queryDatabase(
+                    "DELETE FROM `fys_is101_4_live`.`match` WHERE idAccountPersoonEen = ? && idAccountPersoonTwee = ? && isAccepted = FALSE;",
+                    [buttonTwo.value, Object.values(object)[0]]
+                );
+                refreshPage();
+                //console.log(dataDelete);
+                //console.log(buttonTwo.value);
             };
 
             let linksATwo = document.createElement("a");
@@ -156,7 +173,7 @@ async function getInkomendVerzoek() {
 async function getUitgaandVerzoek() {
     try {
         const data = await FYSCloud.API.queryDatabase(
-            "SELECT * FROM `fys_is101_4_live`.`persoon` LEFT JOIN `fys_is101_4_live`.`match` ON `persoon`.`idAccount` = `match`.`idAccountPersoonTwee` WHERE idAccountPersoonEen=?;",
+            "SELECT * FROM `fys_is101_4_live`.`persoon` LEFT JOIN `fys_is101_4_live`.`match` ON `persoon`.`idAccount` = `match`.`idAccountPersoonTwee` WHERE idAccountPersoonEen=? && isAccepted = FALSE;",
             [Object.values(object)[0]]
         );
         data.forEach((element) => {
@@ -252,7 +269,13 @@ async function getUitgaandVerzoek() {
             button.className = "matchBtn";
             button.value = element.idAccount;
             button.onclick = () => {
-
+                const dataDelete = FYSCloud.API.queryDatabase(
+                    "DELETE FROM `fys_is101_4_live`.`match` WHERE idAccountPersoonEen = ? && idAccountPersoonTwee = ? && isAccepted = FALSE;",
+                    [Object.values(object)[0], button.value]
+                );
+                refreshPage();
+                //console.log(dataDelete);
+                //console.log(button.value);
             };
 
             let linksA = document.createElement("a");
@@ -371,7 +394,13 @@ async function getGeaccepteerd() {
             button.className = "matchBtn";
             button.value = element.idAccount;
             button.onclick = () => {
-
+                const dataDelete = FYSCloud.API.queryDatabase(
+                    "DELETE FROM `fys_is101_4_live`.`match` WHERE (idAccountPersoonEen = ? && idAccountPersoonTwee = ? && isAccepted = TRUE) || (idAccountPersoonEen = ? && idAccountPersoonTwee = ? && isAccepted = TRUE);",
+                    [Object.values(object)[0], button.value, button.value, Object.values(object)[0]]
+                );
+                refreshPage();
+                //console.log(dataDelete);
+                //console.log(button.value);
             };
 
             let linksA = document.createElement("a");
