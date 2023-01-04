@@ -119,12 +119,12 @@ async function getInkomendVerzoek() {
             let linksA = document.createElement("a");
             button.appendChild(linksA);
             linksA.href = "#";
-            const textLinksA = document.createTextNode("Stuur een match verzoek");
+            const textLinksA = document.createTextNode("Accepteren");
             linksA.appendChild(textLinksA);
 
             let aImg = document.createElement("img");
             linksA.appendChild(aImg);
-            aImg.src = "img/icon/send.svg";
+            aImg.src = "img/icon/checkmark.svg";
             aImg.alt = "Send";
         });
         return data;
