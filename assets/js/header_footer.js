@@ -51,11 +51,11 @@ class myFooter extends HTMLElement {
            <div class="footer-divs">
                <label class="footer-labels">Menu</label>
                <ul>
-                   <li><a href="assets/profiel.html">Profiel</a></li>
-                   <li><a href="assets/mogelijke_reispartner.html">Mogelijke reispartner</a></li>
-                   <li><a href="assets/matches.html">Matches</a></li>
-                   <li><a href="assets/contact.html">Contact</a></li>
-                   <li><a href="assets/over.html">Over</a></li>
+                   <li><a href="../assets/profiel.html">Profiel</a></li>
+                   <li><a href="../assets/mogelijke_reispartner.html">Mogelijke reispartner</a></li>
+                   <li><a href="../assets/matches.html">Matches</a></li>
+                   <li><a href="../assets/contact.html">Contact</a></li>
+                   <li><a href="../assets/over.html">Over</a></li>
                </ul>
            </div>
            <div class="footer-divs">
@@ -63,7 +63,7 @@ class myFooter extends HTMLElement {
                    <div class="footer-contact">
                    <label class="footer-labels">Contact</label>
                    <p>Neem contact met ons op via ons contact form, hier reageren wij per email op uw vragen.</p>
-                       <a href="assets/contact.html">Contact</a>
+                       <a href="../assets/contact.html">Contact</a>
                    </div>
                    <div class="footer-juridischeShit">
                    <label class="footer-labels">Privacy, Juridische voorwaarde en gebruiksvoorwaarde</label>
