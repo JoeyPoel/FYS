@@ -3,6 +3,10 @@
     font-family: Hanken Grotesk;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -202,14 +206,15 @@ body {
     object-fit: cover;
     object-position: center center;
     border-radius: 50%;
-    border: 18px solid #f4eeff;
+    border: 18px solid rgb(255, 70, 50, 0.7);
 }
 
 #choosePhoto {
     margin-top: 15px;
     padding: 15px;
     border-radius: 30px;
-    background: pink;
+    background: rgb(255, 70, 50);
+    color: white;
 }
 
 #fileUpload {
@@ -1187,16 +1192,16 @@ label.interesses, label.soortVakantie  {
 }
 
 .button-value {
-    border: 2px solid #6759ff;
+    border: 2px solid rgb(255, 70, 50);
     padding: 1em 2.2em;
     border-radius: 3em;
     background-color: transparent;
-    color: #6759ff;
+    color: rgb(255, 70, 50);
     cursor: pointer;
 }
 
 .active {
-    background-color: #6759ff;
+    background-color: rgb(255, 70, 50);
     color: #ffffff;
 }
 
@@ -1218,7 +1223,7 @@ label.interesses, label.soortVakantie  {
     overflow-y: scroll;
     border-radius: 1em 0 0 1em;
     padding-bottom: 15px;
-    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    background: linear-gradient(135deg, rgb(255, 70, 50), #333333  );
     list-style: none;
     margin-bottom: 20px;
 }
@@ -1259,7 +1264,7 @@ label.interesses, label.soortVakantie  {
     object-fit: cover;
     object-position: center center;
     border-radius: 50%;
-    border: 18px solid #f4eeff;
+    border: 18px solid rgb(255, 70, 50, 0.7);
 }
 
 .card-info {
@@ -1308,10 +1313,10 @@ label.interesses, label.soortVakantie  {
     text-decoration: none;
     align-items: center;
     height: 30px;
-    background: #8749fd;
+    background: rgb(255, 70, 50);
     color: #fff;
     border-radius: 50px;
-    border: 2px solid #8749fd;
+    border: 2px solid rgb(255, 70, 50);
     padding: 10px 30px;
     font-size: 12px;
 }
