@@ -118,6 +118,7 @@ body {
 
 .page-section {
     padding: 20px 40px;
+    background-color: #eeeeee;
 }
 
 .container-about {
@@ -1128,7 +1129,7 @@ label.interesses, label.soortVakantie  {
 }
 
 .input-group input:focus {
-    border-color: rgb(0, 255, 119);
+    border-color: rgb(255, 70, 50);
 }
 
 .error input {
@@ -1223,7 +1224,7 @@ label.interesses, label.soortVakantie  {
     overflow-y: scroll;
     border-radius: 1em 0 0 1em;
     padding-bottom: 15px;
-    background: linear-gradient(135deg, rgb(255, 70, 50), #333333  );
+    background: linear-gradient(135deg, rgb(255, 70, 50), #2a1212  );
     list-style: none;
     margin-bottom: 20px;
 }
