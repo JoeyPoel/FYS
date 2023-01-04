@@ -1533,6 +1533,18 @@ label.interesses, label.soortVakantie  {
     }
 }
 
+/* HOME PAGE */
+@media (max-width: 865px) {
+    .over-article{
+        flex-direction: column;
+    }
+    .img-over{
+        align-self: center;
+        padding: 10px;
+        width: 50%;
+    }
+}
+
 /* Footer */
 .container-1-footer {
     display: flex;
