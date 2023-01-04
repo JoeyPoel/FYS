@@ -1322,6 +1322,12 @@ label.interesses, label.soortVakantie  {
     font-size: 12px;
 }
 
+#accept {
+    background: #6fd649;
+    border: #6fd649;
+    margin-right: 30px;
+}
+
 .card-info ul li img {
     margin-right: 5px;
     width: 32px;

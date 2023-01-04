@@ -107,7 +107,7 @@ async function getInkomendVerzoek() {
             let divLinks = document.createElement("div");
             divCardInfo.appendChild(divLinks);
             divLinks.className = "links";
-
+            // Accepteren knop
             let button = document.createElement("button");
             divLinks.appendChild(button);
             button.className = "matchBtn";
@@ -118,6 +118,7 @@ async function getInkomendVerzoek() {
 
             let linksA = document.createElement("a");
             button.appendChild(linksA);
+            linksA.id = "accept";
             linksA.href = "#";
             const textLinksA = document.createTextNode("Accepteren");
             linksA.appendChild(textLinksA);
@@ -125,7 +126,26 @@ async function getInkomendVerzoek() {
             let aImg = document.createElement("img");
             linksA.appendChild(aImg);
             aImg.src = "img/icon/checkmark.svg";
-            aImg.alt = "Send";
+            aImg.alt = "Accept";
+            // Afwijs knop
+            let buttonTwo = document.createElement("button");
+            divLinks.appendChild(buttonTwo);
+            buttonTwo.className = "matchBtn";
+            buttonTwo.value = element.idAccount;
+            buttonTwo.onclick = () => {
+
+            };
+
+            let linksATwo = document.createElement("a");
+            buttonTwo.appendChild(linksATwo);
+            linksATwo.href = "#";
+            const textLinksATwo = document.createTextNode("Afwijzen");
+            linksATwo.appendChild(textLinksATwo);
+
+            let aImgTwo = document.createElement("img");
+            linksATwo.appendChild(aImgTwo);
+            aImgTwo.src = "img/icon/cancel.svg";
+            aImgTwo.alt = "Reject";
         });
         return data;
     } catch (error) {
@@ -226,7 +246,7 @@ async function getUitgaandVerzoek() {
             let divLinks = document.createElement("div");
             divCardInfo.appendChild(divLinks);
             divLinks.className = "links";
-
+            // Annuleer knop
             let button = document.createElement("button");
             divLinks.appendChild(button);
             button.className = "matchBtn";
@@ -238,13 +258,13 @@ async function getUitgaandVerzoek() {
             let linksA = document.createElement("a");
             button.appendChild(linksA);
             linksA.href = "#";
-            const textLinksA = document.createTextNode("Stuur een match verzoek");
+            const textLinksA = document.createTextNode("Annuleren");
             linksA.appendChild(textLinksA);
 
             let aImg = document.createElement("img");
             linksA.appendChild(aImg);
-            aImg.src = "img/icon/send.svg";
-            aImg.alt = "Send";
+            aImg.src = "img/icon/cancel.svg";
+            aImg.alt = "Cancel";
         });
         return data;
     } catch (error) {
@@ -345,7 +365,7 @@ async function getGeaccepteerd() {
             let divLinks = document.createElement("div");
             divCardInfo.appendChild(divLinks);
             divLinks.className = "links";
-
+            // Annuleer knop
             let button = document.createElement("button");
             divLinks.appendChild(button);
             button.className = "matchBtn";
@@ -357,13 +377,13 @@ async function getGeaccepteerd() {
             let linksA = document.createElement("a");
             button.appendChild(linksA);
             linksA.href = "#";
-            const textLinksA = document.createTextNode("Stuur een match verzoek");
+            const textLinksA = document.createTextNode("Annuleer");
             linksA.appendChild(textLinksA);
 
             let aImg = document.createElement("img");
             linksA.appendChild(aImg);
-            aImg.src = "img/icon/send.svg";
-            aImg.alt = "Send";
+            aImg.src = "img/icon/cancel.svg";
+            aImg.alt = "Cancel";
         });
         return data;
     } catch (error) {
