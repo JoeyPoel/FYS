@@ -24,40 +24,18 @@ async function getData() {
     }
 }
 
-async function getMatchData() {
-    try {
-        const data = await FYSCloud.API.queryDatabase(
-            "SELECT * FROM `fys_is101_4_live`.`match`;"
-        );
-        //console.log({data});
-        return {data};
-    } catch (error) {
-        return null;
-    }
-}
-
 // function that refreshes the page
 function refreshPage() {
     window.location.reload();
 }
-//document.addEventListener('DOMContentLoaded', () => {
-    // Initially display all products
-    //window.onload = () => {
-    filterProduct("all");
-    //};
-//});
+
+// Initially display all products
+window.onload = () => {
+filterProduct("all");
+};
 
 let person = await getData();
 console.log(person);
-let match = await getMatchData();
-console.log(match);
-console.log(match.data);
-
-const index = match.data.map(object => object.idAccountPersoonEen);
-console.log(index);
-
-const indexTwo = match.data.map(object => object.idAccountPersoonTwee);
-console.log(indexTwo);
 
 for (let i of person.data) {
     let dtFormat = new Intl.DateTimeFormat('nl-NL');
@@ -155,12 +133,16 @@ for (let i of person.data) {
         if (button.value == Object.values(object)[0]) {
             alert("Je kunt niet met jezelf matchen!");
         } else {
-            const data = FYSCloud.API.queryDatabase(
+            FYSCloud.API.queryDatabase(
                 "INSERT INTO `fys_is101_4_live`.`match` VALUES (?, ?, FALSE);",
                 [Object.values(object)[0], i.idAccount]
-            );
-            refreshPage();
-            //console.log(data);
+            ).then(function(data) {
+                console.log(data);
+                refreshPage();
+            }).catch(function(reason) {
+                alert("Je hebt al een match verzoek gestuurd naar deze persoon!");
+                console.log(reason);
+            });
         }
     };
 
@@ -174,10 +156,6 @@ for (let i of person.data) {
     linksA.appendChild(aImg);
     aImg.src = "img/icon/send.svg";
     aImg.alt = "Send";
-
-    /* if (Object.values(object)[0] == i.idAccountPersoonEen) {
-        console.log("BOYZ");
-    } */
 }
 
 // Parameter passed from button (Parameter same as category)
@@ -219,28 +197,3 @@ for (let j = 0; j < filterBtn.length; j++) {
         filterProduct(filterBtn[j].value);
     };
 }
-
-/*
-//Search button click
-document.getElementById("search").addEventListener("click", () => {
-    //initializations
-    let searchInput = document.getElementById("search-input").value;
-    let elements = document.querySelectorAll(".product-name");
-    let cards = document.querySelectorAll(".card");
-
-    //loop through all elements
-    elements.forEach((element, index) => {
-        //check if text includes the search value
-        if (element.innerText.includes(searchInput.toUpperCase())) {
-            //display matching card
-            cards[index].classList.remove("hide");
-        } else {
-            //hide others
-            cards[index].classList.add("hide");
-        }
-    });
-}); */
-
-//console.log(data);
-//console.log(data.values(data)[0]); // {one: '1'} -> returns '1'
-//console.log(data.keys(data)); // {one: '1'} -> returns 'one'
