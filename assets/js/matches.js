@@ -118,6 +118,10 @@ async function getInkomendVerzoek() {
             button.className = "matchBtn";
             button.value = element.idAccount;
             button.onclick = () => {
+                const dataInsert = FYSCloud.API.queryDatabase(
+                    "INSERT INTO `fys_is101_4_live`.`match` VALUES (?, ?, TRUE);",
+                    [Object.values(object)[0], button.value]
+                );
                 const dataAccept = FYSCloud.API.queryDatabase(
                     "UPDATE `fys_is101_4_live`.`match` SET isAccepted = TRUE WHERE (idAccountPersoonEen = ? && idAccountPersoonTwee = ? && isAccepted = FALSE) || (idAccountPersoonEen = ? && idAccountPersoonTwee = ? && isAccepted = FALSE);",
                     [Object.values(object)[0], button.value, button.value, Object.values(object)[0]]
@@ -298,7 +302,7 @@ async function getUitgaandVerzoek() {
 async function getGeaccepteerd() {
     try {
         const data = await FYSCloud.API.queryDatabase(
-            "SELECT * FROM `fys_is101_4_live`.`persoon` LEFT JOIN `fys_is101_4_live`.`match` ON `persoon`.`idAccount` = `match`.`idAccountPersoonTwee` WHERE (idAccountPersoonEen = ? || idAccountPersoonTwee = ?) && isAccepted = TRUE;",
+            "SELECT * FROM `fys_is101_4_live`.`persoon` INNER JOIN `fys_is101_4_live`.`match` ON `persoon`.`idAccount` = `match`.`idAccountPersoonEen` WHERE NOT idAccountPersoonEen = ? AND idAccountPersoonTwee = ? && isAccepted = TRUE;",
             [Object.values(object)[0], Object.values(object)[0]]
         );
         data.forEach((element) => {

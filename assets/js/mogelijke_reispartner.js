@@ -155,35 +155,12 @@ for (let i of person.data) {
         if (button.value == Object.values(object)[0]) {
             alert("Je kunt niet met jezelf matchen!");
         } else {
-            for (let x = 0; x < index.length; x++) {
-                /* if (Object.values(object)[0] == index.idAccountPersoonEen && button.value == index.idAccountPersoonTwee) {
-                    //alert("Je hebt al een matchverzoek verstuurd naar deze persoon!");
-                    alert(index.idAccountPersoonEen + " " + index.idAccountPersoonTwee);
-                } */
-                if (Object.values(object)[0] == index[x] && button.value == indexTwo[x]) {
-                    alert("Je hebt al een matchverzoek verstuurd naar deze persoon!");
-                    //alert(index[x] + " " + indexTwo[x]);
-                } else {
-                    const data = FYSCloud.API.queryDatabase(
-                        "INSERT INTO `fys_is101_4_live`.`match` VALUES (?, ?, FALSE);",
-                        [Object.values(object)[0], i.idAccount]
-                    );
-                    refreshPage();
-                    //console.log(data);
-                }
-                //console.log(index[x]);
-                //console.log(indexTwo[x]);
-            }
-
-            // else if (Object.values(object)[0] == j.idAccountPersoonEen && button.value == j.idAccountPersoonTwee) {
-            //     console.log("Success");
-            //     console.log(button.value);
-            //     /* const data = FYSCloud.API.queryDatabase(
-            //         "INSERT INTO `fys_is101_4_live`.`match` VALUES (?, ?, FALSE);",
-            //         [Object.values(object)[0], i.idAccount]
-            //     );
-            //     console.log(data); */
-            // }
+            const data = FYSCloud.API.queryDatabase(
+                "INSERT INTO `fys_is101_4_live`.`match` VALUES (?, ?, FALSE);",
+                [Object.values(object)[0], i.idAccount]
+            );
+            refreshPage();
+            //console.log(data);
         }
     };
 
