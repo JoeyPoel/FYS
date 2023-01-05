@@ -138,6 +138,7 @@ for (let i of person.data) {
                 [Object.values(object)[0], i.idAccount]
             ).then(function(data) {
                 console.log(data);
+                alert("Match verzoek verzonden!");
                 refreshPage();
             }).catch(function(reason) {
                 alert("Je hebt al een match verzoek gestuurd naar deze persoon!");

@@ -126,6 +126,7 @@ async function getInkomendVerzoek() {
                     "UPDATE `fys_is101_4_live`.`match` SET isAccepted = TRUE WHERE (idAccountPersoonEen = ? && idAccountPersoonTwee = ? && isAccepted = FALSE) || (idAccountPersoonEen = ? && idAccountPersoonTwee = ? && isAccepted = FALSE);",
                     [Object.values(object)[0], button.value, button.value, Object.values(object)[0]]
                 );
+                alert("Je hebt het match verzoek geaccepteerd!");
                 refreshPage();
                 //console.log(dataAccept);
                 //console.log(button.value);
@@ -152,6 +153,7 @@ async function getInkomendVerzoek() {
                     "DELETE FROM `fys_is101_4_live`.`match` WHERE idAccountPersoonEen = ? && idAccountPersoonTwee = ? && isAccepted = FALSE;",
                     [buttonTwo.value, Object.values(object)[0]]
                 );
+                alert("Je hebt het match verzoek afgewezen!");
                 refreshPage();
                 //console.log(dataDelete);
                 //console.log(buttonTwo.value);
@@ -277,6 +279,7 @@ async function getUitgaandVerzoek() {
                     "DELETE FROM `fys_is101_4_live`.`match` WHERE idAccountPersoonEen = ? && idAccountPersoonTwee = ? && isAccepted = FALSE;",
                     [Object.values(object)[0], button.value]
                 );
+                alert("Je hebt het match verzoek geannuleerd!");
                 refreshPage();
                 //console.log(dataDelete);
                 //console.log(button.value);
@@ -402,6 +405,7 @@ async function getGeaccepteerd() {
                     "DELETE FROM `fys_is101_4_live`.`match` WHERE (idAccountPersoonEen = ? && idAccountPersoonTwee = ? && isAccepted = TRUE) || (idAccountPersoonEen = ? && idAccountPersoonTwee = ? && isAccepted = TRUE);",
                     [Object.values(object)[0], button.value, button.value, Object.values(object)[0]]
                 );
+                alert("Je hebt de match geannuleerd!");
                 refreshPage();
                 //console.log(dataDelete);
                 //console.log(button.value);
