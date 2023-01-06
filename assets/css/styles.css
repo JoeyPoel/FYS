@@ -1636,6 +1636,26 @@ label.interesses, label.soortVakantie  {
 
 /* CSS for smaller displays */
 
+/* SMALLER DISPLAYS LOG IN / REGISTER */
+@media (max-width: 1300px) {
+    .welcome{
+        margin-right: 10%;
+    }
+
+    .welcomeBack{
+        margin-right: 10%;
+    }
+}
+@media (max-width: 930px) {
+    .welcome{
+        display: none;
+    }
+
+    .welcomeBack{
+        display: none;
+    }
+}
+
 /* Other */
 textarea {
     resize: none;
