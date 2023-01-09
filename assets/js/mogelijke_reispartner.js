@@ -17,7 +17,7 @@ async function getData() {
             "SELECT * FROM `fys_is101_4_live`.`persoon` WHERE NOT (voornaam='admin' || idAccount=?);",
             [Object.values(object)[0]]
         );
-        //console.log({data});
+        console.log({data});
         return {data};
     } catch (error) {
         return null;
@@ -31,7 +31,7 @@ function refreshPage() {
 
 // Initially display all products
 window.onload = () => {
-filterProduct("all");
+    filterProduct("all");
 };
 
 let person = await getData();
@@ -42,7 +42,7 @@ for (let i of person.data) {
 
     let divOne = document.createElement("li");
     document.querySelector("#append-list-ul").appendChild(divOne);
-    divOne.classList.add("liCard", i.bestemming, "hide");
+    divOne.classList.add("liCard", i.bestemming, i.interesse, "hide");
 
     let divContainer = document.createElement("div");
     divOne.appendChild(divContainer);
