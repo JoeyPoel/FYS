@@ -183,19 +183,20 @@ document.addEventListener('DOMContentLoaded', () => {
     if (Object.keys(object).length === 0 && Object.getPrototypeOf(object) === Object.prototype) {
         document.querySelector("#login-logout").innerHTML = "Login";
         document.querySelector("#login-logout").onclick = function () {
-            window.location.href='login.html';
+            window.location.href = 'login.html';
         }
     } else {
         document.querySelector("#login-logout").innerHTML = "Logout";
         document.querySelector("#login-logout").onclick = function () {
             FYSCloud.Session.clear(); // Remove everything from the session
-            refreshPage(); // If a session exists and user clicks on "logout", then refresh the page and the login-logout button will say "Login".
+            refreshPage(); // If a session exists and user clicks on "logout", then redirect (or refresh) the page and the login-logout button will say "Login".
         }
     }
 
-    // function that refreshes the page
+    // function that refreshes or redirects the page
     function refreshPage() {
-        window.location.reload();
+        //window.location.reload();
+        window.location.href = '../index.html';
     }
 
     // Visible/Invisible items in menu like 'profiel'
