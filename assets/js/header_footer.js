@@ -51,9 +51,9 @@ class myFooter extends HTMLElement {
            <div class="footer-divs">
                <label class="footer-labels">Menu</label>
                <ul>
-                   <li><a href="../assets/profiel.html">Profiel</a></li>
-                   <li><a href="../assets/mogelijke_reispartner.html">Mogelijke reispartner</a></li>
-                   <li><a href="../assets/matches.html">Matches</a></li>
+                   <li><a href="../assets/profiel.html" id="linkProfiel">Profiel</a></li>
+                   <li><a href="../assets/mogelijke_reispartner.html" id="linkMogelijkeReispartners">Mogelijke reispartner</a></li>
+                   <li><a href="../assets/matches.html" id="linkMatches">Matches</a></li>
                    <li><a href="../assets/contact.html">Contact</a></li>
                    <li><a href="../assets/over.html">Over</a></li>
                </ul>
@@ -202,6 +202,10 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('profiel').style.display = 'none';
         document.getElementById('mogelijke_reispartner').style.display = 'none';
         document.getElementById('matches').style.display = 'none';
+        document.getElementById('linkProfiel').style.display = 'none';
+        document.getElementById('linkMatches').style.display = 'none';
+        document.getElementById('linkMogelijkeReispartners').style.display = 'none';
+
     } else {
         // object/session is not empty
         getDataPersoon();
