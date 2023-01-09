@@ -10,26 +10,26 @@ document.addEventListener('DOMContentLoaded', () => {
     const form = document.querySelector('#login-register-form');
     const imageInput = document.getElementById("fileUpload");
 
-      form.addEventListener('submit', async (event) => {
+    form.addEventListener('submit', async (event) => {
         console.log("Start transaction");
         // Upload file
-          await FYSCloud.Utils
+        await FYSCloud.Utils
             .getDataUrl(document.querySelector("#fileUpload"))
-            .then(function(data) {
+            .then(function (data) {
                 FYSCloud.API.uploadFile(
                     data.fileName,
                     data.url, true // data.url under ~500kb will work otherwise error due to slow network traffic (in API)
-                ).then(function(data) {
+                ).then(function (data) {
                     console.log(data);
                     console.log("Succes!");
-                }).catch(function(reason) {
+                }).catch(function (reason) {
                     console.log(reason);
                     console.log("Error!");
                 });
-            }).catch(function(reason) {
-            console.log(reason);
-            console.log("Failed! No file selected.");
-        });
+            }).catch(function (reason) {
+                console.log(reason);
+                console.log("Failed! No file selected.");
+            });
 
         await FYSCloud.Utils.fetchBlob(document.querySelector("#fileUpload")).then(
             (result) => {
@@ -42,8 +42,8 @@ document.addEventListener('DOMContentLoaded', () => {
     imageInput.addEventListener('change', (event) => {
         FYSCloud.Utils
             .getDataUrl("#fileUpload")
-            .then(function(data) {
-                if(data.isImage) {
+            .then(function (data) {
+                if (data.isImage) {
                     document.getElementById("imagePreview").src = data.url;
                     console.log(data);
                     console.log(data.url);
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     console.log(promise);
                     console.log("Success!");
                 }
-            }).catch(function(reason) {
+            }).catch(function (reason) {
             console.log(reason);
             console.log("Error!");
         });
