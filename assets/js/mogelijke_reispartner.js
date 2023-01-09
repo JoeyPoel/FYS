@@ -80,14 +80,14 @@ for (let i of person.data) {
     li.appendChild(iconImgLocation);
     iconImgLocation.src = "img/icon/location.svg";
     iconImgLocation.alt = "Location";
-    const textLocation = document.createTextNode(i.bestemming);
+    const textLocation = document.createTextNode(i.bestemming + " ");
     li.appendChild(textLocation);
 
     let iconImgInterest = document.createElement("img");
     li.appendChild(iconImgInterest);
     iconImgInterest.src = "img/icon/interest.svg";
     iconImgInterest.alt = "Interest";
-    const textInterest = document.createTextNode("Interesse " + i.interesse);
+    const textInterest = document.createTextNode("Interesse " + i.interesse + " ");
     li.appendChild(textInterest);
 
     let iconImgCalendar = document.createElement("img");
@@ -102,7 +102,7 @@ for (let i of person.data) {
     li.appendChild(iconImgGender);
     iconImgGender.src = "img/icon/gender.svg";
     iconImgGender.alt = "Gender";
-    const textGender = document.createTextNode("Geslacht " + i.geslacht);
+    const textGender = document.createTextNode("Geslacht " + i.geslacht + " ");
     li.appendChild(textGender);
 
     let iconImgDateFrom = document.createElement("img");
@@ -110,7 +110,7 @@ for (let i of person.data) {
     iconImgDateFrom.src = "img/icon/date-from.svg";
     iconImgDateFrom.alt = "Date from";
     let dateBV = new Date(i.beginVakantie);
-    const textDateFrom = document.createTextNode("Datum van " + dtFormat.format(dateBV));
+    const textDateFrom = document.createTextNode("Datum van " + dtFormat.format(dateBV) + " ");
     li.appendChild(textDateFrom);
 
     let iconImgDateTo = document.createElement("img");

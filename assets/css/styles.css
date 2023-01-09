@@ -1277,6 +1277,7 @@ label.interesses, label.soortVakantie  {
     background-color: transparent;
     color: rgb(255, 70, 50);
     cursor: pointer;
+    margin-top: 10px;
 }
 
 .active {
@@ -1336,6 +1337,8 @@ label.interesses, label.soortVakantie  {
 }
 
 .profile-img {
+    display: flex;
+    justify-content: center;
     min-height: 150px;
     max-height: 150px;
     min-width: 150px;
@@ -1364,6 +1367,7 @@ label.interesses, label.soortVakantie  {
     flex-flow: row wrap;
     align-items: center;
     margin: 10px 0 10px;
+    width: 460px;
 }
 
 .card-info ul li {
@@ -1371,8 +1375,6 @@ label.interesses, label.soortVakantie  {
     flex-flow: wrap;
     list-style: none;
     align-items: center;
-    flex: 1;
-    justify-content: space-evenly;
     font-size: 12px;
     margin-top: 10px;
     margin-right: 20px;
@@ -1655,6 +1657,24 @@ label.interesses, label.soortVakantie  {
     .welcomeBack{
         display: none;
     }
+}
+
+/* ZOEK ANDERE REIZIGERS */
+@media (max-width: 800px) {
+    .card{
+        flex-direction: column;
+        margin-top: -16px;
+        margin-left: -16px;
+        border-radius: 0;
+    }
+    .links{
+        justify-content: center;
+    }
+    .list-styling{
+        width: 80vh;
+    }
+
+
 }
 
 /* Other */
