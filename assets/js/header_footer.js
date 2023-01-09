@@ -156,6 +156,7 @@ document.addEventListener('DOMContentLoaded', () => {
             //console.log(data[0].idAccount);
             let userId = data[0].voornaam;
             console.log(userId);
+            document.getElementById('linkProfiel').style.display = 'none';
             return document.getElementById('profiel').style.display = 'none';
         } catch (userId) {
             // No data found
