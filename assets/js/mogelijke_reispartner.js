@@ -46,21 +46,21 @@ for (let i of person.data) {
 
     let divContainer = document.createElement("div");
     divOne.appendChild(divContainer);
-    divContainer.className = "container";
+    divContainer.classList = "container";
 
     let divCard = document.createElement("div");
     divContainer.appendChild(divCard);
-    divCard.className = "card";
+    divCard.classList = "card";
 
     let imgProfile = document.createElement("img");
     divCard.appendChild(imgProfile);
-    imgProfile.className = "profile-img";
+    imgProfile.classList = "profile-img";
     imgProfile.src = "https://mockup-is101-4.fys.cloud/uploads/" + i.profielfoto;
     imgProfile.alt = "User profile";
 
     let divCardInfo = document.createElement("div");
     divCard.appendChild(divCardInfo);
-    divCardInfo.className = "card-info";
+    divCardInfo.classList = "card-info";
 
     let personName = document.createElement("h1");
     divCardInfo.appendChild(personName);
@@ -123,11 +123,11 @@ for (let i of person.data) {
 
     let divLinks = document.createElement("div");
     divCardInfo.appendChild(divLinks);
-    divLinks.className = "links";
+    divLinks.classList = "links";
 
     let button = document.createElement("button");
     divLinks.appendChild(button);
-    button.className = "matchBtn";
+    button.classList = "matchBtn";
     button.value = i.idAccount;
     button.onclick = () => {
         if (button.value == Object.values(object)[0]) {

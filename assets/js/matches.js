@@ -34,21 +34,21 @@ async function getInkomendVerzoek() {
 
             let divContainer = document.createElement("div");
             divOne.appendChild(divContainer);
-            divContainer.className = "container";
+            divContainer.classList = "container";
 
             let divCard = document.createElement("div");
             divContainer.appendChild(divCard);
-            divCard.className = "card";
+            divCard.classList = "card";
 
             let imgProfile = document.createElement("img");
             divCard.appendChild(imgProfile);
-            imgProfile.className = "profile-img";
+            imgProfile.classList = "profile-img";
             imgProfile.src = "https://mockup-is101-4.fys.cloud/uploads/" + element.profielfoto;
             imgProfile.alt = "User profile";
 
             let divCardInfo = document.createElement("div");
             divCard.appendChild(divCardInfo);
-            divCardInfo.className = "card-info";
+            divCardInfo.classList = "card-info";
 
             let personName = document.createElement("h1");
             divCardInfo.appendChild(personName);
@@ -111,11 +111,11 @@ async function getInkomendVerzoek() {
 
             let divLinks = document.createElement("div");
             divCardInfo.appendChild(divLinks);
-            divLinks.className = "links";
+            divLinks.classList = "links";
             // Accepteren knop
             let button = document.createElement("button");
             divLinks.appendChild(button);
-            button.className = "matchBtn";
+            button.classList = "matchBtn";
             button.value = element.idAccount;
             button.onclick = () => {
                 const dataInsert = FYSCloud.API.queryDatabase(
@@ -146,7 +146,7 @@ async function getInkomendVerzoek() {
             // Afwijs knop
             let buttonTwo = document.createElement("button");
             divLinks.appendChild(buttonTwo);
-            buttonTwo.className = "matchBtn";
+            buttonTwo.classList = "matchBtn";
             buttonTwo.value = element.idAccount;
             buttonTwo.onclick = () => {
                 const dataDelete = FYSCloud.API.queryDatabase(
@@ -191,21 +191,21 @@ async function getUitgaandVerzoek() {
 
             let divContainer = document.createElement("div");
             divOne.appendChild(divContainer);
-            divContainer.className = "container";
+            divContainer.classList = "container";
 
             let divCard = document.createElement("div");
             divContainer.appendChild(divCard);
-            divCard.className = "card";
+            divCard.classList = "card";
 
             let imgProfile = document.createElement("img");
             divCard.appendChild(imgProfile);
-            imgProfile.className = "profile-img";
+            imgProfile.classList = "profile-img";
             imgProfile.src = "https://mockup-is101-4.fys.cloud/uploads/" + element.profielfoto;
             imgProfile.alt = "User profile";
 
             let divCardInfo = document.createElement("div");
             divCard.appendChild(divCardInfo);
-            divCardInfo.className = "card-info";
+            divCardInfo.classList = "card-info";
 
             let personName = document.createElement("h1");
             divCardInfo.appendChild(personName);
@@ -268,11 +268,11 @@ async function getUitgaandVerzoek() {
 
             let divLinks = document.createElement("div");
             divCardInfo.appendChild(divLinks);
-            divLinks.className = "links";
+            divLinks.classList = "links";
             // Annuleer knop
             let button = document.createElement("button");
             divLinks.appendChild(button);
-            button.className = "matchBtn";
+            button.classList = "matchBtn";
             button.value = element.idAccount;
             button.onclick = () => {
                 const dataDelete = FYSCloud.API.queryDatabase(
@@ -317,21 +317,21 @@ async function getGeaccepteerd() {
 
             let divContainer = document.createElement("div");
             divOne.appendChild(divContainer);
-            divContainer.className = "container";
+            divContainer.classList = "container";
 
             let divCard = document.createElement("div");
             divContainer.appendChild(divCard);
-            divCard.className = "card";
+            divCard.classList = "card";
 
             let imgProfile = document.createElement("img");
             divCard.appendChild(imgProfile);
-            imgProfile.className = "profile-img";
+            imgProfile.classList = "profile-img";
             imgProfile.src = "https://mockup-is101-4.fys.cloud/uploads/" + element.profielfoto;
             imgProfile.alt = "User profile";
 
             let divCardInfo = document.createElement("div");
             divCard.appendChild(divCardInfo);
-            divCardInfo.className = "card-info";
+            divCardInfo.classList = "card-info";
 
             let personName = document.createElement("h1");
             divCardInfo.appendChild(personName);
@@ -394,11 +394,11 @@ async function getGeaccepteerd() {
 
             let divLinks = document.createElement("div");
             divCardInfo.appendChild(divLinks);
-            divLinks.className = "links";
+            divLinks.classList = "links";
             // Annuleer knop
             let button = document.createElement("button");
             divLinks.appendChild(button);
-            button.className = "matchBtn";
+            button.classList = "matchBtn";
             button.value = element.idAccount;
             button.onclick = () => {
                 const dataDelete = FYSCloud.API.queryDatabase(
