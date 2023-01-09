@@ -38,44 +38,45 @@ class myFooter extends HTMLElement {
         this.innerHTML = `
             <div class="container-1-footer">
                 <footer>
-       <div class="footer">
-           <div class="footer-divs">
-               <label class="footer-labels">Mede mogelijk gemaakt door</label>
-               <ul>
-                   <li>Joey</li>
-                   <li>Jimi</li>
-                   <li>Kerim</li>
-                   <li>Badr</li>
-               </ul>
-           </div>
-           <div class="footer-divs">
-               <label class="footer-labels">Menu</label>
-               <ul>
-                   <li><a href="../assets/profiel.html" id="linkProfiel">Profiel</a></li>
-                   <li><a href="../assets/mogelijke_reispartner.html" id="linkMogelijkeReispartners">Mogelijke reispartner</a></li>
-                   <li><a href="../assets/matches.html" id="linkMatches">Matches</a></li>
-                   <li><a href="../assets/contact.html">Contact</a></li>
-                   <li><a href="../assets/over.html">Over</a></li>
-               </ul>
-           </div>
-           <div class="footer-divs">
-               <div class="contactEnJuridischeShit">
-                   <div class="footer-contact">
-                   <label class="footer-labels">Contact</label>
-                   <p>Neem contact met ons op via ons contact form, hier reageren wij per email op uw vragen.</p>
-                       <a href="../assets/contact.html">Contact</a>
-                   </div>
-                   <div class="footer-juridischeShit">
-                   <label class="footer-labels">Privacy, Juridische voorwaarde en gebruiksvoorwaarde</label>
-                   <a href="#">Voorwaarden</a>
-                   </div>
-               </div>
-           </div>
-       </div>
-   <p id="footer-tekst">@2022/2023 HVA IS101 Project Fasten Your Seatbelt.</p>
-</footer>
-
-
+                    <div class="footer">
+                        <div class="footer-divs">
+                            <label class="footer-labels">Mede mogelijk gemaakt door</label>
+                            <ul>
+                                <li>Joey</li>
+                                <li>Jimi</li>
+                                <li>Kerim</li>
+                                <li>Badr</li>
+                            </ul>
+                        </div>
+                        <div class="footer-divs">
+                            <label class="footer-labels">Menu</label>
+                            <ul>
+                                <li><a href="../assets/profiel.html" id="linkProfiel">Profiel</a></li>
+                                <li><a href="../assets/mogelijke_reispartner.html" id="linkMogelijkeReispartners">Mogelijke reispartner</a></li>
+                                <li><a href="../assets/matches.html" id="linkMatches">Matches</a></li>
+                                <li><a href="../assets/contact.html">Contact</a></li>
+                                <li><a href="../assets/over.html">Over</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-divs">
+                            <div class="footer-info-section">
+                                <div class="footer-contact">
+                                    <label class="footer-labels">Contact</label>
+                                    <p>Neem contact met ons op via ons contact form, hier reageren wij per email op uw vragen.</p>
+                                    <a href="../assets/contact.html">Contact</a>
+                                </div>
+                                <div class="footer-terms-conditions">
+                                    <label class="footer-labels">Onze voorwaarden</label>
+                                    <a href="#">Privacybeleid</a>
+                                    <a href="#">Gebruiksvoorwaarden</a>
+                                    <a href="#">Cookiebeleid</a>
+                                    <a href="#">Juridisch</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p id="footer-tekst">@ 2022 / 2023 HvA IS101 Project Fasten Your Seatbelt.</p>
+                </footer>
             </div>
         `
     }

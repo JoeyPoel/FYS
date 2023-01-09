@@ -1004,7 +1004,7 @@ label.interesses, label.soortVakantie  {
     justify-content: space-between;
     text-align: center;
     padding: 25px;
-    background: rgba(0,0,0,0.5);
+    background: rgba(89, 89, 89, 0.69);
 }
 
 .container-1-footer p {
@@ -1020,26 +1020,37 @@ label.interesses, label.soortVakantie  {
     color: black;
 }
 
-.footer{
+.footer {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly ;
 }
 
-.footer-labels{
+.footer-labels {
     font-weight: bold;
     font-size: large;
 }
 
-#footer-tekst{
+.footer-info-section {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.footer-terms-conditions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.footer-terms-conditions a {
+    width: max-content;
+}
+
+#footer-tekst {
     margin-top: 50px;
 }
 
-.footer-juridischeShit{
-    display: flex;
-    flex-direction: column;
-    margin-top: 10px;
-}
 /* contact.html */
 .main-contact {
     display: flex;
@@ -1255,6 +1266,10 @@ label.interesses, label.soortVakantie  {
 }
 
 /* mogelijke_reispartner.html */
+#buttons {
+    width: 100%;
+}
+
 .div-container-mogelijke_reispartner {
     display: flex;
     flex-wrap: wrap;
