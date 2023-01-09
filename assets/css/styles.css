@@ -989,68 +989,6 @@ label.interesses, label.soortVakantie  {
     width: 50px;
 }
 
-/* 404.html */
-.container-1-404 {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-}
-
-/* Footer */
-.container-1-footer {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: center;
-    padding: 25px;
-    background: rgba(89, 89, 89, 0.69);
-}
-
-.container-1-footer p {
-    padding: 0;
-    margin: 0;
-}
-
-.container-1-footer li {
-    list-style: none;
-}
-
-.container-1-footer a {
-    color: black;
-}
-
-.footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly ;
-}
-
-.footer-labels {
-    font-weight: bold;
-    font-size: large;
-}
-
-.footer-info-section {
-    display: flex;
-    flex-flow: column wrap;
-}
-
-.footer-terms-conditions {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 10px;
-}
-
-.footer-terms-conditions a {
-    width: max-content;
-}
-
-#footer-tekst {
-    margin-top: 50px;
-}
-
 /* contact.html */
 .main-contact {
     display: flex;
@@ -1638,6 +1576,62 @@ label.interesses, label.soortVakantie  {
     }
 }
 
+/* Footer */
+.container-1-footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    padding: 25px;
+    background: rgba(89, 89, 89, 0.69);
+}
+
+.container-1-footer p {
+    padding: 0;
+    margin: 0;
+}
+
+.container-1-footer li {
+    list-style: none;
+}
+
+.container-1-footer a {
+    color: black;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly ;
+}
+
+.footer-labels {
+    font-weight: bold;
+    font-size: large;
+}
+
+.footer-info-section {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.footer-terms-conditions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.footer-terms-conditions a {
+    width: max-content;
+}
+
+#footer-tekst {
+    margin-top: 50px;
+}
+
+/* CSS for smaller displays */
 /* HOME PAGE */
 @media (max-width: 1100px) {
     .over-article{
@@ -1650,10 +1644,6 @@ label.interesses, label.soortVakantie  {
     }
 }
 
-
-
-/* CSS for smaller displays */
-
 /* SMALLER DISPLAYS LOG IN / REGISTER */
 @media (max-width: 1300px) {
     .welcome{
@@ -1664,6 +1654,7 @@ label.interesses, label.soortVakantie  {
         margin-right: 10%;
     }
 }
+
 @media (max-width: 930px) {
     .welcome{
         display: none;
@@ -1723,4 +1714,3 @@ select:focus {
     background: black;
     border-radius: 1em;
 }
-
