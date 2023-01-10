@@ -1240,7 +1240,7 @@ label.interesses, label.soortVakantie  {
 
 #person-list {
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: column wrap;
     min-height: 70vh;
     width: 100%;
     justify-content: center;
@@ -1331,6 +1331,7 @@ label.interesses, label.soortVakantie  {
     font-size: 12px;
     margin-top: 10px;
     margin-right: 20px;
+    width: 434px;
 }
 
 .links {

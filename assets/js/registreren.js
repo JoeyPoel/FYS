@@ -49,33 +49,33 @@ document.addEventListener('DOMContentLoaded', () => {
     function validateForm() {
         // USERNAME
         if (usernameInput.value.trim() == '') {
-            setError(usernameInput, 'Name can not be empty');
-        } else if (usernameInput.value.trim().length < 5 || usernameInput.value.trim().length > 15) {
-            setError(usernameInput, 'Name must be min 5 and max 15 charecters');
+            setError(usernameInput, 'Gebruikersnaam kan niet leeg zijn');
+        } else if (usernameInput.value.trim().length < 3 || usernameInput.value.trim().length > 15) {
+            setError(usernameInput, 'Gebruikersnaam moet minimaal 3 en maximaal 15 karakters bevatten');
         } else {
             setSuccess(usernameInput);
         }
         // EMAIL
         if (emailInput.value.trim() == '') {
-            setError(emailInput, 'Provide an email address');
+            setError(emailInput, 'Voer een e-mailadres in');
         } else if (isEmailValid(emailInput.value)) {
             setSuccess(emailInput);
         } else {
-            setError(emailInput, 'Provide a valid email address');
+            setError(emailInput, 'Voer een geldig e-mailadres in');
         }
         // PASSWORD
         if (passwordInput.value.trim() == '') {
-            setError(passwordInput, 'Password can not be empty');
+            setError(passwordInput, 'Wachtwoord kan niet leeg zijn');
         } else if (passwordInput.value.trim().length < 6 || passwordInput.value.trim().length > 20) {
-            setError(passwordInput, 'Password min 6 max 20 charecters');
+            setError(passwordInput, 'Wachtwoord heeft minimaal 6 en maximaal 20 karakters');
         } else {
             setSuccess(passwordInput);
         }
         // CONFIRM PASSWORD
         if (confirmPasswordInput.value.trim() == '') {
-            setError(confirmPasswordInput, 'Password can not be empty');
+            setError(confirmPasswordInput, 'Wachtwoord kan niet leeg zijn');
         } else if (confirmPasswordInput.value !== passwordInput.value) {
-            setError(confirmPasswordInput, 'Password does not match');
+            setError(confirmPasswordInput, 'Wachtwoord komt niet overeen');
         } else {
             setSuccess(confirmPasswordInput);
         }

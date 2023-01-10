@@ -43,7 +43,7 @@ async function getInkomendVerzoek() {
             let imgProfile = document.createElement("img");
             divCard.appendChild(imgProfile);
             imgProfile.classList = "profile-img";
-            imgProfile.src = "https://mockup-is101-4.fys.cloud/uploads/" + element.profielfoto;
+            imgProfile.src = element.profielfoto;
             imgProfile.alt = "User profile";
 
             let divCardInfo = document.createElement("div");
@@ -200,7 +200,7 @@ async function getUitgaandVerzoek() {
             let imgProfile = document.createElement("img");
             divCard.appendChild(imgProfile);
             imgProfile.classList = "profile-img";
-            imgProfile.src = "https://mockup-is101-4.fys.cloud/uploads/" + element.profielfoto;
+            imgProfile.src = element.profielfoto;
             imgProfile.alt = "User profile";
 
             let divCardInfo = document.createElement("div");
@@ -305,7 +305,7 @@ async function getUitgaandVerzoek() {
 async function getGeaccepteerd() {
     try {
         const data = await FYSCloud.API.queryDatabase(
-            "SELECT * FROM `fys_is101_4_live`.`persoon` INNER JOIN `fys_is101_4_live`.`match` ON `persoon`.`idAccount` = `match`.`idAccountPersoonEen` WHERE NOT idAccountPersoonEen = ? AND idAccountPersoonTwee = ? && isAccepted = TRUE;",
+            "SELECT * FROM `fys_is101_4_live`.`persoon` INNER JOIN `fys_is101_4_live`.`match` ON `persoon`.`idAccount` = `match`.`idAccountPersoonEen` INNER JOIN `fys_is101_4_live`.`account` ON `account`.`idAccount` = `persoon`.`idAccount` WHERE NOT idAccountPersoonEen = ? AND idAccountPersoonTwee = ? && isAccepted = TRUE;",
             [Object.values(object)[0], Object.values(object)[0]]
         );
         data.forEach((element) => {
@@ -326,7 +326,7 @@ async function getGeaccepteerd() {
             let imgProfile = document.createElement("img");
             divCard.appendChild(imgProfile);
             imgProfile.classList = "profile-img";
-            imgProfile.src = "https://mockup-is101-4.fys.cloud/uploads/" + element.profielfoto;
+            imgProfile.src = element.profielfoto;
             imgProfile.alt = "User profile";
 
             let divCardInfo = document.createElement("div");
@@ -391,6 +391,20 @@ async function getGeaccepteerd() {
             let dateEV = new Date(element.eindVakantie);
             const textDateTo = document.createTextNode("Datum tot " + dtFormat.format(dateEV));
             li.appendChild(textDateTo);
+
+            let iconEmail = document.createElement("img");
+            li.appendChild(iconEmail);
+            iconEmail.src = "img/icon/email.svg";
+            iconEmail.alt = "Email";
+            const textEmail = document.createTextNode(element.email);
+            li.appendChild(textEmail);
+
+            let iconPhone = document.createElement("img");
+            li.appendChild(iconPhone);
+            iconPhone.src = "img/icon/phone.svg";
+            iconPhone.alt = "Phone number";
+            const textPhone = document.createTextNode(element.telefoonnummer);
+            li.appendChild(textPhone);
 
             let divLinks = document.createElement("div");
             divCardInfo.appendChild(divLinks);
