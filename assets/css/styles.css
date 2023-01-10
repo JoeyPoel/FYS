@@ -1205,7 +1205,7 @@ label.interesses, label.soortVakantie  {
 
 /* mogelijke_reispartner.html */
 #buttons {
-    width: 100%;
+    width: 600px;
 }
 
 .div-container-mogelijke_reispartner {
@@ -1242,7 +1242,7 @@ label.interesses, label.soortVakantie  {
     display: flex;
     flex-wrap: wrap;
     min-height: 70vh;
-    width: 1000px;
+    width: 100%;
     justify-content: center;
     align-items: center;
 }

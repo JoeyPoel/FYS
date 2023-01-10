@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const imageInput = document.getElementById("fileUpload");
 
     form.addEventListener('submit', async (event) => {
+        event.preventDefault();
         console.log("Start transaction");
         // Upload file
         await FYSCloud.Utils
@@ -21,6 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     data.url, true // data.url under ~500kb will work otherwise error due to slow network traffic (in API)
                 ).then(function (data) {
                     console.log(data);
+                    console.log(data.fileName);
+                    console.log("Test");
                     console.log("Succes!");
                 }).catch(function (reason) {
                     console.log(reason);
@@ -38,6 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         )
     });
+
     // Show image
     imageInput.addEventListener('change', (event) => {
         FYSCloud.Utils
@@ -58,6 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log("Error!");
         });
     });
+
     // Show list/array with the file names
     let promise = FYSCloud.API.listDirectory();
     console.log(promise);
@@ -67,6 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
             //console.log(result[0]); // First index of array
         }
     );
+
     //FYSCloud.API.deleteFile("Bugatti.jpg");
     //console.log(FYSCloud.API.fileExists("Bugatti.jpg"));
     // Get URL

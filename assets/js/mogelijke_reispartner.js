@@ -55,7 +55,7 @@ for (let i of person.data) {
     let imgProfile = document.createElement("img");
     divCard.appendChild(imgProfile);
     imgProfile.classList = "profile-img";
-    imgProfile.src = "https://mockup-is101-4.fys.cloud/uploads/" + i.profielfoto;
+    imgProfile.src = i.profielfoto;
     imgProfile.alt = "User profile";
 
     let divCardInfo = document.createElement("div");
