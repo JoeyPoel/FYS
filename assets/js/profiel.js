@@ -48,6 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         );
                         //console.log(insertData);
                         console.log("Succes!");
+                        form.submit();
                     }).catch(function (reason) {
                         console.log(reason);
                         console.log("Error!");
