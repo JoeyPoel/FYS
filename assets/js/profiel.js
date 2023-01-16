@@ -200,7 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Oud profiel
-/* document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
     // PROFIEL UPLOAD
     document.getElementById('btn-profiel').onclick= async function addProfiel(){
         // Zorgt er voor dat het profiel in de juiste id wordt ge insert
@@ -518,4 +518,4 @@ document.addEventListener('DOMContentLoaded', () => {
             x.style.display = "flex";
         }
     }
-}); */
+});
